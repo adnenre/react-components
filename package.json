@@ -1,0 +1,49 @@
+{
+  "name": "new",
+  "version": "1.0.0",
+  "author": "adnen rebai adnen.rebai@gmail.com",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "prismjs": "^1.29.0",
+    "prop-types": "^15.8.1",
+    "react": "16.12.0",
+    "react-dom": "16.11.0",
+    "react-prism": "4.3.2",
+    "react-router": "^6.0.0-alpha.1",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "^5.0.1",
+    "styled-components": "^6.0.8"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "format": "npx prettier --write ."
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-react": "^7.22.15",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.0.3"
+  }
+}
