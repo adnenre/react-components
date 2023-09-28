@@ -2,8 +2,11 @@
   "name": "new",
   "version": "1.0.0",
   "author": "adnen rebai adnen.rebai@gmail.com",
-  "description": "",
-  "keywords": [],
+  "description": "some react component with styled components",
+  "homepage": ".",
+  "keywords": [
+    "react components"
+  ],
   "main": "src/index.js",
   "dependencies": {
     "prismjs": "^1.29.0",
@@ -21,7 +24,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "format": "npx prettier --write ."
+    "format": "npx prettier --write .",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
@@ -44,6 +49,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^6.0.0",
     "prettier": "^3.0.3"
   }
 }
