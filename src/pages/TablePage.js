@@ -1,5 +1,6 @@
-import Title from '../components/Title';
 import React from 'react';
+import PropTypes, { object } from 'prop-types';
+import Title from '../components/Title';
 
 import {
   Portlet,
@@ -30,7 +31,7 @@ const TabHead = ({ columns }) => (
   <TableHead>
     <TableRow key="table_head">
       {columns.map((col, index) => (
-        <TableHeadCell keu={index}>{col}</TableHeadCell>
+        <TableHeadCell key={index}>{col}</TableHeadCell>
       ))}
     </TableRow>
   </TableHead>
@@ -85,5 +86,10 @@ const rows = [
     </Portlet>
   );
 };
-
+TabHead.propTypes = {
+  columns: PropTypes.arrayOf(object),
+};
+TabBody.propTypes = {
+  rows: PropTypes.arrayOf(object),
+};
 export default TablePage;
