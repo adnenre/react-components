@@ -43,9 +43,7 @@ const ModalPage = () => {
               <ModalWrapper>
                 <ModalContent>
                   <ModalHeader>
-                    <div style={{ cursor: "pointer" }} onClick={onClose}>
                     <CloseButton onClick={onClose} />
-                    </div>
                   </ModalHeader>
                   <ModalBody> {children}</ModalBody>
           
