@@ -29,7 +29,14 @@ const componentsList = [
     name: 'Button',
     state: true,
   },
-
+  {
+    name: 'Carousel',
+    state: true,
+  },
+  {
+    name: 'Accordion',
+    state: true,
+  },
   {
     name: 'Card',
     state: true,
