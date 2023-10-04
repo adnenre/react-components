@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import theme from '../../theme';
 
@@ -18,16 +17,16 @@ export const DropDownHeader = styled.div`
   min-height: 40px;
   min-width: inherit;
   white-space: nowrap;
-  border-bottom: ${({ active }) =>
-    active ? 'solid 3px #00b0ff' : 'solid 3px transparent'};
-  color: ${({ active }) => (active ? ' #00b0ff' : 'black')};
+  border-bottom: ${({ $active }) =>
+    $active ? 'solid 3px #00b0ff' : 'solid 3px transparent'};
+  color: ${({ $active }) => ($active ? ' #00b0ff' : 'black')};
   border: solid 1px ${theme.colors.$primary};
   border-radius: 5px;
   overflow: hidden;
 
   > div {
-    color: ${({ active }) =>
-      active ? `${theme.colors.$primary}` : ' #546e7a'};
+    color: ${({ $active }) =>
+      $active ? `${theme.colors.$primary}` : ' #546e7a'};
   }
 `;
 export const DropDownHeaderContent = styled.div`
@@ -71,8 +70,9 @@ export const DropDownItem = styled.li`
   font-weight: 600;
   line-height: 1.42857143;
 
-  background: ${({ active }) => (active ? '#e3f2fd' : 'none')};
-  color: ${({ active, selected }) => (active || selected ? '#00b0ff' : 'none')};
+  background: ${({ $active }) => ($active ? '#e3f2fd' : 'none')};
+  color: ${({ $active, selected }) =>
+    $active || selected ? '#00b0ff' : 'none'};
 
   :not(:last-child) {
     border-bottom: solid 0.5px #eee;
@@ -94,8 +94,8 @@ export const DropDownCarretStyled = styled.span`
   color: #00b0ff;
   border-left: solid 0.5px ${theme.colors.$primary};
   > svg {
-    fill: ${({ isOpen }) =>
-      isOpen ? `${theme.colors.$default}` : `${theme.colors.$primary}`};
+    fill: ${({ $isOpen }) =>
+      $isOpen ? `${theme.colors.$default}` : `${theme.colors.$primary}`};
     transition: all 300ms;
   }
 

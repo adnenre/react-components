@@ -14,14 +14,13 @@ import useClickOutside from './hooks/useClickOutslide';
 const DropDownCarret = ({ isOpen }) => {
   const style = { transform: isOpen ? 'rotatez(90deg)' : 'rotatez(0deg)' };
   return (
-    <DropDownCarretStyled isOpen={isOpen}>
+    <DropDownCarretStyled $isOpen={isOpen}>
       <svg
         style={style}
         xmlns="http://www.w3.org/2000/svg"
         width="16"
         height="16"
         viewBox="0 0 16 16"
-        fill
       >
         <path d="M8 11.172l-4.293-4.293a1 1 0 1 1 1.414-1.414L8 8.344l3.88-3.879a1 1 0 0 1 1.415 1.414L8 11.172z" />
       </svg>
@@ -113,7 +112,7 @@ const DropDown = ({ items, onSelectedItem, active }) => {
   return (
     <div ref={containerRef}>
       <DropDownContainer>
-        <DropDownHeader onClick={handleToggle} active={active}>
+        <DropDownHeader onClick={handleToggle} $active={active}>
           <DropDownHeaderContent>{selected.title}</DropDownHeaderContent>
           <DropDownCarret isOpen={active} />
         </DropDownHeader>
@@ -124,7 +123,7 @@ const DropDown = ({ items, onSelectedItem, active }) => {
                 key={i}
                 id={item.id}
                 onClick={handleSelected(item.id)}
-                active={i === cursor && keyPressed}
+                $active={i === cursor && keyPressed}
                 selected={selected.id === item.id}
               >
                 {item.title}
