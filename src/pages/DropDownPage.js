@@ -34,16 +34,16 @@ const DropDownPage = () => {
         </PortletHeader>
         <PortletBody>
           <Row>
-            <Col sm={4}>
+            <Col $sm={4}>
               <DropDown items={items} />
             </Col>
-            <Col sm={4}>
+            <Col $sm={4}>
               <DropDown items={items} />
             </Col>
-            <Col sm={2}>
+            <Col $sm={2}>
               <DropDown items={items} />
             </Col>
-            <Col sm={2}>
+            <Col $sm={2}>
               <DropDown items={items} />
             </Col>
           </Row>

@@ -1,16 +1,15 @@
-import React from 'react';
 import styled from 'styled-components';
-import color from './utility';
+import theme from '../theme';
 const Table = styled.table`
   display: table;
   width: 100%;
   border-collapse: collapse;
-  color: ${color.black};
+  color: ${theme.colors.$black};
 `;
 
 const TableHead = styled.thead`
   font-size: 12px;
-  background: ${color.primary};
+  background: ${theme.colors.$primary};
   color: white;
 `;
 
@@ -18,10 +17,10 @@ const TableHeadCell = styled.th`
   padding: 10px;
   white-space: nowrap;
   text-align: center;
-  border: solid 1px ${color.primary};
+  border: solid 1px ${theme.colors.$primary};
 `;
 const TableBody = styled.tbody`
-  border: solid 1px ${color.primary};
+  border: solid 1px ${theme.colors.$primary};
 `;
 const TableRow = styled.tr`
   padding: 10px;
@@ -30,14 +29,14 @@ const TableRow = styled.tr`
 
   &:nth-child(2n) {
     color: white;
-    background: ${color.primary};
+    background: ${theme.colors.$primary};
   }
 `;
 const TableCell = styled.td`
   padding: 10px;
   white-space: nowrap;
   text-align: center;
-  border: solid 1px ${color.primary};
+  border: solid 1px ${theme.colors.$primary};
 `;
 
 export { Table, TableHead, TableBody, TableRow, TableCell, TableHeadCell };

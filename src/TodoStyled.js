@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import color from './components/utility';
+import theme from './theme';
 const Todo = styled.div`
   padding: 0.5rem;
   text-align: left;
@@ -13,7 +13,7 @@ const TodoName = styled.div`
   padding: 0 0.5rem;
   text-align: left;
   width: 130px;
-  color: ${color.black};
+  color: ${theme.colors.$black};
 `;
 const TodoState = styled.div`
   padding: 0 0.5rem;
@@ -21,7 +21,9 @@ const TodoState = styled.div`
   width: 100px;
   color: white;
   ${(props) =>
-    props.state ? 'background:' + color.success : 'background:' + color.danger};
+    props.$state
+      ? 'background:' + theme.colors.$success
+      : 'background:' + theme.colors.$danger};
 `;
 
 const componentsList = [

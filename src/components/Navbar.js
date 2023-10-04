@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import color from './utility';
+import theme from '../theme';
 
 const style = {
   visible: `
@@ -31,7 +31,7 @@ const NavContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   border-bottom: solid 1px white;
-  background: ${color.primary};
+  background: ${theme.colors.$primary};
 `;
 const NavMenu = styled.div`
   justify-content: center;
@@ -92,7 +92,7 @@ const NavLink = styled.a`
     background: white;
   }
   &:hover {
-    color: ${color.primary};
+    color: ${theme.colors.$primary};
     cursor: pointer;
   }
   &:hover:before {

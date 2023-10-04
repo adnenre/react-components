@@ -25,10 +25,11 @@ const routes = [
   { path: 'AccordionPage', routeName: 'Accordion' },
   { path: 'TreePage', routeName: 'Tree' },
   { path: 'CarouselPage', routeName: 'Carousel' },
+  { path: 'TooltipPage', routeName: 'Tooltip' },
 ];
 const SideBarre = ({ active }) => {
   return (
-    <SideBarreContainer active={active}>
+    <SideBarreContainer $active={active}>
       <SideBarreHeader>
         <Logo>React Component</Logo>
       </SideBarreHeader>

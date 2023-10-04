@@ -12,21 +12,25 @@ const TabContext = createContext();
 // ################# Tab component         ######################
 // #################################################################
 const Tab = (props) => {
-  const { tabTitle, id } = props;
-  const { changeTab, activeTabId } = useContext(TabContext);
+  const { $tabTitle, id } = props;
+  const { changeTab, $activeTabId } = useContext(TabContext);
+  const handleChangeTab = (id) => (event) => {
+    event.preventDefault();
+    changeTab(id);
+  };
   return (
     <TabItem
-      active={activeTabId === id}
-      onClick={() => changeTab(id)}
+      $active={$activeTabId === id}
+      onClick={handleChangeTab(id)}
       {...props}
     >
-      {tabTitle}
+      {$tabTitle}
     </TabItem>
   );
 };
 Tab.propTypes = {
   id: PropTypes.number.isRequired,
-  tabTitle: PropTypes.string.isRequired,
+  $tabTitle: PropTypes.string.isRequired,
 };
 
 // #################################################################
@@ -34,12 +38,11 @@ Tab.propTypes = {
 // #################################################################
 const TabPanel = (props) => {
   const { id, children, ...rest } = props;
-  const { activeTabId } = useContext(TabContext);
-  return (
-    activeTabId === id && (
-      <TabPanelStyled {...rest}> {children} </TabPanelStyled>
-    )
-  );
+  const { $activeTabId } = useContext(TabContext);
+  if ($activeTabId === id) {
+    return <TabPanelStyled {...rest}> {children} </TabPanelStyled>;
+  }
+  return null;
 };
 TabPanel.propTypes = {
   id: PropTypes.number,
@@ -50,11 +53,11 @@ TabPanel.propTypes = {
 // ################# Tabs component         ######################
 // #################################################################
 const Tabs = (props) => {
-  const [activeTabId, setActiveTab] = useState(1);
+  const [$activeTabId, setActiveTab] = useState(1);
   const childComponents = props.children.filter(Boolean);
   const changeTab = (tabId) => {
     setActiveTab(tabId);
-    props.onClickTab(tabId);
+    //props.onClickTab(tabId);
   };
 
   const { Provider } = TabContext;
@@ -64,14 +67,14 @@ const Tabs = (props) => {
         key={child.props.id}
         id={child.props.id}
         children={child.props.children}
-        tabTitle={child.props.tabTitle}
+        $tabTitle={child.props.$tabTitle}
       />
     ));
 
   return (
     <Provider
       value={{
-        activeTabId,
+        $activeTabId,
         changeTab,
       }}
     >
@@ -82,8 +85,8 @@ const Tabs = (props) => {
             key={child.props.id}
             id={child.props.id}
             children={child.props.children}
-            tabTitle={child.props.tabTitle}
-            showAsGrid={props.showAsGrid ? true : false}
+            $tabTitle={child.props.$tabTitle}
+            $showAsGrid={props.$showAsGrid ? true : false}
           />
         ))}
       </TabsContainer>
@@ -93,13 +96,11 @@ const Tabs = (props) => {
 
 Tabs.propTypes = {
   children: PropTypes.instanceOf(Array),
-  onClickTab: PropTypes.func,
-  activeTabID: PropTypes.number,
-  showAsGrid: PropTypes.bool,
+  $activeTabID: PropTypes.number,
+  $showAsGrid: PropTypes.bool,
 };
 Tabs.defaultProps = {
-  onClickTab: () => {},
-  activeTabID: 1,
+  $activeTabID: 1,
 };
 Tabs.Tab = Tab;
 export default Tabs;

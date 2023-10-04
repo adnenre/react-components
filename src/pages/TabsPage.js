@@ -20,13 +20,13 @@ const TablePage = () => {
       </PortletHeader>
       <PortletBody>
         <Tabs>
-          <Tabs.Tab id={1} tabTitle="One">
+          <Tabs.Tab id={1} $tabTitle="One">
             1 - content of tab one
           </Tabs.Tab>
-          <Tabs.Tab id={2} tabTitle="Two">
+          <Tabs.Tab id={2} $tabTitle="Two">
             2 - content of tab two
           </Tabs.Tab>
-          <Tabs.Tab id={3} tabTitle="Three">
+          <Tabs.Tab id={3} $tabTitle="Three">
             3 - content of tab Three
           </Tabs.Tab>
         </Tabs>

@@ -17,10 +17,10 @@ const CarouselPage = () => {
       content={
         <Container>
           <Row>
-            <Col sm={12}>
+            <Col $sm={12}>
               <Carousel slides={slides2} />
             </Col>
-            <Col sm={12}>
+            <Col $sm={12}>
               <Carousel slides={slides} />
             </Col>
           </Row>

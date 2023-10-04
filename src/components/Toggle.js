@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import color from './utility';
+import theme from '../theme';
 
 const ToggleButton = styled.button`
   padding: 0.5em 1rem;
@@ -11,7 +11,7 @@ const ToggleButton = styled.button`
   position: relative;
   width: 100%;
   border: none;
-  color: ${color.warning};
+  color: ${theme.colors.$warning};
   text-align: left;
   cursor: pointer;
   transition: 0.3s;

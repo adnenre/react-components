@@ -1,39 +1,37 @@
 import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import color from './utility';
+import theme from '../theme';
 import Carret from './Carret';
 import useClickOutside from './hooks/useClickOutslide';
-
+import { getHoverEffect } from './utility';
 const AccordionContainer = styled.div`
   width: 100%;
-  background: ${color.primary};
+  background: ${theme.colors.$primary};
 `;
 const AccordionItemStyled = styled.div`
   width: 100%;
 `;
 const AccordionTitleStyled = styled.div`
   width: 100%;
-  background: ${({ isOpen }) =>
-    isOpen ? `${color.primary}` : `${color.default}`};
-  color: ${({ isOpen }) => (!isOpen ? `${color.primary}` : `${color.default}`)};
+  background: ${({ $isOpen }) =>
+    $isOpen ? `${theme.colors.$primary}` : `${theme.colors.$default}`};
+  color: ${({ $isOpen }) =>
+    !$isOpen ? `${theme.colors.$primary}` : `${theme.colors.$default}`};
   user-select: none;
-  border-top: solid 1px ${color.primary};
-  border-bottom: solid 1px ${color.primary};
+  border-top: solid 1px ${theme.colors.$primary};
+  border-bottom: solid 1px ${theme.colors.$primary};
   display: flex;
   justify-content: space-between;
 
-  &:hover {
-    color: ${color.default};
-    background-color: ${color.primary};
-  }
-  cursor: pointer;
+  ${getHoverEffect}
+
   padding: 0.5rem;
   font-weight: 400;
 `;
 const AccordionContent = styled.div`
   width: 100%;
-  background: ${color.default};
+  background: ${theme.colors.$default};
   text-align: left;
 
   padding: 1.5rem 1rem;
@@ -45,9 +43,9 @@ const AccordionTitle = (props) => {
 function AccordionItem({ title, content, isOpen, toggleAccordion }) {
   return (
     <AccordionItemStyled>
-      <AccordionTitle onClick={toggleAccordion} isOpen={isOpen}>
+      <AccordionTitle onClick={toggleAccordion} $isOpen={isOpen}>
         {title}
-        <Carret isOpen={isOpen} />
+        <Carret $isOpen={isOpen} />
       </AccordionTitle>
       {isOpen && (
         <AccordionContent className="accordion-content">

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes, { object } from 'prop-types';
+import PropTypes, { object, string } from 'prop-types';
 import Title from '../components/Title';
 
 import {
@@ -69,7 +69,8 @@ const TablePage = () => {
             target="javascript"
           >
             {`
-const columns = ["First Name", "Last Name", "email"];
+const columns = ["#","First Name", "Last Name", "email"];
+// const columns = Object.keys(rows[0])
 const rows = [
       { id: 1, name: "adnen", lastName: "rebai", email: "@adnen_rebai" },
       { id: 2, name: "Jhone", lastName: "Doe", email: "Jhon_doe" },
@@ -87,7 +88,7 @@ const rows = [
   );
 };
 TabHead.propTypes = {
-  columns: PropTypes.arrayOf(object),
+  columns: PropTypes.arrayOf(string),
 };
 TabBody.propTypes = {
   rows: PropTypes.arrayOf(object),

@@ -1,43 +1,36 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import color from './utility';
+import theme from '../theme';
+import { getBgColor } from './utility';
 
 const border = 'solid 1px ';
 const ButtonOutline = styled.button`
   z-index: 0;
-  display: ${({ fullwidth }) => (fullwidth ? 'block' : 'inline')};
-  width: ${(props) => (props.fullwidth ? '100%' : 'initial')};
+  display: ${({ $fullwidth }) => ($fullwidth ? 'block' : 'inline')};
+  width: ${(props) => (props.$fullwidth ? '100%' : 'initial')};
   padding: 0.5em 1rem;
 
   outline: none;
   position: relative;
-  border: ${({ primary, info, danger, warning, success, black }) => {
-    if (primary) return border + color.primary;
-    if (info) return border + color.info;
-    if (danger) return border + color.danger;
-    if (warning) return border + color.warning;
-    if (success) return border + color.success;
-    if (black) return border + color.black;
-    return border + color.default;
+  border: ${({ $primary, $info, $danger, $warning, $success, $black }) => {
+    if ($primary) return border + theme.colors.$primary;
+    if ($info) return border + theme.colors.$info;
+    if ($danger) return border + theme.colors.$danger;
+    if ($warning) return border + theme.colors.$warning;
+    if ($success) return border + theme.colors.$success;
+    if ($black) return border + theme.colors.$black;
+    return border + theme.colors.$default;
   }};
 
   cursor: pointer;
-  color: ${({ primary, info, danger, warning, success, black }) => {
-    if (primary || info || danger || warning || success || black)
-      return color.default;
-    return color.black;
+  color: ${({ $primary, $info, $danger, $warning, $success, $black }) => {
+    if ($primary || $info || $danger || $warning || $success || $black)
+      return theme.colors.$default;
+    return theme.colors.$black;
   }};
 
-  background: ${({ primary, info, danger, warning, success, black }) => {
-    if (primary) return color.primary;
-    if (info) return color.info;
-    if (danger) return color.danger;
-    if (warning) return color.warning;
-    if (success) return color.success;
-    if (black) return color.black;
+  ${getBgColor}
 
-    return color.default;
-  }};
   &::before {
     content: '';
     position: absolute;
@@ -50,15 +43,15 @@ const ButtonOutline = styled.button`
     transition: 0.2s;
   }
   &:hover {
-    color: ${({ primary, info, danger, warning, success, black }) => {
-      if (primary) return color.primary;
-      if (info) return color.info;
-      if (danger) return color.danger;
-      if (warning) return color.warning;
-      if (success) return color.success;
-      if (black) return color.black;
+    color: ${({ $primary, $info, $danger, $warning, $success, $black }) => {
+      if ($primary) return theme.colors.$primary;
+      if ($info) return theme.colors.$info;
+      if ($danger) return theme.colors.$danger;
+      if ($warning) return theme.colors.$warning;
+      if ($success) return theme.colors.$success;
+      if ($black) return theme.colors.$black;
 
-      return color.black;
+      return theme.colors.$black;
     }};
     &:hover::before {
       width: 100%;

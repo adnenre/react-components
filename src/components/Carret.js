@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-const Carret = ({ isOpen }) => {
-  const style = { transform: isOpen ? 'rotatez(90deg)' : 'rotatez(0deg)' };
+const Carret = ({ $isOpen }) => {
+  const style = { transform: $isOpen ? 'rotatez(90deg)' : 'rotatez(0deg)' };
   return (
     <svg
       style={style}
@@ -20,7 +20,7 @@ const Carret = ({ isOpen }) => {
 };
 
 Carret.propTypes = {
-  isOpen: PropTypes.bool,
+  $isOpen: PropTypes.bool,
 };
 
 export default Carret;

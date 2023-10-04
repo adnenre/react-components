@@ -3,7 +3,7 @@ const gap = '1%';
 const gridColNumber = 12;
 const colwidth = 100 / gridColNumber;
 const style = {
-  demo: `
+  $demo: `
        border: solid 1px #2b95fd;
        height:50px;
        display:flex;
@@ -20,7 +20,7 @@ const style = {
         cursor:pointer;
        }
      `,
-  demoOne: `
+  $demoOne: `
       
        height:50px;
        display:flex;
@@ -38,7 +38,7 @@ const style = {
      
      `,
 
-  col: {
+  $col: {
     auto: `
      
       flex: 0 0 auto;
@@ -117,13 +117,8 @@ const style = {
     max-width: calc(${colwidth * 12}% - ${gap});
    
     `,
-    sm: `
-    
-   margin-bottom:${gap}
-   
-    `,
   },
-  offset: {
+  $offset: {
     1: `margin-left: ${colwidth}%;`,
     2: `margin-left: ${colwidth * 2}%;`,
     3: `margin-left: ${colwidth * 3}%;`,
@@ -136,7 +131,7 @@ const style = {
     10: `margin-left: ${colwidth * 10}%;`,
     11: `margin-left: ${colwidth * 11}%;`,
   },
-  align: {
+  $align: {
     spaceBetween: `
         justify-content:space-between;
         `,
@@ -150,7 +145,7 @@ const style = {
         justify-content: center;
         `,
   },
-  alignSelf: {
+  $alignSelf: {
     auto: `     
       align-self: auto !important;
     `,
@@ -174,8 +169,8 @@ const style = {
 };
 const Container = styled.div`
   width: 100%;
-  padding: ${(fluid) => {
-    if (fluid) return '0';
+  padding: ${($fluid) => {
+    if ($fluid) return '0';
     return '0 1rem';
   }};
 `;
@@ -185,29 +180,30 @@ const Row = styled.div`
   flex-wrap: wrap;
   margin-left: ${gap};
 
-  ${({ align }) => align && style.align[align]};
+  ${({ $align }) => $align && style.$align[$align]};
 `;
 
 const Col = styled.div`
   width: 100%;
-  ${({ demo }) => demo && style.demo};
-  ${({ demoOne }) => demoOne && style.demoOne};
-  ${({ offset }) => offset && style.offset[offset]};
-  ${({ col }) => col && style.col[col]};
+  ${({ $demo }) => $demo && style.$demo};
+  ${({ $demoOne }) => $demoOne && style.$demoOne};
+  ${({ $offset }) => $offset && style.$offset[$offset]};
+  ${({ $col }) => $col && style.$col[$col]};
   margin-right: ${gap};
   margin-bottom: ${gap};
-  ${({ alignSelf }) => alignSelf && style.alignSelf[alignSelf]};
+  ${({ $alignSelf }) => $alignSelf && style.$alignSelf[$alignSelf]};
 
   @media screen and (min-width: 768px) {
-    ${({ sm }) => sm && style.col[sm]};
-    margin-bottom: 0;
+    ${({ $sm }) => $sm && style.$col[$sm]};
+    margin-bottom: ${gap};
   }
   @media screen and (min-width: 992px) {
-    ${({ md }) => md && style.col[md]};
+    ${({ $md }) => $md && style.$col[$md]};
     margin-bottom: ${gap};
   }
   @media screen and (min-width: 1200px) {
-    ${({ lg }) => lg && style.col[lg]};
+    ${({ $lg }) => $lg && style.$col[$lg]};
+    margin-bottom: ${gap};
   }
 `;
 

@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import color from './utility';
+import theme from '../theme';
 import Title from './Title';
 const style = {
   primary: `
-      background:${color.primary};
+      background:${theme.colors.$primary};
       color:white !important; 
     `,
 };
@@ -18,17 +18,17 @@ const Portlet = styled.div`
 const PortletHeader = styled.div`
   border-bottom: solid 1px #eee;
   padding: 1rem 0;
-  ${({ primary }) => style.primary};
+  ${() => style.primary};
 `;
 const PortletBody = styled.div`
   padding: 2rem;
-  display: ${({ flex }) => {
-    if (flex) return 'flex';
+  display: ${({ $flex }) => {
+    if ($flex) return 'flex';
     return 'block';
   }};
-  flex-direction: ${({ flex, flexColumn }) => {
-    if (flex) return 'row';
-    if (flexColumn) return 'column';
+  flex-direction: ${({ $flex, $flexColumn }) => {
+    if ($flex) return 'row';
+    if ($flexColumn) return 'column';
     return 'none';
   }};
   flex-wrap: wrap;
@@ -40,15 +40,15 @@ const PortletFooter = styled.div`
     if (flex) return 'flex';
     return 'block';
   }};
-  flex-direction: ${({ flex, flexColumn }) => {
-    if (flex) return 'row';
-    if (flexColumn) return 'column';
+  flex-direction: ${({ $flex, $flexColumn }) => {
+    if ($flex) return 'row';
+    if ($flexColumn) return 'column';
     return 'none';
   }};
   flex-wrap: wrap;
-  justify-content: ${({ center, spaceBetween }) => {
-    if (center) return 'center';
-    if (spaceBetween) return 'space-between';
+  justify-content: ${({ $center, $spaceBetween }) => {
+    if ($center) return 'center';
+    if ($spaceBetween) return 'space-between';
     return 'center';
   }};
 `;
@@ -61,14 +61,14 @@ const PortletView = ({ title, content }) => {
       <PortletHeader>
         <Title>{title}</Title>
       </PortletHeader>
-      <PortletBody flex>{content}</PortletBody>
+      <PortletBody $flex>{content}</PortletBody>
     </Portlet>
   );
 };
 
 PortletView.propTypes = {
   title: PropTypes.string,
-  content: PropTypes.arrayOf(PropTypes.node),
+  content: PropTypes.node,
 };
 
 export default PortletView;

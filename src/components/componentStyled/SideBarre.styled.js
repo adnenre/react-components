@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import color from '../utility';
+import theme from '../../theme';
 import { Link } from 'react-router-dom';
 
 const TogglerContainer = styled.div`
@@ -13,17 +13,17 @@ const TogglerContainer = styled.div`
     transition: all ease-in-out 500ms;
     cursor: pointer;
     > circle {
-      fill: ${color.primary};
+      fill: ${theme.colors.$primary};
     }
     > rect {
-      fill: ${color.default};
+      fill: ${theme.colors.$default};
     }
     :hover {
       > rect {
-        fill: ${color.primary};
+        fill: ${theme.colors.$primary};
       }
       > circle {
-        fill: ${color.default};
+        fill: ${theme.colors.$default};
       }
     }
   }
@@ -39,16 +39,16 @@ const SideBarreContainer = styled.div`
   z-index: 1000;
   width: 250px;
   transition: 0.5s;
-  margin-left: ${({ active }) => (active ? '-250px' : '0px')};
+  margin-left: ${(props) => (props.$active ? '-250px' : '0px')};
 
   @media screen and (max-width: 768px) {
     width: 100px;
-    margin-left: ${({ active }) => (active ? '-100px' : '0px')};
+    margin-left: ${(props) => (props.$active ? '-100px' : '0px')};
   }
 `;
 const SideBarreHeader = styled.div`
   width: inherit;
-  color: white;
+  color: ${theme.colors.$default};
 
   background: #2b95fd;
 `;
@@ -65,7 +65,7 @@ const SideBarreBody = styled.div`
 
   &::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background: ${color.info};
+    background: ${theme.colors.$info};
   }
   overflow-y: auto;
   height: calc(100% - 52px);
@@ -88,14 +88,14 @@ const LinkItem = styled(Link)`
   line-height: 35px;
   padding: 5px 0 5px 15px;
   background: rgba(255, 255, 255, 0.12);
-  color: ${color.black};
+  color: ${theme.colors.$black};
   position: relative;
   cursor: pointer;
   z-index: 0;
   text-decoration: none;
   border-bottom: solid 1px #eee;
   &:hover {
-    color: white;
+    color: ${theme.colors.$default};
   }
   &:before {
     content: '';
@@ -104,7 +104,7 @@ const LinkItem = styled(Link)`
     left: 0;
     width: 5px;
     height: 100%;
-    background: ${color.info};
+    background: ${theme.colors.$info};
     transition: 0.2s;
     z-index: -1;
   }

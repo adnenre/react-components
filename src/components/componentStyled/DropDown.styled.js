@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import color from '../utility';
+import theme from '../../theme';
 
 export const DropDownContainer = styled.div`
   display: flex;
@@ -21,12 +21,13 @@ export const DropDownHeader = styled.div`
   border-bottom: ${({ active }) =>
     active ? 'solid 3px #00b0ff' : 'solid 3px transparent'};
   color: ${({ active }) => (active ? ' #00b0ff' : 'black')};
-  border: solid 1px ${color.primary};
+  border: solid 1px ${theme.colors.$primary};
   border-radius: 5px;
   overflow: hidden;
 
   > div {
-    color: ${({ active }) => (active ? `${color.primary}` : ' #546e7a')};
+    color: ${({ active }) =>
+      active ? `${theme.colors.$primary}` : ' #546e7a'};
   }
 `;
 export const DropDownHeaderContent = styled.div`
@@ -91,16 +92,17 @@ export const DropDownCarretStyled = styled.span`
   justify-content: center;
   align-items: center;
   color: #00b0ff;
-  border-left: solid 0.5px ${color.primary};
+  border-left: solid 0.5px ${theme.colors.$primary};
   > svg {
-    fill: ${({ isOpen }) => (isOpen ? `${color.default}` : `${color.primary}`)};
+    fill: ${({ isOpen }) =>
+      isOpen ? `${theme.colors.$default}` : `${theme.colors.$primary}`};
     transition: all 300ms;
   }
 
   &:hover {
-    background-color: ${color.primary};
+    background-color: ${theme.colors.$primary};
     svg {
-      fill: ${color.default};
+      fill: ${theme.colors.$default};
     }
   }
 `;

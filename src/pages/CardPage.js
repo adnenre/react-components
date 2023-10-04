@@ -13,7 +13,7 @@ const CardPage = () => {
         </PortletHeader>
         <PortletBody>
           <Row>
-            <Col md={4}>
+            <Col $md={4}>
               <Card>
                 <CardHeader>
                   <h3>Card Title</h3>
@@ -22,11 +22,11 @@ const CardPage = () => {
                   Some quick example text to build on the card's content.
                 </CardBody>
                 <CardFooter>
-                  <ButtonOutline primary>Button</ButtonOutline>
+                  <ButtonOutline $primary>Button</ButtonOutline>
                 </CardFooter>
               </Card>
             </Col>
-            <Col md={4}>
+            <Col $md={4}>
               <Card>
                 <CardHeader>
                   <h3>Card Title</h3>
@@ -35,11 +35,11 @@ const CardPage = () => {
                   Some quick example text to build on the card's content.
                 </CardBody>
                 <CardFooter>
-                  <ButtonOutline success>Button</ButtonOutline>
+                  <ButtonOutline $success>Button</ButtonOutline>
                 </CardFooter>
               </Card>
             </Col>
-            <Col md={4}>
+            <Col $md={4}>
               <Card>
                 <CardHeader>
                   <h3>Card Title</h3>
@@ -48,7 +48,7 @@ const CardPage = () => {
                   Some quick example text to build on the card's content.
                 </CardBody>
                 <CardFooter>
-                  <ButtonOutline danger>Button</ButtonOutline>
+                  <ButtonOutline $danger>Button</ButtonOutline>
                 </CardFooter>
               </Card>
             </Col>

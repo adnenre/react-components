@@ -1,19 +1,18 @@
-import React, { Component } from 'react';
 import styled from 'styled-components';
-import color from './utility';
+import theme from '../theme';
 
 const Title = styled.h5`
   margin: 1rem;
   font-size: 1.5rem;
-  color: ${({ primary, info, danger, warning, success, black }) => {
-    if (primary) return color.primary;
-    if (info) return color.info;
-    if (danger) return color.danger;
-    if (warning) return color.warning;
-    if (success) return color.success;
-    if (black) return color.black;
+  color: ${({ $primary, $info, $danger, $warning, $success, $black }) => {
+    if ($primary) return theme.colors.$primary;
+    if ($info) return theme.colors.$$info;
+    if ($danger) return theme.colors.$$danger;
+    if ($warning) return theme.colors.$$warning;
+    if ($success) return theme.colors.$$success;
+    if ($black) return theme.colors.$$black;
 
-    return color.white;
+    return theme.colors.$white;
   }};
 `;
 

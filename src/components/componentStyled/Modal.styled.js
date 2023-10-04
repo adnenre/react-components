@@ -1,10 +1,9 @@
 import styled from 'styled-components';
-import color from '../utility';
+import theme from '../../theme';
 
 const style = {
   primary: `
-      background:${color.primary};
-      color:white !important; 
+     
     `,
 };
 // Define your styled-components for the modal
@@ -26,7 +25,9 @@ const ModalHeader = styled.div`
   padding: 0.5rem;
   justify-content: right;
 
-  ${({ primary }) => style.primary};
+  background: ${({ $primary }) =>
+    $primary ? theme.colors.$primary : theme.colors.$dark};
+  color: white;
 `;
 const ModalBody = styled.div`
   padding: 2rem;

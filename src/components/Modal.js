@@ -17,17 +17,17 @@ const Modal = ({ isOpen, onClose, children }) => {
   return (
     <ModalWrapper>
       <ModalContent>
-        <ModalHeader>
+        <ModalHeader $primary>
           <CloseButton onClick={onClose} />
         </ModalHeader>
         <ModalBody> {children}</ModalBody>
 
         <ModalFooter>
           {/** need to be changed for success handler */}
-          <Button primary onClick={onClose}>
+          <Button $primary onClick={onClose}>
             Accept
           </Button>
-          <Button danger onClick={onClose}>
+          <Button $danger onClick={onClose}>
             Cancel
           </Button>
         </ModalFooter>

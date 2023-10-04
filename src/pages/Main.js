@@ -17,9 +17,10 @@ import ModalPage from './ModalPage';
 import AccordionPage from './AccordionPage';
 import TreePage from './TreePage';
 import CarouselPage from './CarouselPage';
+import TooltipPage from './TooltipPage';
 const Main = ({ active }) => {
   return (
-    <MainContainer active={active}>
+    <MainContainer $active={active}>
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/Inprogress" component={Inprogress} />
@@ -36,6 +37,7 @@ const Main = ({ active }) => {
         <Route path="/ModalPage" component={ModalPage} />
         <Route path="/TreePage" component={TreePage} />
         <Route path="/CarouselPage" component={CarouselPage} />
+        <Route path="/TooltipPage" component={TooltipPage} />
       </Switch>
     </MainContainer>
   );

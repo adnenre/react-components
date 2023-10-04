@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import color from './utility';
+import theme from '../theme';
 const CarouselWrapper = styled.div`
   position: relative;
   width: 100%; /* Use 100% width for responsiveness */
@@ -37,9 +37,9 @@ const SlideText = styled.div`
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-color: ${color.info};
+  background-color: ${theme.colors.$info};
   font-size: 2rem;
-  color: ${color.default};
+  color: ${theme.colors.$default};
 `;
 
 const Button = styled.button`
