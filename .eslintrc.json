@@ -25,7 +25,7 @@
     "import/no-unused-modules": [
       // for impoted module only ?
 
-      "error",
+      "warn",
       { "missingExports": true, "unusedExports": true }
     ]
   },
