@@ -6,9 +6,9 @@ import {
   SideBarreBody,
   List,
   Item,
-  Logo,
   LinkItem,
 } from './components/componentStyled/SideBarre.styled';
+import Logo from './components/Logo';
 
 const routes = [
   { path: '/', routeName: 'Home' },
@@ -31,7 +31,7 @@ const SideBarre = ({ active }) => {
   return (
     <SideBarreContainer $active={active}>
       <SideBarreHeader>
-        <Logo>React Component</Logo>
+        <Logo />
       </SideBarreHeader>
       <SideBarreBody>
         <List>
