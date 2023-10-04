@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import Title from '../components/Title';
-import { Portlet, PortletHeader, PortletBody } from '../components/Portlet';
+import { Title } from '../components/Portlet/Portlet.Styled';
+import {
+  Portlet,
+  PortletHeader,
+  PortletBody,
+} from '../components/Portlet/Portlet.Styled';
 import {
   NavContainer,
   NavMenu,

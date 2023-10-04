@@ -1,13 +1,13 @@
 import React from 'react';
-import Title from '../components/Title';
+import { Title } from '../components/Portlet/Portlet.Styled';
 
-import { Avatar, AvatarImg } from '../components/Avatar';
+import Avatar from '../components/Avatar';
 import {
   Portlet,
   PortletHeader,
   PortletBody,
   PortletFooter,
-} from '../components/Portlet';
+} from '../components/Portlet/Portlet.Styled';
 
 import imgUrl from '../components/data';
 
@@ -36,9 +36,7 @@ const Home = () => {
         <h5>Made by </h5>
 
         <a href="https://adnenre.github.io" area-label="link to author profile">
-          <Avatar $xsmall $round>
-            <AvatarImg src={imgUrl} alt="author" />
-          </Avatar>
+          <Avatar src={imgUrl} alt="author" />
         </a>
       </PortletFooter>
     </Portlet>

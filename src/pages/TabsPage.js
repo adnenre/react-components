@@ -1,4 +1,4 @@
-import Title from '../components/Title';
+import { Title } from '../components/Portlet/Portlet.Styled';
 import React from 'react';
 
 import {
@@ -6,11 +6,12 @@ import {
   PortletHeader,
   PortletBody,
   PortletFooter,
-} from '../components/Portlet';
+} from '../components/Portlet/Portlet.Styled';
 import Tabs from '../components/Tabs';
-import Prism from 'prismjs';
+
 import 'prismjs/themes/prism.css';
 import PrismCode from 'react-prism';
+import Prism from 'prismjs';
 import Toggle from '../components/Toggle';
 const TablePage = () => {
   return (

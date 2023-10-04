@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
-import { MainContainer } from '../components/componentStyled/Main.styled';
+import { MainContainer } from '../components/Main.styled';
 import HomePage from './HomePage';
 import ButtonPage from './ButtonPage';
 import CardPage from './CardPage';
@@ -18,6 +18,7 @@ import AccordionPage from './AccordionPage';
 import TreePage from './TreePage';
 import CarouselPage from './CarouselPage';
 import TooltipPage from './TooltipPage';
+import MasonryPage from './MasonryPage';
 const Main = ({ active }) => {
   return (
     <MainContainer $active={active}>
@@ -38,6 +39,7 @@ const Main = ({ active }) => {
         <Route path="/TreePage" component={TreePage} />
         <Route path="/CarouselPage" component={CarouselPage} />
         <Route path="/TooltipPage" component={TooltipPage} />
+        <Route path="/MasonryPage" component={MasonryPage} />
       </Switch>
     </MainContainer>
   );

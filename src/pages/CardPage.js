@@ -1,9 +1,13 @@
 import React from 'react';
 import { Card, CardHeader, CardBody, CardFooter } from '../components/Card';
-import Title from '../components/Title';
+import { Title } from '../components/Portlet/Portlet.Styled';
 import ButtonOutline from '../components/ButtonOutline';
 import { Container, Row, Col } from '../components/grid';
-import { Portlet, PortletHeader, PortletBody } from '../components/Portlet';
+import {
+  Portlet,
+  PortletHeader,
+  PortletBody,
+} from '../components/Portlet/Portlet.Styled';
 const CardPage = () => {
   return (
     <Container>

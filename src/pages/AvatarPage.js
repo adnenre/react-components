@@ -1,10 +1,11 @@
 import React from 'react';
-import { Avatar, AvatarImg } from '../components/Avatar';
+import Avatar from '../components/Avatar';
 import PortletView from '../components/Portlet';
 import Toggle from '../components/Toggle';
-import Prism from 'prismjs';
+
 import 'prismjs/themes/prism.css';
 import PrismCode from 'react-prism';
+import Prism from 'prismjs';
 
 import imgUrl from '../components/data';
 
@@ -15,21 +16,11 @@ const AvatarPage = () => {
         title="Avatar Component"
         content={
           <>
-            <Avatar $xsmall>
-              <AvatarImg src={imgUrl} alt="image of adnen rebai" />
-            </Avatar>
-            <Avatar $small>
-              <AvatarImg src={imgUrl} alt="image of adnen rebai" />
-            </Avatar>
-            <Avatar $medium>
-              <AvatarImg src={imgUrl} alt="image of adnen rebai" />
-            </Avatar>
-            <Avatar $large>
-              <AvatarImg src={imgUrl} alt="image of adnen rebai" />
-            </Avatar>
-            <Avatar $xlarge>
-              <AvatarImg src={imgUrl} alt="image of adnen rebai" />
-            </Avatar>
+            <Avatar $xsmall src={imgUrl} alt="image of the author" />
+            <Avatar $small src={imgUrl} alt="image of the author" />
+            <Avatar $medium src={imgUrl} alt="image of the author" />
+            <Avatar $large src={imgUrl} alt="image of the author" />
+            <Avatar $xlarge src={imgUrl} alt="image of the author" />
             <br />
           </>
         }
@@ -37,21 +28,11 @@ const AvatarPage = () => {
           <Toggle>
             <PrismCode component="pre" className="language-markup" target>
               {`
-          <Avatar $xsmall>
-              <AvatarImg src="../img.jpg" alt="image description" />
-          </Avatar>
-          <Avatar $small>
-              <AvatarImg src="../img.jpg" alt="image description" />
-          </Avatar>
-          <Avatar $medium>
-              <AvatarImg src="../img.jpg" alt="image description" />
-          </Avatar>
-          <Avatar $large>
-              <AvatarImg src="../img.jpg" alt="image description" />
-          </Avatar>
-          <Avatar $xlarge>
-              <AvatarImg src="../img.jpg" alt="image description" />
-          </Avatar>
+          <Avatar $xsmall src={imgUrl} alt="image of the author" />
+          <Avatar $small src={imgUrl} alt="image of the author" />
+          <Avatar $medium src={imgUrl} alt="image of the author" />
+          <Avatar $large src={imgUrl} alt="image of the author" />
+          <Avatar $xlarge src={imgUrl} alt="image of the author" />
             `}
             </PrismCode>
           </Toggle>
@@ -61,42 +42,22 @@ const AvatarPage = () => {
         title="Avatar Component Rounded"
         content={
           <>
-            <Avatar $round $xsmall>
-              <AvatarImg src={imgUrl} alt="image of the author" />
-            </Avatar>
-            <Avatar $round $small>
-              <AvatarImg src={imgUrl} alt="image of the author" />
-            </Avatar>
-            <Avatar $round $medium>
-              <AvatarImg src={imgUrl} alt="image of the author" />
-            </Avatar>
-            <Avatar $round $large>
-              <AvatarImg src={imgUrl} alt="image of the author" />
-            </Avatar>
-            <Avatar $round $xlarge>
-              <AvatarImg src={imgUrl} alt="image of the author" />
-            </Avatar>
+            <Avatar $round $xsmall src={imgUrl} alt="image of the author" />
+            <Avatar $round $small src={imgUrl} alt="image of the author" />
+            <Avatar $round $medium src={imgUrl} alt="image of the author" />
+            <Avatar $round $large src={imgUrl} alt="image of the author" />
+            <Avatar $round $xlarge src={imgUrl} alt="image of the author" />
           </>
         }
         footer={
           <Toggle>
             <PrismCode component="pre" className="language-markup" target>
               {`
-      <Avatar $round $xsmall>
-          <AvatarImg src="../img.jpg" alt="image description" />
-      </Avatar>
-      <Avatar $round $small>
-          <AvatarImg src="../img.jpg" alt="image description" />
-      </Avatar>
-      <Avatar $round $medium>
-          <AvatarImg src="../img.jpg" alt="image description" />
-      </Avatar>
-      <Avatar $round $large>
-          <AvatarImg src="../img.jpg" alt="image description" />
-      </Avatar>
-      <Avatar $round $xlarge>
-          <AvatarImg src="../img.jpg" alt="image description" />
-      </Avatar>
+      <Avatar $round $xsmall src={imgUrl} alt="image of the author" />
+      <Avatar $round $small src={imgUrl} alt="image of the author" />
+      <Avatar $round $medium src={imgUrl} alt="image of the author" />
+      <Avatar $round $large src={imgUrl} alt="image of the author" />
+      <Avatar $round $xlarge src={imgUrl} alt="image of the author" />
         `}
             </PrismCode>
           </Toggle>

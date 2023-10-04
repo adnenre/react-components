@@ -2,9 +2,10 @@ import React from 'react';
 import Badge from '../components/Badge';
 
 import PortletView from '../components/Portlet';
-import Prism from 'prismjs';
+
 import 'prismjs/themes/prism.css';
 import PrismCode from 'react-prism';
+import Prism from 'prismjs';
 import Toggle from '../components/Toggle';
 
 const BadgePage = () => {

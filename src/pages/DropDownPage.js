@@ -1,4 +1,4 @@
-import Title from '../components/Title';
+import { Title } from '../components/Portlet/Portlet.Styled';
 import React from 'react';
 
 import {
@@ -6,11 +6,12 @@ import {
   PortletHeader,
   PortletBody,
   PortletFooter,
-} from '../components/Portlet';
+} from '../components/Portlet/Portlet.Styled';
 import DropDown from '../components/DropDown';
 
 import 'prismjs/themes/prism.css';
 import PrismCode from 'react-prism';
+import Prism from 'prismjs';
 import Toggle from '../components/Toggle';
 import { Container, Row, Col } from '../components/grid';
 const items = [

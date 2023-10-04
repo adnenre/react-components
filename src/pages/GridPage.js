@@ -1,15 +1,16 @@
 import React from 'react';
 import { Container, Row, Col } from '../components/grid';
-import Title from '../components/Title';
+import { Title } from '../components/Portlet/Portlet.Styled';
 import {
   Portlet,
   PortletHeader,
   PortletBody,
   PortletFooter,
-} from '../components/Portlet';
-import Prism from 'prismjs';
+} from '../components/Portlet/Portlet.Styled';
+
 import 'prismjs/themes/prism.css';
 import PrismCode from 'react-prism';
+import Prism from 'prismjs';
 import Toggle from '../components/Toggle';
 
 const GridPage = () => {

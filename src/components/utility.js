@@ -66,4 +66,15 @@ export const getBorderColor = ({ theme, ...props }) => {
   `;
 };
 
-/** BUTTON CONFIGURATION */
+export const isImageUrl = (url) => {
+  const supportedExtensions = [
+    '.jpg',
+    '.jpeg',
+    '.png',
+    '.gif',
+    '.svg',
+    '.webp',
+  ];
+  const lowercasedUrl = url.toLowerCase();
+  return supportedExtensions.some((ext) => lowercasedUrl.endsWith(ext));
+};

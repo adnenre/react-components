@@ -11,7 +11,7 @@ const TooltipPage = () => {
       content={
         <>
           <Tooltip text="This is a tooltips">
-            <Button primary> Hello </Button>
+            <Button $primary> Hover me ! </Button>
           </Tooltip>
         </>
       }

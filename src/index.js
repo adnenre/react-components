@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+import routes from './routes';
 import { ThemeProvider } from 'styled-components';
 
 import Main from './pages/Main';
-import SideBarre from './SideBarre';
+import SideBarre from './components/SideBarre';
 
 import './styles.css';
 import { BrowserRouter } from 'react-router-dom';
@@ -20,7 +21,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <div className="App">
-          <SideBarre active={isActive} />
+          <SideBarre routes={routes} active={isActive} />
           <Main active={isActive} />
           <Toggler onClick={activateSideBar} />
         </div>

@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes, { object, string } from 'prop-types';
-import Title from '../components/Title';
+import { Title } from '../components/Portlet/Portlet.Styled';
 
 import {
   Portlet,
   PortletHeader,
   PortletBody,
   PortletFooter,
-} from '../components/Portlet';
+} from '../components/Portlet/Portlet.Styled';
 import {
   Table,
   TableHead,
@@ -15,10 +15,11 @@ import {
   TableRow,
   TableCell,
   TableHeadCell,
-} from '../components/Table';
+} from '../components/Table/Table.styled';
 //import Prism from "prismjs";
 import 'prismjs/themes/prism.css';
 import PrismCode from 'react-prism';
+import Prism from 'prismjs';
 import Toggle from '../components/Toggle';
 
 const columns = ['#', 'First Name', 'Last Name', 'email'];
@@ -76,10 +77,8 @@ const rows = [
       { id: 2, name: "Jhone", lastName: "Doe", email: "Jhon_doe" },
       { id: 3, name: "melina", lastName: "Doe", email: "@melina_doe" }
     ];
-     <Table>
-       <TabHead columns={columns} />
-       <TabBody rows={rows} />
-     </Table>
+     <Table columns={columns} rows={rows} />
+     
             `}
           </PrismCode>
         </Toggle>
