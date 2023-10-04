@@ -2,20 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import theme from '../theme';
-
-const ToggleButton = styled.button`
-  padding: 0.5em 1rem;
-  background: white;
-  outline: none;
-  display: block;
-  position: relative;
-  width: 100%;
-  border: none;
-  color: ${theme.colors.$warning};
-  text-align: left;
-  cursor: pointer;
-  transition: 0.3s;
-`;
+import Button from './Button';
 
 const Toggle = ({ children }) => {
   const [active, setActive] = useState(false);
@@ -23,10 +10,12 @@ const Toggle = ({ children }) => {
   const toggle = () => setActive(!active);
 
   return (
-    <ToggleButton onClick={toggle}>
-      {'VIEW CODE'}
+    <>
+      <Button $black onClick={toggle} width={100}>
+        {'VIEW CODE'}
+      </Button>
       {active && children}
-    </ToggleButton>
+    </>
   );
 };
 Toggle.propTypes = {

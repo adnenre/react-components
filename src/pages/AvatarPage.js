@@ -31,9 +31,12 @@ const AvatarPage = () => {
               <AvatarImg src={imgUrl} alt="image of adnen rebai" />
             </Avatar>
             <br />
-            <Toggle>
-              <PrismCode component="pre" className="language-markup" target>
-                {`
+          </>
+        }
+        footer={
+          <Toggle>
+            <PrismCode component="pre" className="language-markup" target>
+              {`
           <Avatar $xsmall>
               <AvatarImg src="../img.jpg" alt="image description" />
           </Avatar>
@@ -50,9 +53,8 @@ const AvatarPage = () => {
               <AvatarImg src="../img.jpg" alt="image description" />
           </Avatar>
             `}
-              </PrismCode>
-            </Toggle>
-          </>
+            </PrismCode>
+          </Toggle>
         }
       />
       <PortletView
@@ -74,29 +76,30 @@ const AvatarPage = () => {
             <Avatar $round $xlarge>
               <AvatarImg src={imgUrl} alt="image of the author" />
             </Avatar>
-            <br />
-            <Toggle>
-              <PrismCode component="pre" className="language-markup" target>
-                {`
-          <Avatar $round $xsmall>
-              <AvatarImg src="../img.jpg" alt="image description" />
-          </Avatar>
-          <Avatar $round $small>
-              <AvatarImg src="../img.jpg" alt="image description" />
-          </Avatar>
-          <Avatar $round $medium>
-              <AvatarImg src="../img.jpg" alt="image description" />
-          </Avatar>
-          <Avatar $round $large>
-              <AvatarImg src="../img.jpg" alt="image description" />
-          </Avatar>
-          <Avatar $round $xlarge>
-              <AvatarImg src="../img.jpg" alt="image description" />
-          </Avatar>
-            `}
-              </PrismCode>
-            </Toggle>
           </>
+        }
+        footer={
+          <Toggle>
+            <PrismCode component="pre" className="language-markup" target>
+              {`
+      <Avatar $round $xsmall>
+          <AvatarImg src="../img.jpg" alt="image description" />
+      </Avatar>
+      <Avatar $round $small>
+          <AvatarImg src="../img.jpg" alt="image description" />
+      </Avatar>
+      <Avatar $round $medium>
+          <AvatarImg src="../img.jpg" alt="image description" />
+      </Avatar>
+      <Avatar $round $large>
+          <AvatarImg src="../img.jpg" alt="image description" />
+      </Avatar>
+      <Avatar $round $xlarge>
+          <AvatarImg src="../img.jpg" alt="image description" />
+      </Avatar>
+        `}
+            </PrismCode>
+          </Toggle>
         }
       />
     </div>

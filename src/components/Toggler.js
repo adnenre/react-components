@@ -13,9 +13,9 @@ const Toggler = ({ onClick }) => {
         onClick={onClick}
       >
         <circle cx="25" cy="25" r="20" fill="#fff" />
-        <rect x="12" y="15" width="25" height="4" rx="3" fill="#fff" />
-        <rect x="12" y="23" width="25" height="4" rx="3" fill="#fff" />
-        <rect x="12" y="31" width="25" height="4" rx="3" fill="#fff" />
+        <rect x="12" y="17" width="25" height="2" rx="3" fill="#fff" />
+        <rect x="12" y="25" width="25" height="2" rx="3" fill="#fff" />
+        <rect x="12" y="32" width="25" height="2" rx="3" fill="#fff" />
       </svg>
     </TogglerContainer>
   );

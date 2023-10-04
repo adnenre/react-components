@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import theme from '../theme';
 
 const Title = styled.h5`
-  margin: 1rem;
   font-size: 1.5rem;
   color: ${({ $primary, $info, $danger, $warning, $success, $black }) => {
     if ($primary) return theme.colors.$primary;

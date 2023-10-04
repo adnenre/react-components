@@ -1,11 +1,6 @@
 import styled from 'styled-components';
 import theme from '../../theme';
 
-const style = {
-  primary: `
-     
-    `,
-};
 // Define your styled-components for the modal
 const ModalWrapper = styled.div`
   position: fixed;

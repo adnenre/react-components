@@ -20,20 +20,21 @@ const BadgePage = () => {
             <Badge $success>success</Badge>
             <Badge $danger>danger</Badge>
             <Badge $black>black</Badge>
-            <br />
-            <Toggle>
-              <PrismCode component="pre" className="language-markup" target>
-                {`
-          <Badge $primary> primary </Badge>
-          <Badge $info>    info    </Badge>
-          <Badge $warning> warning </Badge>
-          <Badge $success> success </Badge>
-          <Badge $danger>  danger  </Badge>
-          <Badge $black>   black   </Badge>
-            `}
-              </PrismCode>
-            </Toggle>
           </>
+        }
+        footer={
+          <Toggle>
+            <PrismCode component="pre" className="language-markup" target>
+              {`
+      <Badge $primary> primary </Badge>
+      <Badge $info>    info    </Badge>
+      <Badge $warning> warning </Badge>
+      <Badge $success> success </Badge>
+      <Badge $danger>  danger  </Badge>
+      <Badge $black>   black   </Badge>
+        `}
+            </PrismCode>
+          </Toggle>
         }
       />
       {/* */}
@@ -60,20 +61,21 @@ const BadgePage = () => {
             <Badge $black $pill>
               black
             </Badge>
-            <br />
-            <Toggle>
-              <PrismCode component="pre" className="language-markup" target>
-                {`
-          <Badge $primary $pill> primary </Badge>
-          <Badge $info $pill>    info    </Badge>
-          <Badge $warning $pill> warning </Badge>
-          <Badge $success $pill> success </Badge>
-          <Badge $danger $pill>  danger  </Badge>
-          <Badge $black $pill>   black   </Badge>
-            `}
-              </PrismCode>
-            </Toggle>
           </>
+        }
+        footer={
+          <Toggle>
+            <PrismCode component="pre" className="language-markup" target>
+              {`
+      <Badge $primary $pill> primary </Badge>
+      <Badge $info $pill>    info    </Badge>
+      <Badge $warning $pill> warning </Badge>
+      <Badge $success $pill> success </Badge>
+      <Badge $danger $pill>  danger  </Badge>
+      <Badge $black $pill>   black   </Badge>
+        `}
+            </PrismCode>
+          </Toggle>
         }
       />
     </>

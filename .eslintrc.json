@@ -39,7 +39,8 @@
     {
       "files": ["**/*.js"],
       "rules": {
-        "react/no-unknown-property": ["off", { "ignore": ["aria-label"] }]
+        "react/no-unknown-property": ["off", { "ignore": ["aria-label"] }],
+        "no-unused-vars": ["off", { "ignore": ["Prism"] }]
       }
     }
   ]

@@ -144,6 +144,74 @@ const GridPage = () => {
             </Col>
           </Row>
         </PortletBody>
+        <PortletFooter>
+          <Toggle>
+            <PrismCode component="pre" className="language-markup" target>
+              {`
+               <Row>
+                  <Col $col={1}  $demo>   1  </Col>
+                  <Col $col={10} $demo>  10  </Col>
+                  <Col $col={1}  $demo>   1  </Col>
+              </Row>
+              <Row>
+                  <Col $col={2}  $demo>   2  </Col>
+                  <Col $col={2}  $demo>   2  </Col>
+                  <Col $col={2}  $demo>   2  </Col>
+                  <Col $col={2}  $demo>   2  </Col>
+                  <Col $col={2}  $demo>   2  </Col>
+                  <Col $col={2}  $demo>   2  </Col>
+              </Row>
+              <Row>
+                  <Col $col={3}  $demo>   3  </Col>
+                  <Col $col={3}  $demo>   3  </Col>
+                  <Col $col={3}  $demo>   3  </Col>
+                  <Col $col={3}  $demo>   3  </Col>
+              </Row>
+              <Row>
+                  <Col $col={4}  $demo>   4  </Col>
+                  <Col $col={4}  $demo>   4  </Col>
+                  <Col $col={4}  $demo>   4  </Col>
+              </Row>
+              <Row>
+                  <Col $col={5}  $demo>   5  </Col>
+                  <Col $col={2}  $demo>   2  </Col>
+                  <Col $col={5}  $demo>   5  </Col>
+              </Row>
+            
+              <Row>
+                  <Col $col={6}  $demo>   6  </Col>
+                  <Col $col={6}  $demo>   6  </Col>
+              </Row>
+              <Row>
+                  <Col $col={7}  $demo>   7  </Col>
+                  <Col $col={5}  $demo>   5  </Col>
+              </Row>
+              <Row>
+                  <Col $col={8}  $demo>   8  </Col>
+                  <Col $col={4}  $demo>   4  </Col>
+              </Row>
+              <Row>
+                  <Col $col={9}  $demo>   9  </Col>
+                  <Col $col={3}  $demo>   3  </Col>
+              </Row>
+              <Row>
+                  <Col $col={10}  $demo>   10  </Col>
+                  <Col $col={2}  $demo>     2  </Col>
+              </Row>
+              <Row>
+                  <Col $col={11}  $demo>   11  </Col>
+                  <Col $col={1}  $demo>     1  </Col>
+              </Row>
+              <Row>
+                  <Col $col={12}  $demo>   12  </Col>
+              </Row>
+             
+             
+        
+            `}
+            </PrismCode>
+          </Toggle>
+        </PortletFooter>
       </Portlet>
 
       <Portlet>
@@ -177,6 +245,7 @@ const GridPage = () => {
             </Col>
           </Row>
         </PortletBody>
+
         <PortletFooter>
           <Toggle>
             <PrismCode component="pre" className="language-markup" target>

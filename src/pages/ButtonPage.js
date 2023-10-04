@@ -2,7 +2,12 @@ import React from 'react';
 import Button from '../components/Button';
 import ButtonOutline from '../components/ButtonOutline';
 import Title from '../components/Title';
-import { Portlet, PortletHeader, PortletBody } from '../components/Portlet';
+import {
+  Portlet,
+  PortletHeader,
+  PortletBody,
+  PortletFooter,
+} from '../components/Portlet';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
 import PrismCode from 'react-prism';
@@ -36,8 +41,8 @@ const ButtonPage = () => {
               <Button $black>black</Button>
             </Col>
           </Row>
-
-          <br />
+        </PortletBody>
+        <PortletFooter>
           <Toggle>
             <PrismCode component="pre" className="language-markup" target>
               {`
@@ -50,7 +55,7 @@ const ButtonPage = () => {
             `}
             </PrismCode>
           </Toggle>
-        </PortletBody>
+        </PortletFooter>
       </Portlet>
 
       <Portlet>
@@ -102,7 +107,8 @@ const ButtonPage = () => {
               </Button>
             </Col>
           </Row>
-          <br />
+        </PortletBody>
+        <PortletFooter>
           <Toggle>
             <PrismCode component="pre" className="language-markup">
               {`
@@ -116,7 +122,7 @@ const ButtonPage = () => {
             `}
             </PrismCode>
           </Toggle>
-        </PortletBody>
+        </PortletFooter>
       </Portlet>
 
       <Portlet>
@@ -154,6 +160,8 @@ const ButtonPage = () => {
               <ButtonOutline $black>black</ButtonOutline>
             </Col>
           </Row>
+        </PortletBody>
+        <PortletFooter>
           <Toggle>
             <PrismCode component="pre" className="language-markup">
               {`
@@ -166,7 +174,7 @@ const ButtonPage = () => {
             `}
             </PrismCode>
           </Toggle>
-        </PortletBody>
+        </PortletFooter>
       </Portlet>
 
       <Portlet>
@@ -219,6 +227,8 @@ const ButtonPage = () => {
               </ButtonOutline>
             </Col>
           </Row>
+        </PortletBody>
+        <PortletFooter>
           <Toggle>
             <PrismCode component="pre" className="language-markup">
               {`
@@ -231,7 +241,7 @@ const ButtonPage = () => {
             `}
             </PrismCode>
           </Toggle>
-        </PortletBody>
+        </PortletFooter>
       </Portlet>
     </Container>
   );

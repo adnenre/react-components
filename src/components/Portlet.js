@@ -14,11 +14,16 @@ const Portlet = styled.div`
   box-shadow: 0 0 20px 1px #bec0c2;
   border-radius: 4px;
   margin-bottom: 1rem;
+  overflow: auto;
 `;
 const PortletHeader = styled.div`
   border-bottom: solid 1px #eee;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   ${() => style.primary};
+  min-height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 const PortletBody = styled.div`
   padding: 2rem;
@@ -34,34 +39,36 @@ const PortletBody = styled.div`
   flex-wrap: wrap;
 `;
 const PortletFooter = styled.div`
-  padding: 1rem;
+  padding: 0.5rem 2rem;
   border-top: solid 1px #eee;
   display: ${({ flex }) => {
     if (flex) return 'flex';
-    return 'block';
+    return 'flex';
   }};
   flex-direction: ${({ $flex, $flexColumn }) => {
     if ($flex) return 'row';
     if ($flexColumn) return 'column';
-    return 'none';
+    return 'column';
   }};
   flex-wrap: wrap;
   justify-content: ${({ $center, $spaceBetween }) => {
     if ($center) return 'center';
     if ($spaceBetween) return 'space-between';
-    return 'center';
+    return 'left';
   }};
+  overflow: auto;
 `;
 
 export { Portlet, PortletHeader, PortletBody, PortletFooter };
 
-const PortletView = ({ title, content }) => {
+const PortletView = ({ title, content, footer }) => {
   return (
     <Portlet>
       <PortletHeader>
         <Title>{title}</Title>
       </PortletHeader>
       <PortletBody $flex>{content}</PortletBody>
+      <PortletFooter>{footer}</PortletFooter>
     </Portlet>
   );
 };
@@ -69,6 +76,7 @@ const PortletView = ({ title, content }) => {
 PortletView.propTypes = {
   title: PropTypes.string,
   content: PropTypes.node,
+  footer: PropTypes.node,
 };
 
 export default PortletView;

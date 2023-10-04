@@ -12,6 +12,7 @@ const TogglerContainer = styled.div`
     right: 20px;
     transition: all ease-in-out 500ms;
     cursor: pointer;
+
     > circle {
       fill: ${theme.colors.$primary};
     }
@@ -44,19 +45,18 @@ const SideBarreContainer = styled.div`
   @media screen and (max-width: 768px) {
     width: 100px;
     margin-left: ${(props) => (props.$active ? '-100px' : '0px')};
+    box-shadow: none;
   }
 `;
 const SideBarreHeader = styled.div`
   width: inherit;
   color: ${theme.colors.$default};
-
+  min-height: 5rem;
   background: #2b95fd;
+  display: flex;
+  justify-content: center;
 `;
 
-const Logo = styled.div`
-  padding: 1rem;
-  font-size: 1rem;
-`;
 const SideBarreBody = styled.div`
   &::-webkit-scrollbar {
     width: 2px;
@@ -86,7 +86,7 @@ const Item = styled.li`
 const LinkItem = styled(Link)`
   display: block;
   line-height: 35px;
-  padding: 5px 0 5px 15px;
+  padding: 0 5px;
   background: rgba(255, 255, 255, 0.12);
   color: ${theme.colors.$black};
   position: relative;
@@ -101,8 +101,8 @@ const LinkItem = styled(Link)`
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
-    width: 5px;
+    left: 0px;
+    width: 2px;
     height: 100%;
     background: ${theme.colors.$info};
     transition: 0.2s;
@@ -122,5 +122,4 @@ export {
   LinkItem,
   List,
   Item,
-  Logo,
 };

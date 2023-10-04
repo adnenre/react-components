@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Title from '../components/Title';
 
 import { Avatar, AvatarImg } from '../components/Avatar';
