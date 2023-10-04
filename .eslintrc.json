@@ -35,6 +35,12 @@
       "rules": {
         "import/no-unused-modules": "off" // Turn off the rule for this file
       }
+    },
+    {
+      "files": ["**/*.js"],
+      "rules": {
+        "react/no-unknown-property": ["error", { "ignore": ["aria-label"] }]
+      }
     }
   ]
 }
