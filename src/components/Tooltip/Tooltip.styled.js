@@ -13,6 +13,7 @@ export const TooltipText = styled.div`
   background-color: #333;
   color: #fff;
   padding: 0.5rem;
+  font-size: 0.8rem;
 
   white-space: nowrap;
   z-index: 1;

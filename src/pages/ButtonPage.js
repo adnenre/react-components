@@ -14,6 +14,7 @@ import PrismCode from 'react-prism';
 import Prism from 'prismjs';
 import Toggle from '../components/Toggle';
 import { Container, Row, Col } from '../components/grid';
+import Tooltip from '../components/Tooltip';
 const ButtonPage = () => {
   return (
     <Container>
@@ -24,22 +25,34 @@ const ButtonPage = () => {
         <PortletBody>
           <Row>
             <Col $sm={2}>
-              <Button $primary> primary</Button>
+              <Tooltip text="Hello i m a primary button">
+                <Button $primary> primary</Button>
+              </Tooltip>
             </Col>
             <Col $sm={2}>
-              <Button $info>info</Button>
+              <Tooltip text="Hello i m an info button">
+                <Button $info>info</Button>
+              </Tooltip>
             </Col>
             <Col $sm={2}>
-              <Button $warning>warning</Button>
+              <Tooltip text="Hello i m a warning button">
+                <Button $warning>warning</Button>
+              </Tooltip>
             </Col>
             <Col $sm={2}>
-              <Button $success>success</Button>
+              <Tooltip text="Hello i m a success button">
+                <Button $success>success</Button>
+              </Tooltip>
             </Col>
             <Col $sm={2}>
-              <Button $danger>danger</Button>
+              <Tooltip text="Hello i m an danger button">
+                <Button $danger>danger</Button>
+              </Tooltip>
             </Col>
             <Col $sm={2}>
-              <Button $black>black</Button>
+              <Tooltip text="Hello i m an black button">
+                <Button $black>black</Button>
+              </Tooltip>
             </Col>
           </Row>
         </PortletBody>
