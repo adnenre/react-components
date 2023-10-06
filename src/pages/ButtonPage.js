@@ -25,7 +25,7 @@ const ButtonPage = () => {
         <PortletBody>
           <Row>
             <Col $sm={2}>
-              <Tooltip text="Hello i m a primary button">
+              <Tooltip text="Hello i m a primary button" $top>
                 <Button $primary> primary</Button>
               </Tooltip>
             </Col>
@@ -35,12 +35,12 @@ const ButtonPage = () => {
               </Tooltip>
             </Col>
             <Col $sm={2}>
-              <Tooltip text="Hello i m a warning button">
+              <Tooltip text="Hello i m a warning button" $top>
                 <Button $warning>warning</Button>
               </Tooltip>
             </Col>
             <Col $sm={2}>
-              <Tooltip text="Hello i m a success button">
+              <Tooltip text="Hello i m a success button" $top>
                 <Button $success>success</Button>
               </Tooltip>
             </Col>

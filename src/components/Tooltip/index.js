@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { TooltipContainer, TooltipText } from './Tooltip.styled';
 import PropTypes from 'prop-types';
 
-const Tooltip = ({ text, children }) => {
+const Tooltip = ({ text, children, ...rest }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -19,7 +19,9 @@ const Tooltip = ({ text, children }) => {
       onMouseLeave={handleMouseLeave}
     >
       {children}
-      <TooltipText $isHovered={isHovered}>{text}</TooltipText>
+      <TooltipText $isHovered={isHovered} {...rest}>
+        {text}
+      </TooltipText>
     </TooltipContainer>
   );
 };
