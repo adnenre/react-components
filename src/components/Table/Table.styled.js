@@ -24,6 +24,7 @@ const TableHeadCell = styled.th`
   text-align: center;
   border: solid 1px ${theme.colors.$primary};
   width: 50px;
+  user-select: none;
 `;
 const TableBody = styled.tbody`
   border: solid 1px ${theme.colors.$primary};

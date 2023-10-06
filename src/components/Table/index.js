@@ -54,6 +54,7 @@ const ResizableTable = ({ children }) => {
   const colsRef = useRef([]);
 
   const createResizeDiv = () => {
+    const tableHight = tableRef.current.offsetHeight;
     const resizeDiv = document.createElement('div');
     resizeDiv.style.top = 0;
     resizeDiv.style.right = '-2px';
@@ -61,7 +62,7 @@ const ResizableTable = ({ children }) => {
     resizeDiv.style.position = 'absolute';
     resizeDiv.style.cursor = 'col-resize';
     resizeDiv.style.userSelect = 'none';
-    resizeDiv.style.height = '100%';
+    resizeDiv.style.height = tableHight + 'px';
     return resizeDiv;
   };
 
@@ -120,7 +121,7 @@ const ResizableTable = ({ children }) => {
     };
 
     const handleMouseOver = (e) => {
-      e.target.style.borderRight = '4px solid #0000ff';
+      e.target.style.borderRight = '4px solid #07a';
     };
 
     const handleMouseOut = (e) => {
