@@ -4,6 +4,11 @@ const theme = {
     md: '6px',
     lg: '10px',
   },
+  borderRadius: {
+    $pill: '20px',
+    $rounded: '4px',
+    $default: '0px',
+  },
   colors: {
     $default: '#ffffff',
     $primary: '#2b95fd',
@@ -13,6 +18,8 @@ const theme = {
     $warning: '#f0ad4e',
     $danger: '#d9534f',
     $black: '#434A54',
+    $gray: '#9ca3af',
+    $grayLight: '#f3f4f6',
   },
 };
 

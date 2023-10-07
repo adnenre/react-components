@@ -14,7 +14,7 @@ const PortletView = ({ title, content, footer }) => {
       <PortletHeader>
         <Title>{title}</Title>
       </PortletHeader>
-      <PortletBody $flex>{content}</PortletBody>
+      <PortletBody>{content}</PortletBody>
       <PortletFooter>{footer}</PortletFooter>
     </Portlet>
   );
