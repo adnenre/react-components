@@ -16,7 +16,7 @@ const ModalWrapper = styled.div`
 `;
 const ModalHeader = styled.div`
   display: flex;
-  border-bottom: solid 1px #eee;
+  border-bottom: solid 1px ${theme.colors.$grayLight};
   padding: 0.5rem;
   justify-content: right;
 
@@ -46,7 +46,7 @@ const ModalContent = styled.div`
 const ModalFooter = styled.div`
   display: flex;
   padding: 0.5rem;
-  border-top: solid 1px #eee;
+  border-top: solid 1px ${theme.colors.$grayLight};
 
   flex-direction: ${({ flex, flexColumn }) => {
     if (flex) return 'row';

@@ -66,7 +66,7 @@ const LinkItem = styled(Link)`
   cursor: pointer;
   z-index: 0;
   text-decoration: none;
-  border-bottom: solid 1px #eee;
+  border-bottom: solid 1px ${theme.colors.$grayLight};
   &:hover {
     color: ${theme.colors.$default};
   }

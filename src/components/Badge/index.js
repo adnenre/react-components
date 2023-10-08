@@ -14,7 +14,7 @@ const Badge = styled.span`
   white-space: nowrap;
   text-align: center;
   margin: 0.2rem;
-  background-color: #eee;
+  background-color: ${theme.colors.$grayLight};
 
   ${getBgColor}
   border-radius : ${(props) => (props.$pill ? `10px` : '0')};

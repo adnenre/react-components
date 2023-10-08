@@ -75,7 +75,7 @@ export const DropDownItem = styled.li`
     $active || selected ? '#00b0ff' : 'none'};
 
   :not(:last-child) {
-    border-bottom: solid 0.5px #eee;
+    border-bottom: solid 0.5px ${theme.colors.$grayLight};
   }
   white-space: nowrap;
   &:hover {

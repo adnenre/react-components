@@ -7,7 +7,7 @@ const Todo = styled.div`
   justify-content: center;
   width: 50%;
   margin: auto;
-  border: solid 1px #eee;
+  border: solid 1px ${theme.colors.$grayLight};
 `;
 const TodoName = styled.div`
   padding: 0 0.5rem;
