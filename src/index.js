@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { StrictMode, useState } from 'react';
 import ReactDOM from 'react-dom';
 import routes from './routes';
 import { ThemeProvider } from 'styled-components';
@@ -18,15 +18,17 @@ const App = () => {
     setActive(!isActive);
   };
   return (
-    <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <div className="App">
-          <SideBarre routes={routes} active={isActive} />
-          <Main active={isActive} />
-          <Toggler onClick={activateSideBar} />
-        </div>
-      </BrowserRouter>
-    </ThemeProvider>
+    <StrictMode>
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
+          <div className="App">
+            <SideBarre routes={routes} active={isActive} />
+            <Main active={isActive} />
+            <Toggler onClick={activateSideBar} />
+          </div>
+        </BrowserRouter>
+      </ThemeProvider>
+    </StrictMode>
   );
 };
 
