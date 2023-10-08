@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardHeader, CardBody, CardFooter } from '../components/Card';
+import Card from '../components/Card';
 import { Title } from '../components/Portlet/Portlet.Styled';
 import Button from '../components/Button';
 import { Container, Row, Col } from '../components/grid';
@@ -18,43 +18,31 @@ const CardPage = () => {
         <PortletBody>
           <Row>
             <Col $md={4}>
-              <Card>
-                <CardHeader>
-                  <h3>Card Title</h3>
-                </CardHeader>
-                <CardBody>
-                  Some quick example text to build on the card's content.
-                </CardBody>
-                <CardFooter>
-                  <Button $primary>Button</Button>
-                </CardFooter>
-              </Card>
+              <Card
+                header={<h3>Card Title</h3>}
+                body={
+                  " Some quick example text to build on the card's content."
+                }
+                footer={<Button $primary>Button</Button>}
+              />
             </Col>
             <Col $md={4}>
-              <Card>
-                <CardHeader>
-                  <h3>Card Title</h3>
-                </CardHeader>
-                <CardBody>
-                  Some quick example text to build on the card's content.
-                </CardBody>
-                <CardFooter>
-                  <Button $success>Button</Button>
-                </CardFooter>
-              </Card>
+              <Card
+                header={<h3>Card Title</h3>}
+                body={
+                  " Some quick example text to build on the card's content."
+                }
+                footer={<Button $success>Button</Button>}
+              />
             </Col>
             <Col $md={4}>
-              <Card>
-                <CardHeader>
-                  <h3>Card Title</h3>
-                </CardHeader>
-                <CardBody>
-                  Some quick example text to build on the card's content.
-                </CardBody>
-                <CardFooter>
-                  <Button $danger>Button</Button>
-                </CardFooter>
-              </Card>
+              <Card
+                header={<h3>Card Title</h3>}
+                body={
+                  " Some quick example text to build on the card's content."
+                }
+                footer={<Button $danger>Button</Button>}
+              />
             </Col>
           </Row>
         </PortletBody>
