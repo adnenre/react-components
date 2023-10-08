@@ -37,7 +37,7 @@ jobs:
 
       # Format code
       - name: Format Code
-        run: npm format
+        run: npm run format
       # Deploy
       - name: Deploy
-        run: npm deploy
+        run: npm run deploy
