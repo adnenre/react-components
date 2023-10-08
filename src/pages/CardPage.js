@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardHeader, CardBody, CardFooter } from '../components/Card';
 import { Title } from '../components/Portlet/Portlet.Styled';
-import ButtonOutline from '../components/ButtonOutline';
+import Button from '../components/Button';
 import { Container, Row, Col } from '../components/grid';
 import {
   Portlet,
@@ -26,7 +26,7 @@ const CardPage = () => {
                   Some quick example text to build on the card's content.
                 </CardBody>
                 <CardFooter>
-                  <ButtonOutline $primary>Button</ButtonOutline>
+                  <Button $primary>Button</Button>
                 </CardFooter>
               </Card>
             </Col>
@@ -39,7 +39,7 @@ const CardPage = () => {
                   Some quick example text to build on the card's content.
                 </CardBody>
                 <CardFooter>
-                  <ButtonOutline $success>Button</ButtonOutline>
+                  <Button $success>Button</Button>
                 </CardFooter>
               </Card>
             </Col>
@@ -52,7 +52,7 @@ const CardPage = () => {
                   Some quick example text to build on the card's content.
                 </CardBody>
                 <CardFooter>
-                  <ButtonOutline $danger>Button</ButtonOutline>
+                  <Button $danger>Button</Button>
                 </CardFooter>
               </Card>
             </Col>
