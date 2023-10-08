@@ -8,19 +8,33 @@ import PrismCode from 'react-prism';
 import Prism from 'prismjs';
 
 import imgUrl from '../components/data';
+import { Container, Row, Col } from '../components/grid';
 
 const AvatarPage = () => {
   return (
-    <div>
+    <Container>
       <PortletView
         title="Avatar Component"
         content={
           <>
-            <Avatar $xsmall src={imgUrl} alt="image of the author" />
-            <Avatar $small src={imgUrl} alt="image of the author" />
-            <Avatar $medium src={imgUrl} alt="image of the author" />
-            <Avatar $large src={imgUrl} alt="image of the author" />
-            <Avatar $xlarge src={imgUrl} alt="image of the author" />
+            <Row>
+              <Col md={2}>
+                <Avatar $xsmall src={imgUrl} alt="image of the author" />
+              </Col>
+              <Col md={2}>
+                <Avatar $small src={imgUrl} alt="image of the author" />
+              </Col>
+              <Col md={2}>
+                <Avatar $medium src={imgUrl} alt="image of the author" />
+              </Col>
+              <Col md={2}>
+                <Avatar $large src={imgUrl} alt="image of the author" />
+              </Col>
+              <Col md={2}>
+                <Avatar $xlarge src={imgUrl} alt="image of the author" />
+              </Col>
+            </Row>
+
             <br />
           </>
         }
@@ -63,7 +77,7 @@ const AvatarPage = () => {
           </Toggle>
         }
       />
-    </div>
+    </Container>
   );
 };
 
