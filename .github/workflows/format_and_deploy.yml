@@ -26,10 +26,10 @@ jobs:
       - uses: actions/checkout@v3
 
       # Setup node.js
-      - name: setup Node.js
-        uses: actions/setup-node@v2
+      - name: setup Node.js 16.x
+        uses: actions/setup-node@v3.7.0
         with:
-          node-version: 16
+          node-version: 16.x
 
       # Install dependency
       - name: Install dependency
