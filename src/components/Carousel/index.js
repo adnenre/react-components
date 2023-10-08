@@ -29,6 +29,7 @@ const Carousel = ({ slides }) => {
   useEffect(() => {
     const intervalId = setInterval(nextSlide, 3000);
     return () => clearInterval(intervalId);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

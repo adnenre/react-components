@@ -145,6 +145,7 @@ const ResizableTable = ({ children }) => {
       }
     }
     return () => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       colsRef.current.forEach((div) => {
         div.removeEventListener('mousedown', handleResizeStart);
         div.removeEventListener('mouseover', handleMouseOver);
