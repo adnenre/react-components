@@ -1,5 +1,5 @@
 import React, { StrictMode, useState } from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import routes from './routes';
 import { ThemeProvider } from 'styled-components';
 
@@ -33,4 +33,4 @@ const App = () => {
 };
 
 const rootElement = document.getElementById('root');
-ReactDOM.render(<App />, rootElement);
+createRoot(rootElement).render(<App />);
