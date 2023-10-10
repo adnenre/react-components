@@ -1,4 +1,8 @@
 const theme = {
+  width: {
+    full: '100%',
+    fitContent: 'fit-content',
+  },
   radius: {
     sm: '4px',
     md: '6px',
@@ -20,6 +24,10 @@ const theme = {
     $black: '#434A54',
     $gray: '#9ca3af',
     $grayLight: '#f3f4f6',
+  },
+  cursor: {
+    notAllowed: 'not-allowed',
+    default: 'pointer',
   },
 };
 
