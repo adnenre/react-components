@@ -47,25 +47,6 @@ export const getHoverEffect = ({ theme, ...props }) => {
   `;
 };
 
-export const getBorderColor = ({ theme, ...props }) => {
-  const colorProps = Object.keys(theme.colors);
-
-  for (const prop of colorProps) {
-    if (props[prop]) {
-      const color = theme.colors[prop];
-      return css`
-        border: solid 1px ${color};
-      `;
-    }
-  }
-
-  // If none of the color props are present, use the default color
-  const defaultColor = theme.colors.$default;
-  return css`
-    border: solid 1px ${defaultColor};
-  `;
-};
-
 export const isImageUrl = (url) => {
   const supportedExtensions = [
     '.jpg',
