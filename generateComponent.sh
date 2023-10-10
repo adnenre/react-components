@@ -26,8 +26,10 @@ cd "$path/$folder_name"
 # Create two files with parts of the folder name
 file1="${folder_name}.Styled.js"
 file2="index.js"
+file3="${folder_name}.spec.js"
 touch "$file1"
 touch "$file2"
+touch "$file3"
 
 # Optional: Display a message indicating the folder and files have been created
-echo "Folder '$folder_name' created in '$path' with '$file1' and '$file2' inside."
+echo "Folder '$folder_name' created in '$path' with '$file1' , '$file2' and '$file3' inside."
