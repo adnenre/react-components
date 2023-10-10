@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { getBgColor, getBorderColor, getHoverEffect } from '../utility';
 import theme from '../../theme';
 
 const border = 'solid 1px ';
@@ -72,10 +71,11 @@ const SButton = styled.button`
 
     return theme.colors.$default;
   }};
+
   border-radius: ${({ $pill, $rounded }) => {
     if ($pill) return theme.borderRadius.$pill;
     if ($rounded) return theme.borderRadius.$rounded;
-    return theme.borderRadius$default;
+    return theme.borderRadius.$default;
   }};
   &::before {
     content: '';
@@ -144,10 +144,7 @@ const SButton = styled.button`
       color : ${theme.colors.$gray};
       background : ${theme.colors.$grayLight};
       border : solid 1px ${theme.colors.$gray};
-      
       &:hover{
-       
-      
        color : ${theme.colors.$gray};
       }
       `;
