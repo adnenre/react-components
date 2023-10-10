@@ -54,6 +54,10 @@ jobs:
       - name: Format Code
         run: npm run format
 
+        # test code (unit test)
+      - name: Format Code
+        run: npm run test
+
       # Deploy
       - name: Deploy
         run: npm run gh-deploy
