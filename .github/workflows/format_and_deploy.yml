@@ -56,6 +56,6 @@ jobs:
       - name: Github page deployment
         run: |
           git remote set-url origin https://git:${DEPLOYMENT_TOKEN}@github.com/adnenre/react-components.git
-          npm run gh-deploy -u "github-actions-bot <support+actions@github.com>"
+          npm run gh-deploy
         env:
           DEPLOYMENT_TOKEN: ${{ secrets.DEPLOYMENT_TOKEN }}
