@@ -54,8 +54,8 @@ jobs:
       - name: Format Code
         run: npm run format
 
-        # test code (unit test)
-      - name: Format Code
+      # test code (unit test)
+      - name: Test Code
         run: npm run test
 
       # Deploy
