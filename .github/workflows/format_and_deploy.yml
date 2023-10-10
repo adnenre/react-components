@@ -48,7 +48,7 @@ jobs:
 
       # Install dependency
       - name: Install dependency
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
       # Format code
       - name: Format Code
