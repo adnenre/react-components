@@ -26,7 +26,7 @@
     "eject": "react-scripts eject",
     "format": "npx prettier --write .",
     "predeploy": "npm run build",
-    "gh-deploy": "gh-pages -d build",
+    "gh-deploy": "gh-pages -d ",
     "new-component": "generateComponent.sh"
   },
   "browserslist": {
