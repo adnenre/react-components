@@ -56,7 +56,7 @@ jobs:
       - name: Github page deployment  🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: build
+          folder: .
           clean: true
           clean-exclude: |
             special-file.txt
