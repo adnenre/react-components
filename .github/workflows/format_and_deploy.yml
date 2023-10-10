@@ -34,12 +34,6 @@ jobs:
           git config --global user.name "Adnen Rebai" 
           git config --global user.email "adnen.rebai@mail.com"
 
-      # SHOW COMMIT AUTHOR AND MESSAGE
-      - name: Show Commit Author
-        run: |
-          echo "Commit Author: ${{ env.CI_COMMIT_AUTHOR }}"
-          echo "Commit Message: ${{ env.CI_COMMIT_MESSAEG }}"
-
       # Setup node.js
       - name: setup Node.js 16.x
         uses: actions/setup-node@v3.7.0
@@ -59,5 +53,9 @@ jobs:
         run: npm run test
 
       # Deploy
-      - name: Deploy
-        run: npm run gh-deploy
+      - name: Github page deployment
+        run: |
+          git remote set-url origin https://git:${DEPLOYMENT_TOKEN}@github.com/adnenre/react-components.git
+          npm run gh-deploy -u "github-actions-bot <support+actions@github.com>"
+        env:
+          DEPLOYMENT_TOKEN: ${{ secrets.DEPLOYMENT_TOKEN }}
