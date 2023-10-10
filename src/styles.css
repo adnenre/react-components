@@ -1,0 +1,24 @@
+html {
+  font-size: 16px;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #eee;
+}
+body::-webkit-scrollbar {
+  width: 4px;
+  background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #2b95fd;
+}
