@@ -53,9 +53,12 @@ jobs:
         run: npm run test
 
       # Deploy
-      - name: Github page deployment
-        run: |
-          git remote set-url origin https://git:${DEPLOYMENT_TOKEN}@github.com/adnenre/react-components.git
-          npm run gh-deploy
-        env:
-          DEPLOYMENT_TOKEN: ${{ secrets.DEPLOYMENT_TOKEN }}
+      - name: Github page deployment  🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
+          clean: true
+          clean-exclude: |
+            special-file.txt
+            some/*.txt
+          ssh-key: ${{ secrets.DEPLOYMENT_TOKEN }}
