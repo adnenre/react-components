@@ -18,32 +18,20 @@ const BadgePage = () => {
           <>
             <Container>
               <Row>
-                <Badge $primary> primary</Badge>
-                <Badge $info>info</Badge>
-                <Badge $warning>warning</Badge>
-                <Badge $success>success</Badge>
-                <Badge $danger>danger</Badge>
-                <Badge $black>black</Badge>
+                <Badge $primary />
+                <Badge $info />
+                <Badge $warning />
+                <Badge $success />
+                <Badge $danger />
+                <Badge $black />
               </Row>
               <Row>
-                <Badge $outline $primary>
-                  primary
-                </Badge>
-                <Badge $outline $info>
-                  info
-                </Badge>
-                <Badge $outline $warning>
-                  warning
-                </Badge>
-                <Badge $outline $success>
-                  success
-                </Badge>
-                <Badge $outline $danger>
-                  danger
-                </Badge>
-                <Badge $outline $black>
-                  black
-                </Badge>
+                <Badge $outline $primary />
+                <Badge $outline $info />
+                <Badge $outline $warning />
+                <Badge $outline $success />
+                <Badge $outline $danger />
+                <Badge $outline $black />
               </Row>
             </Container>
           </>
@@ -52,19 +40,19 @@ const BadgePage = () => {
           <Toggle>
             <PrismCode component="pre" className="language-markup" target>
               {`
-      <Badge $primary> primary </Badge>
-      <Badge $info>    info    </Badge>
-      <Badge $warning> warning </Badge>
-      <Badge $success> success </Badge>
-      <Badge $danger>  danger  </Badge>
-      <Badge $black>   black   </Badge>
-
-      <Badge $outline $primary> primary </Badge>
-      <Badge $outline $info>    info    </Badge>
-      <Badge $outline $warning> warning </Badge>
-      <Badge $outline $success> success </Badge>
-      <Badge $outline $danger>  danger  </Badge>
-      <Badge $outline $black>   black   </Badge>
+       <Badge $primary />
+       <Badge $info />
+       <Badge $warning />
+       <Badge $success />
+       <Badge $danger />
+       <Badge $black />
+    
+       <Badge $outline $primary />
+       <Badge $outline $info />
+       <Badge $outline $warning />
+       <Badge $outline $success />
+       <Badge $outline $danger />
+       <Badge $outline $black />
         `}
             </PrismCode>
           </Toggle>
@@ -78,45 +66,30 @@ const BadgePage = () => {
           <>
             <Container>
               <Row>
-                <Badge $rounded $primary>
-                  {' '}
-                  primary
-                </Badge>
-                <Badge $rounded $info>
-                  info
-                </Badge>
-                <Badge $rounded $warning>
-                  warning
-                </Badge>
-                <Badge $rounded $success>
-                  success
-                </Badge>
-                <Badge $rounded $danger>
-                  danger
-                </Badge>
-                <Badge $rounded $black>
-                  black
-                </Badge>
+                <Badge $rounded $primary />
+
+                <Badge $rounded $info />
+
+                <Badge $rounded $warning />
+
+                <Badge $rounded $success />
+
+                <Badge $rounded $danger />
+
+                <Badge $rounded $black />
               </Row>
               <Row>
-                <Badge $outline $rounded $primary>
-                  primary
-                </Badge>
-                <Badge $outline $rounded $info>
-                  info
-                </Badge>
-                <Badge $outline $rounded $warning>
-                  warning
-                </Badge>
-                <Badge $outline $rounded $success>
-                  success
-                </Badge>
-                <Badge $outline $rounded $danger>
-                  danger
-                </Badge>
-                <Badge $outline $rounded $black>
-                  black
-                </Badge>
+                <Badge $outline $rounded $primary />
+
+                <Badge $outline $rounded $info />
+
+                <Badge $outline $rounded $warning />
+
+                <Badge $outline $rounded $success />
+
+                <Badge $outline $rounded $danger />
+
+                <Badge $outline $rounded $black />
               </Row>
             </Container>
           </>
@@ -125,19 +98,19 @@ const BadgePage = () => {
           <Toggle>
             <PrismCode component="pre" className="language-markup" target>
               {`
-      <Badge $primary $rounded> primary </Badge>
-      <Badge $info $rounded>    info    </Badge>
-      <Badge $warning $rounded> warning </Badge>
-      <Badge $success $rounded> success </Badge>
-      <Badge $danger $rounded>  danger  </Badge>
-      <Badge $black $rounded>   black   </Badge>
+      <Badge $primary $rounded/>
+      <Badge $info $rounded/>
+      <Badge $warning $rounded/>
+      <Badge $success $rounded/>
+      <Badge $danger $rounded/>
+      <Badge $black $rounded/>
       
-      <Badge $outline $primary $rounded> primary </Badge>
-      <Badge $outline $info $rounded>    info    </Badge>
-      <Badge $outline $warning $rounded> warning </Badge>
-      <Badge $outline $success $rounded> success </Badge>
-      <Badge $outline $danger $rounded>  danger  </Badge>
-      <Badge $outline $black $rounded>   black   </Badge>
+      <Badge $outline $primary $rounded/>
+      <Badge $outline $info $rounded/>
+      <Badge $outline $warning $rounded/>
+      <Badge $outline $success $rounded/>
+      <Badge $outline $danger $rounded/>
+      <Badge $outline $black $rounded/>
         `}
             </PrismCode>
           </Toggle>
@@ -149,45 +122,20 @@ const BadgePage = () => {
           <>
             <Container>
               <Row>
-                <Badge $pill $primary>
-                  {' '}
-                  primary
-                </Badge>
-                <Badge $pill $info>
-                  info
-                </Badge>
-                <Badge $pill $warning>
-                  warning
-                </Badge>
-                <Badge $pill $success>
-                  success
-                </Badge>
-                <Badge $pill $danger>
-                  danger
-                </Badge>
-                <Badge $pill $black>
-                  black
-                </Badge>
+                <Badge $pill $primary />
+                <Badge $pill $info />
+                <Badge $pill $warning />
+                <Badge $pill $success />
+                <Badge $pill $danger />
+                <Badge $pill $black />
               </Row>
               <Row>
-                <Badge $outline $pill $primary>
-                  primary
-                </Badge>
-                <Badge $outline $pill $info>
-                  info
-                </Badge>
-                <Badge $outline $pill $warning>
-                  warning
-                </Badge>
-                <Badge $outline $pill $success>
-                  success
-                </Badge>
-                <Badge $outline $pill $danger>
-                  danger
-                </Badge>
-                <Badge $outline $pill $black>
-                  black
-                </Badge>
+                <Badge $outline $pill $primary />
+                <Badge $outline $pill $info />
+                <Badge $outline $pill $warning />
+                <Badge $outline $pill $success />
+                <Badge $outline $pill $danger />
+                <Badge $outline $pill $black />
               </Row>
             </Container>
           </>
@@ -196,19 +144,19 @@ const BadgePage = () => {
           <Toggle>
             <PrismCode component="pre" className="language-markup" target>
               {`
-      <Badge $primary $pill> primary </Badge>
-      <Badge $info $pill>    info    </Badge>
-      <Badge $warning $pill> warning </Badge>
-      <Badge $success $pill> success </Badge>
-      <Badge $danger $pill>  danger  </Badge>
-      <Badge $black $pill>   black   </Badge>
-
-      <Badge $outline $primary $pill> primary </Badge>
-      <Badge $outline $info $pill>    info    </Badge>
-      <Badge $outline $warning $pill> warning </Badge>
-      <Badge $outline $success $pill> success </Badge>
-      <Badge $outline $danger $pill>  danger  </Badge>
-      <Badge $outline $black $pill>   black   </Badge>
+        <Badge $pill $primary />
+        <Badge $pill $info />
+        <Badge $pill $warning />
+        <Badge $pill $success />
+        <Badge $pill $danger />
+        <Badge $pill $black />
+    
+        <Badge $outline $pill $primary />
+        <Badge $outline $pill $info />
+        <Badge $outline $pill $warning />
+        <Badge $outline $pill $success />
+        <Badge $outline $pill $danger />
+        <Badge $outline $pill $black />
         `}
             </PrismCode>
           </Toggle>
