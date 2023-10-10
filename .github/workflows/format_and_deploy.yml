@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      DEPLOYMENT_TOKEN: ${{ secrets.DEPLOYMENT_TOKEN}}
+      DEPLOYMENT_TOKEN: ${{ secrets.DEPLOY_KEY}}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -61,4 +61,4 @@ jobs:
           clean-exclude: |
             special-file.txt
             some/*.txt
-          ssh-key: ${{ secrets.DEPLOYMENT_TOKEN }}
+          ssh-key: $DEPLOYMENT_TOKEN
