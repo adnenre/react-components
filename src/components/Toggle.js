@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
+import Tooltip from './Tooltip';
+import { Row, Col } from './grid';
 
 const Toggle = ({ children }) => {
   const [active, setActive] = useState(false);
@@ -9,9 +11,14 @@ const Toggle = ({ children }) => {
 
   return (
     <>
-      <Button $black onClick={toggle} width={100}>
-        {'VIEW CODE'}
-      </Button>
+      <Row>
+        <Col sm={2}>
+          <Tooltip text="Click here to show code" $right>
+            <Button $black onClick={toggle} label="VIEW CODE" />
+          </Tooltip>
+        </Col>
+      </Row>
+
       {active && children}
     </>
   );
