@@ -18,278 +18,65 @@ const ButtonPage = () => {
             <Row>
               <Col $sm={2}>
                 <Tooltip text="Hello i m a primary Button" $top>
-                  <Button $primary> primary</Button>
+                  <Button $primary />
                 </Tooltip>
               </Col>
               <Col $sm={2}>
                 <Tooltip text="Hello i m an info Button" $top>
-                  <Button $info>info</Button>
+                  <Button $info />
                 </Tooltip>
               </Col>
               <Col $sm={2}>
                 <Tooltip text="Hello i m a warning Button" $top>
-                  <Button $warning>warning</Button>
+                  <Button $warning />
                 </Tooltip>
               </Col>
               <Col $sm={2}>
                 <Tooltip text="Hello i m a success Button" $top>
-                  <Button $success>success</Button>
+                  <Button $success />
                 </Tooltip>
               </Col>
               <Col $sm={2}>
                 <Tooltip text="Hello i m a danger Button" $top>
-                  <Button $danger>danger</Button>
+                  <Button $danger />
                 </Tooltip>
               </Col>
               <Col $sm={2}>
                 <Tooltip text="Hello i m a black Button" $top>
-                  <Button $black>black</Button>
-                </Tooltip>
-              </Col>
-            </Row>
-            <Row>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a rounded primary Button" $top>
-                  <Button $rounded $primary>
-                    primary
-                  </Button>
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a rounded info Button">
-                  <Button $rounded $info>
-                    info
-                  </Button>
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a rounded warning Button" $top>
-                  <Button $rounded $warning>
-                    warning
-                  </Button>
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a rounded success Button" $top>
-                  <Button $rounded $success>
-                    success
-                  </Button>
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a danger Button">
-                  <Button $rounded $danger>
-                    danger
-                  </Button>
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a black Button">
-                  <Button $rounded $black>
-                    black
-                  </Button>
-                </Tooltip>
-              </Col>
-            </Row>
-            <Row>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a pill primary Button" $top>
-                  <Button $pill $primary>
-                    primary
-                  </Button>
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a pill info Button">
-                  <Button $pill $info>
-                    info
-                  </Button>
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a pill warning Button" $top>
-                  <Button $pill $warning>
-                    warning
-                  </Button>
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a pill success Button" $top>
-                  <Button $pill $success>
-                    success
-                  </Button>
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a pill danger Button">
-                  <Button $pill $danger>
-                    danger
-                  </Button>
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a pill black Button">
-                  <Button $pill $black>
-                    black
-                  </Button>
+                  <Button $black />
                 </Tooltip>
               </Col>
             </Row>
 
             <Row>
               <Col $sm={2}>
-                <Tooltip text="Hello i m a primary Button" $top>
-                  <Button $outline $primary>
-                    primary
-                  </Button>
+                <Tooltip text="Hello i m a primary Button">
+                  <Button $outline $primary />
                 </Tooltip>
               </Col>
               <Col $sm={2}>
                 <Tooltip text="Hello i m an info Button">
-                  <Button $outline $info>
-                    info
-                  </Button>
+                  <Button $outline $info />
                 </Tooltip>
               </Col>
               <Col $sm={2}>
-                <Tooltip text="Hello i m a warning Button" $top>
-                  <Button $outline $warning>
-                    warning
-                  </Button>
+                <Tooltip text="Hello i m a warning Button">
+                  <Button $outline $warning />
                 </Tooltip>
               </Col>
               <Col $sm={2}>
-                <Tooltip text="Hello i m a success Button" $top>
-                  <Button $outline $success>
-                    success
-                  </Button>
+                <Tooltip text="Hello i m a success Button">
+                  <Button $outline $success />
                 </Tooltip>
               </Col>
               <Col $sm={2}>
                 <Tooltip text="Hello i m a danger Button">
-                  <Button $outline $danger>
-                    danger
-                  </Button>
+                  <Button $outline $danger />
                 </Tooltip>
               </Col>
               <Col $sm={2}>
                 <Tooltip text="Hello i m a black Button">
-                  <Button $outline $black>
-                    black
-                  </Button>
-                </Tooltip>
-              </Col>
-            </Row>
-            <Row>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a primary Button" $top>
-                  <Button $outline $rounded $primary>
-                    primary
-                  </Button>
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m an info Button">
-                  <Button $outline $rounded $info>
-                    info
-                  </Button>
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a warning Button" $top>
-                  <Button $outline $rounded $warning>
-                    warning
-                  </Button>
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a success Button" $top>
-                  <Button $outline $rounded $success>
-                    success
-                  </Button>
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a danger Button">
-                  <Button $outline $rounded $danger>
-                    danger
-                  </Button>
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a black Button">
-                  <Button $outline $rounded $black>
-                    black
-                  </Button>
-                </Tooltip>
-              </Col>
-            </Row>
-            <Row>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a primary Button" $top>
-                  <Button $outline $pill $primary>
-                    primary
-                  </Button>
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m an info Button">
-                  <Button $outline $pill $info>
-                    info
-                  </Button>
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a warning Button" $top>
-                  <Button $outline $pill $warning>
-                    warning
-                  </Button>
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a success Button" $top>
-                  <Button $outline $pill $success>
-                    success
-                  </Button>
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a danger Button">
-                  <Button $outline $pill $danger>
-                    danger
-                  </Button>
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a black Button">
-                  <Button $outline $pill $black>
-                    black
-                  </Button>
-                </Tooltip>
-              </Col>
-            </Row>
-            <Row>
-              <Col $sm={12}>
-                <Tooltip text="Hello i m a disabled Button">
-                  <Button disabled>disabled</Button>
-                </Tooltip>
-              </Col>
-            </Row>
-            <Row>
-              <Col $sm={12}>
-                <Tooltip text="Hello i m disabled rounded Button">
-                  <Button disabled $rounded>
-                    disabled
-                  </Button>
-                </Tooltip>
-              </Col>
-            </Row>
-            <Row>
-              <Col $sm={12}>
-                <Tooltip text="Hello i m disabled pill Button">
-                  <Button disabled $pill>
-                    disabled
-                  </Button>
+                  <Button $outline $black />
                 </Tooltip>
               </Col>
             </Row>
@@ -299,53 +86,215 @@ const ButtonPage = () => {
           <Toggle>
             <PrismCode component="pre" className="language-markup" target>
               {`
-          <Button $primary> primary </Button>
-          <Button $info>    info    </Button>
-          <Button $warning> warning </Button>
-          <Button $success> success </Button>
-          <Button $danger>  danger  </Button>
-          <Button $black>   black   </Button>
+          <Button $primary/>
+          <Button $info/>
+          <Button $warning/>
+          <Button $success/>
+          <Button $danger/>
+          <Button $black/>
 
-          <Button $rounded $primary> primary </Button>
-          <Button $rounded $info>    info    </Button>
-          <Button $rounded $warning> warning </Button>
-          <Button $rounded $success> success </Button>
-          <Button $rounded $danger>  danger  </Button>
-          <Button $rounded $black>   black   </Button>
-          
-          <Button $pill $primary> primary </Button>
-          <Button $pill $info>    info    </Button>
-          <Button $pill $warning> warning </Button>
-          <Button $pill $success> success </Button>
-          <Button $pill $danger>  danger  </Button>
-          <Button $pill $black>   black   </Button>
 
-          <Button $outline $primary> primary </Button>
-          <Button $outline $info>    info    </Button>
-          <Button $outline $warning> warning </Button>
-          <Button $outline $success> success </Button>
-          <Button $outline $danger>  danger  </Button>
-          <Button $outline $black>   black   </Button>
+          <Button $outline $primary/>
+          <Button $outline $info/>
+          <Button $outline $warning/>
+          <Button $outline $success/>
+          <Button $outline $danger/>
+          <Button $outline $black/>
 
-          <Button $outline $rounded $primary> primary </Button>
-          <Button $outline $rounded $info>    info    </Button>
-          <Button $outline $rounded $warning> warning </Button>
-          <Button $outline $rounded $success> success </Button>
-          <Button $outline $rounded $danger>  danger  </Button>
-          <Button $outline $rounded $black>   black   </Button>
+         
 
-          <Button $outline $pill $primary> primary </Button>
-          <Button $outline $pill $info>    info    </Button>
-          <Button $outline $pill $warning> warning </Button>
-          <Button $outline $pill $success> success </Button>
-          <Button $outline $pill $danger>  danger  </Button>
-          <Button $outline $pill $black>   black   </Button>
+        
 
-          <Button disabled>          disabled    </Button>
-          <Button disabled $rounded> disabled    </Button>
-          <Button disabled $pill>    disabled    </Button>
+       
           
             `}
+            </PrismCode>
+          </Toggle>
+        }
+      />
+
+      <PortletView
+        title="Button Rounded"
+        content={
+          <>
+            <Row>
+              <Col $sm={2}>
+                <Tooltip text="Hello i m a rounded primary Button" $top>
+                  <Button $rounded $primary />
+                </Tooltip>
+              </Col>
+              <Col $sm={2}>
+                <Tooltip text="Hello i m a rounded info Button">
+                  <Button $rounded $info />
+                </Tooltip>
+              </Col>
+              <Col $sm={2}>
+                <Tooltip text="Hello i m a rounded warning Button" $top>
+                  <Button $rounded $warning />
+                </Tooltip>
+              </Col>
+              <Col $sm={2}>
+                <Tooltip text="Hello i m a rounded success Button" $top>
+                  <Button $rounded $success />
+                </Tooltip>
+              </Col>
+              <Col $sm={2}>
+                <Tooltip text="Hello i m a danger Button">
+                  <Button $rounded $danger />
+                </Tooltip>
+              </Col>
+              <Col $sm={2}>
+                <Tooltip text="Hello i m a black Button">
+                  <Button $rounded $black />
+                </Tooltip>
+              </Col>
+            </Row>
+            <Row>
+              <Col $sm={2}>
+                <Tooltip text="Hello i m a primary Button" $top>
+                  <Button $outline $rounded $primary />
+                </Tooltip>
+              </Col>
+              <Col $sm={2}>
+                <Tooltip text="Hello i m an info Button">
+                  <Button $outline $rounded $info />
+                </Tooltip>
+              </Col>
+              <Col $sm={2}>
+                <Tooltip text="Hello i m a warning Button" $top>
+                  <Button $outline $rounded $warning />
+                </Tooltip>
+              </Col>
+              <Col $sm={2}>
+                <Tooltip text="Hello i m a success Button" $top>
+                  <Button $outline $rounded $success />
+                </Tooltip>
+              </Col>
+              <Col $sm={2}>
+                <Tooltip text="Hello i m a danger Button">
+                  <Button $outline $rounded $danger />
+                </Tooltip>
+              </Col>
+              <Col $sm={2}>
+                <Tooltip text="Hello i m a black Button">
+                  <Button $outline $rounded $black />
+                </Tooltip>
+              </Col>
+            </Row>
+          </>
+        }
+        footer={
+          <Toggle>
+            <PrismCode component="pre" className="language-markup">
+              {`
+               /* Note the component take the with of the column width */
+               <Button $primary $rounded/>
+               <Button $info    $rounded/>
+               <Button $warning $rounded/>
+               <Button $success $rounded/>
+               <Button $danger  $rounded/>
+               <Button $black   $rounded/>
+
+               <Button $outline $rounded $primary/>
+               <Button $outline $rounded $info/>
+               <Button $outline $rounded $warning/>
+               <Button $outline $rounded $success/>
+               <Button $outline $rounded $danger/>
+               <Button $outline $rounded $black/>
+             `}
+            </PrismCode>
+          </Toggle>
+        }
+      />
+
+      <PortletView
+        title="Button Pill"
+        content={
+          <>
+            <Row>
+              <Col $sm={2}>
+                <Tooltip text="Hello i m a pill primary Button" $top>
+                  <Button $pill $primary />
+                </Tooltip>
+              </Col>
+              <Col $sm={2}>
+                <Tooltip text="Hello i m a pill info Button">
+                  <Button $pill $info />
+                </Tooltip>
+              </Col>
+              <Col $sm={2}>
+                <Tooltip text="Hello i m a pill warning Button" $top>
+                  <Button $pill $warning />
+                </Tooltip>
+              </Col>
+              <Col $sm={2}>
+                <Tooltip text="Hello i m a pill success Button" $top>
+                  <Button $pill $success />
+                </Tooltip>
+              </Col>
+              <Col $sm={2}>
+                <Tooltip text="Hello i m a pill danger Button">
+                  <Button $pill $danger />
+                </Tooltip>
+              </Col>
+              <Col $sm={2}>
+                <Tooltip text="Hello i m a pill black Button">
+                  <Button $pill $black />
+                </Tooltip>
+              </Col>
+            </Row>
+            <Row>
+              <Col $sm={2}>
+                <Tooltip text="Hello i m a primary Button" $top>
+                  <Button $outline $pill $primary />
+                </Tooltip>
+              </Col>
+              <Col $sm={2}>
+                <Tooltip text="Hello i m an info Button">
+                  <Button $outline $pill $info />
+                </Tooltip>
+              </Col>
+              <Col $sm={2}>
+                <Tooltip text="Hello i m a warning Button" $top>
+                  <Button $outline $pill $warning />
+                </Tooltip>
+              </Col>
+              <Col $sm={2}>
+                <Tooltip text="Hello i m a success Button" $top>
+                  <Button $outline $pill $success />
+                </Tooltip>
+              </Col>
+              <Col $sm={2}>
+                <Tooltip text="Hello i m a danger Button">
+                  <Button $outline $pill $danger />
+                </Tooltip>
+              </Col>
+              <Col $sm={2}>
+                <Tooltip text="Hello i m a black Button">
+                  <Button $outline $pill $black />
+                </Tooltip>
+              </Col>
+            </Row>
+          </>
+        }
+        footer={
+          <Toggle>
+            <PrismCode component="pre" className="language-markup">
+              {`
+              <Button $primary $pill/>
+              <Button $info $pill/>
+              <Button $warning $pill/>
+              <Button $success $pill/>
+              <Button $danger $pill/>
+              <Button $black $pill/>
+
+              <Button $outline $pill $primary/>
+              <Button $outline $pill $info/>
+              <Button $outline $pill $warning/>
+              <Button $outline $pill $success/>
+              <Button $outline $pill $danger/>
+              <Button $outline $pill $black/>
+             `}
             </PrismCode>
           </Toggle>
         }
@@ -356,47 +305,51 @@ const ButtonPage = () => {
         content={
           <>
             <Row>
-              <Col $sm={2}>
-                <Button $fullwidth $primary>
-                  {' '}
-                  primary
-                </Button>
+              <Col $sm={6}>
+                <Button label="Click here !" $fullwidth $primary />
               </Col>
-            </Row>
-            <Row>
-              <Col $sm={4}>
-                <Button $fullwidth $info>
-                  {' '}
-                  info
-                </Button>
+              <Col $sm={6}>
+                <Button label="Click here !" $outline $fullwidth $primary />
               </Col>
             </Row>
             <Row>
               <Col $sm={6}>
-                <Button $fullwidth $warning>
-                  primary
-                </Button>
+                <Button label="Click here !" $fullwidth $info />
+              </Col>
+              <Col $sm={6}>
+                <Button label="Click here !" $outline $fullwidth $info />
               </Col>
             </Row>
             <Row>
-              <Col $sm={8}>
-                <Button $fullwidth $success>
-                  success
-                </Button>
+              <Col $sm={6}>
+                <Button label="Click here ! " $fullwidth $warning />
+              </Col>
+              <Col $sm={6}>
+                <Button label="Click here ! " $outline $fullwidth $warning />
               </Col>
             </Row>
             <Row>
-              <Col $sm={10}>
-                <Button $fullwidth $danger>
-                  danger
-                </Button>
+              <Col $sm={6}>
+                <Button label="Click here ! " $fullwidth $success />
+              </Col>
+              <Col $sm={6}>
+                <Button label="Click here ! " $outline $fullwidth $success />
               </Col>
             </Row>
             <Row>
-              <Col $sm={12}>
-                <Button $fullwidth $black>
-                  black
-                </Button>
+              <Col $sm={6}>
+                <Button label="Click here ! " $fullwidth $danger />
+              </Col>
+              <Col $sm={6}>
+                <Button label="Click here ! " $outline $fullwidth $danger />
+              </Col>
+            </Row>
+            <Row>
+              <Col $sm={6}>
+                <Button label="Click here ! " $fullwidth $black />
+              </Col>
+              <Col $sm={6}>
+                <Button label="Click here ! " $outline $fullwidth $black />
               </Col>
             </Row>
           </>
@@ -405,51 +358,38 @@ const ButtonPage = () => {
           <Toggle>
             <PrismCode component="pre" className="language-markup">
               {`
-               /* Note the component take the with of the column width */
-               <Button $primary $fullwidth> primary </Button>
-               <Button $info    $fullwidth> info    </Button>
-               <Button $warning $fullwidth> warning </Button>
-               <Button $success $fullwidth> success </Button>
-               <Button $danger  $fullwidth> danger  </Button>
-               <Button $black   $fullwidth> black   </Button>
+               <Button  $primary $fullwidth label="Click here ! "/>
+               <Button  $info $fullwidth label="Click here ! "/>
+               <Button  $warning $fullwidth label="Click here ! "/>
+               <Button  $success $fullwidth label="Click here ! "/>
+               <Button  $danger $fullwidth label="Click here ! "/>
+               <Button  $black $fullwidth label="Click here ! "/>
+
+                <Button $outline $primary $fullwidth label="Click here ! "/>
+                <Button $outline $info $fullwidth label="Click here ! "/>
+                <Button $outline $warning $fullwidth label="Click here ! "/>
+                <Button $outline $success $fullwidth label="Click here ! "/>
+                <Button $outline $danger $fullwidth label="Click here ! "/>
+                <Button $outline $black $fullwidth label="Click here ! "/>
              `}
             </PrismCode>
           </Toggle>
         }
       />
-
       <PortletView
-        title="Button"
+        title="Button disabled"
         content={
           <>
             <Row>
-              <Col $sm={2}>
-                <Button $primary> primary</Button>
-              </Col>
-            </Row>
-            <Row>
               <Col $sm={4}>
-                <Button $info> info</Button>
+                <Button $fullwidth disabled label="Click here !" />
               </Col>
-            </Row>
-            <Row>
-              <Col $sm={6}>
-                <Button $warning> primary</Button>
+              <Col $sm={4}>
+                <Button $fullwidth disabled $rounded label="Click here !" />
               </Col>
-            </Row>
-            <Row>
-              <Col $sm={8}>
-                <Button $success>success</Button>
-              </Col>
-            </Row>
-            <Row>
-              <Col $sm={10}>
-                <Button $danger>danger</Button>
-              </Col>
-            </Row>
-            <Row>
-              <Col $sm={12}>
-                <Button $black>black</Button>
+
+              <Col $sm={4}>
+                <Button $fullwidth disabled $pill label="Click here !" />
               </Col>
             </Row>
           </>
@@ -458,79 +398,10 @@ const ButtonPage = () => {
           <Toggle>
             <PrismCode component="pre" className="language-markup">
               {`
-              <Button $primary> primary </Button>
-              <Button $info>    info    </Button>
-              <Button $warning> warning </Button>
-              <Button $success> success </Button>
-              <Button $danger>  danger  </Button>
-              <Button $black>   black   </Button>
-             `}
-            </PrismCode>
-          </Toggle>
-        }
-      />
-
-      <PortletView
-        title="Button"
-        content={
-          <>
-            <Row>
-              <Col $sm={2}>
-                <Button $fullwidth $primary>
-                  {' '}
-                  primary
-                </Button>
-              </Col>
-            </Row>
-            <Row>
-              <Col $sm={4}>
-                <Button $fullwidth $info>
-                  {' '}
-                  info
-                </Button>
-              </Col>
-            </Row>
-            <Row>
-              <Col $sm={6}>
-                <Button $fullwidth $warning>
-                  {' '}
-                  primary
-                </Button>
-              </Col>
-            </Row>
-            <Row>
-              <Col $sm={8}>
-                <Button $fullwidth $success>
-                  success
-                </Button>
-              </Col>
-            </Row>
-            <Row>
-              <Col $sm={10}>
-                <Button $fullwidth $danger>
-                  danger
-                </Button>
-              </Col>
-            </Row>
-            <Row>
-              <Col $sm={12}>
-                <Button $fullwidth $black>
-                  black
-                </Button>
-              </Col>
-            </Row>
-          </>
-        }
-        footer={
-          <Toggle>
-            <PrismCode component="pre" className="language-markup">
-              {`
-              <Button $primary $fullwidth> primary </Button>
-              <Button $info $fullwidth>    info    </Button>
-              <Button $warning $fullwidth> warning </Button>
-              <Button $success $fullwidth> success </Button>
-              <Button $danger $fullwidth>  danger  </Button>
-              <Button $black $fullwidth>   black   </Button>
+              <Button disabled $fullwidth label="Click here ! "/>
+              <Button disabled $fullwidth  $rounded label="Click here ! "/>
+              <Button disabled $fullwidth  $pill  label="Click here ! "/>
+            
              `}
             </PrismCode>
           </Toggle>

@@ -4,7 +4,7 @@ import { SButton } from './Button.styled';
 
 const Button = ({ ...props }) => {
   return (
-    <SButton {...props}>{props.children || props.label || 'button'}</SButton>
+    <SButton {...props}>{props.children || props.label || 'Button'}</SButton>
   );
 };
 Button.propTypes = {
