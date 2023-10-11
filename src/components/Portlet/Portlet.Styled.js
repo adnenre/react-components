@@ -50,7 +50,7 @@ const PortletBody = styled.div`
   flex-wrap: wrap;
 `;
 const PortletFooter = styled.div`
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   border-top: solid 1px ${theme.colors.$grayLight};
   display: ${({ flex }) => {
     if (flex) return 'flex';
@@ -68,6 +68,7 @@ const PortletFooter = styled.div`
     return 'left';
   }};
   overflow: auto;
+  text-align: left;
 `;
 
 export { Title, Portlet, PortletHeader, PortletBody, PortletFooter };
