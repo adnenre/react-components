@@ -22,7 +22,7 @@ const AvatarPage = () => {
               <Avatar $xsmall src={imgUrl} alt="image of the author" />
             </Tooltip>
 
-            <Tooltip text="Avatar mall">
+            <Tooltip text="Avatar small">
               <Avatar $small src={imgUrl} alt="image of the author" />
             </Tooltip>
 
@@ -62,7 +62,7 @@ const AvatarPage = () => {
                 <Avatar $round $xsmall src={imgUrl} alt="image of the author" />
               </Tooltip>
 
-              <Tooltip text="Avatar rounded mall">
+              <Tooltip text="Avatar rounded small">
                 <Avatar $round $small src={imgUrl} alt="image of the author" />
               </Tooltip>
 
