@@ -12,6 +12,7 @@ import {
 import imgUrl from '../components/data';
 
 import { TodoStyled } from '../TodoStyled';
+import Tooltip from '../components/Tooltip';
 
 const Home = () => {
   const { toDoList, Todo, TodoName, TodoState } = TodoStyled;
@@ -32,12 +33,17 @@ const Home = () => {
           </Todo>
         ))}
       </PortletBody>
-      <PortletFooter $flexColumn $center>
-        <h5>Made by </h5>
-
-        <a href="https://adnenre.github.io" area-label="link to author profile">
-          <Avatar src={imgUrl} alt="author" />
-        </a>
+      <PortletFooter>
+        <h5></h5>
+        <Tooltip text="Click here to visit author profile " $right>
+          <a
+            className="author"
+            href="https://adnenre.github.io"
+            area-label="link to author profile"
+          >
+            <Avatar src={imgUrl} alt="author" $xsmall $round />
+          </a>
+        </Tooltip>
       </PortletFooter>
     </Portlet>
   );

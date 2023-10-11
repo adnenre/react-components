@@ -22,3 +22,10 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background: #2b95fd;
 }
+a.author {
+  display: inline-block;
+  width: fit-content;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+}

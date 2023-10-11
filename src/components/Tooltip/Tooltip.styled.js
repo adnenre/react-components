@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const TooltipContainer = styled.div`
   position: relative;
   display: inline-block;
+  width: fit-content;
 `;
 
 export const TooltipText = styled.div`

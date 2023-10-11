@@ -28,6 +28,10 @@ const TodoState = styled.div`
 
 const componentsList = [
   {
+    name: 'Grid',
+    state: true,
+  },
+  {
     name: 'Button',
     state: true,
   },
@@ -59,12 +63,9 @@ const componentsList = [
     name: 'DropDown ',
     state: true,
   },
+
   {
-    name: 'Grid',
-    state: true,
-  },
-  {
-    name: 'Navbar',
+    name: 'Tree',
     state: true,
   },
   {
@@ -73,6 +74,10 @@ const componentsList = [
   },
   {
     name: 'Modal ',
+    state: true,
+  },
+  {
+    name: 'Tooltip ',
     state: true,
   },
 ];
