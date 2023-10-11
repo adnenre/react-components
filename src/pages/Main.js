@@ -20,26 +20,29 @@ import CarouselPage from './CarouselPage';
 import TooltipPage from './TooltipPage';
 import MasonryPage from './MasonryPage';
 const Main = ({ active }) => {
+  const subPath = '/react-components';
   return (
     <MainContainer $active={active}>
       <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/Inprogress" component={Inprogress} />
-        <Route path="/ButtonPage" component={ButtonPage} />
-        <Route path="/AccordionPage" component={AccordionPage} />
-        <Route path="/CardPage" component={CardPage} />
-        <Route path="/TablePage" component={TablePage} />
-        <Route path="/BadgePage" component={BadgePage} />
-        <Route path="/TabsPage" component={TabsPage} />
-        <Route path="/DropDownPage" component={DropDownPage} />
-        <Route path="/AlertPage" component={AlertPage} />
-        <Route path="/AvatarPage" component={AvatarPage} />
-        <Route path="/GridPage" component={GridPage} />
-        <Route path="/ModalPage" component={ModalPage} />
-        <Route path="/TreePage" component={TreePage} />
-        <Route path="/CarouselPage" component={CarouselPage} />
-        <Route path="/TooltipPage" component={TooltipPage} />
-        <Route path="/MasonryPage" component={MasonryPage} />
+        {' '}
+        ``
+        <Route exact path={`${subPath}/`} component={HomePage} />
+        <Route path={`${subPath}/Inprogress`} component={Inprogress} />
+        <Route path={`${subPath}/ButtonPage`} component={ButtonPage} />
+        <Route path={`${subPath}/AccordionPage`} component={AccordionPage} />
+        <Route path={`${subPath}/CardPage`} component={CardPage} />
+        <Route path={`${subPath}/TablePage`} component={TablePage} />
+        <Route path={`${subPath}/BadgePage`} component={BadgePage} />
+        <Route path={`${subPath}/TabsPage`} component={TabsPage} />
+        <Route path={`${subPath}/DropDownPage`} component={DropDownPage} />
+        <Route path={`${subPath}/AlertPage`} component={AlertPage} />
+        <Route path={`${subPath}/AvatarPage`} component={AvatarPage} />
+        <Route path={`${subPath}/GridPage`} component={GridPage} />
+        <Route path={`${subPath}/ModalPage`} component={ModalPage} />
+        <Route path={`${subPath}/TreePage`} component={TreePage} />
+        <Route path={`${subPath}/CarouselPage`} component={CarouselPage} />
+        <Route path={`${subPath}/TooltipPage`} component={TooltipPage} />
+        <Route path={`${subPath}/MasonryPage`} component={MasonryPage} />
       </Switch>
     </MainContainer>
   );

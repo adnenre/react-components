@@ -11,6 +11,7 @@ import {
 import Logo from '../Logo';
 
 const SideBarre = ({ routes, active }) => {
+  const subPath = '/react-components';
   return (
     <SideBarreContainer $active={active}>
       <SideBarreHeader>
@@ -20,7 +21,7 @@ const SideBarre = ({ routes, active }) => {
         <List>
           {routes.map(({ path, routeName }) => (
             <Item key={path}>
-              <LinkItem to={path}> {routeName}</LinkItem>
+              <LinkItem to={subPath + path}> {routeName}</LinkItem>
             </Item>
           ))}
         </List>
