@@ -9,6 +9,7 @@ import Prism from 'prismjs';
 
 import imgUrl from '../components/data';
 import { Container, Row, Col } from '../components/grid';
+import Tooltip from '../components/Tooltip';
 
 const AvatarPage = () => {
   return (
@@ -16,27 +17,27 @@ const AvatarPage = () => {
       <PortletView
         title="Avatar Component"
         content={
-          <>
-            <Row>
-              <Col md={2}>
-                <Avatar $xsmall src={imgUrl} alt="image of the author" />
-              </Col>
-              <Col md={2}>
-                <Avatar $small src={imgUrl} alt="image of the author" />
-              </Col>
-              <Col md={2}>
-                <Avatar $medium src={imgUrl} alt="image of the author" />
-              </Col>
-              <Col md={2}>
-                <Avatar $large src={imgUrl} alt="image of the author" />
-              </Col>
-              <Col md={2}>
-                <Avatar $xlarge src={imgUrl} alt="image of the author" />
-              </Col>
-            </Row>
+          <Row $align="spaceBetween">
+            <Tooltip text="Avatar xsmall">
+              <Avatar $xsmall src={imgUrl} alt="image of the author" />
+            </Tooltip>
 
-            <br />
-          </>
+            <Tooltip text="Avatar mall">
+              <Avatar $small src={imgUrl} alt="image of the author" />
+            </Tooltip>
+
+            <Tooltip text="Avatar medium">
+              <Avatar $medium src={imgUrl} alt="image of the author" />
+            </Tooltip>
+
+            <Tooltip text="Avatar large">
+              <Avatar $large src={imgUrl} alt="image of the author" />
+            </Tooltip>
+
+            <Tooltip text="Avatar xlarge">
+              <Avatar $xlarge src={imgUrl} alt="image of the author" />
+            </Tooltip>
+          </Row>
         }
         footer={
           <Toggle>
@@ -56,11 +57,27 @@ const AvatarPage = () => {
         title="Avatar Component Rounded"
         content={
           <>
-            <Avatar $round $xsmall src={imgUrl} alt="image of the author" />
-            <Avatar $round $small src={imgUrl} alt="image of the author" />
-            <Avatar $round $medium src={imgUrl} alt="image of the author" />
-            <Avatar $round $large src={imgUrl} alt="image of the author" />
-            <Avatar $round $xlarge src={imgUrl} alt="image of the author" />
+            <Row $align="spaceBetween">
+              <Tooltip text="Avatar rounded xsmall">
+                <Avatar $round $xsmall src={imgUrl} alt="image of the author" />
+              </Tooltip>
+
+              <Tooltip text="Avatar rounded mall">
+                <Avatar $round $small src={imgUrl} alt="image of the author" />
+              </Tooltip>
+
+              <Tooltip text="Avatar rounded medium">
+                <Avatar $round $medium src={imgUrl} alt="image of the author" />
+              </Tooltip>
+
+              <Tooltip text="Avatar rounded large">
+                <Avatar $round $large src={imgUrl} alt="image of the author" />
+              </Tooltip>
+
+              <Tooltip text="Avatar rounded xlarge">
+                <Avatar $round $xlarge src={imgUrl} alt="image of the author" />
+              </Tooltip>
+            </Row>
           </>
         }
         footer={

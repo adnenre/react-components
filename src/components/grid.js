@@ -134,6 +134,7 @@ const style = {
   $align: {
     spaceBetween: `
         justify-content:space-between;
+        align-items:center;
         `,
     spaceAround: `
         justify-content: space-around;
@@ -143,6 +144,7 @@ const style = {
         `,
     center: `
         justify-content: center;
+        align-items:center;
         `,
   },
   $alignSelf: {

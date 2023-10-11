@@ -34,7 +34,6 @@ const Home = () => {
         ))}
       </PortletBody>
       <PortletFooter>
-        <h5></h5>
         <Tooltip text="Click here to visit author profile " $right>
           <a
             className="author"

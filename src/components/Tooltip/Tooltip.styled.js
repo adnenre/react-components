@@ -4,6 +4,8 @@ export const TooltipContainer = styled.div`
   position: relative;
   display: inline-block;
   width: fit-content;
+  height: fit-content;
+  cursor: pointer;
 `;
 
 export const TooltipText = styled.div`
