@@ -80,4 +80,29 @@ describe('Test Accordion', () => {
     expect(queryByText(items[1].content)).toBeInTheDocument();
     expect(queryByText(items[2].content)).toBeNull();
   });
+
+  test('Clicking outside the accordion close all', () => {
+    const { getByText, queryByText } = render(<Accordion items={items} />);
+
+    // all accordion are closed
+    expect(queryByText(items[0].content)).toBeNull();
+
+    expect(queryByText(items[1].content)).toBeNull();
+
+    expect(queryByText(items[2].content)).toBeNull();
+
+    // click on accordion first item
+    fireEvent.click(getByText(items[0].title));
+
+    // first Accordion item content is appended to the DOM
+    expect(getByText(items[0].content)).toBeInTheDocument();
+
+    // simulate mouseDown
+    fireEvent.mouseDown(document.body);
+
+    // all accordion content are hidden
+    expect(queryByText(items[0].content)).toBeNull();
+    expect(queryByText(items[1].content)).toBeNull();
+    expect(queryByText(items[2].content)).toBeNull();
+  });
 });
