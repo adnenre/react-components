@@ -25,6 +25,9 @@ const theme = {
     $gray: '#9ca3af',
     $grayLight: '#f3f4f6',
   },
+  font: {
+    $color: '#001b41',
+  },
   cursor: {
     notAllowed: 'not-allowed',
     default: 'pointer',

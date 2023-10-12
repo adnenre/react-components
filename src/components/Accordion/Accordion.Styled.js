@@ -1,15 +1,10 @@
 import styled from 'styled-components';
 import theme from '../../theme';
-import { getHoverEffect } from '../utility';
 
-const AccordionContainer = styled.div`
-  width: 100%;
-  background: ${theme.colors.$primary};
-`;
 const AccordionItemStyled = styled.div`
   width: 100%;
 `;
-const AccordionTitleStyled = styled.div`
+const AccordionTitleStyled = styled.h5`
   width: 100%;
   background: ${({ $isOpen }) =>
     $isOpen ? `${theme.colors.$primary}` : `${theme.colors.$default}`};
@@ -21,19 +16,33 @@ const AccordionTitleStyled = styled.div`
   display: flex;
   justify-content: space-between;
 
-  ${getHoverEffect}
+  padding: 1rem;
+  font-weight: 500;
 
-  padding: 0.5rem;
-  font-weight: 400;
+  cursor: pointer;
 `;
 const AccordionContent = styled.div`
   width: 100%;
   background: ${theme.colors.$default};
   text-align: left;
-
+  color: ${theme.font.$color};
   padding: 1.5rem 1rem;
-`;
 
+  display: ${({ $isOpen }) => ($isOpen ? 'block' : 'none')};
+`;
+const AccordionContainer = styled.div`
+  width: 100%;
+  background: ${theme.colors.$primary};
+  > div:first-child > h5 {
+    border-top: none !important;
+  }
+  > div > h5 {
+    border-bottom: none;
+    transition:
+      all 0.3s linear,
+      opacity 0.3s linear;
+  }
+`;
 export {
   AccordionContainer,
   AccordionContent,

@@ -14,23 +14,33 @@ const AccordionTitle = (props) => {
   const { children, ...rest } = props;
   return <AccordionTitleStyled {...rest}>{children}</AccordionTitleStyled>;
 };
-function AccordionItem({ title, content, isOpen, toggleAccordion }) {
+export const AccordionItem = ({
+  id,
+  title,
+  content,
+  isOpen,
+  toggleAccordion,
+  ...rest
+}) => {
   return (
-    <AccordionItemStyled>
-      <AccordionTitle onClick={toggleAccordion} $isOpen={isOpen}>
+    <AccordionItemStyled {...rest}>
+      <AccordionTitle
+        data-testid={`accordionItem-${id}`}
+        onClick={toggleAccordion}
+        $isOpen={isOpen}
+      >
         {title}
         <Carret $isOpen={isOpen} />
       </AccordionTitle>
-      {isOpen && (
-        <AccordionContent className="accordion-content">
-          {content}
-        </AccordionContent>
-      )}
+
+      <AccordionContent $isOpen={isOpen} data-testid={`accordionContent-${id}`}>
+        <p>{content}</p>
+      </AccordionContent>
     </AccordionItemStyled>
   );
-}
+};
 
-function Accordion({ items }) {
+const Accordion = ({ items, ...rest }) => {
   const containerRef = useRef(null);
   const [accordionItems, setAccordionItems] = useState(items);
 
@@ -56,10 +66,11 @@ function Accordion({ items }) {
   };
   useClickOutside(containerRef, () => toggleAll());
   return (
-    <AccordionContainer ref={containerRef}>
+    <AccordionContainer ref={containerRef} {...rest}>
       {accordionItems.map((item, index) => (
         <AccordionItem
           key={index}
+          id={index}
           title={item.title}
           content={item.content}
           isOpen={item.isOpen}
@@ -68,11 +79,12 @@ function Accordion({ items }) {
       ))}
     </AccordionContainer>
   );
-}
+};
 AccordionTitle.propTypes = {
   children: PropTypes.node,
 };
 AccordionItem.propTypes = {
+  id: PropTypes.number,
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   isOpen: PropTypes.bool.isRequired,
