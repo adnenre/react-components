@@ -8,34 +8,36 @@ import 'prismjs/themes/prism.css';
 import PrismCode from 'react-prism';
 import Prism from 'prismjs';
 import Toggle from '../components/Toggle';
+import fake_data from '../fake-data';
 
 const TooltipPage = () => {
+  const { tooltip } = fake_data.pages;
   return (
     <PortletView
-      title="Tooltip component"
+      title={tooltip.page.title}
       content={
         <>
           <Container>
             <Row>
               <Col $md={3}>
-                <Tooltip text="Tooltip on the left " $left>
-                  <Button $primary> Hover me ! </Button>
+                <Tooltip text={tooltip.direction.left} $left>
+                  <Button $primary label="Hover me !" />
                 </Tooltip>
               </Col>
               <Col $md={3}>
-                <Tooltip text="Tooltip on the bottom">
-                  <Button $primary> Hover me ! </Button>
+                <Tooltip text={tooltip.direction.bottom}>
+                  <Button $primary label="Hover me !" />
                 </Tooltip>
               </Col>
               <Col $md={3}>
-                <Tooltip text="Tooltip on the right" $right>
-                  <Button $primary> Hover me ! </Button>
+                <Tooltip text={tooltip.direction.right} $right>
+                  <Button $primary label="Hover me !" />
                 </Tooltip>
               </Col>
 
               <Col $md={3}>
-                <Tooltip text="Tooltip on the Top" $top>
-                  <Button $primary> Hover me ! </Button>
+                <Tooltip text={tooltip.direction.top} $top>
+                  <Button $primary label="Hover me !" />
                 </Tooltip>
               </Col>
             </Row>
@@ -49,23 +51,23 @@ const TooltipPage = () => {
           <Row>
           <Col $md={3}>
             <Tooltip text="Tooltip on the left " $left>
-              <Button $primary> Hover me ! </Button>
+              <Button $primary label="Hover me !"/>
             </Tooltip>
           </Col>
           <Col $md={3}>
             <Tooltip text="Tooltip on the bottom">
-              <Button $primary> Hover me ! </Button>
+              <Button $primary label="Hover me !"/>
             </Tooltip>
           </Col>
           <Col $md={3}>
             <Tooltip text="Tooltip on the right" $right>
-              <Button $primary> Hover me ! </Button>
+              <Button $primary label="Hover me !"/>
             </Tooltip>
           </Col>
 
           <Col $md={3}>
             <Tooltip text="Tooltip on the Top" $top>
-              <Button $primary> Hover me ! </Button>
+              <Button $primary label="Hover me !"/>
             </Tooltip>
           </Col>
         </Row>

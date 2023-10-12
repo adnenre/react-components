@@ -10,32 +10,36 @@ import Prism from 'prismjs';
 import imgUrl from '../components/data';
 import { Container, Row, Col } from '../components/grid';
 import Tooltip from '../components/Tooltip';
+import fake_data from '../fake-data';
 
 const AvatarPage = () => {
+  const {
+    pages: { avatar },
+  } = fake_data;
   return (
     <Container>
       <PortletView
-        title="Avatar Component"
+        title={avatar.page.title}
         content={
           <Row $align="spaceBetween">
             <Tooltip text="Avatar xsmall">
-              <Avatar $xsmall src={imgUrl} alt="image of the author" />
+              <Avatar $xsmall src={avatar.src} alt={avatar.alt} />
             </Tooltip>
 
             <Tooltip text="Avatar small">
-              <Avatar $small src={imgUrl} alt="image of the author" />
+              <Avatar $small src={avatar.src} alt={avatar.alt} />
             </Tooltip>
 
             <Tooltip text="Avatar medium">
-              <Avatar $medium src={imgUrl} alt="image of the author" />
+              <Avatar $medium src={avatar.src} alt={avatar.alt} />
             </Tooltip>
 
             <Tooltip text="Avatar large">
-              <Avatar $large src={imgUrl} alt="image of the author" />
+              <Avatar $large src={avatar.src} alt={avatar.alt} />
             </Tooltip>
 
             <Tooltip text="Avatar xlarge">
-              <Avatar $xlarge src={imgUrl} alt="image of the author" />
+              <Avatar $xlarge src={avatar.src} alt={avatar.alt} />
             </Tooltip>
           </Row>
         }
@@ -43,11 +47,11 @@ const AvatarPage = () => {
           <Toggle>
             <PrismCode component="pre" className="language-markup" target>
               {`
-          <Avatar $xsmall src={imgUrl} alt="image of the author" />
-          <Avatar $small src={imgUrl} alt="image of the author" />
-          <Avatar $medium src={imgUrl} alt="image of the author" />
-          <Avatar $large src={imgUrl} alt="image of the author" />
-          <Avatar $xlarge src={imgUrl} alt="image of the author" />
+                <Avatar $xsmall src={avatar.src} alt={avatar.alt} />
+                <Avatar $small src={avatar.src} alt={avatar.alt} />
+                <Avatar $medium src={avatar.src} alt={avatar.alt} />
+                <Avatar $large src={avatar.src} alt={avatar.alt} />
+                <Avatar $xlarge src={avatar.src} alt={avatar.alt} />
             `}
             </PrismCode>
           </Toggle>
@@ -59,23 +63,23 @@ const AvatarPage = () => {
           <>
             <Row $align="spaceBetween">
               <Tooltip text="Avatar rounded xsmall">
-                <Avatar $round $xsmall src={imgUrl} alt="image of the author" />
+                <Avatar $round $xsmall src={avatar.src} alt={avatar.alt} />
               </Tooltip>
 
               <Tooltip text="Avatar rounded small">
-                <Avatar $round $small src={imgUrl} alt="image of the author" />
+                <Avatar $round $small src={avatar.src} alt={avatar.alt} />
               </Tooltip>
 
               <Tooltip text="Avatar rounded medium">
-                <Avatar $round $medium src={imgUrl} alt="image of the author" />
+                <Avatar $round $medium src={avatar.src} alt={avatar.alt} />
               </Tooltip>
 
               <Tooltip text="Avatar rounded large">
-                <Avatar $round $large src={imgUrl} alt="image of the author" />
+                <Avatar $round $large src={avatar.src} alt={avatar.alt} />
               </Tooltip>
 
               <Tooltip text="Avatar rounded xlarge">
-                <Avatar $round $xlarge src={imgUrl} alt="image of the author" />
+                <Avatar $round $xlarge src={avatar.src} alt={avatar.alt} />
               </Tooltip>
             </Row>
           </>
@@ -84,11 +88,11 @@ const AvatarPage = () => {
           <Toggle>
             <PrismCode component="pre" className="language-markup" target>
               {`
-      <Avatar $round $xsmall src={imgUrl} alt="image of the author" />
-      <Avatar $round $small src={imgUrl} alt="image of the author" />
-      <Avatar $round $medium src={imgUrl} alt="image of the author" />
-      <Avatar $round $large src={imgUrl} alt="image of the author" />
-      <Avatar $round $xlarge src={imgUrl} alt="image of the author" />
+      <Avatar $round $xsmall src={avatar.src} alt={avatar.alt} />
+      <Avatar $round $small src={avatar.src} alt={avatar.alt} />
+      <Avatar $round $medium src={avatar.src} alt={avatar.alt} />
+      <Avatar $round $large src={avatar.src} alt={avatar.alt} />
+      <Avatar $round $xlarge src={avatar.src} alt={avatar.alt} />
         `}
             </PrismCode>
           </Toggle>

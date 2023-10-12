@@ -8,26 +8,14 @@ import PrismCode from 'react-prism';
 import Prism from 'prismjs';
 import Toggle from '../components/Toggle';
 
-const items = [
-  'images/image1.jpg',
-  'images/image2.jpg',
-  'images/image3.jpg',
-  'images/image4.jpg',
-  'images/image5.jpg',
-  'images/image6.jpg',
-  'images/image7.jpg',
-  'images/image8.jpg',
-  'images/image9.jpg',
-  'images/image10.jpg',
-  'images/image11.jpg',
-  'images/image12.jpg',
-];
+import fake_data from '../fake-data';
 const MasonryPage = () => {
+  const { masonry } = fake_data.pages;
   return (
     <>
       <PortletView
-        title="Masonry component"
-        content={<Masonry columns={3} gap={5} items={items} />}
+        title={masonry.page.title}
+        content={<Masonry columns={3} gap={5} items={masonry.items} />}
         footer={
           <Toggle>
             <PrismCode component="pre" className="language-markup" target>

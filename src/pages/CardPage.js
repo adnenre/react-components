@@ -12,32 +12,35 @@ import {
   PortletBody,
 } from '../components/Portlet/Portlet.Styled';
 import PortletView from '../components/Portlet';
+import fake_data from '../fake-data';
+
 const CardPage = () => {
+  const { card } = fake_data.pages;
   return (
     <>
       <PortletView
-        title="Card Component"
+        title={card.page.title}
         content={
           <Container>
             <Row>
               <Col $md={4}>
                 <Card
-                  header={<h3>Card Title</h3>}
-                  body={' Some quick example text to build on the card body'}
+                  header={<h3>{card.header}</h3>}
+                  body={card.body}
                   footer={<Button $primary label="Hey!" />}
                 />
               </Col>
               <Col $md={4}>
                 <Card
-                  header={<h3>Card Title</h3>}
-                  body={' Some quick example text to build on the card body'}
+                  header={card.header}
+                  body={card.body}
                   footer={<Button $success label="Hey!" />}
                 />
               </Col>
               <Col $md={4}>
                 <Card
-                  header={<h3>Card Title</h3>}
-                  body={' Some quick example text to build on the card body'}
+                  header={card.header}
+                  body={card.body}
                   footer={<Button $danger label="Hey!" />}
                 />
               </Col>
@@ -49,31 +52,31 @@ const CardPage = () => {
             <PrismCode component="pre" className="language-markup" target>
               {`
       
-        <Container>
-        <Row>
-          <Col $md={4}>
-            <Card
-              header={<h3>Card Title</h3>}
-              body={"Some quick example text to display on the card body"}
-              footer={<Button  $primary label="Hey!" />}
-            />
-          </Col>
-          <Col $md={4}>
-            <Card
-              header={<h3>Card Title</h3>}
-              body={"Some quick example text to display on the card body"}
-              footer={<Button  $success label="Hey!" />}
-            />
-          </Col>
-          <Col $md={4}>
-            <Card
-              header={<h3>Card Title</h3>}
-              body={"Some quick example text to display on the card body"}
-              footer={<Button  $danger label="Hey!" />}
-            />
-          </Col>
-        </Row>
-      </Container>
+         <Container>
+            <Row>
+              <Col $md={4}>
+                <Card
+                  header={card.header}
+                  body={card.body}
+                  footer={<Button  $primary label="Hey!" />}
+                />
+              </Col>
+              <Col $md={4}>
+                <Card
+                  header={card.header}
+                  body={card.body}
+                  footer={<Button  $success label="Hey!" />}
+                />
+              </Col>
+              <Col $md={4}>
+                <Card
+                  header={card.header}
+                  body={card.body}
+                  footer={<Button  $danger label="Hey!" />}
+                />
+              </Col>
+            </Row>
+          </Container>
         
         `}
             </PrismCode>
@@ -88,24 +91,24 @@ const CardPage = () => {
               <Col $md={4}>
                 <Card
                   $rounded
-                  header={<h3>Card Title</h3>}
-                  body={' Some quick example text to build on the card body'}
+                  header={card.header}
+                  body={card.body}
                   footer={<Button $rounded $primary label="Hey!" />}
                 />
               </Col>
               <Col $md={4}>
                 <Card
                   $rounded
-                  header={<h3>Card Title</h3>}
-                  body={' Some quick example text to build on the card body'}
+                  header={card.header}
+                  body={card.body}
                   footer={<Button $rounded $success label="Hey!" />}
                 />
               </Col>
               <Col $md={4}>
                 <Card
                   $rounded
-                  header={<h3>Card Title</h3>}
-                  body={' Some quick example text to build on the card body'}
+                  header={card.header}
+                  body={card.body}
                   footer={<Button $rounded $danger label="Hey!" />}
                 />
               </Col>
@@ -122,24 +125,24 @@ const CardPage = () => {
           <Col $md={4}>
             <Card
               $rounded
-              header={<h3>Card Title</h3>}
-              body={"Some quick example text to display on the card body"}
+              header={card.header}
+              body={card.body}
               footer={<Button $rounded $primary label="Hey!" />}
             />
           </Col>
           <Col $md={4}>
             <Card
               $rounded
-              header={<h3>Card Title</h3>}
-              body={"Some quick example text to display on the card body"}
+              header={card.header}
+              body={card.body}
               footer={<Button $rounded $success label="Hey!" />}
             />
           </Col>
           <Col $md={4}>
             <Card
               $rounded
-              header={<h3>Card Title</h3>}
-              body={"Some quick example text to display on the card body"}
+              header={card.header}
+              body={card.body}
               footer={<Button $rounded $danger label="Hey!" />}
             />
           </Col>
@@ -159,24 +162,24 @@ const CardPage = () => {
               <Col $md={4}>
                 <Card
                   $pill
-                  header={<h3>Card Title</h3>}
-                  body={' Some quick example text to build on the card body'}
+                  header={card.header}
+                  body={card.body}
                   footer={<Button $pill $primary label="Hey!" />}
                 />
               </Col>
               <Col $md={4}>
                 <Card
                   $pill
-                  header={<h3>Card Title</h3>}
-                  body={' Some quick example text to build on the card body'}
+                  header={card.header}
+                  body={card.body}
                   footer={<Button $pill $success label="Hey!" />}
                 />
               </Col>
               <Col $md={4}>
                 <Card
                   $pill
-                  header={<h3>Card Title</h3>}
-                  body={' Some quick example text to build on the card body'}
+                  header={card.header}
+                  body={card.body}
                   footer={<Button $pill $danger label="Hey!" />}
                 />
               </Col>
@@ -193,24 +196,24 @@ const CardPage = () => {
           <Col $md={4}>
             <Card
               $pill
-              header={<h3>Card Title</h3>}
-              body={"Some quick example text to display on the card body"}
+              header={card.header}
+              body={card.body}
               footer={<Button $pill $primary label="Hey!" />}
             />
           </Col>
           <Col $md={4}>
             <Card
               $pill
-              header={<h3>Card Title</h3>}
-              body={"Some quick example text to display on the card body"}
+              header={card.header}
+              body={card.body}
               footer={<Button $pill $success label="Hey!" />}
             />
           </Col>
           <Col $md={4}>
             <Card
               $pill
-              header={<h3>Card Title</h3>}
-              body={"Some quick example text to display on the card body"}
+              header={card.header}
+              body={card.body}
               footer={<Button $pill $danger label="Hey!" />}
             />
           </Col>

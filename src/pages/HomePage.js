@@ -9,7 +9,7 @@ import {
   PortletFooter,
 } from '../components/Portlet/Portlet.Styled';
 
-import imgUrl from '../components/data';
+import fake_data from '../fake-data';
 
 import { TodoStyled } from '../TodoStyled';
 import Tooltip from '../components/Tooltip';
@@ -40,7 +40,12 @@ const Home = () => {
             href="https://adnenre.github.io"
             area-label="link to author profile"
           >
-            <Avatar src={imgUrl} alt="author" $xsmall $round />
+            <Avatar
+              src={fake_data.pages.avatar.src}
+              alt={fake_data.pages.avatar.alt}
+              $xsmall
+              $round
+            />
           </a>
         </Tooltip>
       </PortletFooter>

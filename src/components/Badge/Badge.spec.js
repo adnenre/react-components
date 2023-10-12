@@ -8,7 +8,7 @@ import Badge from './index';
 import theme from '../../theme';
 const label = 'i m a label';
 
-describe('Component Badge', () => {
+describe('Test Badge', () => {
   const Component = (props) => (
     <Badge data-testid="badge" label={label} {...props} />
   );

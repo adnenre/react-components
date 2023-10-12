@@ -12,7 +12,7 @@ import theme from '../../theme';
 const label = 'Click me';
 const onClick = jest.fn(); // Mocking a click handler
 
-describe('Component Card', () => {
+describe('Test Card', () => {
   const bodyContent = 'Some quick example text to build on the card body';
   const Component = (props) => (
     <Card

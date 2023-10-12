@@ -13,23 +13,21 @@ import 'prismjs/themes/prism.css';
 import PrismCode from 'react-prism';
 import Prism from 'prismjs';
 import Toggle from '../components/Toggle';
+import fake_data from '../fake-data';
 const TablePage = () => {
+  const { tab } = fake_data.pages;
   return (
     <Portlet>
       <PortletHeader>
-        <Title>Table component</Title>
+        <Title>{tab.title}</Title>
       </PortletHeader>
       <PortletBody>
         <Tabs>
-          <Tabs.Tab id={1} $tabTitle="One">
-            1 - content of tab one
-          </Tabs.Tab>
-          <Tabs.Tab id={2} $tabTitle="Two">
-            2 - content of tab two
-          </Tabs.Tab>
-          <Tabs.Tab id={3} $tabTitle="Three">
-            3 - content of tab Three
-          </Tabs.Tab>
+          {tab.items.map(({ id, title, content }) => (
+            <Tabs.Tab key={id} id={id} $tabTitle={title}>
+              {content}
+            </Tabs.Tab>
+          ))}
         </Tabs>
       </PortletBody>
       <PortletFooter>
@@ -37,16 +35,16 @@ const TablePage = () => {
           <PrismCode component="pre" className="language-markup" target>
             {`
                <Tabs>
-               <Tabs.Tab id={1} tabTitle='one'>
-                1-content of tab one 
-               </Tabs.Tab>
-               <Tabs.Tab id={2} tabTitle='one'>
-                2- content of tab two
-               </Tabs.Tab>
-               <Tabs.Tab id={3} tabTitle='Three'>
-                3- content of tab Three
-               </Tabs.Tab>
-             </Tabs>
+                  <Tabs.Tab id={1} tabTitle='one'>
+                      1-content of tab one 
+                  </Tabs.Tab>
+                  <Tabs.Tab id={2} tabTitle='one'>
+                      2- content of tab two
+                  </Tabs.Tab>
+                  <Tabs.Tab id={3} tabTitle='Three'>
+                      3- content of tab Three
+                  </Tabs.Tab>
+                </Tabs>
             `}
           </PrismCode>
         </Toggle>

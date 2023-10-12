@@ -43,7 +43,8 @@ export const AccordionItem = ({
 
 const Accordion = ({ items, ...rest }) => {
   const containerRef = useRef(null);
-  const [accordionItems, setAccordionItems] = useState(items);
+  const newItems = items.map((item) => ({ ...item, isOpen: false }));
+  const [accordionItems, setAccordionItems] = useState(newItems);
 
   const toggleAccordionItem = (index) => (e) => {
     e.preventDefault();

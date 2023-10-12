@@ -14,23 +14,27 @@ import PrismCode from 'react-prism';
 import Prism from 'prismjs';
 import Toggle from '../components/Toggle';
 import Button from '../components/Button';
+import fake_data from '../fake-data';
 const ModalPage = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
+  const {
+    pages: { modal },
+  } = fake_data;
   return (
     <Portlet>
       <PortletHeader>
-        <Title>Table component</Title>
+        <Title>{modal.page.title}</Title>
       </PortletHeader>
       <PortletBody>
         <Button $primary onClick={openModal}>
-          Open Modal
+          {modal.page.triggerBtn}
         </Button>
         <Modal isOpen={modalOpen} onClose={closeModal}>
-          <h2>Modal Content</h2>
-          <p>This is a simple modal example.</p>
+          <h2>{modal.body.content_one}</h2>
+          <p>{modal.body.content_two}</p>
         </Modal>
       </PortletBody>
       <PortletFooter>

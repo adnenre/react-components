@@ -10,7 +10,7 @@ import theme from '../../theme';
 const label = 'Click me';
 const onClick = jest.fn(); // Mocking a click handler
 
-describe('Component Button', () => {
+describe('Test Button', () => {
   const Component = (props) => (
     <Button data-testid="button" onClick={onClick} label={label} {...props} />
   );

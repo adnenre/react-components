@@ -13,23 +13,18 @@ import 'prismjs/themes/prism.css';
 import PrismCode from 'react-prism';
 import Prism from 'prismjs';
 import Toggle from '../components/Toggle';
-
-const columns = ['#', 'First Name', 'Last Name', 'email'];
-const rows = [
-  { id: 1, name: 'adnen', lastName: 'rebai', email: '@adnen_rebai' },
-  { id: 2, name: 'Jhone', lastName: 'Doe', email: 'Jhon_doe' },
-  { id: 3, name: 'melina', lastName: 'Doe', email: '@melina_doe' },
-];
+import fake_data from '../fake-data';
 
 const TablePage = () => {
+  const { table } = fake_data.pages;
   return (
     <>
       <Portlet>
         <PortletHeader>
-          <Title>Table component</Title>
+          <Title>{table.page.title}</Title>
         </PortletHeader>
         <PortletBody>
-          <Table columns={columns} rows={rows} />
+          <Table columns={table.columns} rows={table.rows} />
         </PortletBody>
         <PortletFooter>
           <Toggle>
@@ -39,14 +34,16 @@ const TablePage = () => {
               target="javascript"
             >
               {`
-const columns = ["#","First Name", "Last Name", "email"];
-// const columns = Object.keys(rows[0])
-const rows = [
-      { id: 1, name: "adnen", lastName: "rebai", email: "@adnen_rebai" },
-      { id: 2, name: "Jhone", lastName: "Doe", email: "Jhon_doe" },
-      { id: 3, name: "melina", lastName: "Doe", email: "@melina_doe" }
-    ];
-     <Table columns={columns} rows={rows} />
+
+ 
+      const rows = [
+            { id: 1, name: "adnen", lastName: "rebai", email: "@adnen_rebai" },
+            { id: 2, name: "Jhone", lastName: "Doe", email: "Jhon_doe" },
+            { id: 3, name: "melina", lastName: "Doe", email: "@melina_doe" }
+          ];
+      const columns = Object.keys(rows[0]);
+
+      <Table columns={columns} rows={rows} />
      
             `}
             </PrismCode>
@@ -55,10 +52,10 @@ const rows = [
       </Portlet>
       <Portlet>
         <PortletHeader>
-          <Title>Table resizable</Title>
+          <Title>{table.page.title2}</Title>
         </PortletHeader>
         <PortletBody>
-          <Table columns={columns} rows={rows} resizable />
+          <Table columns={table.columns} rows={table.rows} resizable />
         </PortletBody>
         <PortletFooter>
           <Toggle>
@@ -68,14 +65,14 @@ const rows = [
               target="javascript"
             >
               {`
-const columns = ["#","First Name", "Last Name", "email"];
-// const columns = Object.keys(rows[0])
-const rows = [
-    { id: 1, name: "adnen", lastName: "rebai", email: "@adnen_rebai" },
-    { id: 2, name: "Jhone", lastName: "Doe", email: "Jhon_doe" },
-    { id: 3, name: "melina", lastName: "Doe", email: "@melina_doe" }
-  ];
-   <Table columns={columns} rows={rows}  resizable/>
+    const rows = [
+        { id: 1, name: "adnen", lastName: "rebai", email: "@adnen_rebai" },
+        { id: 2, name: "Jhone", lastName: "Doe", email: "Jhon_doe" },
+        { id: 3, name: "melina", lastName: "Doe", email: "@melina_doe" }
+      ];
+    const columns = Object.keys(rows[0]);
+
+    <Table columns={columns} rows={rows}  resizable/>
    
           `}
             </PrismCode>

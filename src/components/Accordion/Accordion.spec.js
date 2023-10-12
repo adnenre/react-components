@@ -7,14 +7,12 @@ import renderer from 'react-test-renderer';
 import Accordion, { AccordionItem } from '.';
 
 import fake_data from '../../fake-data';
+
 // Mocking a click handler
-describe('Component Accordion', () => {
+describe('Test Accordion', () => {
+  const { items } = fake_data.pages.accordion;
   const Component = (props) => (
-    <Accordion
-      data-testid="accordion"
-      items={fake_data.accordion.items}
-      {...props}
-    />
+    <Accordion data-testid="accordion" items={items} {...props} />
   );
   const renderToJson = (C) => (rest) =>
     renderer.create(<C {...rest} />).toJSON();
@@ -32,7 +30,7 @@ describe('Component Accordion', () => {
 
     const { tagName, textContent } = accordionItem;
     const tag = 'H5';
-    const first_accordion_title = fake_data.accordion.items[0].title;
+    const first_accordion_title = items[0].title;
 
     expect(tagName).toBe(tag);
     expect(textContent).toBe(first_accordion_title);
@@ -46,14 +44,13 @@ describe('Component Accordion', () => {
 
     const { tagName, textContent } = accordionItem.firstChild;
     const tag = 'P';
-    const second_accordion_content = fake_data.accordion.items[1].content;
+    const second_accordion_content = items[1].content;
 
     expect(tagName).toBe(tag);
     expect(textContent).toBe(second_accordion_content);
   });
 
   test('I can open accordion items to see the contents', () => {
-    const { items } = fake_data.accordion;
     const { getByText, queryByText } = render(<Accordion items={items} />);
 
     // click the Accordion Title

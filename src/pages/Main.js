@@ -24,8 +24,6 @@ const Main = ({ active }) => {
   return (
     <MainContainer $active={active}>
       <Switch>
-        {' '}
-        ``
         <Route exact path={`${subPath}/`} component={HomePage} />
         <Route path={`${subPath}/Inprogress`} component={Inprogress} />
         <Route path={`${subPath}/ButtonPage`} component={ButtonPage} />

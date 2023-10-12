@@ -8,11 +8,13 @@ import Prism from 'prismjs';
 import Toggle from '../components/Toggle';
 import { Container, Row, Col } from '../components/grid';
 import Tooltip from '../components/Tooltip';
+import fake_data from '../fake-data';
 const ButtonPage = () => {
+  const { button } = fake_data.pages;
   return (
     <Container>
       <PortletView
-        title="Button"
+        title={button.page.title}
         content={
           <>
             <Row>
@@ -114,7 +116,7 @@ const ButtonPage = () => {
       />
 
       <PortletView
-        title="Button Rounded"
+        title={button.page.title2}
         content={
           <>
             <Row>
@@ -208,7 +210,7 @@ const ButtonPage = () => {
       />
 
       <PortletView
-        title="Button Pill"
+        title={button.page.title3}
         content={
           <>
             <Row>
@@ -301,7 +303,7 @@ const ButtonPage = () => {
       />
 
       <PortletView
-        title="Button Fullwidth"
+        title={button.page.title4}
         content={
           <>
             <Row>
@@ -377,7 +379,7 @@ const ButtonPage = () => {
         }
       />
       <PortletView
-        title="Button disabled"
+        title={button.page.title5}
         content={
           <>
             <Row>

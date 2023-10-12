@@ -14,38 +14,28 @@ import PrismCode from 'react-prism';
 import Prism from 'prismjs';
 import Toggle from '../components/Toggle';
 import { Container, Row, Col } from '../components/grid';
-const items = [
-  { id: 1, title: 'Option 1' },
-  { id: 2, title: 'Option 2' },
-  { id: 3, title: 'Option 3' },
-  { id: 4, title: 'Option 4' },
-  { id: 5, title: 'Option 5' },
-  { id: 6, title: 'Option 6' },
-  { id: 7, title: 'Option 7' },
-  { id: 8, title: 'Option 8' },
-  { id: 9, title: 'Option 9' },
-  { id: 10, title: 'Option 10' },
-];
+import fake_data from '../fake-data';
 const DropDownPage = () => {
+  const { dropdown } = fake_data.pages;
   return (
     <Container>
       <Portlet>
         <PortletHeader>
-          <Title>Table component</Title>
+          <Title>{dropdown.page.title}</Title>
         </PortletHeader>
         <PortletBody>
           <Row>
             <Col $sm={4}>
-              <DropDown items={items} />
+              <DropDown items={dropdown.items} />
             </Col>
             <Col $sm={4}>
-              <DropDown items={items} />
+              <DropDown items={dropdown.items} />
             </Col>
             <Col $sm={2}>
-              <DropDown items={items} />
+              <DropDown items={dropdown.items} />
             </Col>
             <Col $sm={2}>
-              <DropDown items={items} />
+              <DropDown items={dropdown.items} />
             </Col>
           </Row>
         </PortletBody>
