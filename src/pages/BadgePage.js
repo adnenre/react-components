@@ -95,7 +95,7 @@ const BadgePage = () => {
           </>
         }
         footer={
-          <Toggle>
+          <Toggle $rounded>
             <PrismCode component="pre" className="language-markup" target>
               {`
       <Badge $primary $rounded/>
@@ -141,7 +141,7 @@ const BadgePage = () => {
           </>
         }
         footer={
-          <Toggle>
+          <Toggle $pill>
             <PrismCode component="pre" className="language-markup" target>
               {`
         <Badge $pill $primary />

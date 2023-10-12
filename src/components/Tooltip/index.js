@@ -19,9 +19,11 @@ const Tooltip = ({ text, children, ...rest }) => {
       onMouseLeave={handleMouseLeave}
     >
       {children}
-      <TooltipText $isHovered={isHovered} {...rest}>
-        {text}
-      </TooltipText>
+      {isHovered && (
+        <TooltipText $isHovered={isHovered} {...rest}>
+          {text}
+        </TooltipText>
+      )}
     </TooltipContainer>
   );
 };

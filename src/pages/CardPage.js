@@ -116,7 +116,7 @@ const CardPage = () => {
           </Container>
         }
         footer={
-          <Toggle>
+          <Toggle $rounded>
             <PrismCode component="pre" className="language-markup" target>
               {`
       
@@ -187,7 +187,7 @@ const CardPage = () => {
           </Container>
         }
         footer={
-          <Toggle>
+          <Toggle $pill>
             <PrismCode component="pre" className="language-markup" target>
               {`
       

@@ -1,10 +1,10 @@
 import React from 'react';
 import '@testing-library/jest-dom';
-import { render, getByTestId, fireEvent } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import 'jest-styled-components';
 import renderer from 'react-test-renderer';
 
-import Accordion, { AccordionItem } from '.';
+import Accordion from '.';
 
 import fake_data from '../../fake-data';
 

@@ -121,7 +121,11 @@ const fake_data = {
       ],
     },
     tooltip: {
-      page: { title: 'Tooltip Component' },
+      page: {
+        title: 'Tooltip Component',
+        title2: 'Tooltip Component Rounded',
+        title3: 'Tooltip Component Pill',
+      },
       direction: {
         top: 'Tooltip on the top ',
         right: 'Tooltip on the right ',

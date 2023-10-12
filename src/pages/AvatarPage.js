@@ -83,7 +83,7 @@ const AvatarPage = () => {
           </>
         }
         footer={
-          <Toggle>
+          <Toggle $rounded>
             <PrismCode component="pre" className="language-markup" target>
               {`
       <Avatar $round $xsmall src={avatar.src} alt={avatar.alt} />

@@ -186,7 +186,7 @@ const ButtonPage = () => {
           </>
         }
         footer={
-          <Toggle>
+          <Toggle $rounded>
             <PrismCode component="pre" className="language-markup">
               {`
                /* Note the component take the with of the column width */
@@ -215,64 +215,64 @@ const ButtonPage = () => {
           <>
             <Row>
               <Col $sm={2}>
-                <Tooltip text="Hello i m a pill primary Button" $top>
+                <Tooltip text="Hello i m a pill primary Button" $top $pill>
                   <Button $pill $primary />
                 </Tooltip>
               </Col>
               <Col $sm={2}>
-                <Tooltip text="Hello i m a pill info Button">
+                <Tooltip text="Hello i m a pill info Button" $pill>
                   <Button $pill $info />
                 </Tooltip>
               </Col>
               <Col $sm={2}>
-                <Tooltip text="Hello i m a pill warning Button" $top>
+                <Tooltip text="Hello i m a pill warning Button" $top $pill>
                   <Button $pill $warning />
                 </Tooltip>
               </Col>
               <Col $sm={2}>
-                <Tooltip text="Hello i m a pill success Button" $top>
+                <Tooltip text="Hello i m a pill success Button" $top $pill>
                   <Button $pill $success />
                 </Tooltip>
               </Col>
               <Col $sm={2}>
-                <Tooltip text="Hello i m a pill danger Button">
+                <Tooltip text="Hello i m a pill danger Button" $pill>
                   <Button $pill $danger />
                 </Tooltip>
               </Col>
               <Col $sm={2}>
-                <Tooltip text="Hello i m a pill black Button">
+                <Tooltip text="Hello i m a pill black Button" $pill>
                   <Button $pill $black />
                 </Tooltip>
               </Col>
             </Row>
             <Row>
               <Col $sm={2}>
-                <Tooltip text="Hello i m a primary Button" $top>
+                <Tooltip text="Hello i m a primary Button" $top $pill>
                   <Button $outline $pill $primary />
                 </Tooltip>
               </Col>
               <Col $sm={2}>
-                <Tooltip text="Hello i m an info Button">
+                <Tooltip text="Hello i m an info Button" $pill>
                   <Button $outline $pill $info />
                 </Tooltip>
               </Col>
               <Col $sm={2}>
-                <Tooltip text="Hello i m a warning Button" $top>
+                <Tooltip text="Hello i m a warning Button" $top $pill>
                   <Button $outline $pill $warning />
                 </Tooltip>
               </Col>
               <Col $sm={2}>
-                <Tooltip text="Hello i m a success Button" $top>
+                <Tooltip text="Hello i m a success Button" $top $pill>
                   <Button $outline $pill $success />
                 </Tooltip>
               </Col>
               <Col $sm={2}>
-                <Tooltip text="Hello i m a danger Button">
+                <Tooltip text="Hello i m a danger Button" $pill>
                   <Button $outline $pill $danger />
                 </Tooltip>
               </Col>
               <Col $sm={2}>
-                <Tooltip text="Hello i m a black Button">
+                <Tooltip text="Hello i m a black Button" $pill>
                   <Button $outline $pill $black />
                 </Tooltip>
               </Col>
@@ -280,7 +280,7 @@ const ButtonPage = () => {
           </>
         }
         footer={
-          <Toggle>
+          <Toggle $pill>
             <PrismCode component="pre" className="language-markup">
               {`
               <Button $primary $pill/>

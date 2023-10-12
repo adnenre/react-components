@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theme from '../../theme';
 
 export const TooltipContainer = styled.div`
   position: relative;
@@ -47,7 +48,11 @@ export const TooltipText = styled.div`
   opacity: 0.8;
 
   display: ${({ $isHovered }) => ($isHovered ? 'block' : 'none')};
-
+  border-radius: ${({ $pill, $rounded }) => {
+    if ($pill) return theme.borderRadius.$pill;
+    if ($rounded) return theme.borderRadius.$rounded;
+    return theme.borderRadius.$default;
+  }};
   &::after {
     content: '';
     width: 0px;

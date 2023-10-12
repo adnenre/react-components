@@ -4,7 +4,7 @@ import Button from './Button';
 import Tooltip from './Tooltip';
 import { Row, Col } from './grid';
 import fake_data from '../fake-data';
-const Toggle = ({ text, label, children }) => {
+const Toggle = ({ text, label, children, ...rest }) => {
   const [active, setActive] = useState(false);
 
   const toggle = () => setActive(!active);
@@ -13,8 +13,8 @@ const Toggle = ({ text, label, children }) => {
     <>
       <Row>
         <Col $sm={2}>
-          <Tooltip text={text} $right>
-            <Button $black onClick={toggle} label={label} />
+          <Tooltip text={text} $right {...rest}>
+            <Button $black onClick={toggle} label={label} {...rest} />
           </Tooltip>
         </Col>
       </Row>
