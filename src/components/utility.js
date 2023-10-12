@@ -23,7 +23,7 @@ export const getBgColor = ({ theme, ...props }) => {
   `;
 };
 
-export const getHoverEffect = ({ theme, ...props }) => {
+const getHoverEffect = ({ theme, ...props }) => {
   const colorProps = Object.keys(theme.colors);
   const defaultColor = theme.colors.$default;
   for (const prop of colorProps) {
