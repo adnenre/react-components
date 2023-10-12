@@ -6,9 +6,7 @@ import Toggle from '../components/Toggle';
 import 'prismjs/themes/prism.css';
 import PrismCode from 'react-prism';
 import Prism from 'prismjs';
-
-import imgUrl from '../components/data';
-import { Container, Row, Col } from '../components/grid';
+import { Container, Row } from '../components/grid';
 import Tooltip from '../components/Tooltip';
 import fake_data from '../fake-data';
 
