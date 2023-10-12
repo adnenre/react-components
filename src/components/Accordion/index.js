@@ -32,10 +32,11 @@ export const AccordionItem = ({
         {title}
         <Carret $isOpen={isOpen} />
       </AccordionTitle>
-
-      <AccordionContent $isOpen={isOpen} data-testid={`accordionContent-${id}`}>
-        <p>{content}</p>
-      </AccordionContent>
+      {isOpen && (
+        <AccordionContent data-testid={`accordionContent-${id}`}>
+          <p>{content}</p>
+        </AccordionContent>
+      )}
     </AccordionItemStyled>
   );
 };

@@ -27,8 +27,6 @@ const AccordionContent = styled.div`
   text-align: left;
   color: ${theme.font.$color};
   padding: 1.5rem 1rem;
-
-  display: ${({ $isOpen }) => ($isOpen ? 'block' : 'none')};
 `;
 const AccordionContainer = styled.div`
   width: 100%;
