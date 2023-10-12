@@ -36,13 +36,13 @@ const Carousel = ({ slides }) => {
     <CarouselWrapper>
       <CarouselContainer>
         <SlideContainer
-          totalSlides={slides.length}
+          $totalSlides={slides.length}
           style={{
             transform: `translateX(-${currentIndex * (100 / slides.length)}%)`,
           }}
         >
           {slides.map((slide, index) => (
-            <Slide key={index} totalSlides={slides.length}>
+            <Slide key={index} $totalSlides={slides.length}>
               {isImageUrl(slide) ? (
                 <img src={slide} alt={`Slide ${index + 1}`} />
               ) : (
@@ -58,7 +58,7 @@ const Carousel = ({ slides }) => {
         {slides.map((_, index) => (
           <Indicator
             key={index}
-            active={index === currentIndex}
+            $active={index === currentIndex}
             onClick={() => setCurrentIndex(index)}
           />
         ))}
@@ -67,6 +67,6 @@ const Carousel = ({ slides }) => {
   );
 };
 Carousel.propTypes = {
-  slides: PropTypes.arrayOf(PropTypes.element).isRequired,
+  slides: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 export default Carousel;

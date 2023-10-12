@@ -17,12 +17,12 @@ const SlideContainer = styled.div`
   height: inherit;
   display: flex;
   transition: transform 0.3s ease-in-out;
-  width: ${(props) => `${props.totalSlides * 100}%`};
+  width: ${({ $totalSlides }) => `${$totalSlides * 100}%`};
 `;
 
 const Slide = styled.div`
   height: 100%;
-  flex: 0 0 ${(props) => `${100 / props.totalSlides}%`};
+  flex: 0 0 ${({ $totalSlides }) => `${100 / $totalSlides}%`};
   max-width: 100%;
   text-align: center;
   img {
@@ -40,14 +40,6 @@ const SlideText = styled.div`
   color: ${theme.colors.$default};
 `;
 
-const Button = styled.button`
-  background-color: #0074cc;
-  color: white;
-  padding: 8px 12px;
-  border: none;
-  cursor: pointer;
-`;
-
 const Indicators = styled.div`
   display: flex;
   justify-content: center;
@@ -58,7 +50,7 @@ const Indicator = styled.div`
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: ${(props) => (props.active ? '#0074cc' : '#ccc')};
+  background-color: ${({ $active }) => ($active ? '#0074cc' : '#ccc')};
   margin: 0 5px;
   cursor: pointer;
 `;
