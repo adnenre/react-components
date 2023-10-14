@@ -29,19 +29,18 @@ const ModalPage = () => {
         title={modal.page.title}
         content={
           <>
-            <Button $primary onClick={toggle(1)}>
+            <Button $primary $rounded onClick={toggle(1)}>
               {modal.page.triggerBtn}
             </Button>
 
             <Modal onToggleModal={toggle(1)} show={modalOpen[1]}>
               <Modal.Header title={modal.page.title} />
               <Modal.Body>
-                <h2>{modal.body.content_one}</h2>
-                <p>{modal.body.content_two}</p>
+                <p>{modal.page.content}</p>
               </Modal.Body>
               <Modal.Footer>
-                <Button $primary label="Ok" onClick={toggle(1)} />
-                <Button $danger label="Cancel" onClick={toggle(1)} />
+                <Button $primary label="Ok" $rounded onClick={toggle(1)} />
+                <Button $danger label="Cancel" $rounded onClick={toggle(1)} />
               </Modal.Footer>
             </Modal>
           </>
@@ -50,19 +49,18 @@ const ModalPage = () => {
           <Toggle>
             <PrismCode component="pre" className="language-markup" target>
               {`
-              <Button $primary onClick={toggle}>
+              <Button $primary $rounded onClick={toggle}>
                 Open Modal
               </Button>
 
               <Modal onToggleModal={toggle} show={modalOpen}>
                 <Modal.Header title={modal.page.title} />
                 <Modal.Body>
-                  <h2>{modal.body.content_one}</h2>
-                  <p>{modal.body.content_two}</p>
+                  <p>{modal.page.content}</p>
                 </Modal.Body>
                 <Modal.Footer>
-                  <Button $primary label="Ok" onClick={toggle} />
-                  <Button $danger label="Cancel" onClick={toggle} />
+                  <Button $primary label="Ok" $rounded onClick={toggle} />
+                  <Button $danger label="Cancel" $rounded onClick={toggle} />
                 </Modal.Footer>
               </Modal>
         `}
@@ -75,19 +73,18 @@ const ModalPage = () => {
         title={modal.page.title2}
         content={
           <>
-            <Button $primary onClick={toggle(2)}>
+            <Button $primary $rounded onClick={toggle(2)}>
               {modal.page.triggerBtn}
             </Button>
 
             <Modal onToggleModal={toggle(2)} show={modalOpen[2]} resizable>
-              <Modal.Header title={modal.page.title} />
+              <Modal.Header title={modal.page.title2} />
               <Modal.Body>
-                <h2>{modal.body.content_one}</h2>
-                <p>{modal.body.content_two}</p>
+                <p>{modal.page.content}</p>
               </Modal.Body>
               <Modal.Footer>
-                <Button $primary label="Ok" onClick={toggle(2)} />
-                <Button $danger label="Cancel" onClick={toggle(2)} />
+                <Button $primary label="Ok" $rounded onClick={toggle(2)} />
+                <Button $danger label="Cancel" $rounded onClick={toggle(2)} />
               </Modal.Footer>
             </Modal>
           </>
@@ -96,19 +93,18 @@ const ModalPage = () => {
           <Toggle>
             <PrismCode component="pre" className="language-markup" target>
               {`
-           <Button $primary onClick={toggle}>
+           <Button $primary $rounded onClick={toggle}>
               Open Modal
             </Button>
 
             <Modal onToggleModal={toggle} show={modalOpen} resizable>
               <Modal.Header title={modal.page.title} />
               <Modal.Body>
-                <h2>{modal.body.content_one}</h2>
-                <p>{modal.body.content_two}</p>
+                    <p>{modal.page.content}</p>
               </Modal.Body>
               <Modal.Footer>
-                <Button $primary label="Ok" onClick={toggle} />
-                <Button $danger label="Cancel" onClick={toggle} />
+                <Button $primary label="Ok" $rounded onClick={toggle} />
+                <Button $danger label="Cancel" $rounded onClick={toggle} />
               </Modal.Footer>
             </Modal>
         `}
@@ -120,19 +116,18 @@ const ModalPage = () => {
         title={modal.page.title3}
         content={
           <>
-            <Button $primary onClick={toggle(3)}>
+            <Button $primary $rounded onClick={toggle(3)}>
               {modal.page.triggerBtn}
             </Button>
 
             <Modal onToggleModal={toggle(3)} show={modalOpen[3]} draggable>
               <Modal.Header title={modal.page.title3} />
               <Modal.Body>
-                <h2>{modal.body.content_one}</h2>
-                <p>{modal.body.content_two}</p>
+                <p>{modal.page.content}</p>
               </Modal.Body>
               <Modal.Footer>
-                <Button $primary label="Ok" onClick={toggle(3)} />
-                <Button $danger label="Cancel" onClick={toggle(3)} />
+                <Button $primary label="Ok" $rounded onClick={toggle(3)} />
+                <Button $danger label="Cancel" $rounded onClick={toggle(3)} />
               </Modal.Footer>
             </Modal>
           </>
@@ -141,19 +136,18 @@ const ModalPage = () => {
           <Toggle>
             <PrismCode component="pre" className="language-markup" target>
               {`
-            <Button $primary onClick={toggle}>
+            <Button $primary $rounded onClick={toggle}>
               Open Modal
             </Button>
 
             <Modal onToggleModal={toggle} show={modalOpen} draggable>
               <Modal.Header title={modal.page.title} />
               <Modal.Body>
-                <h2>{modal.body.content_one}</h2>
-                <p>{modal.body.content_two}</p>
+                    <p>{modal.page.content}</p>
               </Modal.Body>
               <Modal.Footer>
-                <Button $primary label="Ok" onClick={toggle} />
-                <Button $danger label="Cancel" onClick={toggle} />
+                <Button $primary label="Ok" $rounded onClick={toggle} />
+                <Button $danger label="Cancel" $rounded onClick={toggle} />
               </Modal.Footer>
             </Modal>
         `}
@@ -165,7 +159,7 @@ const ModalPage = () => {
         title={modal.page.title4}
         content={
           <>
-            <Button $primary onClick={toggle(4)}>
+            <Button $primary $rounded onClick={toggle(4)}>
               {modal.page.triggerBtn}
             </Button>
 
@@ -176,14 +170,13 @@ const ModalPage = () => {
               resizable
               fullscreen
             >
-              <Modal.Header title={modal.page.title} />
+              <Modal.Header title={modal.page.title4} />
               <Modal.Body>
-                <h2>{modal.body.content_one}</h2>
-                <p>{modal.body.content_two}</p>
+                <p>{modal.page.content}</p>
               </Modal.Body>
               <Modal.Footer>
-                <Button $primary label="Ok" onClick={toggle(4)} />
-                <Button $danger label="Cancel" onClick={toggle(4)} />
+                <Button $primary label="Ok" $rounded onClick={toggle(4)} />
+                <Button $danger label="Cancel" $rounded onClick={toggle(4)} />
               </Modal.Footer>
             </Modal>
           </>
@@ -192,19 +185,18 @@ const ModalPage = () => {
           <Toggle>
             <PrismCode component="pre" className="language-markup" target>
               {`
-           <Button $primary onClick={toggle}>
+           <Button $primary $rounded onClick={toggle}>
               Open Modal
             </Button>
 
             <Modal onToggleModal={toggle} show={modalOpen} resizable draggable fullscreen>
               <Modal.Header title={modal.page.title} />
               <Modal.Body>
-                <h2>{modal.body.content_one}</h2>
-                <p>{modal.body.content_two}</p>
+                    <p>{modal.page.content}</p>
               </Modal.Body>
               <Modal.Footer>
-                <Button $primary label="Ok" onClick={toggle} />
-                <Button $danger label="Cancel" onClick={toggle} />
+                <Button $primary label="Ok" $rounded onClick={toggle} />
+                <Button $danger label="Cancel" $rounded onClick={toggle} />
               </Modal.Footer>
             </Modal>
         `}

@@ -50,22 +50,25 @@ export const ModalHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px;
+  padding: 0.75rem 1rem;
   border-bottom: 1px solid ${theme.colors.$grayLight};
   cursor: ${({ draggable }) => (draggable ? 'move' : 'auto')};
+  font-size: 1rem;
+  line-height: 1.75rem;
+  font-weight: 400;
 `;
 
 export const ModalBody = styled.div`
   justify-content: flex-end;
   overflow: auto;
-  padding: 10px 20px;
+  padding: 1rem;
   flex: 1 1 auto;
 `;
 
 export const ModalFooter = styled.div`
   display: flex;
-  justify-content: flex-end;
-  padding: 15px 30px;
+  justify-content: flex-start;
+  padding: 0.75rem 1rem;
   border-top: 1px solid #e5e5e5;
   > button {
     min-width: 120px;

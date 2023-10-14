@@ -35,9 +35,11 @@ const fake_data = {
     modal: {
       page: {
         title: 'Modal Component',
-        title2: 'Modal Component Resizable',
-        title3: 'Modal Component draggable',
-        title4: 'Modal Component fullscreen resizable and draggable',
+        title2: 'Modal Component - Resizable',
+        title3: 'Modal Component - Draggable',
+        title4: 'Modal Component - Fullscreen, Resizable and Draggable',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         triggerBtn: 'Open Modal',
       },
       header: {},

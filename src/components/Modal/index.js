@@ -77,10 +77,7 @@ const Modal = ({
   // fullscreen toggle function
   const onToggleFullScreen = () =>
     isFullscreen ? document.exitFullscreen() : setIsFullscreen();
-  // clickOutSlide
-  const ToggleModal = () => {
-    setIsModalOpen(!isModalOpen);
-  };
+
   useClickOutside(modalContainer, onToggleModal);
 
   //################       Drag logic    ####################
@@ -188,8 +185,8 @@ const Modal = ({
         supportFullScreen,
       }}
     >
-      <MemoizedPortal id="modal-root">
-        {show && (
+      {show && (
+        <MemoizedPortal id="modal-root">
           <WrapperContainer dialog={isDialog}>
             <ModalContainer
               dialog={isDialog}
@@ -202,8 +199,8 @@ const Modal = ({
               {resizable && <ModalResizeIcon onMouseDown={onResizeStart} />}
             </ModalContainer>
           </WrapperContainer>
-        )}
-      </MemoizedPortal>
+        </MemoizedPortal>
+      )}
     </Provider>
   );
 };
