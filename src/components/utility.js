@@ -2,7 +2,7 @@
 
 import { css } from 'styled-components';
 
-export const getBgColor = ({ theme, ...props }) => {
+const getBgColor = ({ theme, ...props }) => {
   const colorProps = Object.keys(theme.colors);
 
   const defaultColor = theme.colors.$default;
