@@ -3,9 +3,9 @@
   "name": "The front-end UI components",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "images/favicon_package/favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "png"
     }
   ],
   "start_url": ".",
