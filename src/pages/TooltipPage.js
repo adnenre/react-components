@@ -21,12 +21,7 @@ const TooltipPage = () => {
             <Container>
               <Row>
                 <Col $md={3}>
-                  <Tooltip text={tooltip.direction.left} $left>
-                    <Button $primary label="Hover me !" />
-                  </Tooltip>
-                </Col>
-                <Col $md={3}>
-                  <Tooltip text={tooltip.direction.bottom}>
+                  <Tooltip text={tooltip.direction.top} $top>
                     <Button $primary label="Hover me !" />
                   </Tooltip>
                 </Col>
@@ -35,9 +30,14 @@ const TooltipPage = () => {
                     <Button $primary label="Hover me !" />
                   </Tooltip>
                 </Col>
+                <Col $md={3}>
+                  <Tooltip text={tooltip.direction.left} $left>
+                    <Button $primary label="Hover me !" />
+                  </Tooltip>
+                </Col>
 
                 <Col $md={3}>
-                  <Tooltip text={tooltip.direction.top} $top>
+                  <Tooltip text={tooltip.direction.bottom}>
                     <Button $primary label="Hover me !" />
                   </Tooltip>
                 </Col>
@@ -51,12 +51,7 @@ const TooltipPage = () => {
               {`
           <Row>
             <Col $md={3}>
-              <Tooltip text="Tooltip on the left " $left>
-                <Button $primary label="Hover me !"/>
-              </Tooltip>
-            </Col>
-            <Col $md={3}>
-              <Tooltip text="Tooltip on the bottom">
+              <Tooltip text="Tooltip on the bottom " $bottom>
                 <Button $primary label="Hover me !"/>
               </Tooltip>
             </Col>
@@ -65,9 +60,14 @@ const TooltipPage = () => {
                 <Button $primary label="Hover me !"/>
               </Tooltip>
             </Col>
+            <Col $md={3}>
+              <Tooltip text="Tooltip on the left" $left>
+                <Button $primary label="Hover me !"/>
+              </Tooltip>
+            </Col>
 
             <Col $md={3}>
-              <Tooltip text="Tooltip on the Top" $top>
+              <Tooltip text="Tooltip on the Bttom" $bottom>
                 <Button $primary label="Hover me !"/>
               </Tooltip>
             </Col>
@@ -85,12 +85,7 @@ const TooltipPage = () => {
             <Container>
               <Row>
                 <Col $md={3}>
-                  <Tooltip text={tooltip.direction.left} $left $rounded>
-                    <Button $primary label="Hover me !" $rounded />
-                  </Tooltip>
-                </Col>
-                <Col $md={3}>
-                  <Tooltip text={tooltip.direction.bottom} $rounded>
+                  <Tooltip text={tooltip.direction.top} $top $rounded>
                     <Button $primary label="Hover me !" $rounded />
                   </Tooltip>
                 </Col>
@@ -99,9 +94,14 @@ const TooltipPage = () => {
                     <Button $primary label="Hover me !" $rounded />
                   </Tooltip>
                 </Col>
+                <Col $md={3}>
+                  <Tooltip text={tooltip.direction.left} $left $rounded>
+                    <Button $primary label="Hover me !" $rounded />
+                  </Tooltip>
+                </Col>
 
                 <Col $md={3}>
-                  <Tooltip text={tooltip.direction.top} $top $rounded>
+                  <Tooltip text={tooltip.direction.bottom} $bottom $rounded>
                     <Button $primary label="Hover me !" $rounded />
                   </Tooltip>
                 </Col>
@@ -115,12 +115,7 @@ const TooltipPage = () => {
               {`
           <Row>
           <Col $md={3}>
-            <Tooltip text="Tooltip on the left " $left>
-              <Button $primary label="Hover me !"/>
-            </Tooltip>
-          </Col>
-          <Col $md={3}>
-            <Tooltip text="Tooltip on the bottom">
+            <Tooltip text="Tooltip on the top " $top>
               <Button $primary label="Hover me !"/>
             </Tooltip>
           </Col>
@@ -129,9 +124,14 @@ const TooltipPage = () => {
               <Button $primary label="Hover me !"/>
             </Tooltip>
           </Col>
+          <Col $md={3}>
+            <Tooltip text="Tooltip on the left" $left>
+              <Button $primary label="Hover me !"/>
+            </Tooltip>
+          </Col>
 
           <Col $md={3}>
-            <Tooltip text="Tooltip on the Top" $top>
+            <Tooltip text="Tooltip on the bottom" $bottom>
               <Button $primary label="Hover me !"/>
             </Tooltip>
           </Col>
@@ -149,12 +149,7 @@ const TooltipPage = () => {
             <Container>
               <Row>
                 <Col $md={3}>
-                  <Tooltip text={tooltip.direction.left} $left $pill>
-                    <Button $primary label="Hover me !" $pill />
-                  </Tooltip>
-                </Col>
-                <Col $md={3}>
-                  <Tooltip text={tooltip.direction.bottom} $pill>
+                  <Tooltip text={tooltip.direction.top} $top $pill>
                     <Button $primary label="Hover me !" $pill />
                   </Tooltip>
                 </Col>
@@ -163,9 +158,14 @@ const TooltipPage = () => {
                     <Button $primary label="Hover me !" $pill />
                   </Tooltip>
                 </Col>
+                <Col $md={3}>
+                  <Tooltip text={tooltip.direction.left} $left $pill>
+                    <Button $primary label="Hover me !" $pill />
+                  </Tooltip>
+                </Col>
 
                 <Col $md={3}>
-                  <Tooltip text={tooltip.direction.top} $top $pill>
+                  <Tooltip text={tooltip.direction.bottom} $bottom $pill>
                     <Button $primary label="Hover me !" $pill />
                   </Tooltip>
                 </Col>
@@ -179,23 +179,23 @@ const TooltipPage = () => {
               {`
           <Row>
           <Col $md={3}>
-            <Tooltip text="Tooltip on the left " $left $pill>
+            <Tooltip text="Tooltip on the top " $top $pill>
               <Button $primary label="Hover me !" $pill/>
             </Tooltip>
           </Col>
           <Col $md={3}>
-            <Tooltip text="Tooltip on the bottom" $pill>
+            <Tooltip text="Tooltip on the right" $right $pill>
               <Button $primary label="Hover me !" $pill/>
             </Tooltip>
           </Col>
           <Col $md={3}>
-            <Tooltip text="Tooltip on the right" $right>
+            <Tooltip text="Tooltip on the left" $left>
               <Button $primary label="Hover me !" $pill/>
             </Tooltip>
           </Col>
 
           <Col $md={3}>
-            <Tooltip text="Tooltip on the Top" $top  $pill>
+            <Tooltip text="Tooltip on the bottom" $bottom  $pill>
               <Button $primary label="Hover me !"  $pill/>
             </Tooltip>
           </Col>
