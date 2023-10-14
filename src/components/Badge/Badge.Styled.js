@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { getBgColor } from '../utility';
 import theme from '../../theme';
 const border = 'solid 1px';
 const SBadge = styled.span`

@@ -18,7 +18,7 @@ const AccordionTitleStyled = styled.h5`
 
   padding: 1rem;
   font-weight: 500;
-
+  font-size: 1.25rem;
   cursor: pointer;
 `;
 const AccordionContent = styled.div`
