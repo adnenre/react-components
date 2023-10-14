@@ -1,68 +1,85 @@
-import styled from 'styled-components';
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
 import theme from '../../theme';
 
-// Define your styled-components for the modal
-const ModalWrapper = styled.div`
-  position: fixed;
+export const WrapperContainer = styled.div`
+  position: ${({ dialog }) => (dialog ? 'absolute' : 'fixed')};
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-`;
-const ModalHeader = styled.div`
-  display: flex;
-  border-bottom: solid 1px ${theme.colors.$grayLight};
-  padding: 0.5rem;
-  justify-content: right;
+  height: ${({ dialog }) => (dialog ? '10px' : '100vh')};
+  width: ${({ dialog }) => (dialog ? '100vw' : '100vw')};
+  padding: 0;
+  background: ${({ dialog }) => (dialog ? 'none' : 'rgba(0, 0, 0, 0.3)')};
 
-  background: ${({ $primary }) =>
-    $primary ? theme.colors.$primary : theme.colors.$dark};
-  color: white;
+  display: flex;
+  flex-direction: column;
+  z-index: 1050;
 `;
-const ModalBody = styled.div`
-  padding: 2rem;
-  display: ${({ flex }) => {
-    if (flex) return 'flex';
-    return 'block';
-  }};
-  flex-direction: ${({ flex, flexColumn }) => {
-    if (flex) return 'row';
-    if (flexColumn) return 'column';
-    return 'none';
-  }};
-  flex-wrap: wrap;
+const animateModal = keyframes`
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
 `;
-const ModalContent = styled.div`
+
+export const ModalContainer = styled.div`
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.3);
+  max-width: calc(100vw - 80px);
+  max-height: calc(100vh - 80px);
+  min-width: ${({ dialog }) => (dialog ? '500px' : 'none')};
+  min-height: ${({ dialog }) => (dialog ? 'min-content' : 'none')};
+  margin: ${({ position }) =>
+    position && position.left ? '0px' : '50px auto'};
+  border-radius: 5px;
   background-color: #fff;
-
-  border-radius: 4px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-`;
-const ModalFooter = styled.div`
   display: flex;
-  padding: 0.5rem;
-  border-top: solid 1px ${theme.colors.$grayLight};
+  flex-direction: column;
+  animation-name: ${animateModal};
+  animation-duration: 0.6s;
+  position: relative;
+  left: ${({ position }) =>
+    position && position.left ? position.left + 'px' : 0};
+  top: ${({ position }) =>
+    position && position.top ? position.top + 'px' : 0};
+  width: ${({ size, lg }) =>
+    size && size.w ? size.w + 'px' : lg ? '80%' : '50%'};
+  height: ${({ size }) => (size && size.h ? size.h + 'px' : '')};
+`;
 
-  flex-direction: ${({ flex, flexColumn }) => {
-    if (flex) return 'row';
-    if (flexColumn) return 'column';
-    return 'none';
-  }};
-  flex-wrap: wrap;
-  justify-content: ${({ center, spaceBetween }) => {
-    if (center) return 'center';
-    if (spaceBetween) return 'space-between';
-    return 'right';
-  }};
-  align-items: 'right';
-  button:first-child {
-    margin-right: 5px;
+export const ModalHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  border-bottom: 1px solid ${theme.colors.$grayLight};
+  cursor: ${({ draggable }) => (draggable ? 'move' : 'auto')};
+`;
+
+export const ModalBody = styled.div`
+  justify-content: flex-end;
+  overflow: auto;
+  padding: 10px 20px;
+  flex: 1 1 auto;
+`;
+
+export const ModalFooter = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 30px;
+  border-top: 1px solid #e5e5e5;
+  > button {
+    min-width: 120px;
+  }
+  > button ~ button {
+    margin-left: 5px;
   }
 `;
 
-export { ModalWrapper, ModalHeader, ModalContent, ModalBody, ModalFooter };
+export const ModalStyledResizeIcon = styled.div`
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  bottom: 3px;
+  left: calc(100% - 20px);
+  cursor: nw-resize;
+`;

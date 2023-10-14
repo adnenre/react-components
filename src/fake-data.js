@@ -35,6 +35,9 @@ const fake_data = {
     modal: {
       page: {
         title: 'Modal Component',
+        title2: 'Modal Component Resizable',
+        title3: 'Modal Component draggable',
+        title4: 'Modal Component fullscreen resizable and draggable',
         triggerBtn: 'Open Modal',
       },
       header: {},

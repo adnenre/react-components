@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import Carret from '../Carret';
-import useClickOutside from '../../hooks/useClickOutslide';
+import useClickOutside from '../../hooks/useClickOutside';
 
 import {
   AccordionContainer,

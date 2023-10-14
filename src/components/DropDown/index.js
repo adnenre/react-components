@@ -9,7 +9,7 @@ import {
   DropDownCarretStyled,
 } from './DropDown.styled';
 import PropTypes from 'prop-types';
-import useClickOutside from '../../hooks/useClickOutslide';
+import useClickOutside from '../../hooks/useClickOutside';
 
 const DropDownCarret = ({ isOpen }) => {
   const style = { transform: isOpen ? 'rotatez(90deg)' : 'rotatez(0deg)' };
