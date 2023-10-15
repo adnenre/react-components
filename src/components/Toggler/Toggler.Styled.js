@@ -1,15 +1,20 @@
 import styled from 'styled-components';
 import theme from '../../theme';
 
+const TogglerIcon = styled.div`
+  height: 38px;
+  width: 50px;
+`;
 const TogglerContainer = styled.div`
   position: fixed;
   bottom: 20px;
   right: 20px;
+
   opacity: 0.5;
   &:hover {
     opacity: 1;
   }
-  > svg {
+  svg {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -25,4 +30,4 @@ const TogglerContainer = styled.div`
   }
 `;
 
-export { TogglerContainer };
+export { TogglerContainer, TogglerIcon };
