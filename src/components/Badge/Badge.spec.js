@@ -53,33 +53,33 @@ describe('Test Badge', () => {
 
   test('check that $outline && $primary apply correct styles ', () => {
     const badge = renderToJson(Component)({ $outline: true, $primary: true });
-    expect(badge).toHaveStyleRule('background', theme.colors.$default);
+    expect(badge).toHaveStyleRule('background', theme.colors.$white);
     expect(badge).toHaveStyleRule('color', theme.colors.$primary);
   });
 
   test('check that $outline && $info apply correct styles ', () => {
     const badge = renderToJson(Component)({ $outline: true, $info: true });
-    expect(badge).toHaveStyleRule('background', theme.colors.$default);
+    expect(badge).toHaveStyleRule('background', theme.colors.$white);
     expect(badge).toHaveStyleRule('color', theme.colors.$info);
   });
   test('check that $outline && $success apply correct styles ', () => {
     const badge = renderToJson(Component)({ $outline: true, $success: true });
-    expect(badge).toHaveStyleRule('background', theme.colors.$default);
+    expect(badge).toHaveStyleRule('background', theme.colors.$white);
     expect(badge).toHaveStyleRule('color', theme.colors.$success);
   });
   test('check that $outline && $danger apply correct styles ', () => {
     const badge = renderToJson(Component)({ $outline: true, $danger: true });
-    expect(badge).toHaveStyleRule('background', theme.colors.$default);
+    expect(badge).toHaveStyleRule('background', theme.colors.$white);
     expect(badge).toHaveStyleRule('color', theme.colors.$danger);
   });
   test('check that $outline && $warning apply correct styles ', () => {
     const badge = renderToJson(Component)({ $outline: true, $warning: true });
-    expect(badge).toHaveStyleRule('background', theme.colors.$default);
+    expect(badge).toHaveStyleRule('background', theme.colors.$white);
     expect(badge).toHaveStyleRule('color', theme.colors.$warning);
   });
   test('check that $outline && $black apply correct styles ', () => {
     const badge = renderToJson(Component)({ $outline: true, $black: true });
-    expect(badge).toHaveStyleRule('background', theme.colors.$default);
+    expect(badge).toHaveStyleRule('background', theme.colors.$white);
     expect(badge).toHaveStyleRule('color', theme.colors.$black);
   });
 });

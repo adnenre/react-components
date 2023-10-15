@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 const SideBarreContainer = styled.div`
   height: 100%;
   background: white;
-  box-shadow: 0 0 20px 1px #bec0c2;
 
   transition: 300ms;
   min-height: 100%;
@@ -16,6 +15,7 @@ const SideBarreContainer = styled.div`
   margin-left: ${(props) => (props.$active ? '-250px' : '0px')};
 
   @media screen and (max-width: 768px) {
+    margin: 0;
     width: 100px;
     margin-left: ${(props) => (props.$active ? '-100px' : '0px')};
     box-shadow: none;
@@ -23,9 +23,9 @@ const SideBarreContainer = styled.div`
 `;
 const SideBarreHeader = styled.div`
   width: inherit;
-  color: ${theme.colors.$default};
+  color: ${theme.colors.$white};
   min-height: 5rem;
-  background: #2b95fd;
+  background: ${theme.colors.$primary};
   display: flex;
   justify-content: center;
 `;
@@ -38,7 +38,7 @@ const SideBarreBody = styled.div`
 
   &::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background: ${theme.colors.$info};
+    background: ${theme.colors.$primary};
   }
   overflow-y: scroll;
   height: calc(100% - 80px);
@@ -59,16 +59,16 @@ const Item = styled.li`
 const LinkItem = styled(Link)`
   display: block;
   line-height: 35px;
-  padding: 0 5px;
+  // padding: 0 5px;
   background: rgba(255, 255, 255, 0.12);
-  color: ${theme.colors.$black};
+  color: ${theme.colors.$gray};
   position: relative;
   cursor: pointer;
   z-index: 0;
   text-decoration: none;
-  border-bottom: solid 1px ${theme.colors.$grayLight};
+  border-bottom: ${theme.border.thin} ${theme.colors.$grayLight};
   &:hover {
-    color: ${theme.colors.$default};
+    color: ${theme.colors.$white};
   }
   &:before {
     content: '';

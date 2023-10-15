@@ -12,10 +12,10 @@ const Toggler = ({ onClick }) => {
         viewBox="0 0 50 50"
         onClick={onClick}
       >
-        <circle cx="25" cy="25" r="20" fill="#fff" />
-        <rect x="12" y="17" width="25" height="2" rx="3" fill="#fff" />
-        <rect x="12" y="25" width="25" height="2" rx="3" fill="#fff" />
-        <rect x="12" y="32" width="25" height="2" rx="3" fill="#fff" />
+        <circle cx="25" cy="25" r="20" />
+        <rect x="12" y="17" width="25" height="2" rx="3" />
+        <rect x="12" y="25" width="25" height="2" rx="3" />
+        <rect x="12" y="32" width="25" height="2" rx="3" />
       </svg>
     </TogglerContainer>
   );

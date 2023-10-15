@@ -58,7 +58,7 @@ describe('Test Button', () => {
     });
     expect(btnFullwidth).toHaveStyleRule('width', theme.width.full);
     expect(btnFullwidth).toHaveStyleRule('background', theme.colors.$primary);
-    expect(btnFullwidth).toHaveStyleRule('color', theme.colors.$default);
+    expect(btnFullwidth).toHaveStyleRule('color', theme.colors.$white);
   });
   test('check that $rounded apply correct border radius ', () => {
     const btn = renderToJson(Component)({ $rounded: true });
@@ -73,38 +73,38 @@ describe('Test Button', () => {
 
   test('check that $outline && $primary apply correct styles ', () => {
     const btn = renderToJson(Component)({ $outline: true, $primary: true });
-    expect(btn).toHaveStyleRule('background', theme.colors.$default);
+    expect(btn).toHaveStyleRule('background', theme.colors.$white);
     expect(btn).toHaveStyleRule('color', theme.colors.$primary);
     expect(btn).toHaveStyleRule('width', theme.width.fitContent);
   });
 
   test('check that $outline && $info apply correct styles ', () => {
     const btn = renderToJson(Component)({ $outline: true, $info: true });
-    expect(btn).toHaveStyleRule('background', theme.colors.$default);
+    expect(btn).toHaveStyleRule('background', theme.colors.$white);
     expect(btn).toHaveStyleRule('color', theme.colors.$info);
     expect(btn).toHaveStyleRule('width', theme.width.fitContent);
   });
   test('check that $outline && $success apply correct styles ', () => {
     const btn = renderToJson(Component)({ $outline: true, $success: true });
-    expect(btn).toHaveStyleRule('background', theme.colors.$default);
+    expect(btn).toHaveStyleRule('background', theme.colors.$white);
     expect(btn).toHaveStyleRule('color', theme.colors.$success);
     expect(btn).toHaveStyleRule('width', theme.width.fitContent);
   });
   test('check that $outline && $danger apply correct styles ', () => {
     const btn = renderToJson(Component)({ $outline: true, $danger: true });
-    expect(btn).toHaveStyleRule('background', theme.colors.$default);
+    expect(btn).toHaveStyleRule('background', theme.colors.$white);
     expect(btn).toHaveStyleRule('color', theme.colors.$danger);
     expect(btn).toHaveStyleRule('width', theme.width.fitContent);
   });
   test('check that $outline && $warning apply correct styles ', () => {
     const btn = renderToJson(Component)({ $outline: true, $warning: true });
-    expect(btn).toHaveStyleRule('background', theme.colors.$default);
+    expect(btn).toHaveStyleRule('background', theme.colors.$white);
     expect(btn).toHaveStyleRule('color', theme.colors.$warning);
     expect(btn).toHaveStyleRule('width', theme.width.fitContent);
   });
   test('check that $outline && $black apply correct styles ', () => {
     const btn = renderToJson(Component)({ $outline: true, $black: true });
-    expect(btn).toHaveStyleRule('background', theme.colors.$default);
+    expect(btn).toHaveStyleRule('background', theme.colors.$white);
     expect(btn).toHaveStyleRule('color', theme.colors.$black);
     expect(btn).toHaveStyleRule('width', theme.width.fitContent);
   });

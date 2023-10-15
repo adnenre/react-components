@@ -20,7 +20,7 @@ export const DropDownHeader = styled.div`
   border-bottom: ${({ $active }) =>
     $active ? 'solid 3px #00b0ff' : 'solid 3px transparent'};
   color: ${({ $active }) => ($active ? ' #00b0ff' : 'black')};
-  border: solid 1px ${theme.colors.$primary};
+  border: ${theme.border.thin} ${theme.colors.$primary};
   border-radius: 5px;
   overflow: hidden;
 
@@ -58,7 +58,7 @@ export const DropDownMenu = styled.ul`
     height: 0.8rem !important;
   }
   &::-webkit-scrollbar-thumb {
-    background: #64b5f6 !important;
+    background: ${theme.colors.$primary} !important;
   }
 `;
 export const DropDownItem = styled.li`
@@ -95,14 +95,14 @@ export const DropDownCarretStyled = styled.span`
   border-left: solid 0.5px ${theme.colors.$primary};
   > svg {
     fill: ${({ $isOpen }) =>
-      $isOpen ? `${theme.colors.$default}` : `${theme.colors.$primary}`};
+      $isOpen ? `${theme.colors.$white}` : `${theme.colors.$primary}`};
     transition: all 300ms;
   }
 
   &:hover {
     background-color: ${theme.colors.$primary};
     svg {
-      fill: ${theme.colors.$default};
+      fill: ${theme.colors.$white};
     }
   }
 `;

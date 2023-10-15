@@ -13,7 +13,7 @@ const CardContainer = styled.div`
 const CardHeader = styled.div`
   padding: 1rem 1.5rem;
   text-align: left;
-  border-bottom: solid 1px ${theme.colors.$grayLight};
+  border-bottom: ${theme.border.thin} ${theme.colors.$grayLight};
   color: ${theme.colors.$black};
 `;
 const CardBody = styled.div`
@@ -22,7 +22,7 @@ const CardBody = styled.div`
   color: ${theme.colors.$black};
 `;
 const CardFooter = styled.div`
-  border-top: solid 1px ${theme.colors.$grayLight};
+  border-top: ${theme.border.thin} ${theme.colors.$grayLight};
   display: flex;
   justify-content: space-between;
   padding: 1rem;

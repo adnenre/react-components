@@ -38,7 +38,7 @@ export const TooltipText = styled.div`
       `;
   }};
 
-  background-color: #333;
+  background-color: ${theme.colors.$gray};
   color: #fff;
   padding: 0.5rem;
   font-size: 0.8rem;
@@ -62,9 +62,9 @@ export const TooltipText = styled.div`
         return `position: absolute;
                 width:0px;
                 height:0px;
-                border-top: solid 5px #333;
+                border-top: solid 5px ${theme.colors.$gray};
                 border-left: solid 5px transparent;
-                border-right: solid 5px #333;
+                border-right: solid 5px ${theme.colors.$gray};
                 border-bottom: solid 5px transparent;
                 transform:translate(0,-50%) rotateZ(45deg);
                 top:50%;
@@ -76,9 +76,9 @@ export const TooltipText = styled.div`
                 width:0px;
                 height:0px;
                 border-top: solid 5px transparent;
-                border-left: solid 5px #333;
+                border-left: solid 5px ${theme.colors.$gray};
                 border-right: solid 5px transparent;
-                border-bottom: solid 5px #333;
+                border-bottom: solid 5px ${theme.colors.$gray};
                 transform:translate(0,-50%) rotateZ(45deg);
                 top:50%;
                 bottom : 0;
@@ -88,8 +88,8 @@ export const TooltipText = styled.div`
         return `position: absolute;
                 border-top: solid 5px transparent;
                 border-left: solid 5px transparent;
-                border-right: solid 5px #333;
-                border-bottom: solid 5px #333;
+                border-right: solid 5px ${theme.colors.$gray};
+                border-bottom: solid 5px ${theme.colors.$gray};
                 transform: rotateZ(45deg);
                 top: calc(100% - 5px); 
                 bottom : 0;
@@ -97,8 +97,8 @@ export const TooltipText = styled.div`
       }
 
       return `position: absolute;
-              border-top: solid 5px #333;
-              border-left: solid 5px #333;
+              border-top: solid 5px ${theme.colors.$gray};
+              border-left: solid 5px ${theme.colors.$gray};
               border-right: solid 5px transparent;
               border-bottom: solid 5px transparent;
               transform: rotateZ(45deg);

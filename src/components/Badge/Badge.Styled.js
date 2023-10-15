@@ -30,7 +30,7 @@ const SBadge = styled.span`
       if ($success) return border + theme.colors.$success;
       if ($black) return border + theme.colors.$black;
     }
-    return border + theme.colors.$default;
+    return border + theme.colors.$white;
   }};
   color: ${({
     $outline,
@@ -45,7 +45,7 @@ const SBadge = styled.span`
       ($primary || $info || $danger || $warning || $success || $black) &&
       !$outline
     )
-      return theme.colors.$default;
+      return theme.colors.$white;
     if ($outline) {
       if ($primary) return theme.colors.$primary;
       if ($info) return theme.colors.$info;
@@ -74,12 +74,12 @@ const SBadge = styled.span`
       if ($black) return theme.colors.$black;
     }
 
-    return theme.colors.$default;
+    return theme.colors.$white;
   }};
   border-radius: ${({ $pill, $rounded }) => {
     if ($pill) return theme.borderRadius.$pill;
     if ($rounded) return theme.borderRadius.$rounded;
-    return theme.borderRadius.$default;
+    return theme.borderRadius.$white;
   }};
 `;
 

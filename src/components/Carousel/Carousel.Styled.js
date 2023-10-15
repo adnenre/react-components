@@ -37,7 +37,7 @@ const SlideText = styled.div`
   height: 100%;
   background-color: ${theme.colors.$info};
   font-size: 2rem;
-  color: ${theme.colors.$default};
+  color: ${theme.colors.$white};
 `;
 
 const Indicators = styled.div`

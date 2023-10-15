@@ -1,3 +1,6 @@
+:root {
+  ---primary: '#3a81f7';
+}
 html {
   font-size: 16px;
 }
@@ -20,7 +23,10 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #2b95fd;
+  background: var(---primary);
+}
+button {
+  text-wrap: nowrap;
 }
 a.author {
   display: inline-block;

@@ -14,7 +14,7 @@ const Toggle = ({ text, label, children, ...rest }) => {
       <Row>
         <Col $sm={2}>
           <Tooltip text={text} $right {...rest}>
-            <Button $black onClick={toggle} label={label} {...rest} />
+            <Button onClick={toggle} label={label} {...rest} />
           </Tooltip>
         </Col>
       </Row>

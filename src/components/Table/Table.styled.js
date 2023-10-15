@@ -22,12 +22,12 @@ const TableHeadCell = styled.th`
   padding: 10px;
   white-space: nowrap;
   text-align: center;
-  border: solid 1px ${theme.colors.$primary};
+  border: ${theme.border.thin} ${theme.colors.$primary};
   width: 50px;
   user-select: none;
 `;
 const TableBody = styled.tbody`
-  border: solid 1px ${theme.colors.$primary};
+  border: ${theme.border.thin} ${theme.colors.$primary};
 `;
 const TableRow = styled.tr`
   padding: 10px;
@@ -43,7 +43,7 @@ const TableCell = styled.td`
   padding: 10px;
   white-space: nowrap;
   text-align: center;
-  border: solid 1px ${theme.colors.$primary};
+  border: ${theme.border.thin} ${theme.colors.$primary};
 `;
 
 export {

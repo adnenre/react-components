@@ -2,18 +2,19 @@ import styled from 'styled-components';
 const gap = '1%';
 const gridColNumber = 12;
 const colwidth = 100 / gridColNumber;
+import theme from '../theme';
 const style = {
   $demo: `
-       border: solid 1px #2b95fd;
+       border: ${theme.border.thin} ${theme.colors.$primary};
        height:50px;
        display:flex;
        align-items: center;
        justify-content: center;
-       color:#2b95fd;
+       color:${theme.colors.$primary};
        transition:0.3s;
        &:hover{
        
-       background:#2b95fd;
+       background:${theme.colors.$primary};
        color:white;
        }
        :hover{
@@ -26,12 +27,12 @@ const style = {
        display:flex;
        align-items: center;
        justify-content: center;
-       background:#2b95fd;
+       background:${theme.colors.$primary};
        color:white;
        transition:0.3s;
        &:hover{
-         border:solid 1px #2b95fd;
-         color:#2b95fd;
+         border:${theme.border.thin} ${theme.colors.$primary};
+         color:${theme.colors.$primary};
          background:white;
          cursor:pointer;
        }

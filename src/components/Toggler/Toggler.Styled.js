@@ -5,6 +5,10 @@ const TogglerContainer = styled.div`
   position: fixed;
   bottom: 20px;
   right: 20px;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+  }
   > svg {
     position: fixed;
     bottom: 20px;
@@ -16,15 +20,7 @@ const TogglerContainer = styled.div`
       fill: ${theme.colors.$primary};
     }
     > rect {
-      fill: ${theme.colors.$default};
-    }
-    :hover {
-      > rect {
-        fill: ${theme.colors.$primary};
-      }
-      > circle {
-        fill: ${theme.colors.$default};
-      }
+      fill: ${theme.colors.$white};
     }
   }
 `;
