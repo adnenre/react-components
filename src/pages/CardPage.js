@@ -3,14 +3,10 @@ import PrismCode from 'react-prism';
 import Prism from 'prismjs';
 import Toggle from '../components/Toggle';
 import Card from '../components/Card';
-import { Title } from '../components/Portlet/Portlet.Styled';
+
 import Button from '../components/Button';
 import { Container, Row, Col } from '../components/grid';
-import {
-  Portlet,
-  PortletHeader,
-  PortletBody,
-} from '../components/Portlet/Portlet.Styled';
+
 import PortletView from '../components/Portlet';
 import fake_data from '../fake-data';
 
@@ -25,7 +21,7 @@ const CardPage = () => {
             <Row>
               <Col $md={4}>
                 <Card
-                  header={<h3>{card.header}</h3>}
+                  header={card.header}
                   body={card.body}
                   footer={<Button $primary label="Hey!" />}
                 />

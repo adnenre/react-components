@@ -44,6 +44,11 @@ export const ModalContainer = styled.div`
   width: ${({ size, lg }) =>
     size && size.w ? size.w + 'px' : lg ? '80%' : '50%'};
   height: ${({ size }) => (size && size.h ? size.h + 'px' : '')};
+  // moblie media query
+  @media screen and (max-width: 767px) {
+    width: calc(100vw - 20px);
+    height: calc(100vh - 20px);
+  }
 `;
 
 export const ModalHeader = styled.div`
@@ -53,9 +58,18 @@ export const ModalHeader = styled.div`
   padding: 0.75rem 1rem;
   border-bottom: 1px solid ${theme.colors.$grayLight};
   cursor: ${({ draggable }) => (draggable ? 'move' : 'auto')};
-  font-size: 1rem;
-  line-height: 1.75rem;
-  font-weight: 400;
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-size: 1.25rem;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.375;
+  font-weight: 500;
+  opacity: 1;
+  text-transform: none;
+  vertical-align: unset;
+  text-decoration: none;
+  color: ${theme.colors.$gray};
+  letter-spacing: 0.5px;
 `;
 
 export const ModalBody = styled.div`
@@ -63,6 +77,18 @@ export const ModalBody = styled.div`
   overflow: auto;
   padding: 1rem;
   flex: 1 1 auto;
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-size: 1rem;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.375;
+  font-weight: 300;
+  opacity: 1;
+  text-transform: none;
+  vertical-align: unset;
+  text-decoration: none;
+  color: ${theme.colors.gray};
+  letter-spacing: 0.5px;
 `;
 
 export const ModalFooter = styled.div`
@@ -71,7 +97,7 @@ export const ModalFooter = styled.div`
   padding: 0.75rem 1rem;
   border-top: 1px solid #e5e5e5;
   > button {
-    min-width: 120px;
+    min-width: 100px;
   }
   > button ~ button {
     margin-left: 5px;
