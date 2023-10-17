@@ -33,17 +33,27 @@ const TableRow = styled.tr`
   padding: 10px;
   white-space: nowrap;
   text-align: center;
-
-  &:nth-child(2n) {
-    color: white;
-    background: ${theme.colors.$primary};
-  }
+  ${(props) => {
+    if (props.$striped) {
+      return `
+      &:nth-child(2n) {
+        color: white;
+        background: ${theme.colors.$primary};
+      }
+      `;
+    }
+  }}
 `;
 const TableCell = styled.td`
   padding: 10px;
   white-space: nowrap;
   text-align: center;
-  border: ${theme.border.thin} ${theme.colors.$primary};
+  ${(props) => {
+    if (props.$withBorder) {
+      return `border : ${theme.border.thin} ${theme.colors.$primary}`;
+    }
+    return `border : none`;
+  }};
 `;
 
 export {

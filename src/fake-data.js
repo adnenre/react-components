@@ -109,7 +109,11 @@ const fake_data = {
       ],
     },
     table: {
-      page: { title: 'Table Component', title2: 'Table Component resizable' },
+      page: {
+        title: 'Table Component',
+        title2: 'Table Component striped',
+        title3: 'Table Component resizable striped',
+      },
       columns: ['#', 'First Name', 'Last Name', 'email'],
       rows: [
         { id: 1, name: 'adnen', lastName: 'rebai', email: '@adnen_rebai' },
@@ -124,6 +128,9 @@ const fake_data = {
         { id: 2, title: 'Second', content: '2 - content of tab two' },
         { id: 3, title: 'Third', content: '3 - content of tab three' },
       ],
+    },
+    stepper: {
+      page: { title: 'Stepper Component' },
     },
     tooltip: {
       page: {
