@@ -27,6 +27,18 @@ const AccordionContent = styled.div`
   text-align: left;
   color: ${theme.font.$color};
   padding: 1.5rem 1rem;
+  text-align: left;
+  color: ${theme.colors.$black};
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+  opacity: 1;
+  text-transform: none;
+  vertical-align: unset;
+  text-decoration: none;
+  color: ${theme.colors.$gray};
+  letter-spacing: 1px;
 `;
 const AccordionContainer = styled.div`
   width: 100%;
