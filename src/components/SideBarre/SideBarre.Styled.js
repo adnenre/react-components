@@ -53,8 +53,7 @@ const List = styled.ul`
 const Item = styled.li`
   margin-bottom: 1px;
   list-style: none;
-  > a {
-  }
+  text-align: center;
 `;
 const LinkItem = styled(Link)`
   display: block;
