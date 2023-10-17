@@ -31,20 +31,27 @@ const TabHead = () => {
 };
 
 // TABLE BODY COMPONENT
-const TabBody = () => {
+const TabBody = ({ withBorder, striped }) => {
   const { rows } = useTableContext();
 
   return (
     <TableBody>
       {rows.map((row) => (
-        <TableRow key={row.id}>
+        <TableRow key={row.id} $striped={striped}>
           {Object.values(row).map((col, index) => (
-            <TableCell key={index}>{col}</TableCell>
+            <TableCell key={index} $withBorder={withBorder}>
+              {col}
+            </TableCell>
           ))}
         </TableRow>
       ))}
     </TableBody>
   );
+};
+
+TabBody.propTypes = {
+  striped: PropTypes.bool,
+  withBorder: PropTypes.bool,
 };
 
 const { Provider: TableProvider } = TableContext;
@@ -157,7 +164,7 @@ const ResizableTable = ({ children }) => {
   return <TableContainer ref={tableRef}>{children}</TableContainer>;
 };
 // TABLE COMPONENT
-const Table = ({ rows, columns, resizable }) => {
+const Table = ({ rows, columns, resizable, withBorder, striped }) => {
   // Calculate column style based on width
 
   return (
@@ -170,12 +177,12 @@ const Table = ({ rows, columns, resizable }) => {
       {resizable ? (
         <ResizableTable>
           <TabHead />
-          <TabBody />
+          <TabBody withBorder={withBorder} striped={striped} />
         </ResizableTable>
       ) : (
         <TableContainer>
           <TabHead />
-          <TabBody />
+          <TabBody withBorder={withBorder} striped={striped} />
         </TableContainer>
       )}
     </TableProvider>
@@ -184,9 +191,16 @@ const Table = ({ rows, columns, resizable }) => {
 ResizableTable.propTypes = {
   children: PropTypes.node,
 };
+Table.defaultProps = {
+  resizable: false,
+  withBorder: false,
+  striped: false,
+};
 Table.propTypes = {
   columns: PropTypes.arrayOf(PropTypes.string).isRequired,
   rows: PropTypes.arrayOf(PropTypes.object).isRequired,
   resizable: PropTypes.bool,
+  withBorder: PropTypes.bool,
+  striped: PropTypes.bool,
 };
 export default Table;
