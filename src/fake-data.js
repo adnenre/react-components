@@ -131,6 +131,23 @@ const fake_data = {
     },
     stepper: {
       page: { title: 'Stepper Component' },
+      steps: [
+        {
+          label: 'Card Details',
+        },
+        {
+          label: 'Form Review',
+        },
+        {
+          label: 'Authentication ',
+        },
+        {
+          label: 'Subscription plan',
+        },
+        {
+          label: 'Payment details',
+        },
+      ],
     },
     tooltip: {
       page: {

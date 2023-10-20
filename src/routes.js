@@ -15,6 +15,7 @@ const routes = [
   { path: '/CarouselPage', routeName: 'Carousel' },
   { path: '/TooltipPage', routeName: 'Tooltip' },
   { path: '/MasonryPage', routeName: 'Masonry' },
+  { path: '/StepperPage', routeName: 'Stepper' },
 ];
 
 export default routes;

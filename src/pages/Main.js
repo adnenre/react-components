@@ -19,6 +19,7 @@ import TreePage from './TreePage';
 import CarouselPage from './CarouselPage';
 import TooltipPage from './TooltipPage';
 import MasonryPage from './MasonryPage';
+import StepperPage from './StepperPage';
 const Main = ({ active }) => {
   const subPath = '/react-components';
   return (
@@ -41,6 +42,7 @@ const Main = ({ active }) => {
         <Route path={`${subPath}/CarouselPage`} component={CarouselPage} />
         <Route path={`${subPath}/TooltipPage`} component={TooltipPage} />
         <Route path={`${subPath}/MasonryPage`} component={MasonryPage} />
+        <Route path={`${subPath}/StepperPage`} component={StepperPage} />
       </Switch>
     </MainContainer>
   );
