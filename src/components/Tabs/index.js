@@ -15,6 +15,7 @@ const Tab = (props) => {
   };
   return (
     <TabItem
+      data-testid={$tabTitle}
       $active={$activeTabId === id}
       onClick={handleChangeTab(id)}
       {...props}
@@ -35,7 +36,11 @@ const TabPanel = (props) => {
   const { id, children, ...rest } = props;
   const { $activeTabId } = useContext(TabContext);
   if ($activeTabId === id) {
-    return <TabPanelStyled {...rest}> {children} </TabPanelStyled>;
+    return (
+      <TabPanelStyled data-testid="active-panel" {...rest}>
+        {children}
+      </TabPanelStyled>
+    );
   }
   return null;
 };
