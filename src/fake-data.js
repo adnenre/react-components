@@ -116,9 +116,9 @@ const fake_data = {
       },
       columns: ['#', 'First Name', 'Last Name', 'email'],
       rows: [
-        { id: 1, name: 'adnen', lastName: 'rebai', email: '@adnen_rebai' },
-        { id: 2, name: 'Jhone', lastName: 'Doe', email: 'Jhon_doe' },
-        { id: 3, name: 'melina', lastName: 'Doe', email: '@melina_doe' },
+        { id: '1', name: 'adnen', lastName: 'rebai', email: '@adnen_rebai' },
+        { id: '2', name: 'Jhone', lastName: 'Doe', email: 'Jhon_doe' },
+        { id: '3', name: 'melina', lastName: 'Doe', email: '@melina_doe' },
       ],
     },
     tab: {

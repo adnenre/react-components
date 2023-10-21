@@ -20,7 +20,7 @@ const useTableContext = () => useContext(TableContext);
 const TabHead = () => {
   const { columns } = useTableContext();
   return (
-    <TableHead>
+    <TableHead data-testid="table-thead">
       <TableRow key="table_head">
         {columns.map((col, index) => (
           <TableHeadCell key={col}>{col}</TableHeadCell>
@@ -35,7 +35,7 @@ const TabBody = ({ withBorder, striped }) => {
   const { rows } = useTableContext();
 
   return (
-    <TableBody>
+    <TableBody data-testid="table-tbody">
       {rows.map((row) => (
         <TableRow key={row.id} $striped={striped}>
           {Object.values(row).map((col, index) => (
