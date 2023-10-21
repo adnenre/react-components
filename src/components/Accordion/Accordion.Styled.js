@@ -47,6 +47,8 @@ const AccordionContainer = styled.div`
     border-top: none !important;
   }
   > div > h5 {
+    display: flex;
+    align-items: center;
     border-bottom: none;
     transition:
       all 0.3s linear,
