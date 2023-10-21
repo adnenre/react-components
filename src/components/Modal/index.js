@@ -44,7 +44,6 @@ const Modal = ({
   onToggleModal,
   resizable,
   draggable,
-
   dialog,
   show,
   fullscreen,
@@ -57,8 +56,7 @@ const Modal = ({
   const modalContainer = useRef(null);
   // modal min size
   const modalMinSize = { minWidth: 500, minHeight: 150 };
-  // Modal state open / closed
-  const [isModalOpen, setIsModalOpen] = useState(show);
+
   // fullscreen support usefull to display/not the button
   const [supportFullScreen] = useState(fullscreen);
   // fullscreen state
@@ -220,7 +218,6 @@ Modal.propTypes = {
 Modal.defaultProps = {
   fullscreen: false,
   draggable: false,
-  closeOnClickOutSide: true,
 };
 //#################################################
 //###########      Title         ##################
@@ -249,7 +246,7 @@ const Header = (props) => {
       <Title title={title} />
       <div style={{ display: 'flex' }}>
         {supportFullScreen && <FullScreenIcon onClick={onToggleFullScreen} />}
-        <CloseButton onClick={onToggleModal} />
+        <CloseButton role="closeButton" onClick={onToggleModal} />
       </div>
     </ModalHeader>
   );

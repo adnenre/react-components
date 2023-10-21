@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-const CloseButton = ({ onClick }) => {
+const CloseButton = ({ onClick, ...rest }) => {
   return (
-    <div style={{ cursor: 'pointer' }} onClick={onClick}>
+    <div style={{ cursor: 'pointer' }} onClick={onClick} {...rest}>
       <svg
         width="24"
         height="24"
