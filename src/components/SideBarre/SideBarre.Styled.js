@@ -72,16 +72,20 @@ const LinkItem = styled(Link)`
   &:before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0px;
+    top: 50%;
+    left: 50%;
     width: 2px;
-    height: 100%;
-    background: ${theme.colors.$info};
-    transition: 0.2s;
+    height: 80%;
+    border-radius: 4px;
+    background: ${theme.colors.$grayDark};
+    transition: all 0.3s;
     z-index: -1;
+    opacity: 0;
+    transform: translate(-50%, -50%);
   }
   &:hover::before {
-    width: 100%;
+    width: 90%;
+    opacity: 1;
   }
 `;
 
