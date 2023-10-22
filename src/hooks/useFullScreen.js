@@ -1,6 +1,6 @@
 import { useState, useLayoutEffect } from 'react';
 
-const useFullScreen = elRef => {
+const useFullScreen = (elRef) => {
   const [isFullscreen, setIsFullscreen] = useState(
     document[getBrowserFullSreen()] != null
   );

@@ -11,7 +11,8 @@ import {
 } from './Carousel.Styled';
 import { isImageUrl } from '../utility';
 
-const Carousel = ({ slides }) => {
+const Carousel = ({ slides, auto }) => {
+  const [autoSlide, setAutoSlide] = useState(auto);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
@@ -27,13 +28,16 @@ const Carousel = ({ slides }) => {
   };
 
   useEffect(() => {
-    const intervalId = setInterval(nextSlide, 3000);
-    return () => clearInterval(intervalId);
+    if (autoSlide) {
+      const intervalId = setInterval(nextSlide, 3000);
+      return () => clearInterval(intervalId);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
+  }, [autoSlide]);
+  const stopAutoSlide = () => (auto ? setAutoSlide(false) : null);
+  const runAutoSlide = () => (auto ? setAutoSlide(true) : null);
   return (
-    <CarouselWrapper>
+    <CarouselWrapper onMouseEnter={stopAutoSlide} onMouseLeave={runAutoSlide}>
       <CarouselContainer>
         <SlideContainer
           $totalSlides={slides.length}
@@ -68,5 +72,6 @@ const Carousel = ({ slides }) => {
 };
 Carousel.propTypes = {
   slides: PropTypes.arrayOf(PropTypes.string).isRequired,
+  auto: PropTypes.bool,
 };
 export default Carousel;

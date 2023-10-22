@@ -4,13 +4,17 @@ const CarouselWrapper = styled.div`
   position: relative;
   width: 100%; /* Use 100% width for responsiveness */
   min-height: 300px;
-  height: 100%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
 `;
 const CarouselContainer = styled.div`
   position: relative;
   width: 100%;
   overflow: hidden;
-  height: 90%;
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
 `;
 
 const SlideContainer = styled.div`
@@ -26,8 +30,8 @@ const Slide = styled.div`
   max-width: 100%;
   text-align: center;
   img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 100%;
   }
 `;
 const SlideText = styled.div`
@@ -43,16 +47,32 @@ const SlideText = styled.div`
 const Indicators = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin: 1rem;
 `;
 
 const Indicator = styled.div`
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  width: 15px;
+  height: 4px;
+  border-radius: 4px;
   background-color: ${({ $active }) => ($active ? '#0074cc' : '#ccc')};
   margin: 0 5px;
+  position: relative;
   cursor: pointer;
+  transition: all 0.3s;
+  &::after {
+    content: '';
+    border-width: 1px;
+    border-color: ${theme.colors.$primary};
+    border-style: solid;
+    border-radius: 4px;
+    pointer-events: none;
+    display: ${({ $active }) => ($active ? 'block' : 'none')};
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+  }
 `;
 
 export {
