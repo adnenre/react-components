@@ -65,7 +65,10 @@ const fake_data = {
       footer: '',
     },
     carousel: {
-      page: { title: 'Carousel Component' },
+      page: {
+        title: 'Carousel Component',
+        title2: 'Carousel Component - auto slide',
+      },
       slides: {
         example1: ['Slide 1', 'Slide 2', 'Slide 3', 'Slide 4'],
         example2: [
