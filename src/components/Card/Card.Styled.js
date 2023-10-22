@@ -11,6 +11,12 @@ const CardContainer = styled.div`
     if ($rounded) return theme.borderRadius.$rounded;
     return theme.borderRadius.$default;
   }};
+  transition: all 0.3s;
+  &:hover {
+    box-shadow:
+      rgba(0, 0, 0, 0.1) 0rem 0.625rem 0.9375rem -0.1875rem,
+      rgba(0, 0, 0, 0.4) 0rem 0.5rem 0.5rem -0.5rem;
+  }
 `;
 const CardHeader = styled.div`
   padding: 1rem 1.5rem;
@@ -48,7 +54,7 @@ const CardFooter = styled.div`
   border-top: ${theme.border.thin} ${theme.colors.$grayLight};
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0.75rem 1rem;
 `;
 
 export { CardContainer, CardHeader, CardBody, CardFooter };
