@@ -1,21 +1,33 @@
+const size = {
+  $xsmall: '50px',
+  $small: '80px',
+  $medium: '100px',
+  $large: '150px',
+  $xlarge: '180px',
+};
+
 const theme = {
   width: {
     full: '100%',
     fitContent: 'fit-content',
+    ...size,
+  },
+  height: {
+    ...size,
   },
 
   border: {
     thin: '1px solid ',
   },
-  radius: {
+  'border-radius': {
     $pill: '20px',
     $round: '50%',
     $rounded: '4px',
     $default: '0',
   },
-  colors: {
+  color: {
     $white: '#ffffff',
-    $default: '#94a2bd',
+    $default: '#FFF',
     $primary: '#3a81f7',
     $secondary: '#AB47BC',
     $info: '#5bc0de',
@@ -27,6 +39,7 @@ const theme = {
     $grayLight: '#e4edfe', //'#f3f4f6',
     $grayDark: '#94a2bd',
   },
+
   font: {
     $color: '#001b41',
   },
