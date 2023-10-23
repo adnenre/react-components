@@ -50,6 +50,12 @@ const theme = {
     notAllowed: 'not-allowed',
     default: 'pointer',
   },
+
+  components: {
+    alert: {
+      'border-left': 'solid 10px ',
+    },
+  },
 };
 
 export default theme;

@@ -5,32 +5,36 @@ import {
   AlertInfo,
   AlertTitle,
   AlertDescription,
-  AlertButton,
 } from './Alert.styled';
 import CloseButton from '../CloseButton';
-const Alert = ({ title, desc }) => {
-  const [isOpen, setIsOpen] = useState(true);
+
+const Alert = ({ title, description, isOpen, ...rest }) => {
+  const [isActive, setIsOpen] = useState(isOpen);
   const close = () => {
     setIsOpen(false);
   };
+  if (isActive)
+    return (
+      <AlertContainer $isOpen={isActive} {...rest}>
+        <AlertInfo>
+          <AlertTitle data-testid="alert-title">{title}</AlertTitle>
+          <AlertDescription data-testid="alert-description">
+            {description}
+          </AlertDescription>
+        </AlertInfo>
+        <CloseButton onClick={close} />
+      </AlertContainer>
+    );
 
-  return (
-    <div style={{ width: '100%' }}>
-      {isOpen && (
-        <AlertContainer>
-          <AlertInfo>
-            <AlertTitle>{title}</AlertTitle>
-            <AlertDescription>{desc} </AlertDescription>
-          </AlertInfo>
-          <CloseButton onClick={close}>x</CloseButton>
-        </AlertContainer>
-      )}
-    </div>
-  );
+  return null;
 };
 
+Alert.defaultProps = {
+  isOpen: true,
+};
 Alert.propTypes = {
+  isOpen: PropTypes.bool,
   title: PropTypes.string.isRequired,
-  desc: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
 export default Alert;

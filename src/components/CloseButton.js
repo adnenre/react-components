@@ -2,7 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 const CloseButton = ({ onClick, ...rest }) => {
   return (
-    <div style={{ cursor: 'pointer' }} onClick={onClick} {...rest}>
+    <div
+      style={{ cursor: 'pointer', height: '24px', width: '24px' }}
+      onClick={onClick}
+      role="closeButton"
+      {...rest}
+    >
       <svg
         width="24"
         height="24"

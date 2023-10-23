@@ -1,31 +1,28 @@
 import styled from 'styled-components';
 import theme from '../../theme';
+import { getProperty } from '../utility';
 
+const alertBorder = theme.components.alert['border-left'];
 const AlertContainer = styled.div`
+  display: ${({ $isOpen }) => ($isOpen ? 'block' : 'none')};
   align-items: center;
   width: 100%;
-  padding: 1rem;
+  margin: 0.25rem 0;
+  padding: 0.5em;
   font-size: 1rem;
   background: ${theme.color.$black};
-  border-radius: 4px;
+  ${(props) => getProperty('border-radius', props)}
+  ${(props) => getProperty('color', props)}
   border-left: ${({ $primary, $info, $danger, $warning, $success, $black }) => {
-    if ($primary) return 'solid 5px ' + theme.color.$primary;
-    if ($info) return 'solid 5px ' + theme.color.$info;
-    if ($danger) return 'solid 5px ' + theme.color.$danger;
-    if ($warning) return 'solid 5px ' + theme.color.$warning;
-    if ($success) return 'solid 5px ' + theme.color.$success;
-    if ($black) return 'solid 5px ' + theme.color.$black;
-    return 'solid 5px ' + theme.color.$danger;
+    if ($primary) return alertBorder + theme.color.$primary;
+    if ($info) return alertBorder + theme.color.$info;
+    if ($danger) return alertBorder + theme.color.$danger;
+    if ($warning) return alertBorder + theme.color.$warning;
+    if ($success) return alertBorder + theme.color.$success;
+    if ($black) return alertBorder + theme.color.$black;
+    return alertBorder + theme.color.$primary;
   }};
-  color: ${({ primary, info, danger, warning, success, black }) => {
-    if (primary) return theme.color.$primary;
-    if (info) return theme.color.$info;
-    if (danger) return theme.color.$danger;
-    if (warning) return theme.color.$warning;
-    if (success) return theme.color.$success;
-    if (black) return theme.color.$black;
-    return theme.color.$danger;
-  }};
+
   display: flex;
   justify-content: space-between;
 `;
