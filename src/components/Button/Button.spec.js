@@ -1,12 +1,8 @@
 // Component.test.js
 import React from 'react';
-import '@testing-library/jest-dom';
-import { render, fireEvent } from '@testing-library/react';
-import 'jest-styled-components';
-import renderer from 'react-test-renderer';
-
+import { fireEvent, render, renderToJson, theme } from '../utility-test';
 import Button from './index';
-import theme from '../../theme';
+
 const label = 'Click me';
 const onClick = jest.fn(); // Mocking a click handler
 
@@ -15,8 +11,6 @@ describe('Test Button', () => {
     <Button data-testid="button" onClick={onClick} label={label} {...props} />
   );
 
-  const renderToJson = (C) => (rest) =>
-    renderer.create(<C {...rest} />).toJSON();
   test('renders a button with the correct label', () => {
     const { getByTestId } = render(<Component />);
     const button = getByTestId('button');
@@ -44,12 +38,12 @@ describe('Test Button', () => {
     const btnDanger = renderToJson(Component)({ $danger: true });
     const btnBlack = renderToJson(Component)({ $black: true });
 
-    expect(btnPrimary).toHaveStyleRule(property, theme.colors.$primary);
-    expect(btnInfo).toHaveStyleRule(property, theme.colors.$info);
-    expect(btnWarning).toHaveStyleRule(property, theme.colors.$warning);
-    expect(btnSuccess).toHaveStyleRule(property, theme.colors.$success);
-    expect(btnDanger).toHaveStyleRule(property, theme.colors.$danger);
-    expect(btnBlack).toHaveStyleRule(property, theme.colors.$black);
+    expect(btnPrimary).toHaveStyleRule(property, theme.color.$primary);
+    expect(btnInfo).toHaveStyleRule(property, theme.color.$info);
+    expect(btnWarning).toHaveStyleRule(property, theme.color.$warning);
+    expect(btnSuccess).toHaveStyleRule(property, theme.color.$success);
+    expect(btnDanger).toHaveStyleRule(property, theme.color.$danger);
+    expect(btnBlack).toHaveStyleRule(property, theme.color.$black);
   });
   test('check that $fullwidth && $primary apply correct style', () => {
     const btnFullwidth = renderToJson(Component)({
@@ -57,61 +51,64 @@ describe('Test Button', () => {
       $primary: true,
     });
     expect(btnFullwidth).toHaveStyleRule('width', theme.width.full);
-    expect(btnFullwidth).toHaveStyleRule('background', theme.colors.$primary);
-    expect(btnFullwidth).toHaveStyleRule('color', theme.colors.$white);
+    expect(btnFullwidth).toHaveStyleRule('background', theme.color.$primary);
+    expect(btnFullwidth).toHaveStyleRule('color', theme.color.$white);
   });
   test('check that $rounded apply correct border radius ', () => {
     const btn = renderToJson(Component)({ $rounded: true });
-    expect(btn).toHaveStyleRule('border-radius', theme.borderRadius.$rounded);
+    expect(btn).toHaveStyleRule(
+      'border-radius',
+      theme['border-radius'].$rounded
+    );
   });
 
   test('check that $pill apply correct border radius ', () => {
     const btn = renderToJson(Component)({ $pill: true });
-    expect(btn).toHaveStyleRule('border-radius', theme.borderRadius.$pill);
+    expect(btn).toHaveStyleRule('border-radius', theme['border-radius'].$pill);
     expect(btn).toHaveStyleRule('width', theme.width.fitContent);
   });
 
   test('check that $outline && $primary apply correct styles ', () => {
     const btn = renderToJson(Component)({ $outline: true, $primary: true });
-    expect(btn).toHaveStyleRule('background', theme.colors.$white);
-    expect(btn).toHaveStyleRule('color', theme.colors.$primary);
+    expect(btn).toHaveStyleRule('background', theme.color.$white);
+    expect(btn).toHaveStyleRule('color', theme.color.$primary);
     expect(btn).toHaveStyleRule('width', theme.width.fitContent);
   });
 
   test('check that $outline && $info apply correct styles ', () => {
     const btn = renderToJson(Component)({ $outline: true, $info: true });
-    expect(btn).toHaveStyleRule('background', theme.colors.$white);
-    expect(btn).toHaveStyleRule('color', theme.colors.$info);
+    expect(btn).toHaveStyleRule('background', theme.color.$white);
+    expect(btn).toHaveStyleRule('color', theme.color.$info);
     expect(btn).toHaveStyleRule('width', theme.width.fitContent);
   });
   test('check that $outline && $success apply correct styles ', () => {
     const btn = renderToJson(Component)({ $outline: true, $success: true });
-    expect(btn).toHaveStyleRule('background', theme.colors.$white);
-    expect(btn).toHaveStyleRule('color', theme.colors.$success);
+    expect(btn).toHaveStyleRule('background', theme.color.$white);
+    expect(btn).toHaveStyleRule('color', theme.color.$success);
     expect(btn).toHaveStyleRule('width', theme.width.fitContent);
   });
   test('check that $outline && $danger apply correct styles ', () => {
     const btn = renderToJson(Component)({ $outline: true, $danger: true });
-    expect(btn).toHaveStyleRule('background', theme.colors.$white);
-    expect(btn).toHaveStyleRule('color', theme.colors.$danger);
+    expect(btn).toHaveStyleRule('background', theme.color.$white);
+    expect(btn).toHaveStyleRule('color', theme.color.$danger);
     expect(btn).toHaveStyleRule('width', theme.width.fitContent);
   });
   test('check that $outline && $warning apply correct styles ', () => {
     const btn = renderToJson(Component)({ $outline: true, $warning: true });
-    expect(btn).toHaveStyleRule('background', theme.colors.$white);
-    expect(btn).toHaveStyleRule('color', theme.colors.$warning);
+    expect(btn).toHaveStyleRule('background', theme.color.$white);
+    expect(btn).toHaveStyleRule('color', theme.color.$warning);
     expect(btn).toHaveStyleRule('width', theme.width.fitContent);
   });
   test('check that $outline && $black apply correct styles ', () => {
     const btn = renderToJson(Component)({ $outline: true, $black: true });
-    expect(btn).toHaveStyleRule('background', theme.colors.$white);
-    expect(btn).toHaveStyleRule('color', theme.colors.$black);
+    expect(btn).toHaveStyleRule('background', theme.color.$white);
+    expect(btn).toHaveStyleRule('color', theme.color.$black);
     expect(btn).toHaveStyleRule('width', theme.width.fitContent);
   });
   test('check that disabled apply correct styles ', () => {
     const btn = renderToJson(Component)({ disabled: true });
-    expect(btn).toHaveStyleRule('background', theme.colors.$grayLight);
-    expect(btn).toHaveStyleRule('color', theme.colors.$gray);
+    expect(btn).toHaveStyleRule('background', theme.color.$grayLight);
+    expect(btn).toHaveStyleRule('color', theme.color.$gray);
     expect(btn).toHaveStyleRule('cursor', theme.cursor.notAllowed);
     expect(btn).toHaveStyleRule('width', theme.width.fitContent);
   });

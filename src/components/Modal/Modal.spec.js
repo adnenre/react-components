@@ -1,14 +1,5 @@
 import React from 'react';
-import '@testing-library/jest-dom';
-import {
-  render,
-  fireEvent,
-  getByTestId,
-  queryByText,
-  queryByRole,
-} from '@testing-library/react';
-import 'jest-styled-components';
-//import renderer from 'react-test-renderer';
+import { render, fireEvent } from '../utility-test';
 import Button from '../Button';
 import Modal from '.';
 import fake_data from '../../fake-data';

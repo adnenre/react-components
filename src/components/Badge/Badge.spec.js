@@ -1,11 +1,7 @@
 import React from 'react';
-import '@testing-library/jest-dom';
-import { render, fireEvent } from '@testing-library/react';
-import 'jest-styled-components';
-import renderer from 'react-test-renderer';
+import { render, renderToJson, theme } from '../utility-test';
+import Badge from '.';
 
-import Badge from './index';
-import theme from '../../theme';
 const label = 'i m a label';
 
 describe('Test Badge', () => {
@@ -13,8 +9,6 @@ describe('Test Badge', () => {
     <Badge data-testid="badge" label={label} {...props} />
   );
 
-  const renderToJson = (C) => (rest) =>
-    renderer.create(<C {...rest} />).toJSON();
   test('renders a badge with the correct label', () => {
     const { getByTestId } = render(<Component />);
     const badge = getByTestId('badge');
@@ -25,7 +19,7 @@ describe('Test Badge', () => {
   });
 
   test('check that applyed theme colors props passed correctly', () => {
-    const property = 'background';
+    const cssP = 'background';
     const badgePrimary = renderToJson(Component)({ $primary: true });
     const badgeInfo = renderToJson(Component)({ $info: true });
     const badgeWarning = renderToJson(Component)({ $warning: true });
@@ -33,53 +27,59 @@ describe('Test Badge', () => {
     const badgeDanger = renderToJson(Component)({ $danger: true });
     const badgeBlack = renderToJson(Component)({ $black: true });
 
-    expect(badgePrimary).toHaveStyleRule(property, theme.colors.$primary);
-    expect(badgeInfo).toHaveStyleRule(property, theme.colors.$info);
-    expect(badgeWarning).toHaveStyleRule(property, theme.colors.$warning);
-    expect(badgeSuccess).toHaveStyleRule(property, theme.colors.$success);
-    expect(badgeDanger).toHaveStyleRule(property, theme.colors.$danger);
-    expect(badgeBlack).toHaveStyleRule(property, theme.colors.$black);
+    expect(badgePrimary).toHaveStyleRule(cssP, theme.color.$primary);
+    expect(badgeInfo).toHaveStyleRule(cssP, theme.color.$info);
+    expect(badgeWarning).toHaveStyleRule(cssP, theme.color.$warning);
+    expect(badgeSuccess).toHaveStyleRule(cssP, theme.color.$success);
+    expect(badgeDanger).toHaveStyleRule(cssP, theme.color.$danger);
+    expect(badgeBlack).toHaveStyleRule(cssP, theme.color.$black);
   });
 
   test('check that $rounded apply correct border radius ', () => {
     const badge = renderToJson(Component)({ $rounded: true });
-    expect(badge).toHaveStyleRule('border-radius', theme.borderRadius.$rounded);
+    expect(badge).toHaveStyleRule(
+      'border-radius',
+      theme['border-radius'].$rounded
+    );
   });
 
   test('check that $pill apply correct border radius ', () => {
     const badge = renderToJson(Component)({ $pill: true });
-    expect(badge).toHaveStyleRule('border-radius', theme.borderRadius.$pill);
+    expect(badge).toHaveStyleRule(
+      'border-radius',
+      theme['border-radius'].$pill
+    );
   });
 
   test('check that $outline && $primary apply correct styles ', () => {
     const badge = renderToJson(Component)({ $outline: true, $primary: true });
-    expect(badge).toHaveStyleRule('background', theme.colors.$white);
-    expect(badge).toHaveStyleRule('color', theme.colors.$primary);
+    expect(badge).toHaveStyleRule('background', theme.color.$white);
+    expect(badge).toHaveStyleRule('color', theme.color.$primary);
   });
 
   test('check that $outline && $info apply correct styles ', () => {
     const badge = renderToJson(Component)({ $outline: true, $info: true });
-    expect(badge).toHaveStyleRule('background', theme.colors.$white);
-    expect(badge).toHaveStyleRule('color', theme.colors.$info);
+    expect(badge).toHaveStyleRule('background', theme.color.$white);
+    expect(badge).toHaveStyleRule('color', theme.color.$info);
   });
   test('check that $outline && $success apply correct styles ', () => {
     const badge = renderToJson(Component)({ $outline: true, $success: true });
-    expect(badge).toHaveStyleRule('background', theme.colors.$white);
-    expect(badge).toHaveStyleRule('color', theme.colors.$success);
+    expect(badge).toHaveStyleRule('background', theme.color.$white);
+    expect(badge).toHaveStyleRule('color', theme.color.$success);
   });
   test('check that $outline && $danger apply correct styles ', () => {
     const badge = renderToJson(Component)({ $outline: true, $danger: true });
-    expect(badge).toHaveStyleRule('background', theme.colors.$white);
-    expect(badge).toHaveStyleRule('color', theme.colors.$danger);
+    expect(badge).toHaveStyleRule('background', theme.color.$white);
+    expect(badge).toHaveStyleRule('color', theme.color.$danger);
   });
   test('check that $outline && $warning apply correct styles ', () => {
     const badge = renderToJson(Component)({ $outline: true, $warning: true });
-    expect(badge).toHaveStyleRule('background', theme.colors.$white);
-    expect(badge).toHaveStyleRule('color', theme.colors.$warning);
+    expect(badge).toHaveStyleRule('background', theme.color.$white);
+    expect(badge).toHaveStyleRule('color', theme.color.$warning);
   });
   test('check that $outline && $black apply correct styles ', () => {
     const badge = renderToJson(Component)({ $outline: true, $black: true });
-    expect(badge).toHaveStyleRule('background', theme.colors.$white);
-    expect(badge).toHaveStyleRule('color', theme.colors.$black);
+    expect(badge).toHaveStyleRule('background', theme.color.$white);
+    expect(badge).toHaveStyleRule('color', theme.color.$black);
   });
 });

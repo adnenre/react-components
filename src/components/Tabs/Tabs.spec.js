@@ -1,8 +1,6 @@
 import React from 'react';
-import '@testing-library/jest-dom';
-import { render, fireEvent } from '@testing-library/react';
-import 'jest-styled-components';
-import renderer from 'react-test-renderer';
+
+import { render, fireEvent } from '../utility-test';
 
 import Tabs from '.';
 import fake_data from '../../fake-data';

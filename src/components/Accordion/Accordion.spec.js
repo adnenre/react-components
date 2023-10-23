@@ -1,8 +1,6 @@
 import React from 'react';
-import '@testing-library/jest-dom';
-import { render, fireEvent } from '@testing-library/react';
-import 'jest-styled-components';
-import renderer from 'react-test-renderer';
+
+import { render, fireEvent } from '../utility-test';
 
 import Accordion from '.';
 
@@ -14,8 +12,7 @@ describe('Test Accordion', () => {
   const Component = (props) => (
     <Accordion data-testid="accordion" items={items} {...props} />
   );
-  const renderToJson = (C) => (rest) =>
-    renderer.create(<C {...rest} />).toJSON();
+
   test('renders an Accordion with the correct data', () => {
     const { getByTestId } = render(<Component />);
     const accordion = getByTestId('accordion');
