@@ -15,7 +15,7 @@ const Masonry = (props) => {
 
   // create columns
   for (let i = 0; i < columns; i++) {
-    columnWrapper[`column${i}`] = [];
+    columnWrapper[`column-${i}`] = [];
   }
 
   // divide items into columns
@@ -23,15 +23,20 @@ const Masonry = (props) => {
     const columnIndex = i % columns;
     const height = 100 + Math.ceil(Math.random() * 200);
 
-    columnWrapper[`column${columnIndex}`].push(
+    columnWrapper[`column-${columnIndex}`].push(
       <MasonryItem
+        key={`item-${i}-${columnIndex}`}
         style={{
           marginBottom: `${gap}px`,
           height: `${height}px`,
         }}
       >
         {isImageUrl(items[i]) ? (
-          <MasonryImage src={items[i]} alt={`image item ${i + 1}`} />
+          <MasonryImage
+            key={`image item ${i + 1}`}
+            src={items[i]}
+            alt={`image item ${i + 1}`}
+          />
         ) : (
           items[i]
         )}
@@ -43,12 +48,13 @@ const Masonry = (props) => {
   for (let i = 0; i < columns; i++) {
     result.push(
       <MasonryColumn
+        key={`column-${i}}`}
         style={{
           marginLeft: `${i > 0 ? gap : 0}px`,
           flex: 1,
         }}
       >
-        {columnWrapper[`column${i}`]}
+        {columnWrapper[`column-${i}`]}
       </MasonryColumn>
     );
   }
@@ -59,7 +65,7 @@ const Masonry = (props) => {
 Masonry.propTypes = {
   columns: PropTypes.number.isRequired,
   gap: PropTypes.number.isRequired,
-  items: PropTypes.arrayOf(PropTypes.element),
+  items: PropTypes.arrayOf(PropTypes.node),
 };
 
 Masonry.defaultProps = {
