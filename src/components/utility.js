@@ -2,48 +2,50 @@
 
 import { css } from 'styled-components';
 import theme from '../theme';
-export const getButtonStyle = ({ ...props }) => {
-  const colorProps = Object.keys(theme.colors);
 
+const colorProps = Object.keys(theme.color);
+
+export const getButtonStyle = ({ ...props }) => {
   for (const prop of colorProps) {
     if (props['disabled']) {
       return css`
-        background: ${theme.colors.$grayLight};
-        color: ${theme.colors.$gray};
+        background: ${theme.color.$grayLight};
+        color: ${theme.color.$gray};
         border: none;
         cursor: not-allowed;
 
-        border: ${theme.border.thin} ${theme.colors.$grayLight};
+        border: ${theme.border.thin} ${theme.color.$grayLight};
         &:hover {
-          color: ${theme.colors.$gray};
+          color: ${theme.color.$gray};
         }
       `;
     }
     if (props[prop] && !props['$outline']) {
-      const color = theme.colors[prop];
+      const color = theme.color[prop];
       return css`
         background: ${color};
-        color: ${theme.colors.$white};
+        color: ${theme.color.$white};
         border: ${theme.border.thin} ${color};
         &:hover {
           box-shadow: ${theme.boxShadow.default};
         }
         &:active {
           color: ${color};
-          background: ${theme.colors.$white};
+          background: ${theme.color.$white};
+          box-shadow: none;
         }
       `;
     }
     if (props[prop] && props['$outline']) {
-      const color = theme.colors[prop];
+      const color = theme.color[prop];
       return css`
-        background: ${theme.colors.$white};
+        background: ${theme.color.$white};
         color: ${color};
         border: ${theme.border.thin} ${color};
 
         &:active {
           color: ${color};
-          background-color: ${theme.colors.$white};
+          background-color: ${theme.color.$white};
         }
         &::before {
           content: '';
@@ -54,10 +56,10 @@ export const getButtonStyle = ({ ...props }) => {
           left: 0;
           width: 0px;
           height: 100%;
-          background: ${theme.colors[prop]};
+          background: ${theme.color[prop]};
         }
         &:hover {
-          color: ${theme.colors.$white};
+          color: ${theme.color.$white};
         }
         &:hover::before {
           width: 100%;
@@ -69,15 +71,41 @@ export const getButtonStyle = ({ ...props }) => {
   // If none of the color props are present, use the default color
 
   return css`
-    background: ${theme.colors.$grayDark};
-    color: ${theme.colors.$white};
-    border: ${theme.border.thin} ${theme.colors.$grayDark};
+    background: ${theme.color.$grayDark};
+    color: ${theme.color.$white};
+    border: ${theme.border.thin} ${theme.color.$grayDark};
 
     &:active {
-      color: ${theme.colors.$grayDark};
-      background: ${theme.colors.$white};
-      border: ${theme.border.thin} ${theme.colors.$grayDark};
+      color: ${theme.color.$grayDark};
+      background: ${theme.color.$white};
+      border: ${theme.border.thin} ${theme.color.$grayDark};
     }
+  `;
+};
+export const getBadgetyle = ({ ...props }) => {
+  for (const prop of colorProps) {
+    if (props[prop] && !props['$outline']) {
+      return css`
+        background: ${theme.color[prop]};
+        color: ${theme.color.$white};
+        border: ${theme.border.thin} ${theme.color[prop]};
+      `;
+    }
+    if (props[prop] && props['$outline']) {
+      return css`
+        background: ${theme.color.$white};
+        color: ${theme.color[prop]};
+        border: ${theme.border.thin} ${theme.color[prop]};
+      `;
+    }
+  }
+
+  // If none of the color props are present, use the default color
+
+  return css`
+    background: ${theme.color.$grayDark};
+    color: ${theme.color.$white};
+    border: ${theme.border.thin} ${theme.color.$grayDark};
   `;
 };
 
@@ -92,4 +120,18 @@ export const isImageUrl = (url) => {
   ];
   const lowercasedUrl = url.toLowerCase();
   return supportedExtensions.some((ext) => lowercasedUrl.endsWith(ext));
+};
+
+export const getProperty = (cssProperty, props) => {
+  for (const prop of Object.keys(theme[cssProperty])) {
+    if (props[prop]) {
+      return `
+        ${[cssProperty]}: ${theme[cssProperty][prop]};
+      `;
+    }
+  }
+
+  return `
+     ${[cssProperty]}: ${theme[cssProperty].$default};
+  `;
 };
