@@ -1,41 +1,15 @@
 import styled from 'styled-components';
+import { getProperty } from '../utility';
 
-const avatarSizing = {
-  xsmall: '50px',
-  small: '80px',
-  medium: '100px',
-  large: '150px',
-  xlarge: '180px',
-};
 const AvatarContainer = styled.div`
-  border-radius: ${({ $round }) => {
-    if ($round) return '50%';
-    return '10px';
-  }};
-
   margin: auto;
   overflow: hidden;
   box-shadow: 0 0 20px 1px #bec0c2;
-  width: ${({ $xsmall, $small, $medium, $large, $xlarge }) => {
-    if ($xsmall) return avatarSizing.xsmall;
-    if ($small) return avatarSizing.small;
-    if ($medium) return avatarSizing.medium;
-    if ($large) return avatarSizing.large;
-    if ($xlarge) return avatarSizing.xlarge;
-
-    return avatarSizing.small;
-  }};
-  height: ${({ $xsmall, $small, $medium, $large, $xlarge }) => {
-    if ($xsmall) return avatarSizing.xsmall;
-    if ($small) return avatarSizing.small;
-    if ($medium) return avatarSizing.medium;
-    if ($large) return avatarSizing.large;
-    if ($xlarge) return avatarSizing.xlarge;
-
-    return avatarSizing.small;
-  }};
   border: solid 4px white;
   display: flex;
+  ${(props) => getProperty('width', props)};
+  ${(props) => getProperty('height', props)};
+  ${(props) => getProperty('border-radius', props)};
 `;
 const AvatarImg = styled.img`
   width: 100%;
