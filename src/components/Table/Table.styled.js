@@ -4,7 +4,7 @@ const TableContainer = styled.table`
   display: table;
   width: 100%;
   border-collapse: collapse;
-  color: ${theme.colors.$black};
+  color: ${theme.color.$black};
   table-layout: fixed;
   border-collapse: collapse;
 `;
@@ -14,7 +14,7 @@ const TableHead = styled.thead`
   overflow: hidden; /* Hide overflowing content */
   text-overflow: ellipsis; /* Display ellipsis (...) for truncated content */
   font-size: 12px;
-  background: ${theme.colors.$primary};
+  background: ${theme.color.$primary};
   color: white;
 `;
 
@@ -22,12 +22,12 @@ const TableHeadCell = styled.th`
   padding: 10px;
   white-space: nowrap;
   text-align: center;
-  border: ${theme.border.thin} ${theme.colors.$primary};
+  border: ${theme.border.thin} ${theme.color.$primary};
   width: 50px;
   user-select: none;
 `;
 const TableBody = styled.tbody`
-  border: ${theme.border.thin} ${theme.colors.$primary};
+  border: ${theme.border.thin} ${theme.color.$primary};
 `;
 const TableRow = styled.tr`
   padding: 10px;
@@ -38,7 +38,7 @@ const TableRow = styled.tr`
       return `
       &:nth-child(2n) {
         color: white;
-        background: ${theme.colors.$primary};
+        background: ${theme.color.$primary};
       }
       `;
     }
@@ -50,7 +50,7 @@ const TableCell = styled.td`
   text-align: center;
   ${(props) => {
     if (props.$withBorder) {
-      return `border : ${theme.border.thin} ${theme.colors.$primary}`;
+      return `border : ${theme.border.thin} ${theme.color.$primary}`;
     }
     return `border : none`;
   }};

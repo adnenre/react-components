@@ -18,7 +18,7 @@ const StepContainer = styled.div`
 
 const Step = styled.div`
   background-color: ${({ $active }) =>
-    $active ? theme.colors.$primary : theme.colors.$grayLight};
+    $active ? theme.color.$primary : theme.color.$grayLight};
   border-radius: 50%;
   margin: 3px;
   width: 28px;
@@ -35,7 +35,7 @@ const Step = styled.div`
   transition-property: color, background-color, border-color;
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
-  border-color: ${theme.colors.$primary};
+  border-color: ${theme.color.$primary};
   &::after {
     border-radius: 100%;
     content: '';

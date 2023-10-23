@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { SButton } from './Button.styled';
 
-const Button = ({ ...props }) => {
-  return <SButton {...props}>{props.children || props.label}</SButton>;
+const Button = ({ children, label, ...rest }) => {
+  return <SButton {...rest}>{children || label}</SButton>;
 };
 Button.defaultProps = {
   label: 'Button',

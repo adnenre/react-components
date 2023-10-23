@@ -56,7 +56,7 @@ export const ModalHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 1rem;
-  border-bottom: 1px solid ${theme.colors.$grayLight};
+  border-bottom: 1px solid ${theme.color.$grayLight};
   cursor: ${({ draggable }) => (draggable ? 'move' : 'auto')};
   padding: 1rem 1.5rem;
   text-align: left;
@@ -68,7 +68,7 @@ export const ModalHeader = styled.div`
   text-transform: none;
   vertical-align: unset;
   text-decoration: none;
-  color: ${theme.colors.$gray};
+  color: ${theme.color.$gray};
   letter-spacing: 0.5px;
 `;
 
@@ -87,7 +87,7 @@ export const ModalBody = styled.div`
   text-transform: none;
   vertical-align: unset;
   text-decoration: none;
-  color: ${theme.colors.gray};
+  color: ${theme.color.gray};
   letter-spacing: 0.5px;
 `;
 

@@ -7,12 +7,12 @@ const AccordionItemStyled = styled.div`
 const AccordionTitleStyled = styled.h5`
   width: 100%;
   background: ${({ $isOpen }) =>
-    $isOpen ? `${theme.colors.$primary}` : `${theme.colors.$white}`};
+    $isOpen ? `${theme.color.$primary}` : `${theme.color.$white}`};
   color: ${({ $isOpen }) =>
-    !$isOpen ? `${theme.colors.$primary}` : `${theme.colors.$white}`};
+    !$isOpen ? `${theme.color.$primary}` : `${theme.color.$white}`};
   user-select: none;
-  border-top: ${theme.border.thin} ${theme.colors.$primary};
-  border-bottom: ${theme.border.thin} ${theme.colors.$primary};
+  border-top: ${theme.border.thin} ${theme.color.$primary};
+  border-bottom: ${theme.border.thin} ${theme.color.$primary};
   display: flex;
   justify-content: space-between;
 
@@ -23,12 +23,12 @@ const AccordionTitleStyled = styled.h5`
 `;
 const AccordionContent = styled.div`
   width: 100%;
-  background: ${theme.colors.$white};
+  background: ${theme.color.$white};
   text-align: left;
   color: ${theme.font.$color};
   padding: 1.5rem 1rem;
   text-align: left;
-  color: ${theme.colors.$black};
+  color: ${theme.color.$black};
   font-family: Roboto, Helvetica, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -37,12 +37,12 @@ const AccordionContent = styled.div`
   text-transform: none;
   vertical-align: unset;
   text-decoration: none;
-  color: ${theme.colors.$gray};
+  color: ${theme.color.$gray};
   letter-spacing: 1px;
 `;
 const AccordionContainer = styled.div`
   width: 100%;
-  background: ${theme.colors.$primary};
+  background: ${theme.color.$primary};
   > div:first-child > h5 {
     border-top: none !important;
   }

@@ -20,7 +20,7 @@ const ExpandedTreeNode = styled(TreeNode)`
 `;
 
 const TreeLeaf = styled.span`
-  color: ${theme.colors.$black}; /* Style the leaves differently */
+  color: ${theme.color.$black}; /* Style the leaves differently */
 `;
 
 const Caret = styled.span`

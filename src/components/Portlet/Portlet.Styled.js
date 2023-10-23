@@ -1,25 +1,18 @@
 import styled from 'styled-components';
 import theme from '../../theme';
+import { getProperty } from '../utility';
 
 const style = {
   primary: `
-      background:${theme.colors.$primary};
+      background:${theme.color.$primary};
       color:white !important; 
     `,
 };
 
 const Title = styled.h5`
   font-size: 1.5rem;
-  color: ${({ $primary, $info, $danger, $warning, $success, $black }) => {
-    if ($primary) return theme.colors.$primary;
-    if ($info) return theme.colors.$$info;
-    if ($danger) return theme.colors.$$danger;
-    if ($warning) return theme.colors.$$warning;
-    if ($success) return theme.colors.$$success;
-    if ($black) return theme.colors.$$black;
-
-    return theme.colors.$white;
-  }};
+  text-align: center;
+  ${(props) => getProperty('color', props)}
 `;
 const Portlet = styled.div`
   background: white;
@@ -28,7 +21,7 @@ const Portlet = styled.div`
   margin-bottom: 1rem;
 `;
 const PortletHeader = styled.div`
-  border-bottom: ${theme.border.thin} ${theme.colors.$grayLight};
+  border-bottom: ${theme.border.thin} ${theme.color.$grayLight};
   padding: 0.5rem 0;
   ${() => style.primary};
   min-height: 5rem;
@@ -51,7 +44,7 @@ const PortletBody = styled.div`
 `;
 const PortletFooter = styled.div`
   padding: 0.5rem 1rem;
-  border-top: ${theme.border.thin} ${theme.colors.$grayLight};
+  border-top: ${theme.border.thin} ${theme.color.$grayLight};
   display: ${({ flex }) => {
     if (flex) return 'flex';
     return 'flex';

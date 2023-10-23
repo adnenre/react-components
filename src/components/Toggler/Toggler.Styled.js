@@ -22,10 +22,10 @@ const TogglerContainer = styled.div`
     cursor: pointer;
 
     > circle {
-      fill: ${theme.colors.$primary};
+      fill: ${theme.color.$primary};
     }
     > rect {
-      fill: ${theme.colors.$white};
+      fill: ${theme.color.$white};
     }
   }
 `;

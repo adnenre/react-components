@@ -1,16 +1,14 @@
 import styled from 'styled-components';
 import theme from '../../theme';
+import { getProperty } from '../utility';
 const CardContainer = styled.div`
+  ${(props) => getProperty('border-radius', props)};
   box-shadow:
     rgba(0, 0, 0, 0.1) 0rem 0.625rem 0.9375rem -0.1875rem,
     rgba(0, 0, 0, 0.05) 0rem 0.25rem 0.375rem -0.125rem;
   background: white;
   overflow: hidden;
-  border-radius: ${({ $pill, $rounded }) => {
-    if ($pill) return theme.borderRadius.$pill;
-    if ($rounded) return theme.borderRadius.$rounded;
-    return theme.borderRadius.$default;
-  }};
+
   transition: all 0.3s;
   &:hover {
     box-shadow:
@@ -29,16 +27,15 @@ const CardHeader = styled.div`
   text-transform: none;
   vertical-align: unset;
   text-decoration: none;
-  color: ${theme.colors.gray};
   letter-spacing: 0.5px;
 
-  border-bottom: ${theme.border.thin} ${theme.colors.$grayLight};
-  color: ${theme.colors.$black};
+  border-bottom: ${theme.border.thin} ${theme.color.$grayLight};
+  color: ${theme.color.$black};
 `;
 const CardBody = styled.div`
   padding: 1rem 1.5rem;
   text-align: left;
-  color: ${theme.colors.$black};
+  color: ${theme.color.$black};
   font-family: Roboto, Helvetica, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -47,11 +44,11 @@ const CardBody = styled.div`
   text-transform: none;
   vertical-align: unset;
   text-decoration: none;
-  color: ${theme.colors.$gray};
+  color: ${theme.color.$gray};
   letter-spacing: 1px;
 `;
 const CardFooter = styled.div`
-  border-top: ${theme.border.thin} ${theme.colors.$grayLight};
+  border-top: ${theme.border.thin} ${theme.color.$grayLight};
   display: flex;
   justify-content: space-between;
   padding: 0.75rem 1rem;

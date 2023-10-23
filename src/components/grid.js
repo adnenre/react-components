@@ -5,16 +5,16 @@ const colwidth = 100 / gridColNumber;
 import theme from '../theme';
 const style = {
   $demo: `
-       border: ${theme.border.thin} ${theme.colors.$primary};
+       border: ${theme.border.thin} ${theme.color.$primary};
        height:50px;
        display:flex;
        align-items: center;
        justify-content: center;
-       color:${theme.colors.$primary};
+       color:${theme.color.$primary};
        transition:0.3s;
        &:hover{
        
-       background:${theme.colors.$primary};
+       background:${theme.color.$primary};
        color:white;
        }
        :hover{
@@ -27,12 +27,12 @@ const style = {
        display:flex;
        align-items: center;
        justify-content: center;
-       background:${theme.colors.$primary};
+       background:${theme.color.$primary};
        color:white;
        transition:0.3s;
        &:hover{
-         border:${theme.border.thin} ${theme.colors.$primary};
-         color:${theme.colors.$primary};
+         border:${theme.border.thin} ${theme.color.$primary};
+         color:${theme.color.$primary};
          background:white;
          cursor:pointer;
        }

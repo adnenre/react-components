@@ -31,7 +31,7 @@ const NavContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   border-bottom: solid 1px white;
-  background: ${theme.colors.$primary};
+  background: ${theme.color.$primary};
 `;
 const NavMenu = styled.div`
   justify-content: center;
@@ -92,7 +92,7 @@ const NavLink = styled.a`
     background: white;
   }
   &:hover {
-    color: ${theme.colors.$primary};
+    color: ${theme.color.$primary};
     cursor: pointer;
   }
   &:hover:before {

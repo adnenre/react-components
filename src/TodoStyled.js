@@ -7,13 +7,13 @@ const Todo = styled.div`
   justify-content: center;
   width: 50%;
   margin: auto;
-  border: ${theme.border.thin} ${theme.colors.$grayLight};
+  border: ${theme.border.thin} ${theme.color.$grayLight};
 `;
 const TodoName = styled.div`
   padding: 0 0.5rem;
   text-align: left;
   width: 130px;
-  color: ${theme.colors.$black};
+  color: ${theme.color.$black};
 `;
 const TodoState = styled.div`
   padding: 0 0.5rem;
@@ -22,8 +22,8 @@ const TodoState = styled.div`
   color: white;
   ${(props) =>
     props.$state
-      ? 'background:' + theme.colors.$success
-      : 'background:' + theme.colors.$danger};
+      ? 'background:' + theme.color.$success
+      : 'background:' + theme.color.$danger};
 `;
 
 const componentsList = [

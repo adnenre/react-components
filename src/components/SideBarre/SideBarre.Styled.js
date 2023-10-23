@@ -23,9 +23,9 @@ const SideBarreContainer = styled.div`
 `;
 const SideBarreHeader = styled.div`
   width: inherit;
-  color: ${theme.colors.$white};
+  color: ${theme.color.$white};
   min-height: 5rem;
-  background: ${theme.colors.$primary};
+  background: ${theme.color.$primary};
   display: flex;
   justify-content: center;
 `;
@@ -38,7 +38,7 @@ const SideBarreBody = styled.div`
 
   &::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background: ${theme.colors.$primary};
+    background: ${theme.color.$primary};
   }
   overflow-y: scroll;
   height: calc(100% - 80px);
@@ -60,14 +60,14 @@ const LinkItem = styled(Link)`
   line-height: 35px;
   // padding: 0 5px;
   background: rgba(255, 255, 255, 0.12);
-  color: ${theme.colors.$gray};
+  color: ${theme.color.$gray};
   position: relative;
   cursor: pointer;
   z-index: 0;
   text-decoration: none;
-  border-bottom: ${theme.border.thin} ${theme.colors.$grayLight};
+  border-bottom: ${theme.border.thin} ${theme.color.$grayLight};
   &:hover {
-    color: ${theme.colors.$white};
+    color: ${theme.color.$white};
   }
   &:before {
     content: '';
@@ -77,7 +77,7 @@ const LinkItem = styled(Link)`
     width: 2px;
     height: 80%;
     border-radius: 4px;
-    background: ${theme.colors.$grayDark};
+    background: ${theme.color.$grayDark};
     transition: all 0.3s;
     z-index: -1;
     opacity: 0;

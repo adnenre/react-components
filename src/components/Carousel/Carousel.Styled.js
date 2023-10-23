@@ -39,9 +39,9 @@ const SlideText = styled.div`
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-color: ${theme.colors.$info};
+  background-color: ${theme.color.$info};
   font-size: 2rem;
-  color: ${theme.colors.$white};
+  color: ${theme.color.$white};
 `;
 
 const Indicators = styled.div`
@@ -62,7 +62,7 @@ const Indicator = styled.div`
   &::after {
     content: '';
     border-width: 1px;
-    border-color: ${theme.colors.$primary};
+    border-color: ${theme.color.$primary};
     border-style: solid;
     border-radius: 4px;
     pointer-events: none;
