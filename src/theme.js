@@ -3,18 +3,15 @@ const theme = {
     full: '100%',
     fitContent: 'fit-content',
   },
-  radius: {
-    sm: '4px',
-    md: '6px',
-    lg: '10px',
-  },
+
   border: {
     thin: '1px solid ',
   },
-  borderRadius: {
+  radius: {
     $pill: '20px',
+    $round: '50%',
     $rounded: '4px',
-    $default: '0px',
+    $default: '0',
   },
   colors: {
     $white: '#ffffff',
