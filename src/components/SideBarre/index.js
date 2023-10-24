@@ -4,6 +4,7 @@ import {
   SideBarreContainer,
   SideBarreHeader,
   SideBarreBody,
+  SideBarreFooter,
   List,
   Item,
   LinkItem,
@@ -26,6 +27,7 @@ const SideBarre = ({ routes, active }) => {
           ))}
         </List>
       </SideBarreBody>
+      <SideBarreFooter $primary>LANA </SideBarreFooter>
     </SideBarreContainer>
   );
 };

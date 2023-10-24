@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import theme from '../../theme';
 import { Link } from 'react-router-dom';
+import { getProperty } from '../utility';
 
 const SideBarreContainer = styled.div`
   height: 100%;
@@ -32,19 +33,36 @@ const SideBarreHeader = styled.div`
 
 const SideBarreBody = styled.div`
   &::-webkit-scrollbar {
-    width: 2px;
+    width: 3px;
     background: white;
   }
 
   &::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background: ${theme.color.$primary};
+    background: ${theme.color.$primary5};
   }
   overflow-y: scroll;
-  height: calc(100% - 80px);
+  height: calc(100% - 120px);
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
 `;
 const SideBarreFooter = styled.div`
+  height: 40px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-weight: 300;
+  ${(props) => getProperty('background', props)}
+
+  display: flex;
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
 `;
 const List = styled.ul`
   list-style: none;
@@ -66,7 +84,9 @@ const LinkItem = styled(Link)`
   z-index: 0;
   text-decoration: none;
   border-bottom: ${theme.border.thin} ${theme.color.$grayLight};
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     color: ${theme.color.$white};
   }
   &:before {
@@ -77,13 +97,14 @@ const LinkItem = styled(Link)`
     width: 2px;
     height: 80%;
     border-radius: 4px;
-    background: ${theme.color.$grayDark};
+    background: ${theme.color.$primary4};
     transition: all 0.3s;
     z-index: -1;
     opacity: 0;
     transform: translate(-50%, -50%);
   }
-  &:hover::before {
+  &:hover::before,
+  &:focus::before {
     width: 90%;
     opacity: 1;
   }
@@ -93,7 +114,7 @@ export {
   SideBarreContainer,
   SideBarreHeader,
   SideBarreBody,
-  //SideBarreFooter,
+  SideBarreFooter,
   LinkItem,
   List,
   Item,
