@@ -1,5 +1,6 @@
 const routes = [
   { path: '/', routeName: 'Home' },
+  { path: '/PaletPage', routeName: 'Palet' },
   { path: '/GridPage', routeName: 'Grid' },
   { path: '/ButtonPage', routeName: 'Button' },
   { path: '/CardPage', routeName: 'Card' },
