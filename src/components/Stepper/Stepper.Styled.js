@@ -3,10 +3,22 @@ import theme from '../../theme';
 
 const StepperContainer = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: self-start;
-  width: 50%;
+  justify-content: center;
+  align-items: center;
+
   margin: 0 auto;
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`;
+const StepperWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 768px) {
+  }
 `;
 const StepContainer = styled.div`
   display: flex;
@@ -14,13 +26,29 @@ const StepContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 0 1rem;
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    > p {
+      margin: 0 0.5rem 0 0.2rem;
+    }
+  }
 `;
+const StepperButtonContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
 
+  @media (max-width: 768px) {
+  }
+`;
 const Step = styled.div`
   background-color: ${({ $active }) =>
     $active ? theme.color.$primary : theme.color.$grayLight};
   border-radius: 50%;
-  margin: 3px;
+  margin: 5px;
   width: 28px;
   height: 28px;
   border-width: 1px;
@@ -51,6 +79,14 @@ const Step = styled.div`
     left: -4px;
     z-index: 2;
   }
+  @media (max-width: 768px) {
+  }
 `;
 
-export { StepperContainer, StepContainer, Step };
+export {
+  StepperWrapper,
+  StepperContainer,
+  StepContainer,
+  Step,
+  StepperButtonContainer,
+};

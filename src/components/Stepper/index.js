@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { StepperContainer, StepContainer, Step } from './Stepper.Styled.js';
+import {
+  StepperContainer,
+  StepContainer,
+  Step,
+  StepperButtonContainer,
+  StepperWrapper,
+} from './Stepper.Styled.js';
 import Button from '../Button';
 
 const Stepper = ({ steps }) => {
@@ -26,12 +32,18 @@ const Stepper = ({ steps }) => {
   };
 
   return (
-    <div>
+    <StepperWrapper>
       <StepperContainer>
         {stepperItems.map((step) => (
-          <StepContainer key={step.id}>
+          <StepContainer key={step.id} $active={step.id === activeStep}>
             <Step $active={step.id === activeStep}></Step>
-            <p style={{ fontSize: '0.5rem', marginTop: '0.25rem' }}>
+            <p
+              style={{
+                fontSize: '0.5rem',
+                marginTop: '0.25rem',
+                textWrap: 'nowrap',
+              }}
+            >
               {step.subLabel}
             </p>
             <p
@@ -46,13 +58,7 @@ const Stepper = ({ steps }) => {
           </StepContainer>
         ))}
       </StepperContainer>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          marginTop: '1rem',
-        }}
-      >
+      <StepperButtonContainer>
         <Button
           $primary
           $pill
@@ -69,8 +75,8 @@ const Stepper = ({ steps }) => {
         >
           Next
         </Button>
-      </div>
-    </div>
+      </StepperButtonContainer>
+    </StepperWrapper>
   );
 };
 
