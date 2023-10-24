@@ -14,28 +14,29 @@ export const TooltipText = styled.div`
   position: absolute;
   ${(props) => {
     if (props.$top) {
-      return `top : calc(-100% + -6px);
+      return `top : -6px;
       left:50%;
-      transform:translate(-50%)
+      transform:translate(-50%,-100%)
       `;
     }
     if (props.$left) {
-      return `right : calc(100% + 6px);
+      return `left : -6px;
       top:50%;
-      transform:translate(0,-50%);
+      transform:translate(-100%,-50%);
    
       `;
     }
     if (props.$right) {
-      return `left : calc(100% + 6px);
+      return ` right :-6px;
                top:50%;
-               transform:translate(0,-50%);
+             
+               transform:translate(100%,-50%);
                `;
     }
 
-    return `top : calc(100% + 6px);
+    return `top : 6px;
              left:50%;
-             transform:translate(-50%)
+             transform:translate(-50%,100%)
    
       `;
   }};

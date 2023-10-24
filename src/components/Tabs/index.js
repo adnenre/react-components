@@ -86,7 +86,6 @@ const Tabs = (props) => {
             id={child.props.id}
             children={child.props.children}
             $tabTitle={child.props.$tabTitle}
-            $showAsGrid={props.$showAsGrid ? true : false}
           />
         ))}
       </TabsContainer>
@@ -97,7 +96,6 @@ const Tabs = (props) => {
 Tabs.propTypes = {
   children: PropTypes.instanceOf(Array),
   $activeTabID: PropTypes.number,
-  $showAsGrid: PropTypes.bool,
 };
 Tabs.defaultProps = {
   $activeTabID: 1,

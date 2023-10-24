@@ -1,3 +1,5 @@
+import base from './assets/theme/base';
+
 const size = {
   $xsmall: '50px',
   $small: '80px',
@@ -38,6 +40,7 @@ const theme = {
     $gray: '#2e3f6b',
     $grayLight: '#e4edfe', //'#f3f4f6',
     $grayDark: '#94a2bd',
+    ...base.colors,
   },
 
   font: {
