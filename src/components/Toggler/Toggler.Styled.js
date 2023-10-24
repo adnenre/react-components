@@ -22,7 +22,7 @@ const TogglerContainer = styled.div`
     cursor: pointer;
 
     > circle {
-      fill: ${theme.color.$primary};
+      fill: ${theme.color.$primary5};
     }
     > rect {
       fill: ${theme.color.$white};
