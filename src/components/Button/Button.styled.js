@@ -9,7 +9,7 @@ const SButton = styled.button`
   user-select: none;
   outline: none;
   padding: 0.5em 1rem;
-
+  min-width: 90px;
   overflow: hidden;
   position: relative;
 
