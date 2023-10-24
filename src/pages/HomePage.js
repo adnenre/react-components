@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <Portlet>
       <PortletHeader>
-        <Title> Collection of react Component using styled-Components </Title>
+        <Title> LANA react library</Title>
       </PortletHeader>
       <PortletBody $flexColumn>
         {/* map over toDoList*/}
