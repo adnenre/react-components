@@ -9,6 +9,8 @@ import {
   TableCell,
   TableHeadCell,
 } from './Table.styled';
+import Button from '../Button';
+import { exportToCSV } from './utils';
 
 // CREATE CONTEXT
 const TableContext = createContext();
@@ -166,7 +168,7 @@ const ResizableTable = ({ children }) => {
 // TABLE COMPONENT
 const Table = ({ rows, columns, resizable, withBorder, striped }) => {
   // Calculate column style based on width
-
+  const exportDataToCSV = () => exportToCSV(rows, 'table-data.csv');
   return (
     <TableProvider
       value={{
@@ -180,10 +182,13 @@ const Table = ({ rows, columns, resizable, withBorder, striped }) => {
           <TabBody withBorder={withBorder} striped={striped} />
         </ResizableTable>
       ) : (
-        <TableContainer>
-          <TabHead />
-          <TabBody withBorder={withBorder} striped={striped} />
-        </TableContainer>
+        <div>
+          <TableContainer>
+            <TabHead />
+            <TabBody withBorder={withBorder} striped={striped} />
+          </TableContainer>
+          <Button $primary5 label="export CSV" onClick={exportDataToCSV} />
+        </div>
       )}
     </TableProvider>
   );
