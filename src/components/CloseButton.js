@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-const CloseButton = ({ onClick, ...rest }) => {
+import theme from '../theme';
+
+const CloseButton = ({ onClick, $light, ...rest }) => {
   return (
     <div
       style={{ cursor: 'pointer', height: '24px', width: '24px' }}
@@ -19,14 +21,18 @@ const CloseButton = ({ onClick, ...rest }) => {
           fillRule="evenodd"
           clipRule="evenodd"
           d="M6.293 6.293a1 1 0 011.414 0L12 10.586l4.293-4.293a1 1 0 111.414 1.414L13.414 12l4.293 4.293a1 1 0 01-1.414 1.414L12 13.414l-4.293 4.293a1 1 0 01-1.414-1.414L10.586 12 6.293 7.707a1 1 0 010-1.414z"
-          fill="gray"
+          fill={$light ? theme.color.$gray2 : theme.color.$darkBlue10}
         />
       </svg>
     </div>
   );
 };
+CloseButton.defaultProps = {
+  $light: false,
+};
 CloseButton.propTypes = {
   onClick: PropTypes.func.isRequired,
+  $light: PropTypes.bool,
 };
 
 export default CloseButton;

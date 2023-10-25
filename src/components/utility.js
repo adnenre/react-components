@@ -10,14 +10,11 @@ export const getButtonStyle = ({ ...props }) => {
     if (props['disabled']) {
       return css`
         background: ${theme.color.$gray2};
-        color: ${theme.color.$gray};
+        color: ${theme.color.$gray6};
         border: none;
         cursor: not-allowed;
 
         border: ${theme.border.thin} ${theme.color.$gray2};
-        &:hover {
-          color: ${theme.color.$gray};
-        }
       `;
     }
     if (props[prop] && !props['$outline']) {

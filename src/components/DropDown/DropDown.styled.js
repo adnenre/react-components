@@ -18,15 +18,15 @@ export const DropDownHeader = styled.div`
   min-width: inherit;
   white-space: nowrap;
   border-bottom: ${({ $active }) =>
-    $active ? 'solid 3px #00b0ff' : 'solid 3px transparent'};
-  color: ${({ $active }) => ($active ? ' #00b0ff' : 'black')};
+    $active ? `solid 3px ${theme.color.$primary}` : 'solid 3px transparent'};
+
   border: ${theme.border.thin} ${theme.color.$primary};
   border-radius: 5px;
   overflow: hidden;
 
   > div {
     color: ${({ $active }) =>
-      $active ? `${theme.color.$primary}` : ' #546e7a'};
+      $active ? theme.color.$primary : theme.color.$darkBlue10};
   }
 `;
 export const DropDownHeaderContent = styled.div`
@@ -48,7 +48,7 @@ export const DropDownMenu = styled.ul`
   width: 100%;
   text-align: left;
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid ${theme.color.$gray2};
   border-radius: 5px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   overflow: auto;
@@ -70,18 +70,18 @@ export const DropDownItem = styled.li`
   font-weight: 600;
   line-height: 1.42857143;
 
-  background: ${({ $active }) => ($active ? '#e3f2fd' : 'none')};
+  background: ${({ $active }) => ($active ? theme.color.$primary : 'none')};
   color: ${({ $active, selected }) =>
-    $active || selected ? '#00b0ff' : 'none'};
+    $active || selected ? theme.color.$primary : theme.color.$darkBlue10};
 
-  :not(:last-child) {
+  &:not(:last-child) {
     border-bottom: solid 0.5px ${theme.color.$gray2};
   }
   white-space: nowrap;
   &:hover {
     cursor: pointer;
-    background: #e3f2fd;
-    color: #00b0ff;
+    background: ${theme.color.$primary1};
+    color: ${theme.color.$primary};
   }
 `;
 
@@ -91,7 +91,7 @@ export const DropDownCarretStyled = styled.span`
   height: 40px;
   justify-content: center;
   align-items: center;
-  color: #00b0ff;
+  color: ${theme.color.$primary};
   border-left: solid 0.5px ${theme.color.$primary};
   > svg {
     fill: ${({ $isOpen }) =>

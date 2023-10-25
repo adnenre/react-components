@@ -108,7 +108,7 @@ describe('Test Button', () => {
   test('check that disabled apply correct styles ', () => {
     const btn = renderToJson(Component)({ disabled: true });
     expect(btn).toHaveStyleRule('background', theme.color.$gray2);
-    expect(btn).toHaveStyleRule('color', theme.color.$gray);
+    expect(btn).toHaveStyleRule('color', theme.color.$gray6);
     expect(btn).toHaveStyleRule('cursor', theme.cursor.notAllowed);
     expect(btn).toHaveStyleRule('width', theme.width.fitContent);
   });

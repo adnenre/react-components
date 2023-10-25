@@ -28,8 +28,8 @@ export const ModalContainer = styled.div`
   max-height: calc(100vh - 80px);
   min-width: ${({ dialog }) => (dialog ? '500px' : 'none')};
   min-height: ${({ dialog }) => (dialog ? 'min-content' : 'none')};
-  margin: ${({ position }) =>
-    position && position.left ? '0px' : '50px auto'};
+  margin: ${({ $position }) =>
+    $position && $position.left ? '0px' : '50px auto'};
   border-radius: 5px;
   background-color: #fff;
   display: flex;
@@ -37,10 +37,10 @@ export const ModalContainer = styled.div`
   animation-name: ${animateModal};
   animation-duration: 0.6s;
   position: relative;
-  left: ${({ position }) =>
-    position && position.left ? position.left + 'px' : 0};
-  top: ${({ position }) =>
-    position && position.top ? position.top + 'px' : 0};
+  left: ${({ $position }) =>
+    $position && $position.left ? $position.left + 'px' : 0};
+  top: ${({ $position }) =>
+    $position && $position.top ? $position.top + 'px' : 0};
   width: ${({ size, lg }) =>
     size && size.w ? size.w + 'px' : lg ? '80%' : '50%'};
   height: ${({ size }) => (size && size.h ? size.h + 'px' : '')};
@@ -68,7 +68,7 @@ export const ModalHeader = styled.div`
   text-transform: none;
   vertical-align: unset;
   text-decoration: none;
-  color: ${theme.color.$gray};
+  color: ${theme.color.$darkBlue8};
   letter-spacing: 0.5px;
 `;
 
@@ -87,7 +87,7 @@ export const ModalBody = styled.div`
   text-transform: none;
   vertical-align: unset;
   text-decoration: none;
-  color: ${theme.color.gray};
+  color: ${theme.color.$darkBlue10};
   letter-spacing: 0.5px;
 `;
 

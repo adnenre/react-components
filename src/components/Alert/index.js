@@ -22,7 +22,7 @@ const Alert = ({ title, description, isOpen, ...rest }) => {
             {description}
           </AlertDescription>
         </AlertInfo>
-        <CloseButton onClick={close} />
+        <CloseButton $light onClick={close} />
       </AlertContainer>
     );
 

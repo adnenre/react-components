@@ -34,20 +34,20 @@ const Home = () => {
         ))}
       </PortletBody>
       <PortletFooter>
-        <Tooltip text="Click here to visit author profile " $right>
-          <a
-            className="author"
-            href="https://adnenre.github.io"
-            area-label="link to author profile"
-          >
+        <a
+          className="author"
+          href="https://adnenre.github.io"
+          area-label="link to author profile"
+        >
+          <Tooltip text="Click here to visit author profile " $right>
             <Avatar
               src={fake_data.pages.avatar.src}
               alt={fake_data.pages.avatar.alt}
               $xsmall
               $round
             />
-          </a>
-        </Tooltip>
+          </Tooltip>
+        </a>
       </PortletFooter>
     </Portlet>
   );

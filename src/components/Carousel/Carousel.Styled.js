@@ -51,10 +51,11 @@ const Indicators = styled.div`
 `;
 
 const Indicator = styled.div`
-  width: 15px;
-  height: 4px;
+  width: 25px;
+  height: 5px;
   border-radius: 4px;
-  background-color: ${({ $active }) => ($active ? '#0074cc' : '#ccc')};
+  background-color: ${({ $active }) =>
+    $active ? theme.color.$primary : theme.color.$primary2};
   margin: 0 5px;
   position: relative;
   cursor: pointer;
@@ -62,7 +63,7 @@ const Indicator = styled.div`
   &::after {
     content: '';
     border-width: 1px;
-    border-color: ${theme.color.$primary};
+    border-color: ${theme.color.$primary2};
     border-style: solid;
     border-radius: 4px;
     pointer-events: none;

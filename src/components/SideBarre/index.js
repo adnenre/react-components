@@ -21,7 +21,7 @@ const SideBarre = ({ routes, active }) => {
       <SideBarreBody>
         <List>
           {routes.map(({ path, routeName }) => (
-            <Item key={path}>
+            <Item key={path} role="button">
               <LinkItem to={subPath + path}> {routeName}</LinkItem>
             </Item>
           ))}

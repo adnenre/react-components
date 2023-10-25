@@ -40,6 +40,7 @@ const Palet = () => {
             <PaletContainer key={c}>
               <Tooltip text={text} $top>
                 <PaletBox
+                  role="button"
                   onClick={copyToClipboard}
                   onMouseEnter={checkIsCopied}
                   $color={c}

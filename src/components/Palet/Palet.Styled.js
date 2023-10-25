@@ -29,6 +29,9 @@ export const PaletBox = styled.div`
     transform: scale(1.02);
     z-index: 2;
   }
+  &:active {
+    transform: scale(0.99);
+  }
 `;
 export const PaletCode = styled.h5`
   text-align: center;

@@ -72,6 +72,10 @@ const Item = styled.li`
   margin-bottom: 1px;
   list-style: none;
   text-align: center;
+
+  &:active {
+    transform: scale(0.99);
+  }
 `;
 const LinkItem = styled(Link)`
   display: block;

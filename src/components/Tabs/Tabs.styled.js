@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import theme from '../../theme';
 export const TabsContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -23,11 +23,17 @@ export const TabItem = styled.div`
   white-space: nowrap;
   cursor: pointer;
   border-bottom: ${({ $active }) =>
-    $active ? 'solid 3px #00b0ff' : 'solid 3px transparent'};
-  color: ${({ $active }) => ($active ? ' #00b0ff' : '#546e7a')};
-  :hover {
-    color: #00b0ff;
-    background-color: #e3f2fd;
+    $active ? `solid 3px ${theme.color.$primary}` : 'solid 3px transparent'};
+  color: ${({ $active }) =>
+    $active ? theme.color.$primary : theme.color.$darkBlue10};
+  &:hover {
+    color: ${theme.color.$primary};
+    background-color: ${theme.color.$primary1};
+  }
+
+  &:active {
+    color: ${theme.color.$primary};
+    transform: scale(0.99);
   }
 `;
 export const TabPanelStyled = styled.div`

@@ -104,7 +104,7 @@ const fake_data = {
         title2: 'Table Component striped',
         title3: 'Table Component resizable striped',
       },
-      columns: ['#', 'First Name', 'Last Name', 'email'],
+      columns: ['ID', 'First Name', 'Last Name', 'email'],
       rows: [
         { id: '1', name: 'adnen', lastName: 'rebai', email: '@adnen_rebai' },
         { id: '2', name: 'Jhone', lastName: 'Doe', email: 'Jhon_doe' },

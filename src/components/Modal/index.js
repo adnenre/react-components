@@ -189,7 +189,7 @@ const Modal = ({
             <ModalContainer
               dialog={isDialog}
               ref={modalContainer}
-              position={position}
+              $position={position}
               size={size}
               {...restProps}
             >

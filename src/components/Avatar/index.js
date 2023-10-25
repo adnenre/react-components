@@ -4,7 +4,7 @@ import { AvatarContainer, AvatarImg } from './Avatar.Styled';
 const Avatar = ({ src, alt, ...rest }) => {
   return (
     <AvatarContainer {...rest}>
-      <AvatarImg src={src} alt={alt} />
+      <AvatarImg src={src} alt={alt} width="100%" height="auto" />
     </AvatarContainer>
   );
 };
