@@ -56,7 +56,7 @@ export const ModalHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 1rem;
-  border-bottom: 1px solid ${theme.color.$grayLight};
+  border-bottom: 1px solid ${theme.color.$gray2};
   cursor: ${({ draggable }) => (draggable ? 'move' : 'auto')};
   padding: 1rem 1.5rem;
   text-align: left;
@@ -95,7 +95,7 @@ export const ModalFooter = styled.div`
   display: flex;
   justify-content: flex-start;
   padding: 0.75rem 1rem;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid ${theme.color.$gray2};
   > button {
     min-width: 100px;
   }

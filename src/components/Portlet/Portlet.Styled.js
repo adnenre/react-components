@@ -21,7 +21,7 @@ const Portlet = styled.div`
   margin-bottom: 1rem;
 `;
 const PortletHeader = styled.div`
-  border-bottom: ${theme.border.thin} ${theme.color.$grayLight};
+  border-bottom: ${theme.border.thin} ${theme.color.$gray2};
   padding: 0.5rem 0;
   ${() => style.primary};
   min-height: 5rem;
@@ -44,7 +44,7 @@ const PortletBody = styled.div`
 `;
 const PortletFooter = styled.div`
   padding: 0.5rem 1rem;
-  border-top: ${theme.border.thin} ${theme.color.$grayLight};
+  border-top: ${theme.border.thin} ${theme.color.$gray2};
   display: ${({ flex }) => {
     if (flex) return 'flex';
     return 'flex';

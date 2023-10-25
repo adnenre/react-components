@@ -9,12 +9,12 @@ export const getButtonStyle = ({ ...props }) => {
   for (const prop of colorProps) {
     if (props['disabled']) {
       return css`
-        background: ${theme.color.$grayLight};
+        background: ${theme.color.$gray2};
         color: ${theme.color.$gray};
         border: none;
         cursor: not-allowed;
 
-        border: ${theme.border.thin} ${theme.color.$grayLight};
+        border: ${theme.border.thin} ${theme.color.$gray2};
         &:hover {
           color: ${theme.color.$gray};
         }
@@ -71,14 +71,14 @@ export const getButtonStyle = ({ ...props }) => {
   // If none of the color props are present, use the default color
 
   return css`
-    background: ${theme.color.$grayDark};
+    background: ${theme.color.$darkBlue5};
     color: ${theme.color.$white};
-    border: ${theme.border.thin} ${theme.color.$grayDark};
+    border: ${theme.border.thin} ${theme.color.$darkBlue5};
 
     &:active {
-      color: ${theme.color.$grayDark};
+      color: ${theme.color.$darkBlue5};
       background: ${theme.color.$white};
-      border: ${theme.border.thin} ${theme.color.$grayDark};
+      border: ${theme.border.thin} ${theme.color.$darkBlue5};
     }
   `;
 };
@@ -103,9 +103,9 @@ export const getBadgetyle = ({ ...props }) => {
   // If none of the color props are present, use the default color
 
   return css`
-    background: ${theme.color.$grayDark};
+    background: ${theme.color.$darkBlue5};
     color: ${theme.color.$white};
-    border: ${theme.border.thin} ${theme.color.$grayDark};
+    border: ${theme.border.thin} ${theme.color.$darkBlue5};
   `;
 };
 

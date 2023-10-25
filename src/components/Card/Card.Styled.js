@@ -29,7 +29,7 @@ const CardHeader = styled.div`
   text-decoration: none;
   letter-spacing: 0.5px;
 
-  border-bottom: ${theme.border.thin} ${theme.color.$grayLight};
+  border-bottom: ${theme.border.thin} ${theme.color.$gray2};
   color: ${theme.color.$black};
 `;
 const CardBody = styled.div`
@@ -48,7 +48,7 @@ const CardBody = styled.div`
   letter-spacing: 1px;
 `;
 const CardFooter = styled.div`
-  border-top: ${theme.border.thin} ${theme.color.$grayLight};
+  border-top: ${theme.border.thin} ${theme.color.$gray2};
   display: flex;
   justify-content: space-between;
   padding: 0.75rem 1rem;

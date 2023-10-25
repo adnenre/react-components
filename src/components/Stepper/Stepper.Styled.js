@@ -46,7 +46,7 @@ const StepperButtonContainer = styled.div`
 `;
 const Step = styled.div`
   background-color: ${({ $active }) =>
-    $active ? theme.color.$primary : theme.color.$grayLight};
+    $active ? theme.color.$primary : theme.color.$gray2};
   border-radius: 50%;
   margin: 5px;
   width: 28px;

@@ -112,16 +112,16 @@ const base = {
     $darkBlue10: '#344779',
 
     /* GRAY COLORS */
-    $gary1: '#f8f9fa',
-    $gary2: '#f1f3f5',
-    $gary3: '#e9ecef',
-    $gary4: '#dee2e6',
-    $gary5: '#ced4da',
-    $gary6: '#adb5bd',
-    $gary7: '#868e96',
-    $gary8: '#495057',
-    $gary9: '#343a40',
-    $gary10: '#212529',
+    $gray1: '#f8f9fa',
+    $gray2: '#f1f3f5',
+    $gray3: '#e9ecef',
+    $gray4: '#dee2e6',
+    $gray5: '#ced4da',
+    $gray6: '#adb5bd',
+    $gray7: '#868e96',
+    $gray8: '#495057',
+    $gray9: '#343a40',
+    $gray10: '#212529',
 
     /* dark COLORS */
     $dark1: '#C1C2C5',

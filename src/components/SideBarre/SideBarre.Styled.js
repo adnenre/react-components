@@ -83,7 +83,7 @@ const LinkItem = styled(Link)`
   cursor: pointer;
   z-index: 0;
   text-decoration: none;
-  border-bottom: ${theme.border.thin} ${theme.color.$grayLight};
+  border-bottom: ${theme.border.thin} ${theme.color.$gray2};
   &:hover,
   &:focus,
   &:active {
