@@ -5,8 +5,8 @@ import { getProperty } from '../utility';
 export const TooltipContainer = styled.div`
   position: relative;
   display: inline-block;
-  width: fit-content;
-  height: fit-content;
+  width: auto;
+  height: auto;
   cursor: pointer;
 `;
 
@@ -34,7 +34,7 @@ export const TooltipText = styled.div`
                `;
     }
 
-    return `top : 6px;
+    return `bottom : -6px;
              left:50%;
              transform:translate(-50%,100%)
    

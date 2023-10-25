@@ -16,14 +16,15 @@ const Palet = () => {
   const inputRef = useRef(null);
 
   const copyToClipboard = (e) => {
-    inputRef.current.value = e.target.textContent;
+    let cCode = e.target.dataset.value;
+    inputRef.current.value = cCode;
     inputRef.current.select();
     document.execCommand('copy');
     setText('Copied !');
-    setCopiedText(e.target.textContent);
+    setCopiedText(cCode);
   };
   const checkIsCopied = (e) => {
-    if (e.target.textContent !== copiedText) {
+    if (e.target.dataset.value !== copiedText) {
       setText(tooltipText);
     } else {
       setText('Copied !');
@@ -33,24 +34,19 @@ const Palet = () => {
   if (colors.length) {
     return (
       <>
-        <input
-          ref={inputRef}
-          disabled
-          style={{ zIndex: '-999999', opacity: 0 }}
-        />
-
+        <input ref={inputRef} style={{ opacity: 0 }} />
         <PaletWrapper>
-          {colors.map((c) => (
+          {colors.map((c, index) => (
             <PaletContainer key={c}>
               <Tooltip text={text} $top>
                 <PaletBox
                   onClick={copyToClipboard}
                   onMouseEnter={checkIsCopied}
                   $color={c}
-                >
-                  <PaletCode> {c.toLowerCase()}</PaletCode>
-                </PaletBox>
+                  data-value={c}
+                ></PaletBox>
               </Tooltip>
+              <PaletCode> {c}</PaletCode>
             </PaletContainer>
           ))}
         </PaletWrapper>
