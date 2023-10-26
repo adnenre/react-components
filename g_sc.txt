@@ -1,0 +1,10 @@
+import React from 'react';
+import ComponentContainer from './Component.styled.js'
+
+const component = (props) => {
+  return (
+    <ComponentContainer {...props}>component</ComponentContainer>
+  )
+}
+
+export default component;
