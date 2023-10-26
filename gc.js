@@ -1,6 +1,6 @@
-import { readFile, writeFile, mkdir } from 'fs';
-import path from 'path';
-
+const fs = require('fs');
+const path = require('path');
+const { readFile, writeFile, mkdir } = fs;
 // GET COMPONENT NAME FROM COMMAND LINE
 const component = process.argv[2];
 
@@ -13,16 +13,16 @@ const snippet_s = 'g_ss.txt';
 const toUppercase = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
 // COMPONENT FOLDER NAME
-const folderName = toUppercase(component);
+const componentName = toUppercase(component);
 
 // COMPONENT PATH
-const targetPath = `src/components/${folderName}`;
+const targetPath = `src/components/${componentName}`;
 
 // COMPONENT FOLDER NAME AND FILES
 const files = [
   { name: 'index.js', snippet: snippet_c },
-  { name: `${folderName}.spec.js`, snippet: snippet_t },
-  { name: `${folderName}.styled.js`, snippet: snippet_s },
+  { name: `${componentName}.spec.js`, snippet: snippet_t },
+  { name: `${componentName}.styled.js`, snippet: snippet_s },
 ];
 
 // CHECK FIRST ARGUMENT TO BE COMPOENENT NAME
@@ -35,12 +35,12 @@ if (!component) {
 mkdir(targetPath, (err) => {
   if (err) {
     if (err.code === 'EEXIST') {
-      console.log(`Folder '${folderName}' already exists.`);
+      console.log(`Component '${componentName}' already exists.`);
     } else {
-      console.error(`Error creating folder: ${err}`);
+      console.error(`Error creating Component: ${err}`);
     }
   } else {
-    console.log(`Folder '${folderName}' created.`);
+    console.log(`Component '${componentName}' created.`);
 
     // Create the files inside the folder
     files.forEach(({ name, snippet }) => {
@@ -52,8 +52,8 @@ mkdir(targetPath, (err) => {
           return;
         }
         const updatedContent = data.replace(
-          new RegExp('(?<!-\\w*)component', 'g'),
-          component
+          new RegExp('(?<!-\\w*)component', 'gi'),
+          componentName
         );
         writeFile(filePath, updatedContent, 'utf8', (err) => {
           if (err) {
