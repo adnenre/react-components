@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "author": "adnen rebai adnen.rebai@gmail.com",
   "description": "some react component with styled components",
-  "type": "module",
   "homepage": ".",
   "keywords": [
     "react components"
@@ -55,6 +54,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "fs": "^0.0.1-security",
     "gh-pages": "^6.0.0",
+    "jest-environment-jsdom": "^29.7.0",
     "jest-styled-components": "^7.1.1",
     "path": "^0.12.7",
     "prettier": "^3.0.3",
