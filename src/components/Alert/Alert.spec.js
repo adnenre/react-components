@@ -24,7 +24,7 @@ const alerts = [
 describe('Test Alert', () => {
   const Component = (props) => (
     <Alert
-      data-testId="Alert"
+      data-testid="Alert"
       title={alerts[0].title}
       description={alerts[0].description}
       {...props}
