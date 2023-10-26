@@ -1,6 +1,8 @@
 /node_modules
 /build
 /coverage
-*.txt
+*_list.txt
 .codesandbox
 *.sh
+package-lock.json
+
