@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "author": "adnen rebai adnen.rebai@gmail.com",
   "description": "some react component with styled components",
+  "type": "module",
   "homepage": ".",
   "keywords": [
     "react components"
@@ -27,7 +28,7 @@
     "format": "npx prettier --write .",
     "predeploy": "npm run build",
     "gh-deploy": "gh-pages -d build -m 'deploy to gh-pages'",
-    "new-component": "generateComponent.sh"
+    "gc": "node gc.js"
   },
   "browserslist": {
     "production": [
@@ -52,8 +53,10 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "fs": "^0.0.1-security",
     "gh-pages": "^6.0.0",
     "jest-styled-components": "^7.1.1",
+    "path": "^0.12.7",
     "prettier": "^3.0.3",
     "react-test-render": "^1.1.2",
     "react-test-renderer": "^18.2.0"
