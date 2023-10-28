@@ -5,6 +5,8 @@ const AccordionItemStyled = styled.div`
   width: 100%;
 `;
 const AccordionTitleStyled = styled.h5`
+  position: relative;
+  z-index: 2;
   width: 100%;
   background: ${({ $isOpen }) =>
     $isOpen ? `${theme.color.$primary}` : `${theme.color.$white}`};
@@ -21,28 +23,46 @@ const AccordionTitleStyled = styled.h5`
   font-size: 1.25rem;
   cursor: pointer;
 `;
+
 const AccordionContent = styled.div`
+  position: relative;
+  z-index: 1;
   width: 100%;
   background: ${theme.color.$white};
   text-align: left;
-  color: ${theme.font.$color};
+  display: block;
   padding: 1.5rem 1rem;
   text-align: left;
-  color: ${theme.color.$black};
+
   font-family: Roboto, Helvetica, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.6;
   opacity: 1;
   text-transform: none;
-  vertical-align: unset;
+
   text-decoration: none;
   color: ${theme.color.$gray};
   letter-spacing: 1px;
+  animation-name: slideaway;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  @keyframes slideaway {
+    0% {
+      height: 0;
+      transform: translateY(-40px);
+      opacity: 0;
+    }
+    100% {
+      height: 100%;
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
 `;
 const AccordionContainer = styled.div`
   width: 100%;
-  background: ${theme.color.$primary};
+
   > div:first-child > h5 {
     border-top: none !important;
   }
@@ -50,9 +70,6 @@ const AccordionContainer = styled.div`
     display: flex;
     align-items: center;
     border-bottom: none;
-    transition:
-      all 0.3s linear,
-      opacity 0.3s linear;
   }
 `;
 export {
