@@ -21,6 +21,7 @@ import TooltipPage from './TooltipPage';
 import MasonryPage from './MasonryPage';
 import StepperPage from './StepperPage';
 import PaletPage from './PaletPage';
+import SwitchPage from './SwitchPage';
 
 const Main = ({ active }) => {
   const subPath = '/react-components';
@@ -47,6 +48,7 @@ const Main = ({ active }) => {
           <Route path={`${subPath}/MasonryPage`} component={MasonryPage} />
           <Route path={`${subPath}/StepperPage`} component={StepperPage} />
           <Route path={`${subPath}/PaletPage`} component={PaletPage} />
+          <Route path={`${subPath}/SwitchPage`} component={SwitchPage} />
         </Switch>
       </MainContainer>
     </MainWrapper>

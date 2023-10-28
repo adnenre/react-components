@@ -98,6 +98,9 @@ const fake_data = {
       page: { title: 'Masonry Component' },
       items: [],
     },
+    switch: {
+      page: { title: 'Switch Component' },
+    },
     table: {
       page: {
         title: 'Table Component',
