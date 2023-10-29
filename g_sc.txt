@@ -1,10 +1,13 @@
 import React from 'react';
-import ComponentContainer from './Component.styled.js'
+import PropTypes from 'prop-types';
+import { ComponentContainer } from './Component.styled.js'
 
-const component = (props) => {
+const Component = (props) => {
   return (
     <ComponentContainer {...props}>component</ComponentContainer>
   )
 }
-
-export default component;
+Component.propTypes  = {
+  children: PropTypes.node,
+}
+export default Component;
