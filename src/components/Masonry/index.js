@@ -69,6 +69,7 @@ const Masonry = (props) => {
   useEffect(() => {
     RenderMasonryItem();
     RenderMasonryColumn();
+    /* eslint-disable react-hooks/exhaustive-deps */
   }, []);
   return <MasonryContainer>{res}</MasonryContainer>;
 };

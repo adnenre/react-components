@@ -15,11 +15,10 @@ const useEscape = (ref, callback) => {
 
     // Remove the event listener when the component using this hook unmounts
     return () => {
-      if (ref.current) {
-        document.removeEventListener('keydown', handleEscape);
-      }
+      document.removeEventListener('keydown', handleEscape);
     };
-  }, [callback, ref]);
+    /* eslint-disable react-hooks/exhaustive-deps */
+  }, [callback, ref.current]);
 };
 
 export default useEscape;

@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useRef } from 'react';
 import {
   DropDownContainer,
@@ -55,7 +54,8 @@ const useKeyPress = (targetKey) => {
       window.removeEventListener('keydown', downHandler);
       window.removeEventListener('keyup', upHandler);
     };
-  });
+    /* eslint-disable react-hooks/exhaustive-deps */
+  }, []);
 
   return keyPressed;
 };
