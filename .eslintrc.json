@@ -37,6 +37,16 @@
       }
     },
     {
+      "files": [
+        // console is needed in these senarios
+        "src/components/Breadcrumb/index.js",
+        "src/pages/SwitchPage.js"
+      ], // Adjust the filename or pattern as needed
+      "rules": {
+        "no-console": "off" // Turn off the rule for this file
+      }
+    },
+    {
       "files": ["**/*.js"],
       "rules": {
         "react/no-unknown-property": ["off", { "ignore": ["aria-label"] }],

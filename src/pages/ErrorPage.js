@@ -11,7 +11,6 @@ const ErrorContainer = styled.div`
 `;
 export default function ErrorPage() {
   const error = useRouteError();
-  console.error(error);
 
   return (
     <ErrorContainer>
