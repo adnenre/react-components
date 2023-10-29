@@ -9,11 +9,11 @@ import routes from './routes';
 const router = createHashRouter(routes);
 const App = () => {
   return (
-    <StrictMode>
+    <>
       <ThemeProvider theme={theme}>
         <RouterProvider router={router} />
       </ThemeProvider>
-    </StrictMode>
+    </>
   );
 };
 
