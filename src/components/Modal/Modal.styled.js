@@ -1,4 +1,3 @@
-import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import theme from '../../theme';
 
@@ -11,7 +10,7 @@ export const WrapperContainer = styled.div`
   height: ${({ dialog }) => (dialog ? '10px' : '100vh')};
   width: ${({ dialog }) => (dialog ? '100vw' : '100vw')};
   padding: 0;
-  background: ${({ dialog }) => (dialog ? 'none' : 'rgba(0, 0, 0, 0.3)')};
+  background: ${({ dialog }) => (dialog ? 'none' : 'rgba(0, 0, 0, 0.8)')};
 
   display: flex;
   flex-direction: column;
@@ -41,8 +40,8 @@ export const ModalContainer = styled.div`
     $position && $position.left ? $position.left + 'px' : 0};
   top: ${({ $position }) =>
     $position && $position.top ? $position.top + 'px' : 0};
-  width: ${({ size, lg }) =>
-    size && size.w ? size.w + 'px' : lg ? '80%' : '50%'};
+  width: ${({ size, $lg }) =>
+    size && size.w ? size.w + 'px' : $lg ? '80%' : '50%'};
   height: ${({ size }) => (size && size.h ? size.h + 'px' : '')};
   // moblie media query
   @media screen and (max-width: 767px) {
@@ -54,7 +53,7 @@ export const ModalContainer = styled.div`
 export const ModalHeader = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   border-bottom: 1px solid ${theme.color.$gray2};
   cursor: ${({ draggable }) => (draggable ? 'move' : 'auto')};
   padding: 1rem 1.5rem;
