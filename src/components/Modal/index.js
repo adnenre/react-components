@@ -14,6 +14,7 @@ import useFullScreen from '../../hooks/useFullScreen';
 import useClickOutside from '../../hooks/useClickOutside';
 import MemoizedPortal from '../../hooks/usePortal';
 import FullScreenIcon from '../FullScreenIcon';
+import useEscape from '../../hooks/useEscape';
 
 const ModalResizeIcon = ({ onMouseDown }) => {
   return (
@@ -77,7 +78,7 @@ const Modal = ({
     isFullscreen ? document.exitFullscreen() : setIsFullscreen();
 
   useClickOutside(modalContainer, onToggleModal);
-
+  useEscape(modalContainer, onToggleModal);
   //################       Drag logic    ####################
   const onDragingStart = (e) => {
     if (!draggable) return;
@@ -232,7 +233,7 @@ Title.propTypes = {
 //#################################################
 
 const Header = (props) => {
-  const { title } = props;
+  const { title, ...rest } = props;
   const {
     onToggleModal,
     onToggleFullScreen,
@@ -242,7 +243,7 @@ const Header = (props) => {
   } = useContext(ModalContext);
 
   return (
-    <ModalHeader draggable={draggable} onMouseDown={onDragingStart}>
+    <ModalHeader draggable={draggable} onMouseDown={onDragingStart} {...rest}>
       <Title title={title} />
       <div style={{ display: 'flex' }}>
         {supportFullScreen && <FullScreenIcon onClick={onToggleFullScreen} />}

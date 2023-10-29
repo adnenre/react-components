@@ -55,7 +55,6 @@ export const ModalHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 1rem;
   border-bottom: 1px solid ${theme.color.$gray2};
   cursor: ${({ draggable }) => (draggable ? 'move' : 'auto')};
   padding: 1rem 1.5rem;
