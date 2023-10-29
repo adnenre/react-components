@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import theme from '../theme';
 const FullScreenIcon = ({ onClick }) => {
   return (
     <div style={{ cursor: 'pointer', marginRight: '5px' }} onClick={onClick}>
       <svg
-        fill="gray"
+        fill={theme.color.$darkBlue10}
         height="25"
         width="15"
         version="1.1"
@@ -13,11 +14,11 @@ const FullScreenIcon = ({ onClick }) => {
         viewBox="0 0 384.97 384.97"
         stroke="gray"
       >
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
         <g
           id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         ></g>
         <g id="SVGRepo_iconCarrier">
           <g>
