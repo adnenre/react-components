@@ -3,13 +3,13 @@ import { render } from '../utility-test';
 import component from  '.';
 
 describe('Test component', () => {
-  const Component = (props) => (
-    <component data-testid='component'  {...props} />
+  const C = (props) => (
+    <component data-testid='component_testid'  {...props} />
   );
 
   test('renders component to the document ', () => {
-    const { getByTestId } = render(<Component />);
-    const component = getByTestId('component');
+    const { getByTestId } = render(<C />);
+    const component = getByTestId('component_testid');
 
     // Assert
     expect(component).toBeInTheDocument();
