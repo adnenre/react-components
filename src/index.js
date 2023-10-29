@@ -1,17 +1,17 @@
 import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { ThemeProvider } from 'styled-components';
-import { BrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import theme from './theme';
-import Application from './Application';
 
+import routes from './routes';
+
+const router = createBrowserRouter(routes);
 const App = () => {
   return (
     <StrictMode>
       <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <Application />
-        </BrowserRouter>
+        <RouterProvider router={router} />
       </ThemeProvider>
     </StrictMode>
   );

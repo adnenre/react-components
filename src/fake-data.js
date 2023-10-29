@@ -101,6 +101,10 @@ const fake_data = {
     switch: {
       page: { title: 'Switch Component' },
     },
+    breadcrumb: {
+      page: { title: 'Breadcrumb Component' },
+      items: ['Home', 'Category', 'Subcategory', 'Current Page'],
+    },
     table: {
       page: {
         title: 'Table Component',

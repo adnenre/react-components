@@ -20,9 +20,9 @@ const SideBarre = ({ routes, active }) => {
       </SideBarreHeader>
       <SideBarreBody>
         <List>
-          {routes.map(({ path, routeName }) => (
+          {routes.map(({ path }) => (
             <Item key={path} role="button">
-              <LinkItem to={subPath + path}> {routeName}</LinkItem>
+              <LinkItem to={path}> {path.split('/')[1]}</LinkItem>
             </Item>
           ))}
         </List>

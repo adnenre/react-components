@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import routes from './routes';
+import { childrenRoutes } from './routes';
 import Toggler from './components/Toggler';
 import Main from './pages/Main';
 import SideBarre from './components/SideBarre';
+import { Outlet } from 'react-router-dom';
 import './styles.css';
 
 const Application = () => {
@@ -13,9 +14,10 @@ const Application = () => {
   };
   return (
     <div className="App">
-      <SideBarre routes={routes} active={isActive} />
-      <Main active={isActive} />
-
+      <SideBarre routes={childrenRoutes} active={isActive} />
+      <Main active={isActive}>
+        <Outlet />
+      </Main>
       <Toggler
         onClick={activateSideBar}
         withTooltip
