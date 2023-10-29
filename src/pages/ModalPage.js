@@ -15,6 +15,7 @@ const ModalPage = () => {
     2: false,
     3: false,
     4: false,
+    5: false,
   });
 
   const toggle = (arg) => (e) =>
@@ -41,6 +42,49 @@ const ModalPage = () => {
               <Modal.Footer>
                 <Button $primary label="Ok" $rounded onClick={toggle(1)} />
                 <Button $danger label="Cancel" $rounded onClick={toggle(1)} />
+              </Modal.Footer>
+            </Modal>
+          </>
+        }
+        footer={
+          <Toggle>
+            <PrismCode component="pre" className="language-markup" target>
+              {`
+              <Button $primary $rounded onClick={toggle}>
+                Open Modal
+              </Button>
+
+              <Modal onToggleModal={toggle} show={modalOpen}>
+                <Modal.Header title={modal.page.title} />
+                <Modal.Body>
+                  <p>{modal.page.content}</p>
+                </Modal.Body>
+                <Modal.Footer>
+                  <Button $primary label="Ok" $rounded onClick={toggle} />
+                  <Button $danger label="Cancel" $rounded onClick={toggle} />
+                </Modal.Footer>
+              </Modal>
+        `}
+            </PrismCode>
+          </Toggle>
+        }
+      />
+      <PortletView
+        title={modal.page.title + ' - ' + 'Large'}
+        content={
+          <>
+            <Button $primary $rounded onClick={toggle(5)}>
+              {modal.page.triggerBtn}
+            </Button>
+
+            <Modal onToggleModal={toggle(5)} show={modalOpen[5]} $lg>
+              <Modal.Header title={modal.page.title + ' - ' + 'Large'} />
+              <Modal.Body>
+                <p>{modal.page.content}</p>
+              </Modal.Body>
+              <Modal.Footer>
+                <Button $primary label="Ok" $rounded onClick={toggle(5)} />
+                <Button $danger label="Cancel" $rounded onClick={toggle(5)} />
               </Modal.Footer>
             </Modal>
           </>
