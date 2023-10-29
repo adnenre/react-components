@@ -207,13 +207,13 @@ const Modal = ({
 Modal.propTypes = {
   children: PropTypes.any.isRequired,
   onToggleModal: PropTypes.func.isRequired,
-  lg: PropTypes.bool,
+  $lg: PropTypes.bool,
   draggable: PropTypes.bool,
   fullscreen: PropTypes.bool,
 
   dialog: PropTypes.bool,
   resizable: PropTypes.bool,
-  show: PropTypes.bool.isRequired,
+  show: PropTypes.any.isRequired,
 };
 //##### default PropTypes
 Modal.defaultProps = {
@@ -226,7 +226,7 @@ Modal.defaultProps = {
 
 const Title = (props) => <h3 {...props}>{props.title}</h3>;
 Title.propTypes = {
-  title: PropTypes.any.isRequired,
+  title: PropTypes.string,
 };
 //#################################################
 //###########       Header     ####################
