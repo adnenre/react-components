@@ -15,6 +15,42 @@ const CarouselContainer = styled.div`
   height: 100%;
   border-radius: 4px;
   overflow: hidden;
+  &:hover {
+    > button.navigation-btn {
+      opacity: 0.5;
+    }
+  }
+  > button.navigation-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: ${theme.color.$dark10};
+    opacity: 0;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    min-width: 30px;
+    border: none;
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  > button.prev-slid {
+    left: 15px;
+    > svg {
+      margin-right: 5px;
+    }
+  }
+  > button.next-slid {
+    right: 15px;
+  }
 `;
 
 const SlideContainer = styled.div`
@@ -51,21 +87,25 @@ const Indicators = styled.div`
 `;
 
 const Indicator = styled.div`
-  width: 25px;
-  height: 5px;
-  border-radius: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
   background-color: ${({ $active }) =>
-    $active ? theme.color.$primary : theme.color.$primary2};
+    $active ? theme.color.$dark10 : theme.color.$dark2};
+  opacity: ${({ $active }) => ($active ? 1 : 0.5)};
   margin: 0 5px;
   position: relative;
   cursor: pointer;
   transition: all 0.3s;
+  &:hover {
+    opacity: 1 !important;
+  }
   &::after {
     content: '';
     border-width: 1px;
-    border-color: ${theme.color.$primary2};
+    border-color: ${theme.color.$dark3};
     border-style: solid;
-    border-radius: 4px;
+    border-radius: 50px;
     pointer-events: none;
     display: ${({ $active }) => ($active ? 'block' : 'none')};
     position: absolute;

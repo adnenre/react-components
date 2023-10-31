@@ -9,7 +9,10 @@ import {
   Indicators,
   Indicator,
 } from './Carousel.Styled';
+import Button from '../Button';
 import { isImageUrl } from '../utility';
+import Prev from '../Icons/Prev';
+import Next from '../Icons/Next';
 
 const Carousel = ({ slides, auto }) => {
   const [autoSlide, setAutoSlide] = useState(auto);
@@ -55,8 +58,16 @@ const Carousel = ({ slides, auto }) => {
             </Slide>
           ))}
         </SlideContainer>
-        {/* <Button onClick={prevSlide}>Previous</Button>
-      <Button onClick={nextSlide}>Next</Button> */}
+        <Button
+          className="navigation-btn prev-slid"
+          onClick={prevSlide}
+          icon={<Prev />}
+        ></Button>
+        <Button
+          className="navigation-btn next-slid"
+          onClick={nextSlide}
+          icon={<Next />}
+        ></Button>
       </CarouselContainer>
       <Indicators>
         {slides.map((_, index) => (
