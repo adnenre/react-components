@@ -90,13 +90,14 @@ export const getButtonIconStyle = ({ ...props }) => {
         color: ${theme.color.$gray6};
       `;
     }
-    if (props[prop] && props['icon']) {
+    if (props[prop] && props['aria-label'] == 'icon') {
       const color = theme.color[prop];
       return css`
         background: transparent;
         border: ${theme.border.thin} transparent;
         color: ${color};
         border: none;
+
         &:active {
           border-radius: 4px;
           border: ${theme.border.thin} ${color};

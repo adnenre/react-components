@@ -6,7 +6,8 @@ import {
   AlertTitle,
   AlertDescription,
 } from './Alert.styled';
-import CloseButton from '../CloseButton';
+import Close from '../Icons/Close';
+import Button from '../Button';
 
 const Alert = ({ title, description, isOpen, ...rest }) => {
   const [isActive, setIsOpen] = useState(isOpen);
@@ -22,7 +23,7 @@ const Alert = ({ title, description, isOpen, ...rest }) => {
             {description}
           </AlertDescription>
         </AlertInfo>
-        <CloseButton $light onClick={close} />
+        <Button $gray1 role="closeButton" icon={<Close />} onClick={close} />
       </AlertContainer>
     );
 

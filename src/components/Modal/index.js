@@ -8,25 +8,27 @@ import {
   ModalFooter,
   ModalStyledResizeIcon,
 } from './Modal.styled';
-import CloseButton from '../CloseButton';
+import Close from '../Icons/Close';
+import Fullscreen from '../Icons/Fullscreen';
+import Button from '../Button';
 
 import useFullScreen from '../../hooks/useFullScreen';
 import useClickOutside from '../../hooks/useClickOutside';
 import MemoizedPortal from '../../hooks/usePortal';
-import FullScreenIcon from '../FullScreenIcon';
+
 import useEscape from '../../hooks/useEscape';
 
 const ModalResizeIcon = ({ onMouseDown }) => {
   return (
     <ModalStyledResizeIcon onMouseDown={onMouseDown}>
       <svg width="15" height="15">
-        <g>
-          <ellipse ry="2" rx="2" cy="7.59375" cx="12.625" fill="#546E7A" />
-          <ellipse ry="2" rx="2" cy="2.25" cx="12.75" fill="#546E7A" />
-          <ellipse ry="2" rx="2" cy="12.75" cx="7.25" fill="#546E7A" />
-          <ellipse ry="2" rx="2" cy="7.6875" cx="7.375" fill="#546E7A" />
-          <ellipse ry="2" rx="2" cy="12.75" cx="12.625" fill="#546E7A" />
-          <ellipse ry="2" rx="2" cy="12.875" cx="2.25" fill="#546E7A" />
+        <g fill="#546E7A">
+          <ellipse ry="2" rx="2" cy="7.59375" cx="12.625" />
+          <ellipse ry="2" rx="2" cy="2.25" cx="12.75" />
+          <ellipse ry="2" rx="2" cy="12.75" cx="7.25" />
+          <ellipse ry="2" rx="2" cy="7.6875" cx="7.375" />
+          <ellipse ry="2" rx="2" cy="12.75" cx="12.625" />
+          <ellipse ry="2" rx="2" cy="12.875" cx="2.25" />
         </g>
       </svg>
     </ModalStyledResizeIcon>
@@ -74,8 +76,11 @@ const Modal = ({
   // draggin position
   const [position, setPosition] = useState(null);
   // fullscreen toggle function
-  const onToggleFullScreen = () =>
-    isFullscreen ? document.exitFullscreen() : setIsFullscreen();
+  const onToggleFullScreen = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    return isFullscreen ? document.exitFullscreen() : setIsFullscreen();
+  };
 
   useClickOutside(modalContainer, onToggleModal);
   useEscape(modalContainer, onToggleModal);
@@ -246,8 +251,14 @@ const Header = (props) => {
     <ModalHeader draggable={draggable} onMouseDown={onDragingStart} {...rest}>
       <Title title={title} />
       <div style={{ display: 'flex' }}>
-        {supportFullScreen && <FullScreenIcon onClick={onToggleFullScreen} />}
-        <CloseButton role="closeButton" onClick={onToggleModal} />
+        {supportFullScreen && (
+          <Button
+            role="closeButton"
+            icon={<Fullscreen />}
+            onClick={onToggleFullScreen}
+          />
+        )}
+        <Button role="closeButton" icon={<Close />} onClick={onToggleModal} />
       </div>
     </ModalHeader>
   );

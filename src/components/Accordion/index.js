@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
-import Carret from '../Carret';
+import Carret from '../Icons/Carret';
 import useClickOutside from '../../hooks/useClickOutside';
 
 import {
