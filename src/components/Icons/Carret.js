@@ -8,11 +8,11 @@ const Carret = ({ $isOpen }) => {
       focusable="false"
       preserveAspectRatio="xMidYMid meet"
       xmlns="http://www.w3.org/2000/svg"
-      fill="currentColor"
       width="16"
       height="16"
       viewBox="0 0 16 16"
       aria-hidden="true"
+      fill="currentColor"
     >
       <path d="M11 8L6 13 5.3 12.3 9.6 8 5.3 3.7 6 3z"></path>
     </svg>

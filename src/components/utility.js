@@ -79,6 +79,46 @@ export const getButtonStyle = ({ ...props }) => {
     }
   `;
 };
+export const getButtonIconStyle = ({ ...props }) => {
+  for (const prop of colorProps) {
+    if (props['disabled']) {
+      return css`
+        background: ${theme.color.$gray2};
+
+        border: none;
+        cursor: not-allowed;
+        color: ${theme.color.$gray6};
+      `;
+    }
+    if (props[prop] && props['icon']) {
+      const color = theme.color[prop];
+      return css`
+        background: transparent;
+        border: ${theme.border.thin} transparent;
+        color: ${color};
+        border: none;
+        &:active {
+          border-radius: 4px;
+          border: ${theme.border.thin} ${color};
+        }
+      `;
+    }
+  }
+
+  // If none of the color props are present, use the default color
+
+  return css`
+    background: transparent;
+    border: ${theme.border.thin} transparent;
+    color: ${theme.color.$darkBlue5};
+    border: none;
+    &:active {
+      border-radius: 4px;
+      color: ${theme.color.$darkBlue5};
+      border: ${theme.border.thin} ${theme.color.$darkBlue5};
+    }
+  `;
+};
 export const getBadgetyle = ({ ...props }) => {
   for (const prop of colorProps) {
     if (props[prop] && !props['$outline']) {
