@@ -9,7 +9,7 @@ import Prism from 'prismjs';
 import { Container, Row } from '../components/grid';
 import Tooltip from '../components/Tooltip';
 import fake_data from '../fake-data';
-
+import avatarsrource from '../assets/images/avatar.png';
 const AvatarPage = () => {
   const {
     pages: { avatar },
@@ -21,23 +21,23 @@ const AvatarPage = () => {
         content={
           <Row $align="spaceBetween">
             <Tooltip text="Avatar xsmall">
-              <Avatar $xsmall src={avatar.src} alt={avatar.alt} />
+              <Avatar $xsmall src={avatarsrource} alt={avatar.alt} />
             </Tooltip>
 
             <Tooltip text="Avatar small">
-              <Avatar $small src={avatar.src} alt={avatar.alt} />
+              <Avatar $small src={avatarsrource} alt={avatar.alt} />
             </Tooltip>
 
             <Tooltip text="Avatar medium">
-              <Avatar $medium src={avatar.src} alt={avatar.alt} />
+              <Avatar $medium src={avatarsrource} alt={avatar.alt} />
             </Tooltip>
 
             <Tooltip text="Avatar large">
-              <Avatar $large src={avatar.src} alt={avatar.alt} />
+              <Avatar $large src={avatarsrource} alt={avatar.alt} />
             </Tooltip>
 
             <Tooltip text="Avatar xlarge">
-              <Avatar $xlarge src={avatar.src} alt={avatar.alt} />
+              <Avatar $xlarge src={avatarsrource} alt={avatar.alt} />
             </Tooltip>
           </Row>
         }
@@ -45,11 +45,11 @@ const AvatarPage = () => {
           <Toggle>
             <PrismCode component="pre" className="language-markup" target>
               {`
-                <Avatar $xsmall src={avatar.src} alt={avatar.alt} />
-                <Avatar $small src={avatar.src} alt={avatar.alt} />
-                <Avatar $medium src={avatar.src} alt={avatar.alt} />
-                <Avatar $large src={avatar.src} alt={avatar.alt} />
-                <Avatar $xlarge src={avatar.src} alt={avatar.alt} />
+                <Avatar $xsmall src={avatarsrource} alt={avatar.alt} />
+                <Avatar $small src={avatarsrource} alt={avatar.alt} />
+                <Avatar $medium src={avatarsrource} alt={avatar.alt} />
+                <Avatar $large src={avatarsrource} alt={avatar.alt} />
+                <Avatar $xlarge src={avatarsrource} alt={avatar.alt} />
             `}
             </PrismCode>
           </Toggle>
@@ -60,23 +60,23 @@ const AvatarPage = () => {
         content={
           <Row $align="spaceBetween">
             <Tooltip text="Avatar xsmall">
-              <Avatar $xsmall $pill src={avatar.src} alt={avatar.alt} />
+              <Avatar $xsmall $pill src={avatarsrource} alt={avatar.alt} />
             </Tooltip>
 
             <Tooltip text="Avatar small">
-              <Avatar $small $pill src={avatar.src} alt={avatar.alt} />
+              <Avatar $small $pill src={avatarsrource} alt={avatar.alt} />
             </Tooltip>
 
             <Tooltip text="Avatar medium">
-              <Avatar $medium $pill src={avatar.src} alt={avatar.alt} />
+              <Avatar $medium $pill src={avatarsrource} alt={avatar.alt} />
             </Tooltip>
 
             <Tooltip text="Avatar large">
-              <Avatar $large $pill src={avatar.src} alt={avatar.alt} />
+              <Avatar $large $pill src={avatarsrource} alt={avatar.alt} />
             </Tooltip>
 
             <Tooltip text="Avatar xlarge">
-              <Avatar $xlarge $pill src={avatar.src} alt={avatar.alt} />
+              <Avatar $xlarge $pill src={avatarsrource} alt={avatar.alt} />
             </Tooltip>
           </Row>
         }
@@ -84,11 +84,11 @@ const AvatarPage = () => {
           <Toggle>
             <PrismCode component="pre" className="language-markup" target>
               {`
-                <Avatar $pill $xsmall src={avatar.src} alt={avatar.alt} />
-                <Avatar $pill $small src={avatar.src} alt={avatar.alt} />
-                <Avatar $pill $medium src={avatar.src} alt={avatar.alt} />
-                <Avatar $pill $large src={avatar.src} alt={avatar.alt} />
-                <Avatar $pill $xlarge src={avatar.src} alt={avatar.alt} />
+                <Avatar $pill $xsmall src={avatarsrource} alt={avatar.alt} />
+                <Avatar $pill $small src={avatarsrource} alt={avatar.alt} />
+                <Avatar $pill $medium src={avatarsrource} alt={avatar.alt} />
+                <Avatar $pill $large src={avatarsrource} alt={avatar.alt} />
+                <Avatar $pill $xlarge src={avatarsrource} alt={avatar.alt} />
             `}
             </PrismCode>
           </Toggle>
@@ -100,23 +100,23 @@ const AvatarPage = () => {
           <>
             <Row $align="spaceBetween">
               <Tooltip text="Avatar round xsmall">
-                <Avatar $round $xsmall src={avatar.src} alt={avatar.alt} />
+                <Avatar $round $xsmall src={avatarsrource} alt={avatar.alt} />
               </Tooltip>
 
               <Tooltip text="Avatar round small">
-                <Avatar $round $small src={avatar.src} alt={avatar.alt} />
+                <Avatar $round $small src={avatarsrource} alt={avatar.alt} />
               </Tooltip>
 
               <Tooltip text="Avatar round medium">
-                <Avatar $round $medium src={avatar.src} alt={avatar.alt} />
+                <Avatar $round $medium src={avatarsrource} alt={avatar.alt} />
               </Tooltip>
 
               <Tooltip text="Avatar round large">
-                <Avatar $round $large src={avatar.src} alt={avatar.alt} />
+                <Avatar $round $large src={avatarsrource} alt={avatar.alt} />
               </Tooltip>
 
               <Tooltip text="Avatar round xlarge">
-                <Avatar $round $xlarge src={avatar.src} alt={avatar.alt} />
+                <Avatar $round $xlarge src={avatarsrource} alt={avatar.alt} />
               </Tooltip>
             </Row>
           </>
@@ -125,11 +125,11 @@ const AvatarPage = () => {
           <Toggle>
             <PrismCode component="pre" className="language-markup" target>
               {`
-      <Avatar $round $xsmall src={avatar.src} alt={avatar.alt} />
-      <Avatar $round $small src={avatar.src} alt={avatar.alt} />
-      <Avatar $round $medium src={avatar.src} alt={avatar.alt} />
-      <Avatar $round $large src={avatar.src} alt={avatar.alt} />
-      <Avatar $round $xlarge src={avatar.src} alt={avatar.alt} />
+      <Avatar $round $xsmall src={avatarsrource} alt={avatar.alt} />
+      <Avatar $round $small src={avatarsrource} alt={avatar.alt} />
+      <Avatar $round $medium src={avatarsrource} alt={avatar.alt} />
+      <Avatar $round $large src={avatarsrource} alt={avatar.alt} />
+      <Avatar $round $xlarge src={avatarsrource} alt={avatar.alt} />
         `}
             </PrismCode>
           </Toggle>

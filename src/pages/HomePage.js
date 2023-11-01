@@ -41,8 +41,8 @@ const Home = () => {
         >
           <Tooltip text="Click here to visit author profile " $right>
             <Avatar
-              src={fake_data.pages.avatar.src}
-              alt={fake_data.pages.avatar.alt}
+              src={fake_data.pages.avatar.author.src}
+              alt={fake_data.pages.avatar.author.alt}
               $xsmall
               $round
             />

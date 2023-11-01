@@ -54,9 +54,12 @@ const fake_data = {
       desc: 'Danger Alert click to close',
     },
     avatar: {
+      author: {
+        src: 'https://uploads.codesandbox.io/uploads/user/e9cef623-b98a-4a6d-b947-fe6f35c276a5/mj6P-HouNJybq_400x400.jpg',
+        alt: 'image of the author',
+      },
       page: { title: 'Avatar Component' },
-      alt: 'Image of the author',
-      src: 'https://uploads.codesandbox.io/uploads/user/e9cef623-b98a-4a6d-b947-fe6f35c276a5/mj6P-HouNJybq_400x400.jpg',
+      alt: 'Iimage of the user',
     },
     card: {
       page: { title: 'Card Component' },
