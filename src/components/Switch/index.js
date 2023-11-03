@@ -8,7 +8,7 @@ import {
 } from './switch.styled.js';
 
 const Switch = (props) => {
-  const { label, onChange, checked, ...rest } = props;
+  const { label, labelOn, labelOff, onChange, checked, ...rest } = props;
   const [isChecked, setIsChecked] = useState(checked);
   const handleChange = () => {
     setIsChecked(!isChecked);
@@ -16,7 +16,13 @@ const Switch = (props) => {
   };
   return (
     <SwitchContainer {...rest}>
-      <SwitchLabel>{label}</SwitchLabel>
+      {label ? (
+        <SwitchLabel>{label}</SwitchLabel>
+      ) : isChecked ? (
+        <SwitchLabel>{labelOn}</SwitchLabel>
+      ) : (
+        <SwitchLabel>{labelOff}</SwitchLabel>
+      )}
       <SwitchInput
         type="checkbox"
         checked={isChecked}
@@ -29,10 +35,14 @@ const Switch = (props) => {
 
 Switch.defaultProps = {
   checked: false,
+  labelOn: 'On',
+  labelOff: 'Off',
 };
 Switch.propTypes = {
   label: PropTypes.string,
   onChange: PropTypes.func,
   checked: PropTypes.bool,
+  labelOn: PropTypes.string,
+  labelOff: PropTypes.string,
 };
 export default Switch;

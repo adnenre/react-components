@@ -20,45 +20,24 @@ const SwitchPage = () => {
               <Switch
                 checked
                 $primary
-                label="switch"
                 onChange={() => console.log('switched')}
               />
             </Col>
             <Col $md="2">
-              <Switch
-                $secondary
-                label="switch"
-                onChange={() => console.log('switched')}
-              />
+              <Switch $secondary onChange={() => console.log('switched')} />
             </Col>
             <Col $md="2">
-              <Switch
-                $lime10
-                label="switch"
-                onChange={() => console.log('switched')}
-              />
+              <Switch $lime10 onChange={() => console.log('switched')} />
             </Col>
 
             <Col $md="2">
-              <Switch
-                $danger
-                label="switch"
-                onChange={() => console.log('switched')}
-              />
+              <Switch $danger onChange={() => console.log('switched')} />
             </Col>
             <Col $md="2">
-              <Switch
-                $warning
-                label="switch"
-                onChange={() => console.log('switched')}
-              />
+              <Switch $warning onChange={() => console.log('switched')} />
             </Col>
             <Col $md="2">
-              <Switch
-                $black
-                label="switch"
-                onChange={() => console.log('switched')}
-              />
+              <Switch $black onChange={() => console.log('switched')} />
             </Col>
           </Row>
         </Container>
@@ -79,21 +58,21 @@ const SwitchPage = () => {
               <Switch
                 checked
                 $primary
-                label="switch"
+                
                 onChange={() => console.log('switched')}
               />
             </Col>
             <Col $md="2">
               <Switch
                 $secondary
-                label="switch"
+                
                 onChange={() => console.log('switched')}
               />
             </Col>
             <Col $md="2">
               <Switch
                 $lime10
-                label="switch"
+                
                 onChange={() => console.log('switched')}
               />
             </Col>
@@ -101,21 +80,21 @@ const SwitchPage = () => {
             <Col $md="2">
               <Switch
                 $danger
-                label="switch"
+                
                 onChange={() => console.log('switched')}
               />
             </Col>
             <Col $md="2">
               <Switch
                 $warning
-                label="switch"
+                
                 onChange={() => console.log('switched')}
               />
             </Col>
             <Col $md="2">
               <Switch
                 $black
-                label="switch"
+                
                 onChange={() => console.log('switched')}
               />
             </Col>
