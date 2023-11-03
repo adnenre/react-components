@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import {
-  MasonryContainer,
-  MasonryItem,
-  MasonryColumn,
-  MasonryImage,
-} from './Masonry.styled';
+import { MasonryContainer, MasonryItem, MasonryColumn } from './Masonry.styled';
 import { isImageUrl } from '../utility';
+import ImageWithSkeleton from './ImageWithSkeleton';
 
 const Masonry = (props) => {
-  const { items, columns, gap, onItemClick } = props;
+  const { items, columns, gap, onItemClick, ...rest } = props;
 
   const [res, setResult] = useState([]);
 
@@ -36,7 +32,7 @@ const Masonry = (props) => {
           }}
         >
           {isImageUrl(items[i]) ? (
-            <MasonryImage
+            <ImageWithSkeleton
               key={`image-column-${columnIndex}-item-${i}`}
               src={items[i]}
               alt={`image-column-${columnIndex}-item-${i}`}
@@ -71,7 +67,7 @@ const Masonry = (props) => {
     RenderMasonryColumn();
     /* eslint-disable react-hooks/exhaustive-deps */
   }, []);
-  return <MasonryContainer>{res}</MasonryContainer>;
+  return <MasonryContainer {...rest}>{res}</MasonryContainer>;
 };
 
 Masonry.propTypes = {
@@ -84,5 +80,6 @@ Masonry.propTypes = {
 Masonry.defaultProps = {
   columns: 2,
   gap: 20,
+  items: [],
 };
 export default Masonry;
