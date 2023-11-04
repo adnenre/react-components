@@ -122,11 +122,30 @@ const fake_data = {
       ],
     },
     tab: {
-      page: { title: 'Tab Component' },
+      page: {
+        title: 'Tab Component',
+        title2: 'Tab Component left',
+        title3: 'Tab Component right',
+      },
       items: [
-        { id: 1, title: 'First', content: '1 - content of tab one' },
-        { id: 2, title: 'Second', content: '2 - content of tab two' },
-        { id: 3, title: 'Third', content: '3 - content of tab three' },
+        {
+          id: 1,
+          title: 'First',
+          content:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit lorem vitae augue aliquet, id rutrum dolor consequat. Nunc ultricies ante non leo interdum malesuada. Mauris at leo finibus, maximus nunc in, vestibulum mauris. In ac dui convallis, semper turpis in, semper tellus. Praesent a mauris commodo, bibendum nulla ac, lacinia orci. Etiam viverra nec odio a elementum. Quisque a imperdiet elit. ',
+        },
+        {
+          id: 2,
+          title: 'Second',
+          content:
+            'In ac elit ex. Suspendisse ornare, metus vel iaculis maximus, odio massa vestibulum orci, eget vehicula leo metus at ligula. Proin scelerisque enim nisi. Nunc ut nisi risus. Aenean sem massa, faucibus id tempus a, commodo eu libero. In non dui maximus, condimentum felis et, vulputate tortor. Suspendisse a eros quis ipsum auctor tincidunt. Fusce id arcu facilisis risus facilisis feugiat eget at magna. .',
+        },
+        {
+          id: 3,
+          title: 'Third',
+          content:
+            'Donec ultricies porta libero et varius. Nullam sed ex nulla. Nunc dignissim mollis turpis, sed scelerisque ipsum aliquet egestas. Etiam bibendum, mauris id elementum malesuada, arcu dolor rutrum ante, in eleifend massa lorem nec tortor. Phasellus semper aliquam risus ut elementum. Etiam euismod luctus magna, et dapibus libero rhoncus vitae. Nulla porta est purus, at sagittis nisi pulvinar vel.',
+        },
       ],
     },
     stepper: {

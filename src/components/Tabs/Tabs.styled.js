@@ -1,17 +1,54 @@
 import styled from 'styled-components';
 import theme from '../../theme';
+import { getTabStyle } from '../utility';
 export const TabsContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  ${({ $left, $right }) => {
+    if ($left) return `flex-direction: row;`;
+    else if ($right) return `flex-direction: row-reverse;`;
+    return `flex-direction: column;`;
+  }}
+  border: solid 1px ${theme.color.$gray2};
+  border-radius: ${theme['border-radius'].$rounded};
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0rem 0.625rem 0.9375rem -0.1875rem,
+    rgba(0, 0, 0, 0.05) 0rem 0.25rem 0.375rem -0.125rem;
+  background: white;
+  overflow: hidden;
+  padding: 0.25rem;
+  transition: all 0.3s;
+  &:hover {
+    box-shadow:
+      rgba(0, 0, 0, 0.1) 0rem 0.625rem 0.9375rem -0.1875rem,
+      rgba(0, 0, 0, 0.4) 0rem 0.5rem 0.5rem -0.5rem;
+  }
 `;
 
 export const TabList = styled.div`
   display: flex;
   align-items: center;
   min-height: 40px;
-  box-shadow: inset 0 -1px 0 0 #d0d8dc;
+  border-bottom: solid 1px ${theme.color.$gray2};
   width: inherit;
+  ${({ $left, $right }) => {
+    if ($left) {
+      return `
+    flex-direction: column;
+    width:20%;
+    border-right: solid 1px ${theme.color.$gray2};
+    `;
+    } else if ($right) {
+      return `
+      width:20%;
+    flex-direction: column;
+    border-left: solid 1px ${theme.color.$gray2};
+  
+    `;
+    }
+    return `flex-direction: row;`;
+  }}
 `;
 export const TabItem = styled.div`
   display: flex;
@@ -22,27 +59,16 @@ export const TabItem = styled.div`
   padding: 10px 15px;
   white-space: nowrap;
   cursor: pointer;
-  border-bottom: ${({ $active }) =>
-    $active ? `solid 3px ${theme.color.$primary}` : 'solid 3px transparent'};
-  color: ${({ $active }) =>
-    $active ? theme.color.$primary : theme.color.$darkBlue10};
-  &:hover {
-    color: ${theme.color.$primary};
-    background-color: ${theme.color.$primary1};
-  }
-
-  &:active {
-    color: ${theme.color.$primary};
-    transform: scale(0.99);
-  }
+  justify-content: center;
+  flex: 1 1 0;
+  width: 100%;
+  max-height: 50px;
+  ${getTabStyle}
 `;
 export const TabPanelStyled = styled.div`
   width: inherit;
-  padding: 15px 5px;
+  padding: 1rem;
   flex: 1 1 auto;
   text-align: left;
-  display: ${({ $showAsGrid }) => ($showAsGrid ? ' grid' : 'block')};
-  grid-template-columns: ${({ $showAsGrid }) =>
-    $showAsGrid ? 'repeat(auto-fill, minmax(40rem, 1fr))' : ''};
-  grid-gap: ${({ $showAsGrid }) => ($showAsGrid ? '2px' : '')};
+  text-align: justify;
 `;

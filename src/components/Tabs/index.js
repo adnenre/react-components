@@ -8,7 +8,11 @@ const TabContext = createContext();
 // #################################################################
 const Tab = (props) => {
   const { $tabTitle, id } = props;
-  const { changeTab, $activeTabId } = useContext(TabContext);
+  const {
+    changeTab,
+    $activeTabId,
+    props: parentProps,
+  } = useContext(TabContext);
   const handleChangeTab = (id) => (event) => {
     event.preventDefault();
     changeTab(id);
@@ -19,6 +23,7 @@ const Tab = (props) => {
       $active={$activeTabId === id}
       onClick={handleChangeTab(id)}
       {...props}
+      {...parentProps}
     >
       {$tabTitle}
     </TabItem>
@@ -57,7 +62,6 @@ const Tabs = (props) => {
   const childComponents = props.children.filter(Boolean);
   const changeTab = (tabId) => {
     setActiveTab(tabId);
-    //props.onClickTab(tabId);
   };
 
   const { Provider } = TabContext;
@@ -76,10 +80,11 @@ const Tabs = (props) => {
       value={{
         $activeTabId,
         changeTab,
+        props,
       }}
     >
       <TabsContainer {...props}>
-        <TabList>{RenderTab()}</TabList>
+        <TabList {...props}>{RenderTab()}</TabList>
         {childComponents.map((child) => (
           <TabPanel
             key={child.props.id}

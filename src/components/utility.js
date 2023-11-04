@@ -187,6 +187,68 @@ export const getButtonStyle = ({ ...props }) => {
 
   // If none of the color props are present, use the default color
 };
+
+export const getTabStyle = ({ ...props }) => {
+  for (const prop of colorProps) {
+    if (props[prop]) {
+      const color = theme.color[prop];
+      if (props['$left']) {
+        return css`
+          border: solid 1px ${theme.color.$gray1};
+          border-right: ${(props) =>
+            props.$active ? `solid 3px ${color}` : 'solid 3px transparent'};
+          color: ${(props) =>
+            props.$active ? color : theme.color.$darkBlue10};
+          background: ${(props) =>
+            props.$active ? setTranspancy(color, 0.1) : 'white'};
+          &:hover {
+            color: ${color};
+            background: ${setTranspancy(color, 0.1)};
+          }
+          &:active {
+            color: ${color};
+            background: ${setTranspancy(color, 0.1)};
+          }
+        `;
+      }
+      if (props['$right']) {
+        return css`
+          border: solid 1px ${theme.color.$gray1};
+          border-left: ${(props) =>
+            props.$active ? `solid 3px ${color}` : 'solid 3px transparent'};
+          color: ${(props) =>
+            props.$active ? color : theme.color.$darkBlue10};
+          background: ${(props) =>
+            props.$active ? setTranspancy(color, 0.1) : 'white'};
+          &:hover {
+            color: ${color};
+            background-color: ${setTranspancy(color, 0.1)};
+          }
+          &:active {
+            color: ${color};
+            transform: scale(0.99);
+          }
+        `;
+      }
+      return css`
+        border: solid 1px ${theme.color.$gray1};
+        border-bottom: ${(props) =>
+          props.$active ? `solid 3px ${color}` : 'solid 3px transparent'};
+        color: ${(props) => (props.$active ? color : theme.color.$darkBlue10)};
+        background: ${(props) =>
+          props.$active ? setTranspancy(color, 0.1) : 'white'};
+        &:hover {
+          color: ${color};
+          background-color: ${setTranspancy(color, 0.1)};
+        }
+        &:active {
+          color: ${color};
+          transform: scale(0.99);
+        }
+      `;
+    }
+  }
+};
 export const getButtonIconStyle = ({ ...props }) => {
   for (const prop of colorProps) {
     if (props['disabled']) {
