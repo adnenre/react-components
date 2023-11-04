@@ -2,7 +2,7 @@
 import React from 'react';
 import { fireEvent, render, renderToJson, theme } from '../utility-test';
 import Button from './index';
-
+import { setTranspancy } from '../utility';
 const label = 'Click me';
 const onClick = jest.fn(); // Mocking a click handler
 
@@ -105,10 +105,13 @@ describe('Test Button', () => {
     expect(btn).toHaveStyleRule('color', theme.color.$black);
     expect(btn).toHaveStyleRule('width', theme.width.fitContent);
   });
-  test('check that disabled apply correct styles ', () => {
+  test('check that disabled apply correct default styles ', () => {
     const btn = renderToJson(Component)({ disabled: true });
-    expect(btn).toHaveStyleRule('background', theme.color.$gray2);
-    expect(btn).toHaveStyleRule('color', theme.color.$gray6);
+    expect(btn).toHaveStyleRule(
+      'background',
+      setTranspancy(theme.color.$darkBlue10, 0.3)
+    );
+    expect(btn).toHaveStyleRule('color', theme.color.$white);
     expect(btn).toHaveStyleRule('cursor', theme.cursor.notAllowed);
     expect(btn).toHaveStyleRule('width', theme.width.fitContent);
   });

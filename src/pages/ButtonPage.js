@@ -18,68 +18,122 @@ const ButtonPage = () => {
         content={
           <>
             <Row>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a primary Button" $top>
-                  <Button $primary />
-                </Tooltip>
+              <Col $sm={3}>
+                <Button />
               </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m an info Button" $top>
-                  <Button $info />
-                </Tooltip>
+
+              <Col $sm={3}>
+                <Button $outline label="outline" />
               </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a warning Button" $top>
-                  <Button $warning />
-                </Tooltip>
+              <Col $sm={3}>
+                <Button $link label="link" />
               </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a success Button" $top>
-                  <Button $success />
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a danger Button" $top>
-                  <Button $danger />
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a black Button" $top>
-                  <Button $black />
-                </Tooltip>
+              <Col $sm={3}>
+                <Button label="disabled" disabled />
               </Col>
             </Row>
-
             <Row>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a primary Button">
-                  <Button $outline $primary />
-                </Tooltip>
+              <Col $sm={3}>
+                <Button $primary />
               </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m an info Button">
-                  <Button $outline $info />
-                </Tooltip>
+              <Col $sm={3}>
+                <Button $primary $outline label="outline" />
               </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a warning Button">
-                  <Button $outline $warning />
-                </Tooltip>
+              <Col $sm={3}>
+                <Button $primary $link label="link" />
               </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a success Button">
-                  <Button $outline $success />
-                </Tooltip>
+              <Col $sm={3}>
+                <Button $primary $link label="disabled" disabled />
               </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a danger Button">
-                  <Button $outline $danger />
-                </Tooltip>
+            </Row>
+            <Row>
+              <Col $sm={3}>
+                <Button $secondary />
               </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a black Button">
-                  <Button $outline $black />
-                </Tooltip>
+
+              <Col $sm={3}>
+                <Button $secondary $outline label="outline" />
+              </Col>
+              <Col $sm={3}>
+                <Button $secondary $link label="link" />
+              </Col>
+              <Col $sm={3}>
+                <Button $secondary $link label="disabled" disabled />
+              </Col>
+            </Row>
+            <Row>
+              <Col $sm={3}>
+                <Button $info />
+              </Col>
+
+              <Col $sm={3}>
+                <Button $info $outline label="outline" />
+              </Col>
+              <Col $sm={3}>
+                <Button $info $link label="link" />
+              </Col>
+              <Col $sm={3}>
+                <Button $info $link label="disabled" disabled />
+              </Col>
+            </Row>
+            <Row>
+              <Col $sm={3}>
+                <Button $warning />
+              </Col>
+
+              <Col $sm={3}>
+                <Button $warning $outline label="outline" />
+              </Col>
+              <Col $sm={3}>
+                <Button $warning $link label="link" />
+              </Col>
+              <Col $sm={3}>
+                <Button $warning $link label="disabled" disabled />
+              </Col>
+            </Row>
+            <Row>
+              <Col $sm={3}>
+                <Button $success />
+              </Col>
+
+              <Col $sm={3}>
+                <Button $success $outline label="outline" />
+              </Col>
+              <Col $sm={3}>
+                <Button $success $link label="link" />
+              </Col>
+              <Col $sm={3}>
+                <Button $success $link label="disabled" disabled />
+              </Col>
+            </Row>
+            <Row>
+              <Col $sm={3}>
+                <Button $danger />
+              </Col>
+
+              <Col $sm={3}>
+                <Button $danger $outline label="outline" />
+              </Col>
+              <Col $sm={3}>
+                <Button $danger $link label="link" />
+              </Col>
+              <Col $sm={3}>
+                <Button $danger $link label="disabled" disabled />
+              </Col>
+            </Row>
+            <Row>
+              <Col $sm={3}>
+                <Button $black />
+              </Col>
+
+              <Col $sm={3}>
+                <Button $black $outline label="outline" />
+              </Col>
+              <Col $sm={3}>
+                <Button $black $link label="link" />
+              </Col>
+              <Col $sm={3}>
+                <Button $black $link label="disabled" disabled />
               </Col>
             </Row>
           </>
@@ -88,26 +142,414 @@ const ButtonPage = () => {
           <Toggle>
             <PrismCode component="pre" className="language-markup" target>
               {`
-          <Button $primary/>
-          <Button $info/>
-          <Button $warning/>
-          <Button $success/>
-          <Button $danger/>
-          <Button $black/>
+        <Row>
+          <Col $sm={3}>
+            <Button />
+          </Col>
+          <Col $sm={3}>
+            <Button $outline label="outline" />
+          </Col>
+          <Col $sm={3}>
+            <Button $link label="link" />
+          </Col>
+          <Col $sm={3}>
+            <Button label="disabled" disabled />
+          </Col>
+        </Row>
 
+        <Row>
+          <Col $sm={3}>
+            <Button $primary />
+          </Col>
+          <Col $sm={3}>
+            <Button $primary $outline label="outline" />
+          </Col>
+          <Col $sm={3}>
+            <Button $primary $link label="link" />
+          </Col>
+          <Col $sm={3}>
+            <Button $primary $link label="disabled" disabled />
+          </Col>
+        </Row>
 
-          <Button $outline $primary/>
-          <Button $outline $info/>
-          <Button $outline $warning/>
-          <Button $outline $success/>
-          <Button $outline $danger/>
-          <Button $outline $black/>
+        <Row>
+          <Col $sm={3}>
+            <Button $secondary />
+          </Col>
+          <Col $sm={3}>
+            <Button $secondary $outline label="outline" />
+          </Col>
+          <Col $sm={3}>
+            <Button $secondary $link label="link" />
+          </Col>
+          <Col $sm={3}>
+            <Button $secondary $link label="disabled" disabled />
+          </Col>
+        </Row>
 
-         
+        <Row>
+          <Col $sm={3}>
+            <Button $info />
+          </Col>
+          <Col $sm={3}>
+            <Button $info $outline label="outline" />
+          </Col>
+          <Col $sm={3}>
+            <Button $info $link label="link" />
+          </Col>
+          <Col $sm={3}>
+            <Button $info $link label="disabled" disabled />
+          </Col>
+        </Row>
 
+        <Row>
+          <Col $sm={3}>
+            <Button $warning />
+          </Col>
+          <Col $sm={3}>
+            <Button $warning $outline label="outline" />
+          </Col>
+          <Col $sm={3}>
+            <Button $warning $link label="link" />
+          </Col>
+          <Col $sm={3}>
+            <Button $warning $link label="disabled" disabled />
+          </Col>
+        </Row>
+
+        <Row>
+          <Col $sm={3}>
+            <Button $success />
+          </Col>
+          <Col $sm={3}>
+            <Button $success $outline label="outline" />
+          </Col>
+          <Col $sm={3}>
+            <Button $success $link label="link" />
+          </Col>
+          <Col $sm={3}>
+            <Button $success $link label="disabled" disabled />
+          </Col>
+        </Row>
         
+        <Row>
+          <Col $sm={3}>
+            <Button $danger />
+          </Col>
+          <Col $sm={3}>
+            <Button $danger $outline label="outline" />
+          </Col>
+          <Col $sm={3}>
+            <Button $danger $link label="link" />
+          </Col>
+          <Col $sm={3}>
+            <Button $danger $link label="disabled" disabled />
+          </Col>
+        </Row>
 
-       
+        <Row>
+          <Col $sm={3}>
+            <Button $black />
+          </Col>
+          <Col $sm={3}>
+            <Button $black $outline label="outline" />
+          </Col>
+          <Col $sm={3}>
+            <Button $black $link label="link" />
+          </Col>
+          <Col $sm={3}>
+            <Button $black $link label="disabled" disabled />
+          </Col>
+        </Row>
+          
+            `}
+            </PrismCode>
+          </Toggle>
+        }
+      />
+      <PortletView
+        title={button.page.title2}
+        content={
+          <>
+            <Row>
+              <Col $sm={3}>
+                <Button $rounded />
+              </Col>
+
+              <Col $sm={3}>
+                <Button $rounded $outline label="outline" />
+              </Col>
+              <Col $sm={3}>
+                <Button $rounded $link label="link" />
+              </Col>
+              <Col $sm={3}>
+                <Button $rounded label="disabled" disabled />
+              </Col>
+            </Row>
+            <Row>
+              <Col $sm={3}>
+                <Button $rounded $primary />
+              </Col>
+              <Col $sm={3}>
+                <Button $rounded $primary $outline label="outline" />
+              </Col>
+              <Col $sm={3}>
+                <Button $rounded $primary $link label="link" />
+              </Col>
+              <Col $sm={3}>
+                <Button
+                  $rounded
+                  $pill
+                  $primary
+                  $link
+                  label="disabled"
+                  disabled
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col $sm={3}>
+                <Button $rounded $secondary />
+              </Col>
+
+              <Col $sm={3}>
+                <Button $rounded $secondary $outline label="outline" />
+              </Col>
+              <Col $sm={3}>
+                <Button $rounded $secondary $link label="link" />
+              </Col>
+              <Col $sm={3}>
+                <Button
+                  $rounded
+                  $pill
+                  $secondary
+                  $link
+                  label="disabled"
+                  disabled
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col $sm={3}>
+                <Button $rounded $info />
+              </Col>
+
+              <Col $sm={3}>
+                <Button $rounded $info $outline label="outline" />
+              </Col>
+              <Col $sm={3}>
+                <Button $rounded $info $link label="link" />
+              </Col>
+              <Col $sm={3}>
+                <Button $rounded $info $link label="disabled" disabled />
+              </Col>
+            </Row>
+            <Row>
+              <Col $sm={3}>
+                <Button $rounded $warning />
+              </Col>
+
+              <Col $sm={3}>
+                <Button $rounded $warning $outline label="outline" />
+              </Col>
+              <Col $sm={3}>
+                <Button $rounded $warning $link label="link" />
+              </Col>
+              <Col $sm={3}>
+                <Button
+                  $rounded
+                  $pill
+                  $warning
+                  $link
+                  label="disabled"
+                  disabled
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col $sm={3}>
+                <Button $rounded $success />
+              </Col>
+
+              <Col $sm={3}>
+                <Button $rounded $success $outline label="outline" />
+              </Col>
+              <Col $sm={3}>
+                <Button $rounded $success $link label="link" />
+              </Col>
+              <Col $sm={3}>
+                <Button
+                  $rounded
+                  $pill
+                  $success
+                  $link
+                  label="disabled"
+                  disabled
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col $sm={3}>
+                <Button $rounded $danger />
+              </Col>
+
+              <Col $sm={3}>
+                <Button $rounded $danger $outline label="outline" />
+              </Col>
+              <Col $sm={3}>
+                <Button $rounded $danger $link label="link" />
+              </Col>
+              <Col $sm={3}>
+                <Button
+                  $rounded
+                  $pill
+                  $danger
+                  $link
+                  label="disabled"
+                  disabled
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col $sm={3}>
+                <Button $rounded $black />
+              </Col>
+
+              <Col $sm={3}>
+                <Button $rounded $black $outline label="outline" />
+              </Col>
+              <Col $sm={3}>
+                <Button $rounded $black $link label="link" />
+              </Col>
+              <Col $sm={3}>
+                <Button $rounded $black $link label="disabled" disabled />
+              </Col>
+            </Row>
+          </>
+        }
+        footer={
+          <Toggle>
+            <PrismCode component="pre" className="language-markup" target>
+              {`
+        <Row>
+          <Col $sm={3}>
+            <Button $rounded />
+          </Col>
+          <Col $sm={3}>
+            <Button $rounded $outline label="outline" />
+          </Col>
+          <Col $sm={3}>
+            <Button $rounded $link label="link" />
+          </Col>
+          <Col $sm={3}>
+            <Button $rounded label="disabled" disabled />
+          </Col>
+        </Row>
+
+        <Row>
+          <Col $sm={3}>
+            <Button $rounded $primary />
+          </Col>
+          <Col $sm={3}>
+            <Button $rounded $primary $outline label="outline" />
+          </Col>
+          <Col $sm={3}>
+            <Button $rounded $primary $link label="link" />
+          </Col>
+          <Col $sm={3}>
+            <Button $rounded $primary $link label="disabled" disabled />
+          </Col>
+        </Row>
+
+        <Row>
+          <Col $sm={3}>
+            <Button $rounded $secondary />
+          </Col>
+          <Col $sm={3}>
+            <Button $rounded $secondary $outline label="outline" />
+          </Col>
+          <Col $sm={3}>
+            <Button $rounded $secondary $link label="link" />
+          </Col>
+          <Col $sm={3}>
+            <Button $rounded $secondary $link label="disabled" disabled />
+          </Col>
+        </Row>
+
+        <Row>
+          <Col $sm={3}>
+            <Button $rounded $info />
+          </Col>
+          <Col $sm={3}>
+            <Button $rounded $info $outline label="outline" />
+          </Col>
+          <Col $sm={3}>
+            <Button $rounded $info $link label="link" />
+          </Col>
+          <Col $sm={3}>
+            <Button $rounded $info $link label="disabled" disabled />
+          </Col>
+        </Row>
+
+        <Row>
+          <Col $sm={3}>
+            <Button $rounded $warning />
+          </Col>
+          <Col $sm={3}>
+            <Button $rounded $warning $outline label="outline" />
+          </Col>
+          <Col $sm={3}>
+            <Button $rounded $warning $link label="link" />
+          </Col>
+          <Col $sm={3}>
+            <Button $rounded $warning $link label="disabled" disabled />
+          </Col>
+        </Row>
+
+        <Row>
+          <Col $sm={3}>
+            <Button $rounded $success />
+          </Col>
+          <Col $sm={3}>
+            <Button $rounded $success $outline label="outline" />
+          </Col>
+          <Col $sm={3}>
+            <Button $rounded $success $link label="link" />
+          </Col>
+          <Col $sm={3}>
+            <Button $rounded $success $link label="disabled" disabled />
+          </Col>
+        </Row>
+        
+        <Row>
+          <Col $sm={3}>
+            <Button $rounded $danger />
+          </Col>
+          <Col $sm={3}>
+            <Button $rounded $danger $outline label="outline" />
+          </Col>
+          <Col $sm={3}>
+            <Button $rounded $danger $link label="link" />
+          </Col>
+          <Col $sm={3}>
+            <Button $rounded $danger $link label="disabled" disabled />
+          </Col>
+        </Row>
+
+        <Row>
+          <Col $sm={3}>
+            <Button $rounded $black />
+          </Col>
+          <Col $sm={3}>
+            <Button $rounded $black $outline label="outline" />
+          </Col>
+          <Col $sm={3}>
+            <Button $rounded $black $link label="link" />
+          </Col>
+          <Col $sm={3}>
+            <Button $rounded $black $link label="disabled" disabled />
+          </Col>
+        </Row>
           
             `}
             </PrismCode>
@@ -116,187 +558,290 @@ const ButtonPage = () => {
       />
 
       <PortletView
-        title={button.page.title2}
+        title={button.page.title}
         content={
           <>
             <Row>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a rounded primary Button" $top>
-                  <Button $rounded $primary />
-                </Tooltip>
+              <Col $sm={3}>
+                <Button $pill />
               </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a rounded info Button">
-                  <Button $rounded $info />
-                </Tooltip>
+
+              <Col $sm={3}>
+                <Button $pill $outline label="outline" />
               </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a rounded warning Button" $top>
-                  <Button $rounded $warning />
-                </Tooltip>
+              <Col $sm={3}>
+                <Button $pill $link label="link" />
               </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a rounded success Button" $top>
-                  <Button $rounded $success />
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a danger Button">
-                  <Button $rounded $danger />
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a black Button">
-                  <Button $rounded $black />
-                </Tooltip>
+              <Col $sm={3}>
+                <Button $pill label="disabled" disabled />
               </Col>
             </Row>
             <Row>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a primary Button" $top>
-                  <Button $outline $rounded $primary />
-                </Tooltip>
+              <Col $sm={3}>
+                <Button $pill $primary />
               </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m an info Button">
-                  <Button $outline $rounded $info />
-                </Tooltip>
+              <Col $sm={3}>
+                <Button $pill $primary $outline label="outline" />
               </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a warning Button" $top>
-                  <Button $outline $rounded $warning />
-                </Tooltip>
+              <Col $sm={3}>
+                <Button $pill $primary $link label="link" />
               </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a success Button" $top>
-                  <Button $outline $rounded $success />
-                </Tooltip>
+              <Col $sm={3}>
+                <Button
+                  $rounded
+                  $pill
+                  $primary
+                  $link
+                  label="disabled"
+                  disabled
+                />
               </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a danger Button">
-                  <Button $outline $rounded $danger />
-                </Tooltip>
+            </Row>
+            <Row>
+              <Col $sm={3}>
+                <Button $pill $secondary />
               </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a black Button">
-                  <Button $outline $rounded $black />
-                </Tooltip>
+
+              <Col $sm={3}>
+                <Button $pill $secondary $outline label="outline" />
+              </Col>
+              <Col $sm={3}>
+                <Button $pill $secondary $link label="link" />
+              </Col>
+              <Col $sm={3}>
+                <Button
+                  $rounded
+                  $pill
+                  $secondary
+                  $link
+                  label="disabled"
+                  disabled
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col $sm={3}>
+                <Button $pill $info />
+              </Col>
+
+              <Col $sm={3}>
+                <Button $pill $info $outline label="outline" />
+              </Col>
+              <Col $sm={3}>
+                <Button $pill $info $link label="link" />
+              </Col>
+              <Col $sm={3}>
+                <Button $pill $info $link label="disabled" disabled />
+              </Col>
+            </Row>
+            <Row>
+              <Col $sm={3}>
+                <Button $pill $warning />
+              </Col>
+
+              <Col $sm={3}>
+                <Button $pill $warning $outline label="outline" />
+              </Col>
+              <Col $sm={3}>
+                <Button $pill $warning $link label="link" />
+              </Col>
+              <Col $sm={3}>
+                <Button
+                  $rounded
+                  $pill
+                  $warning
+                  $link
+                  label="disabled"
+                  disabled
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col $sm={3}>
+                <Button $pill $success />
+              </Col>
+
+              <Col $sm={3}>
+                <Button $pill $success $outline label="outline" />
+              </Col>
+              <Col $sm={3}>
+                <Button $pill $success $link label="link" />
+              </Col>
+              <Col $sm={3}>
+                <Button
+                  $rounded
+                  $pill
+                  $success
+                  $link
+                  label="disabled"
+                  disabled
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col $sm={3}>
+                <Button $pill $danger />
+              </Col>
+
+              <Col $sm={3}>
+                <Button $pill $danger $outline label="outline" />
+              </Col>
+              <Col $sm={3}>
+                <Button $pill $danger $link label="link" />
+              </Col>
+              <Col $sm={3}>
+                <Button
+                  $rounded
+                  $pill
+                  $danger
+                  $link
+                  label="disabled"
+                  disabled
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col $sm={3}>
+                <Button $pill $black />
+              </Col>
+
+              <Col $sm={3}>
+                <Button $pill $black $outline label="outline" />
+              </Col>
+              <Col $sm={3}>
+                <Button $pill $black $link label="link" />
+              </Col>
+              <Col $sm={3}>
+                <Button $pill $black $link label="disabled" disabled />
               </Col>
             </Row>
           </>
         }
         footer={
-          <Toggle $rounded>
-            <PrismCode component="pre" className="language-markup">
+          <Toggle>
+            <PrismCode component="pre" className="language-markup" target>
               {`
-               /* Note the component take the with of the column width */
-               <Button $primary $rounded/>
-               <Button $info    $rounded/>
-               <Button $warning $rounded/>
-               <Button $success $rounded/>
-               <Button $danger  $rounded/>
-               <Button $black   $rounded/>
+        <Row>
+          <Col $sm={3}>
+            <Button $pill />
+          </Col>
+          <Col $sm={3}>
+            <Button $pill $outline label="outline" />
+          </Col>
+          <Col $sm={3}>
+            <Button $pill $link label="link" />
+          </Col>
+          <Col $sm={3}>
+            <Button $pill label="disabled" disabled />
+          </Col>
+        </Row>
 
-               <Button $outline $rounded $primary/>
-               <Button $outline $rounded $info/>
-               <Button $outline $rounded $warning/>
-               <Button $outline $rounded $success/>
-               <Button $outline $rounded $danger/>
-               <Button $outline $rounded $black/>
-             `}
-            </PrismCode>
-          </Toggle>
-        }
-      />
+        <Row>
+          <Col $sm={3}>
+            <Button $pill $primary />
+          </Col>
+          <Col $sm={3}>
+            <Button $pill $primary $outline label="outline" />
+          </Col>
+          <Col $sm={3}>
+            <Button $pill $primary $link label="link" />
+          </Col>
+          <Col $sm={3}>
+            <Button $pill $primary $link label="disabled" disabled />
+          </Col>
+        </Row>
 
-      <PortletView
-        title={button.page.title3}
-        content={
-          <>
-            <Row>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a pill primary Button" $top $pill>
-                  <Button $pill $primary />
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a pill info Button" $pill>
-                  <Button $pill $info />
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a pill warning Button" $top $pill>
-                  <Button $pill $warning />
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a pill success Button" $top $pill>
-                  <Button $pill $success />
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a pill danger Button" $pill>
-                  <Button $pill $danger />
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a pill black Button" $pill>
-                  <Button $pill $black />
-                </Tooltip>
-              </Col>
-            </Row>
-            <Row>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a primary Button" $top $pill>
-                  <Button $outline $pill $primary />
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m an info Button" $pill>
-                  <Button $outline $pill $info />
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a warning Button" $top $pill>
-                  <Button $outline $pill $warning />
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a success Button" $top $pill>
-                  <Button $outline $pill $success />
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a danger Button" $pill>
-                  <Button $outline $pill $danger />
-                </Tooltip>
-              </Col>
-              <Col $sm={2}>
-                <Tooltip text="Hello i m a black Button" $pill>
-                  <Button $outline $pill $black />
-                </Tooltip>
-              </Col>
-            </Row>
-          </>
-        }
-        footer={
-          <Toggle $pill>
-            <PrismCode component="pre" className="language-markup">
-              {`
-              <Button $primary $pill/>
-              <Button $info $pill/>
-              <Button $warning $pill/>
-              <Button $success $pill/>
-              <Button $danger $pill/>
-              <Button $black $pill/>
+        <Row>
+          <Col $sm={3}>
+            <Button $pill $secondary />
+          </Col>
+          <Col $sm={3}>
+            <Button $pill $secondary $outline label="outline" />
+          </Col>
+          <Col $sm={3}>
+            <Button $pill $secondary $link label="link" />
+          </Col>
+          <Col $sm={3}>
+            <Button $pill $secondary $link label="disabled" disabled />
+          </Col>
+        </Row>
 
-              <Button $outline $pill $primary/>
-              <Button $outline $pill $info/>
-              <Button $outline $pill $warning/>
-              <Button $outline $pill $success/>
-              <Button $outline $pill $danger/>
-              <Button $outline $pill $black/>
-             `}
+        <Row>
+          <Col $sm={3}>
+            <Button $pill $info />
+          </Col>
+          <Col $sm={3}>
+            <Button $pill $info $outline label="outline" />
+          </Col>
+          <Col $sm={3}>
+            <Button $pill $info $link label="link" />
+          </Col>
+          <Col $sm={3}>
+            <Button $pill $info $link label="disabled" disabled />$rounded
+          </Col>
+        </Row>
+
+        <Row>
+          <Col $sm={3}>
+            <Button $pill $warning />
+          </Col>
+          <Col $sm={3}>
+            <Button $pill $warning $outline label="outline" />
+          </Col>
+          <Col $sm={3}>
+            <Button $pill $warning $link label="link" />
+          </Col>
+          <Col $sm={3}>
+            <Button $pill $warning $link label="disabled" disabled />
+          </Col>
+        </Row>
+
+        <Row>
+          <Col $sm={3}>
+            <Button $pill $success />
+          </Col>
+          <Col $sm={3}>
+            <Button $pill $success $outline label="outline" />
+          </Col>
+          <Col $sm={3}>
+            <Button $pill $success $link label="link" />
+          </Col>
+          <Col $sm={3}>
+            <Button $pill $success $link label="disabled" disabled />
+          </Col>
+        </Row>
+        
+        <Row>
+          <Col $sm={3}>
+            <Button $pill $danger />
+          </Col>
+          <Col $sm={3}>
+            <Button $pill $danger $outline label="outline" />
+          </Col>
+          <Col $sm={3}>
+            <Button $pill $danger $link label="link" />
+          </Col>
+          <Col $sm={3}>
+            <Button $pill $danger $link label="disabled" disabled />
+          </Col>
+        </Row>
+
+        <Row>
+          <Col $sm={3}>
+            <Button $pill $black />
+          </Col>
+          <Col $sm={3}>
+            <Button $pill $black $outline label="outline" />
+          </Col>
+          <Col $sm={3}>
+            <Button $pill $black $link label="link" />
+          </Col>
+          <Col $sm={3}>
+            <Button $pill $black $link label="disabled" disabled />
+          </Col>
+        </Row>
+          
+            `}
             </PrismCode>
           </Toggle>
         }

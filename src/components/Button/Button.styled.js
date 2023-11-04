@@ -17,9 +17,6 @@ const SButton = styled.button`
 
   ${getButtonStyle}
   ${(props) => getProperty('border-radius', props)};
-  &:active {
-    transform: scale(1, 0.99);
-  }
 `;
 
 const SIButton = styled.button`
