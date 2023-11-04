@@ -21,11 +21,13 @@ import PaletPage from './pages/PaletPage';
 import SwitchPage from './pages/SwitchPage';
 import BreadcrumbPage from './pages/BreadcrumbPage';
 import Application from './Application';
+import InputPage from './pages/InputPage';
 
 export const childrenRoutes = [
   { path: 'component/Palet', element: <PaletPage /> },
   { path: 'component/Grid', element: <GridPage /> },
   { path: 'component/Button', element: <ButtonPage /> },
+  { path: 'component/Input', element: <InputPage /> },
   { path: 'component/Switch', element: <SwitchPage /> },
   { path: 'component/Badge', element: <BadgePage /> },
 
