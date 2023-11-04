@@ -9,11 +9,12 @@ import { Container, Row, Col } from '../components/grid';
 
 import PortletView from '../components/Portlet';
 import fake_data from '../fake-data';
+import CodeBlock from './pageUtils';
 
 const CardPage = () => {
   const { card } = fake_data.pages;
   return (
-    <>
+    <Container>
       <PortletView
         title={card.page.title}
         content={
@@ -44,9 +45,9 @@ const CardPage = () => {
           </Container>
         }
         footer={
-          <Toggle>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
+              
       
          <Container>
             <Row>
@@ -75,8 +76,7 @@ const CardPage = () => {
           </Container>
         
         `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
       <PortletView
@@ -112,9 +112,8 @@ const CardPage = () => {
           </Container>
         }
         footer={
-          <Toggle $rounded>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
       
         <Container>
         <Row>
@@ -146,8 +145,7 @@ const CardPage = () => {
       </Container>
         
         `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
       <PortletView
@@ -183,9 +181,8 @@ const CardPage = () => {
           </Container>
         }
         footer={
-          <Toggle $pill>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
       
         <Container>
         <Row>
@@ -217,11 +214,10 @@ const CardPage = () => {
       </Container>
         
         `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
-    </>
+    </Container>
   );
 };
 

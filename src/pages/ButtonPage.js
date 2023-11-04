@@ -2,10 +2,7 @@ import React from 'react';
 import Button from '../components/Button';
 import PortletView from '../components/Portlet';
 
-import 'prismjs/themes/prism.css';
-import PrismCode from 'react-prism';
-import Prism from 'prismjs';
-import Toggle from '../components/Toggle';
+import CodeBlock from './pageUtils';
 import { Container, Row, Col } from '../components/grid';
 import Tooltip from '../components/Tooltip';
 import fake_data from '../fake-data';
@@ -139,9 +136,9 @@ const ButtonPage = () => {
           </>
         }
         footer={
-          <Toggle>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
+              
         <Row>
           <Col $sm={3}>
             <Button />
@@ -263,8 +260,7 @@ const ButtonPage = () => {
         </Row>
           
             `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
       <PortletView
@@ -428,9 +424,9 @@ const ButtonPage = () => {
           </>
         }
         footer={
-          <Toggle>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
+              
         <Row>
           <Col $sm={3}>
             <Button $rounded />
@@ -552,8 +548,7 @@ const ButtonPage = () => {
         </Row>
           
             `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
 
@@ -718,9 +713,9 @@ const ButtonPage = () => {
           </>
         }
         footer={
-          <Toggle>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
+              
         <Row>
           <Col $sm={3}>
             <Button $pill />
@@ -842,8 +837,7 @@ const ButtonPage = () => {
         </Row>
           
             `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
 
@@ -902,9 +896,8 @@ const ButtonPage = () => {
           </>
         }
         footer={
-          <Toggle>
-            <PrismCode component="pre" className="language-markup">
-              {`
+          <CodeBlock
+            code={`
                <Button  $primary $fullwidth label="Click here ! "/>
                <Button  $info $fullwidth label="Click here ! "/>
                <Button  $warning $fullwidth label="Click here ! "/>
@@ -919,8 +912,7 @@ const ButtonPage = () => {
                 <Button $outline $danger $fullwidth label="Click here ! "/>
                 <Button $outline $black $fullwidth label="Click here ! "/>
              `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
       <PortletView
@@ -942,16 +934,14 @@ const ButtonPage = () => {
           </>
         }
         footer={
-          <Toggle>
-            <PrismCode component="pre" className="language-markup">
-              {`
+          <CodeBlock
+            code={`
               <Button disabled $fullwidth label="Click here ! "/>
               <Button disabled $fullwidth  $rounded label="Click here ! "/>
               <Button disabled $fullwidth  $pill  label="Click here ! "/>
             
              `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
     </Container>

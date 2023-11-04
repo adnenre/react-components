@@ -1,11 +1,7 @@
 import React from 'react';
 import Avatar from '../components/Avatar';
 import PortletView from '../components/Portlet';
-import Toggle from '../components/Toggle';
-
-import 'prismjs/themes/prism.css';
-import PrismCode from 'react-prism';
-import Prism from 'prismjs';
+import CodeBlock from './pageUtils';
 import { Container, Row } from '../components/grid';
 import Tooltip from '../components/Tooltip';
 import fake_data from '../fake-data';
@@ -42,17 +38,16 @@ const AvatarPage = () => {
           </Row>
         }
         footer={
-          <Toggle>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
+              
                 <Avatar $xsmall src={avatarsrource} alt={avatar.alt} />
                 <Avatar $small src={avatarsrource} alt={avatar.alt} />
                 <Avatar $medium src={avatarsrource} alt={avatar.alt} />
                 <Avatar $large src={avatarsrource} alt={avatar.alt} />
                 <Avatar $xlarge src={avatarsrource} alt={avatar.alt} />
             `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
       <PortletView
@@ -81,17 +76,16 @@ const AvatarPage = () => {
           </Row>
         }
         footer={
-          <Toggle>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
+              
                 <Avatar $pill $xsmall src={avatarsrource} alt={avatar.alt} />
                 <Avatar $pill $small src={avatarsrource} alt={avatar.alt} />
                 <Avatar $pill $medium src={avatarsrource} alt={avatar.alt} />
                 <Avatar $pill $large src={avatarsrource} alt={avatar.alt} />
                 <Avatar $pill $xlarge src={avatarsrource} alt={avatar.alt} />
             `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
       <PortletView
@@ -122,17 +116,16 @@ const AvatarPage = () => {
           </>
         }
         footer={
-          <Toggle>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
+              
       <Avatar $round $xsmall src={avatarsrource} alt={avatar.alt} />
       <Avatar $round $small src={avatarsrource} alt={avatar.alt} />
       <Avatar $round $medium src={avatarsrource} alt={avatar.alt} />
       <Avatar $round $large src={avatarsrource} alt={avatar.alt} />
       <Avatar $round $xlarge src={avatarsrource} alt={avatar.alt} />
         `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
     </Container>

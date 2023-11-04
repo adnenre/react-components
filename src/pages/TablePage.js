@@ -2,10 +2,7 @@ import React from 'react';
 
 import Table from '../components/Table';
 //import Prism from "prismjs";
-import 'prismjs/themes/prism.css';
-import PrismCode from 'react-prism';
-import Prism from 'prismjs';
-import Toggle from '../components/Toggle';
+import CodeBlock from './pageUtils';
 import fake_data from '../fake-data';
 import PortletView from '../components/Portlet';
 
@@ -17,13 +14,8 @@ const TablePage = () => {
         title={table.page.title}
         content={<Table columns={table.columns} rows={table.rows} />}
         footer={
-          <Toggle>
-            <PrismCode
-              component="pre"
-              className="language-markup"
-              target="javascript"
-            >
-              {`
+          <CodeBlock
+            code={`
 
 
   const rows = [
@@ -36,21 +28,15 @@ const TablePage = () => {
   <Table columns={columns} rows={rows} />
  
         `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
       <PortletView
         title={table.page.title2}
         content={<Table columns={table.columns} rows={table.rows} striped />}
         footer={
-          <Toggle>
-            <PrismCode
-              component="pre"
-              className="language-markup"
-              target="javascript"
-            >
-              {`
+          <CodeBlock
+            code={`
 
 
   const rows = [
@@ -63,8 +49,7 @@ const TablePage = () => {
   <Table columns={columns} rows={rows}  striped />
  
         `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
 
@@ -80,9 +65,8 @@ const TablePage = () => {
           />
         }
         footer={
-          <Toggle>
-            <PrismCode component="pre" className="language-markup">
-              {`
+          <CodeBlock
+            code={`
 const rows = [
     { id: 1, name: "adnen", lastName: "rebai", email: "@adnen_rebai" },
     { id: 2, name: "Jhone", lastName: "Doe", email: "Jhon_doe" },
@@ -93,8 +77,7 @@ const columns = Object.keys(rows[0]);
 <Table columns={columns} rows={rows}  resizable withBorder striped/>
 
       `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
     </>

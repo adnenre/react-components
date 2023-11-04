@@ -2,10 +2,7 @@ import React from 'react';
 
 import PortletView from '../components/Portlet';
 
-import 'prismjs/themes/prism.css';
-import PrismCode from 'react-prism';
-import Prism from 'prismjs';
-import Toggle from '../components/Toggle';
+import CodeBlock from './pageUtils';
 import { Container, Row } from '../components/grid';
 import Breadcrumb from '../components/Breadcrumb';
 import fake_data from '../fake-data';
@@ -25,9 +22,8 @@ const BreadcrumbPage = () => {
         </>
       }
       footer={
-        <Toggle>
-          <PrismCode component="pre" className="language-markup" target>
-            {`
+        <CodeBlock
+          code={`
             <Container>
                  <Row>
                      <Breadcrumb items={breadcrumb.items} />
@@ -35,8 +31,7 @@ const BreadcrumbPage = () => {
             </Container>
       
         `}
-          </PrismCode>
-        </Toggle>
+        />
       }
     />
   );

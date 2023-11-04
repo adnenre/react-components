@@ -1,8 +1,5 @@
 import React from 'react';
-import 'prismjs/themes/prism.css';
-import PrismCode from 'react-prism';
-import Prism from 'prismjs';
-import Toggle from '../components/Toggle';
+import CodeBlock from './pageUtils';
 import PortletView from '../components/Portlet';
 import Accordion from '../components/Accordion';
 import fake_data from '../fake-data';
@@ -14,9 +11,8 @@ const AccordionPage = () => {
       title={accordion.page.title}
       content={<Accordion items={accordion.items} />}
       footer={
-        <Toggle>
-          <PrismCode component="pre" className="language-markup">
-            {`
+        <CodeBlock
+          code={`
             const items = [
               {
                 title: 'Section 1',
@@ -34,8 +30,7 @@ const AccordionPage = () => {
 
             <Accordion items={items} />
             `}
-          </PrismCode>
-        </Toggle>
+        />
       }
     />
   );

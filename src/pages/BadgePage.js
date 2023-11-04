@@ -3,15 +3,12 @@ import Badge from '../components/Badge';
 
 import PortletView from '../components/Portlet';
 
-import 'prismjs/themes/prism.css';
-import PrismCode from 'react-prism';
-import Prism from 'prismjs';
-import Toggle from '../components/Toggle';
+import CodeBlock from './pageUtils';
 import { Container, Row } from '../components/grid';
 
 const BadgePage = () => {
   return (
-    <>
+    <Container>
       <PortletView
         title="Badge component"
         content={
@@ -37,9 +34,9 @@ const BadgePage = () => {
           </>
         }
         footer={
-          <Toggle>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
+              
        <Badge $primary />
        <Badge $info />
        <Badge $warning />
@@ -54,11 +51,9 @@ const BadgePage = () => {
        <Badge $outline $danger />
        <Badge $outline $black />
         `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
-      {/* */}
 
       <PortletView
         title="Badge component rounded"
@@ -95,9 +90,8 @@ const BadgePage = () => {
           </>
         }
         footer={
-          <Toggle $rounded>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
       <Badge $primary $rounded/>
       <Badge $info $rounded/>
       <Badge $warning $rounded/>
@@ -112,8 +106,7 @@ const BadgePage = () => {
       <Badge $outline $danger $rounded/>
       <Badge $outline $black $rounded/>
         `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
       <PortletView
@@ -141,9 +134,8 @@ const BadgePage = () => {
           </>
         }
         footer={
-          <Toggle $pill>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
         <Badge $pill $primary />
         <Badge $pill $info />
         <Badge $pill $warning />
@@ -158,11 +150,10 @@ const BadgePage = () => {
         <Badge $outline $pill $danger />
         <Badge $outline $pill $black />
         `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
-    </>
+    </Container>
   );
 };
 

@@ -9,10 +9,7 @@ import {
 } from '../components/Portlet/Portlet.Styled';
 import DropDown from '../components/DropDown';
 
-import 'prismjs/themes/prism.css';
-import PrismCode from 'react-prism';
-import Prism from 'prismjs';
-import Toggle from '../components/Toggle';
+import CodeBlock from './pageUtils';
 import { Container, Row, Col } from '../components/grid';
 import fake_data from '../fake-data';
 const DropDownPage = () => {
@@ -40,9 +37,9 @@ const DropDownPage = () => {
           </Row>
         </PortletBody>
         <PortletFooter>
-          <Toggle>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
+              
             const items = [
               { id: 1, title: "One" },
               { id: 2, title: "Two" },
@@ -53,8 +50,7 @@ const DropDownPage = () => {
                 items={items}
               />
             `}
-            </PrismCode>
-          </Toggle>
+          />
         </PortletFooter>
       </Portlet>
     </Container>

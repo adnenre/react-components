@@ -8,10 +8,7 @@ import {
   PortletFooter,
 } from '../components/Portlet/Portlet.Styled';
 
-import 'prismjs/themes/prism.css';
-import PrismCode from 'react-prism';
-import Prism from 'prismjs';
-import Toggle from '../components/Toggle';
+import CodeBlock from './pageUtils';
 
 const GridPage = () => {
   {
@@ -178,9 +175,9 @@ const GridPage = () => {
           </Row>
         </PortletBody>
         <PortletFooter>
-          <Toggle>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
+              
                <Row>
                   <Col $col={1}  $demo>   1  </Col>
                   <Col $col={10} $demo>  10  </Col>
@@ -242,8 +239,7 @@ const GridPage = () => {
              
         
             `}
-            </PrismCode>
-          </Toggle>
+          />
         </PortletFooter>
       </Portlet>
 
@@ -280,9 +276,9 @@ const GridPage = () => {
         </PortletBody>
 
         <PortletFooter>
-          <Toggle>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
+              
                 <Row>
                   <Col $md={1} $sm={6} >
                     sm - 6
@@ -309,8 +305,7 @@ const GridPage = () => {
                   </Col>
                 </Row>
             `}
-            </PrismCode>
-          </Toggle>
+          />
         </PortletFooter>
       </Portlet>
 

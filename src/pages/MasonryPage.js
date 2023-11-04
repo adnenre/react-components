@@ -3,10 +3,7 @@ import Masonry from '../components/Masonry';
 
 import PortletView from '../components/Portlet';
 
-import 'prismjs/themes/prism.css';
-import PrismCode from 'react-prism';
-import Prism from 'prismjs';
-import Toggle from '../components/Toggle';
+import CodeBlock from './pageUtils';
 import Modal from '../components/Modal';
 import fake_data from '../fake-data';
 import image1 from './../assets/images/image1.jpg';
@@ -92,9 +89,9 @@ const MasonryPage = () => {
           </>
         }
         footer={
-          <Toggle>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
+              
               
           const items = [
             'images/image1.jpg',
@@ -110,8 +107,7 @@ const MasonryPage = () => {
           ];
           <Masonry columns={3} gap={5} items={items} />
           `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
     </>

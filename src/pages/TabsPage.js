@@ -9,10 +9,7 @@ import {
 } from '../components/Portlet/Portlet.Styled';
 import Tabs from '../components/Tabs';
 
-import 'prismjs/themes/prism.css';
-import PrismCode from 'react-prism';
-import Prism from 'prismjs';
-import Toggle from '../components/Toggle';
+import CodeBlock from './pageUtils';
 import fake_data from '../fake-data';
 const TablePage = () => {
   const { tab } = fake_data.pages;
@@ -31,9 +28,8 @@ const TablePage = () => {
         </Tabs>
       </PortletBody>
       <PortletFooter>
-        <Toggle>
-          <PrismCode component="pre" className="language-markup" target>
-            {`
+        <CodeBlock
+          code={`
                <Tabs>
                   <Tabs.Tab id={1} tabTitle='one'>
                       1-content of tab one 
@@ -46,8 +42,7 @@ const TablePage = () => {
                   </Tabs.Tab>
                 </Tabs>
             `}
-          </PrismCode>
-        </Toggle>
+        />
       </PortletFooter>
     </Portlet>
   );

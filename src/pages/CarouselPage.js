@@ -3,10 +3,7 @@ import Carousel from '../components/Carousel';
 import PortletView from '../components/Portlet';
 import { Container, Row, Col } from '../components/grid';
 import fake_data from '../fake-data';
-import 'prismjs/themes/prism.css';
-import PrismCode from 'react-prism';
-import Prism from 'prismjs';
-import Toggle from '../components/Toggle';
+import CodeBlock from './pageUtils';
 const CarouselPage = () => {
   const { carousel } = fake_data.pages;
   return (
@@ -27,9 +24,9 @@ const CarouselPage = () => {
           </Container>
         }
         footer={
-          <Toggle>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
+              
           <Container>
           <Row>
             <Col $sm={6}>
@@ -42,8 +39,7 @@ const CarouselPage = () => {
           </Row>
         </Container>
           `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
       <PortletView
@@ -62,9 +58,9 @@ const CarouselPage = () => {
           </Container>
         }
         footer={
-          <Toggle>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
+              
           <Container>
           <Row>
             <Col $sm={6}>
@@ -77,8 +73,7 @@ const CarouselPage = () => {
           </Row>
         </Container>
           `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
     </>

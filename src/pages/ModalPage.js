@@ -3,10 +3,7 @@ import React, { useState } from 'react';
 import PortletView from '../components/Portlet';
 import Modal from '../components/Modal';
 
-import 'prismjs/themes/prism.css';
-import PrismCode from 'react-prism';
-import Prism from 'prismjs';
-import Toggle from '../components/Toggle';
+import CodeBlock from './pageUtils';
 import Button from '../components/Button';
 import fake_data from '../fake-data';
 const ModalPage = () => {
@@ -47,9 +44,9 @@ const ModalPage = () => {
           </>
         }
         footer={
-          <Toggle>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
+              
               <Button $primary $rounded onClick={toggle}>
                 Open Modal
               </Button>
@@ -65,8 +62,7 @@ const ModalPage = () => {
                 </Modal.Footer>
               </Modal>
         `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
       <PortletView
@@ -90,9 +86,9 @@ const ModalPage = () => {
           </>
         }
         footer={
-          <Toggle>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
+              
               <Button $primary $rounded onClick={toggle}>
                 Open Modal
               </Button>
@@ -108,8 +104,7 @@ const ModalPage = () => {
                 </Modal.Footer>
               </Modal>
         `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
 
@@ -134,9 +129,9 @@ const ModalPage = () => {
           </>
         }
         footer={
-          <Toggle>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
+              
            <Button $primary $rounded onClick={toggle}>
               Open Modal
             </Button>
@@ -152,8 +147,7 @@ const ModalPage = () => {
               </Modal.Footer>
             </Modal>
         `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
       <PortletView
@@ -177,9 +171,9 @@ const ModalPage = () => {
           </>
         }
         footer={
-          <Toggle>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
+              
             <Button $primary $rounded onClick={toggle}>
               Open Modal
             </Button>
@@ -195,8 +189,7 @@ const ModalPage = () => {
               </Modal.Footer>
             </Modal>
         `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
       <PortletView
@@ -226,9 +219,9 @@ const ModalPage = () => {
           </>
         }
         footer={
-          <Toggle>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
+              
            <Button $primary $rounded onClick={toggle}>
               Open Modal
             </Button>
@@ -244,8 +237,7 @@ const ModalPage = () => {
               </Modal.Footer>
             </Modal>
         `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
     </>

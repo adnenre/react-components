@@ -1,8 +1,5 @@
 import React from 'react';
-import 'prismjs/themes/prism.css';
-import PrismCode from 'react-prism';
-import Prism from 'prismjs';
-import Toggle from '../components/Toggle';
+import CodeBlock from './pageUtils';
 import PortletView from '../components/Portlet';
 import Tree from '../components/Tree';
 import fake_data from '../fake-data';
@@ -14,9 +11,8 @@ const TreePage = () => {
       title={tree.page.title}
       content={<Tree data={tree.data} />}
       footer={
-        <Toggle>
-          <PrismCode component="pre" className="language-markup">
-            {`
+        <CodeBlock
+          code={`
            const data = {
               id: 1,
               label: 'Root',
@@ -85,8 +81,7 @@ const TreePage = () => {
 
             <Tree data={data} />
       `}
-          </PrismCode>
-        </Toggle>
+        />
       }
     />
   );

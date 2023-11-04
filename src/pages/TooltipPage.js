@@ -4,10 +4,7 @@ import PortletView from '../components/Portlet';
 import Tooltip from '../components/Tooltip';
 import Button from '../components/Button';
 import { Col, Container, Row } from '../components/grid';
-import 'prismjs/themes/prism.css';
-import PrismCode from 'react-prism';
-import Prism from 'prismjs';
-import Toggle from '../components/Toggle';
+import CodeBlock from './pageUtils';
 import fake_data from '../fake-data';
 
 const TooltipPage = () => {
@@ -46,9 +43,9 @@ const TooltipPage = () => {
           </>
         }
         footer={
-          <Toggle>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
+              
           <Row>
             <Col $md={3}>
               <Tooltip text="Tooltip on the bottom " $bottom>
@@ -74,8 +71,7 @@ const TooltipPage = () => {
          </Row>
           
           `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
       <PortletView
@@ -110,9 +106,8 @@ const TooltipPage = () => {
           </>
         }
         footer={
-          <Toggle $rounded>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
           <Row>
           <Col $md={3}>
             <Tooltip text="Tooltip on the top " $top>
@@ -138,8 +133,7 @@ const TooltipPage = () => {
         </Row>
           
           `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
       <PortletView
@@ -174,9 +168,8 @@ const TooltipPage = () => {
           </>
         }
         footer={
-          <Toggle $pill>
-            <PrismCode component="pre" className="language-markup" target>
-              {`
+          <CodeBlock
+            code={`
           <Row>
           <Col $md={3}>
             <Tooltip text="Tooltip on the top " $top $pill>
@@ -202,8 +195,7 @@ const TooltipPage = () => {
         </Row>
           
           `}
-            </PrismCode>
-          </Toggle>
+          />
         }
       />
     </>

@@ -7,6 +7,7 @@ import PortletView from '../components/Portlet';
 import Switch from '../components/Switch';
 import fake_data from '../fake-data';
 import { Container, Row, Col } from '../components/grid';
+import CodeBlock from './pageUtils';
 
 const { pages } = fake_data;
 const SwitchPage = () => {
@@ -43,13 +44,8 @@ const SwitchPage = () => {
         </Container>
       }
       footer={
-        <Toggle>
-          <PrismCode
-            component="pre"
-            className="language-markup"
-            target="javascript"
-          >
-            {`
+        <CodeBlock
+          code={`
 
 
         <Container>
@@ -102,8 +98,7 @@ const SwitchPage = () => {
         </Container>
  
         `}
-          </PrismCode>
-        </Toggle>
+        />
       }
     />
   );
