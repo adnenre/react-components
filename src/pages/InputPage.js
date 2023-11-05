@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PortletView from '../components/Portlet';
 import Input from '../components/Input';
 import CodeBlock from './pageUtils';
 import { Col, Row, Container } from '../components/grid';
-import Button from '../components/Button';
+
+import ToggleView from '../components/Icons/ToggleView';
 
 const InputPage = () => {
+  const [formInfo, setFormInfo] = useState({
+    password: { label: 'Password', name: 'password', type: 'password' },
+    password_confirm: {
+      label: 'Password Confirm',
+      name: 'password_confirm',
+      type: 'password',
+    },
+  });
+  const toggleType = (key) => (e) => {
+    e.preventDefault();
+    let type = formInfo[key].type === 'text' ? 'password' : 'text';
+    setFormInfo({ ...formInfo, [key]: { ...formInfo[key], type } });
+  };
   return (
     <Container>
       <PortletView
@@ -56,17 +70,22 @@ const InputPage = () => {
               <Col $sm={6}>
                 <Input
                   required
-                  type="password"
-                  label="Password"
-
+                  type={formInfo.password.type}
+                  name={formInfo.password.name}
+                  label={formInfo.password.label}
+                  iconEnd={<ToggleView onClick={toggleType('password')} />}
                   //   onChange={(e) => console.log(e.target.value)}
                 />
               </Col>
               <Col $sm={6}>
                 <Input
-                  type="password"
-                  label="Confirm Password"
+                  type={formInfo.password_confirm.type}
+                  name={formInfo.password_confirm.name}
+                  label={formInfo.password_confirm.label}
                   required
+                  iconEnd={
+                    <ToggleView onClick={toggleType('password_confirm')} />
+                  }
                   //   onChange={(e) => console.log(e.target.value)}
                 />
               </Col>

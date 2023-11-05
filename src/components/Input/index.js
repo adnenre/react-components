@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import {
   SInput,
@@ -8,7 +8,17 @@ import {
 } from './Input.styled.js';
 
 const Input = (props) => {
-  const { placeholder, onChange, label, required, name, type, ...rest } = props;
+  const {
+    placeholder,
+    onChange,
+    label,
+    required,
+    name,
+    type,
+    iconStart,
+    iconEnd,
+    ...rest
+  } = props;
   const [selected, setSelected] = useState(false);
   const InputRef = useRef(null);
 
@@ -27,6 +37,7 @@ const Input = (props) => {
         {label} {required ? '*' : ''}
       </SInputLabel>
       <SInputContainer $selected={selected}>
+        {iconStart}
         <SInput
           placeholder={placeholder || label}
           onChange={onChange}
@@ -36,6 +47,7 @@ const Input = (props) => {
           required={required}
           {...rest}
         />
+        {iconEnd}
       </SInputContainer>
     </SInputwrapper>
   );
@@ -70,5 +82,7 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   onChange: PropTypes.func,
   required: PropTypes.bool,
+  iconStart: PropTypes.node,
+  iconEnd: PropTypes.node,
 };
 export default Input;
