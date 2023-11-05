@@ -249,6 +249,33 @@ export const getTabStyle = ({ ...props }) => {
     }
   }
 };
+
+export const getAccordionStyle = ({ ...props }) => {
+  for (const prop of colorProps) {
+    if (props[prop]) {
+      const color = theme.color[prop];
+
+      return css`
+        > div > h5 {
+          background: ${({ $isOpen }) =>
+            $isOpen ? `${color}` : `${theme.color.$white}`};
+          color: ${({ $isOpen }) =>
+            !$isOpen ? `${color}` : `${theme.color.$white}`};
+          user-select: none;
+          border-top: ${theme.border.thin} ${color};
+          border-bottom: ${theme.border.thin} ${color};
+        }
+      `;
+    }
+  }
+  return css`
+    > div > h5 {
+      color: ${theme.color.$darkBlue10};
+      border-top: ${theme.border.thin} ${theme.color.$gray5};
+      border-bottom: ${theme.border.thin} ${theme.color.$gray5};
+    }
+  `;
+};
 export const getButtonIconStyle = ({ ...props }) => {
   for (const prop of colorProps) {
     if (props['disabled']) {

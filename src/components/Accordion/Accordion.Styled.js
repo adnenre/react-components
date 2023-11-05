@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import theme from '../../theme';
+import { getAccordionStyle } from '../utility';
 
 const AccordionItemStyled = styled.div`
   width: 100%;
@@ -8,19 +9,13 @@ const AccordionTitleStyled = styled.h5`
   position: relative;
   z-index: 2;
   width: 100%;
-  background: ${({ $isOpen }) =>
-    $isOpen ? `${theme.color.$primary}` : `${theme.color.$white}`};
-  color: ${({ $isOpen }) =>
-    !$isOpen ? `${theme.color.$primary}` : `${theme.color.$white}`};
-  user-select: none;
-  border-top: ${theme.border.thin} ${theme.color.$primary};
-  border-bottom: ${theme.border.thin} ${theme.color.$primary};
+
   display: flex;
   justify-content: space-between;
 
   padding: 1rem;
   font-weight: 500;
-  font-size: 1.25rem;
+  font-size: 1rem;
   cursor: pointer;
 `;
 
@@ -62,7 +57,7 @@ const AccordionContent = styled.div`
 `;
 const AccordionContainer = styled.div`
   width: 100%;
-
+  ${getAccordionStyle}
   > div:first-child > h5 {
     border-top: none !important;
   }

@@ -89,6 +89,7 @@ const SInput = styled.input`
   }
 `;
 const SInputLabel = styled.label`
+  user-select: none;
   cursor: pointer;
   font-size: 0.8rem;
   color: ${({ $selected }) =>
