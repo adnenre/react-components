@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-const gap = '1%';
+const gap = '2%';
 const gridColNumber = 12;
 const colwidth = 100 / gridColNumber;
 import theme from '../theme';
