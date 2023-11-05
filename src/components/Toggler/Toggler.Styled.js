@@ -9,6 +9,7 @@ const TogglerContainer = styled.div`
   position: fixed;
   bottom: 20px;
   right: 20px;
+  z-index: 999999;
 
   opacity: 0.5;
   &:hover {
