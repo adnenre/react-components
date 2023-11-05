@@ -263,16 +263,26 @@ export const getAccordionStyle = ({ ...props }) => {
             !$isOpen ? `${color}` : `${theme.color.$white}`};
           user-select: none;
           border-top: ${theme.border.thin} ${color};
-          border-bottom: ${theme.border.thin} ${color};
+        }
+        > div:first-child > h5 {
+          border-top: none !important;
         }
       `;
     }
   }
   return css`
-    > div > h5 {
-      color: ${theme.color.$darkBlue10};
-      border-top: ${theme.border.thin} ${theme.color.$gray5};
-      border-bottom: ${theme.border.thin} ${theme.color.$gray5};
+    width: 100%;
+    > div {
+      > h5 {
+        display: flex;
+        align-items: center;
+        border-bottom: none;
+        color: ${theme.color.$darkBlue10};
+        border-top: ${theme.border.thin} ${theme.color.$gray5};
+      }
+    }
+    > div:first-child > h5 {
+      border-top: none !important;
     }
   `;
 };

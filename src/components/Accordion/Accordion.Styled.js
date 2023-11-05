@@ -56,16 +56,7 @@ const AccordionContent = styled.div`
   }
 `;
 const AccordionContainer = styled.div`
-  width: 100%;
   ${getAccordionStyle}
-  > div:first-child > h5 {
-    border-top: none !important;
-  }
-  > div > h5 {
-    display: flex;
-    align-items: center;
-    border-bottom: none;
-  }
 `;
 export {
   AccordionContainer,
