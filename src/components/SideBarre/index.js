@@ -22,7 +22,7 @@ const SideBarre = ({ routes, active }) => {
         <List>
           {routes.map(({ path }) => (
             <Item key={path} role="button">
-              <LinkItem to={path}> {path.split('/')[1]}</LinkItem>
+              <LinkItem to={path}> {path.replace('Page', '')}</LinkItem>
             </Item>
           ))}
         </List>
