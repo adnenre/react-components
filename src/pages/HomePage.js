@@ -1,4 +1,6 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import { Title } from '../components/Portlet/Portlet.Styled';
 
 import Avatar from '../components/Avatar';
@@ -11,26 +13,26 @@ import {
 
 import fake_data from '../fake-data';
 
-import { TodoStyled } from '../TodoStyled';
+import { componentList } from '../componentList';
 import Tooltip from '../components/Tooltip';
-
+import components from '../components';
 const Home = () => {
-  const { toDoList, Todo, TodoName, TodoState } = TodoStyled;
-
+  const navigate = useNavigate();
+  const { CContainer, Cname } = componentList;
+  const naviteToPage = (c) => (e) => {
+    navigate(`/${c}Page`);
+  };
   return (
     <Portlet>
       <PortletHeader>
         <Title> LANA react library</Title>
       </PortletHeader>
       <PortletBody $flexColumn>
-        {/* map over toDoList*/}
-        {toDoList.map(({ name, state, id }) => (
-          <Todo key={id}>
-            <TodoName> {name + ' : '}</TodoName>
-            <TodoState $state={state}>
-              {state ? 'Done' : 'In Progress'}
-            </TodoState>
-          </Todo>
+        {components.map(({ name, image, id }) => (
+          <CContainer key={id} onClick={naviteToPage(name)}>
+            <Cname> {name}</Cname>
+            <img src={image} alt={name} />
+          </CContainer>
         ))}
       </PortletBody>
       <PortletFooter>

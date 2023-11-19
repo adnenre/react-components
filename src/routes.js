@@ -1,33 +1,12 @@
 import React, { lazy } from 'react';
 import withSuspense from './HOC/withSuspence';
+import components from './components';
 const Application = lazy(() => import('./Application'));
 const HomePage = lazy(() => import('./pages/HomePage'));
 const ErrorPage = lazy(() => import('./pages/ErrorPage'));
 
 // Define a list of page names
-const pageNames = [
-  'ButtonPage',
-  'CardPage',
-  'AvatarPage',
-  'AlertPage',
-  'GridPage',
-  'TablePage',
-  'BadgePage',
-  'TabsPage',
-  'DropDownPage',
-  'ModalPage',
-  'AccordionPage',
-  'TreePage',
-  'CarouselPage',
-  'TooltipPage',
-  'MasonryPage',
-  'StepperPage',
-  'PaletPage',
-  'SwitchPage',
-  'BreadcrumbPage',
-  'InputPage',
-  'LoadingPage',
-];
+const pageNames = components.map((c) => c.name + 'Page');
 
 // Create lazy-loaded components based on the page names
 const lazyComponents = pageNames.reduce((components, pageName) => {
