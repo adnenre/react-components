@@ -1,0 +1,87 @@
+
+<svg
+   width="200"
+   height="200"
+   viewBox="0 0 52.916665 52.916666"
+   version="1.1"
+    id="svg1"
+   role="image"
+   xmlns="http://www.w3.org/2000/svg"
+  >
+ 
+  <g
+    
+     id="layer1">
+    <rect
+       style="fill:#f5f5f5;stroke-width:0.168676"
+       id="rect12-4-6"
+       width="50.715015"
+       height="26.205492"
+       x="1.1471308"
+       y="14.23659"
+       ry="2.3121092" />
+    <rect
+       style="fill:#8993a4;stroke-width:0.0853193"
+       id="rect12-4-64-7-6-3"
+       width="37.942078"
+       height="3.2692764"
+       x="7.3858566"
+       y="34.377914"
+       ry="0.11161569" />
+    <ellipse
+       style="opacity:0.65;fill:#8993a4;fill-opacity:1;stroke-width:0.399861"
+       id="path2"
+       cx="26.698879"
+       cy="24.562328"
+       rx="7.9296522"
+       ry="8.1046562" />
+    <ellipse
+       style="opacity:0.65;fill:#8993a4;fill-opacity:1;stroke-width:0.0404291"
+       id="path2-8"
+       cx="23.153313"
+       cy="43.227089"
+       rx="0.81608272"
+       ry="0.80505455" />
+    <ellipse
+       style="opacity:0.65;fill:#8993a4;fill-opacity:1;stroke-width:0.0744176"
+       id="path2-6"
+       cx="48.739075"
+       cy="26.959213"
+       rx="1.4757751"
+       ry="1.5083449" />
+    <ellipse
+       style="opacity:0.65;fill:#8993a4;fill-opacity:1;stroke-width:0.0404291"
+       id="path2-8-2"
+       cx="25.633739"
+       cy="43.267967"
+       rx="0.81608272"
+       ry="0.80505455" />
+    <ellipse
+       style="opacity:0.65;fill:#8993a4;fill-opacity:1;stroke-width:0.0404291"
+       id="path2-8-6"
+       cx="28.105328"
+       cy="43.259514"
+       rx="0.81608272"
+       ry="0.80505455" />
+    <path
+       id="path2-8-67"
+       style="opacity:0.65;fill:#8993a4;fill-opacity:1;stroke-width:0.0404291"
+       d="m 30.514162,42.514928 a 0.81608272,0.80505455 0 0 0 -0.815971,0.805118 0.81608272,0.80505455 0 0 0 0.815971,0.805119 0.81608272,0.80505455 0 0 0 0.816487,-0.805119 0.81608272,0.80505455 0 0 0 -0.816487,-0.805118 z" />
+    <path
+       style="opacity:0.65;fill:#c0c0c0;fill-opacity:1;stroke-width:0.143829"
+       d="m 48.311998,27.813314 1.360065,-0.75961 -1.322286,-0.94047 z"
+       id="path4" />
+    <ellipse
+       style="opacity:0.65;fill:#8993a4;fill-opacity:1;stroke-width:0.0744176"
+       id="path2-6-6"
+       cx="-4.0667214"
+       cy="27.278683"
+       rx="1.4757751"
+       ry="1.5083449"
+       transform="scale(-1,1)" />
+    <path
+       style="opacity:0.65;fill:#c0c0c0;fill-opacity:1;stroke-width:0.143829"
+       d="m 4.4937985,28.132783 -1.360065,-0.75961 1.322286,-0.94047 z"
+       id="path4-3" />
+  </g>
+</svg>

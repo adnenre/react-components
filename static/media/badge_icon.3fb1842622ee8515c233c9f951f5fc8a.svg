@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200"
+   height="200"
+   viewBox="0 0 52.916665 52.916666"
+   version="1.1"
+    id="svg1"
+   role="image"
+   
+   xmlns="http://www.w3.org/2000/svg"
+   >
+ 
+  <g
+  
+     id="layer1">
+    <rect
+       style="fill:#8993a4;stroke-width:0.125437"
+       id="rect12-4-6"
+       width="44.594727"
+       height="16.481031"
+       x="3.9352632"
+       y="22.260969"
+       ry="2.9337499" />
+    <rect
+       style="fill:#f5f5f5;stroke:none;stroke-width:0.195892;stroke-opacity:1"
+       id="rect12-4-64-7-6-3"
+       width="43.279366"
+       height="15.108566"
+       x="4.6363411"
+       y="22.797312"
+       ry="2.369338" />
+    <text
+       xml:space="preserve"
+       style="font-size:11.7459px;opacity:0.65;fill:#8993a4;fill-opacity:1;stroke-width:0.550588"
+       x="5.9388556"
+       y="36.505619"
+       id="text5"
+       transform="scale(1.076359,0.92905806)"><tspan
+        
+         id="tspan5"
+         style="font-size:11.7459px;stroke-width:0.550588"
+         x="5.9388556"
+         y="36.505619">Badge</tspan></text>
+  </g>
+</svg>

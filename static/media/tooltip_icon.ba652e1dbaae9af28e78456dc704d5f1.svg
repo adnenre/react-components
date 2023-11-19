@@ -1,0 +1,38 @@
+
+
+<svg
+   width="200"
+   height="200"
+   viewBox="0 0 52.916665 52.916666"
+   version="1.1"
+    id="svg1"
+   role="image"
+  
+   xmlns="http://www.w3.org/2000/svg"
+   >
+ 
+  <g
+  
+     id="layer1">
+    <rect
+       style="fill:#8993a4;stroke-width:0.11824"
+       id="rect12-4-6"
+       width="50.715015"
+       height="12.876862"
+       x="1.2831373"
+       y="20.016863"
+       ry="1.1361248" />
+    <rect
+       style="fill:#f5f5f5;stroke-width:0.127589"
+       id="rect12-4-64-7-6-3"
+       width="45.286423"
+       height="6.1254115"
+       x="4.0537"
+       y="23.157381"
+       ry="1.7051961" />
+    <path
+       style="opacity:0.65;fill:#8993a4;fill-opacity:1;stroke-width:0.534765"
+       d="m 23.966849,20.128951 2.916903,-4.896232 3.611405,4.760228 z"
+       id="path4" />
+  </g>
+</svg>
