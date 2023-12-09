@@ -35,7 +35,7 @@ const InputPage = () => {
       <PortletView
         title="Input Component required"
         content={<Input label="First Name" required />}
-        footer={<CodeBlock code="<Input label='First Name' />" />}
+        footer={<CodeBlock code="<Input label='First Name'  required />" />}
       />
       <PortletView
         title="Input Component form"
