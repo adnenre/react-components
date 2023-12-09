@@ -18,7 +18,7 @@ import Tooltip from '../components/Tooltip';
 import components from '../components';
 const Home = () => {
   const navigate = useNavigate();
-  const { CContainer, Cname } = componentList;
+  const { CContainer, Cname, Cimage } = componentList;
   const naviteToPage = (c) => (e) => {
     navigate(`/${c}Page`);
   };
@@ -31,11 +31,7 @@ const Home = () => {
         {components.map(({ name, image, id }) => (
           <CContainer key={id} onClick={naviteToPage(name)}>
             <Cname> {name}</Cname>
-            <img
-              style={{ width: 'inherit', height: 'auto' }}
-              src={image}
-              alt={name}
-            />
+            <Cimage src={image} alt={name} />
           </CContainer>
         ))}
       </PortletBody>
