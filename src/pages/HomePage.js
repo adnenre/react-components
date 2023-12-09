@@ -31,7 +31,11 @@ const Home = () => {
         {components.map(({ name, image, id }) => (
           <CContainer key={id} onClick={naviteToPage(name)}>
             <Cname> {name}</Cname>
-            <img src={image} alt={name} />
+            <img
+              style={{ width: 'inherit', height: 'auto' }}
+              src={image}
+              alt={name}
+            />
           </CContainer>
         ))}
       </PortletBody>
